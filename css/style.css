@@ -1,5 +1,37 @@
-textarea
+.results
 {
-    width: 90%;
-    height: 600px;
+  width: 800px;
+  height: 600px;
+}
+
+.cond_table input
+{
+  width: 4em;
+  text-align: right;
+}
+
+#gov_form
+{
+  text-align: center;
+}
+
+.cond_table td:nth-child(odd)
+{
+   min-width: 9em;
+}
+
+.cond_table td:nth-child(2)
+{
+  padding-right: 1em;
+  border-right: solid black 1px;
+}
+
+.cond_table td:nth-child(3)
+{
+  padding-left: 1em;
+}
+
+fieldset
+{
+  width: fit-content;
 }

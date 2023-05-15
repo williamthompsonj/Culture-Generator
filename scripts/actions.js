@@ -1,3 +1,0 @@
-
-
-setValue('results', 'new content');
