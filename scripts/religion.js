@@ -1,3 +1,4 @@
+"use strict";
 // define conditions of religious environment
 let religion = {
   diversity: 0,

@@ -1,3 +1,19 @@
+/* dark mode */
+.darkmode *
+{
+  background-color: black;
+  color: white;
+}
+
+.darkmode button,
+.darkmode textarea,
+.darkmode select,
+.darkmode input
+{
+  background-color: #333;
+}
+
+/* normal style stuff */
 .results
 {
   width: 800px;
@@ -23,7 +39,7 @@
 .cond_table td:nth-child(2)
 {
   padding-right: 1em;
-  border-right: solid black 1px;
+  border-right: solid gray 1px;
 }
 
 .cond_table td:nth-child(3)

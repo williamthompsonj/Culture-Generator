@@ -1,5 +1,8 @@
+"use strict";
 // utility object namespace
 var util = {
+  dark: false,
+  
   /* Get element object using query syntax. Returns null if nothing found.
     - "foo" gets the first element named <foo>
     - "#foo" gets the first element with id="foo"
@@ -109,5 +112,49 @@ var util = {
       else
         this.setValue("#"+prefix+obj.props[i], (obj[obj.props[i]] * offset).toFixed(fixed_length));
     }
+  },
+
+  cookieManager()
+  {
+    var c = this._getCookie();
+  
+    // check if we're setting a new value
+    if (val != '')
+    {
+      
+    }
+  },
+  
+  _getCookie()
+  {
+    var a = document.cookie.split(';');
+    var cookie = [];
+    var s = [];
+
+    for(var i = 0; i != a.length; i++)
+    {
+      s = a[i].trim().split('=');
+      cookie[s[0]] = s[1];
+    }
+    
+    return cookie;
+  },
+  
+  _setCookie(arr)
+  {
+    arr['Expires'] = new Date(8.64e14).toString();
+    arr['darkMode'] = this.darkMode;
+    var c = [];
+    
+    arr.forEach((item, index) => {
+      c.push(index + '=' + item.toString());
+    });
+    
+    document.cookie = c.join('; ');
+  },
+  
+  _delCookie()
+  {
+    document.cookie = 'Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   }
 };

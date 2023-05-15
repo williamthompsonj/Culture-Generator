@@ -1,3 +1,4 @@
+"use strict";
 // define conditions of the population
 let population = {
   poverty: 0, // how much of the population is poor vs. average

@@ -1,3 +1,4 @@
+"use strict";
 // define government parameters
 let government = {
   power_concentration: 0, // how much power does a small group/individual have

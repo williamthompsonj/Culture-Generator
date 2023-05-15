@@ -1,3 +1,4 @@
+"use strict";
 // Returns String With Title Case
 String.prototype.toTitleCase = function()
 {
