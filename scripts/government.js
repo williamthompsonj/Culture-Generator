@@ -10,10 +10,10 @@ let government = {
   bureaucracy: 0, // how complicated is government process
   military: 0, // how powerful is external defense
   diplomacy: 0, // used only for external relations
-  form: '',
+  style: '',
 
-  // treat _forms as a private property
-  _forms: [
+  // treat _styles as a private property
+  _styles: [
     'anarchy',
     'autocracy',
     'bureaucracy',
@@ -48,13 +48,13 @@ let government = {
     'bureaucracy',
     'military',
     'diplomacy',
-    'form'
+    'style'
   ],
 
-  ChooseForm()
+  Choosestyle()
   {
     // pick at random!
-    return this._forms[Math.floor(Math.random()*this._forms.length)];
+    return this._styles[Math.floor(Math.random()*this._styles.length)];
   },
 
   /* show current conditions */
@@ -64,7 +64,7 @@ let government = {
         "*****************************\r\n"
       + "*** Government Conditions ***\r\n"
       + "*****************************\r\n"
-      + "Form: " + this.form.toTitleCase() + "\r\n"
+      + "Style: " + this.style.toTitleCase() + "\r\n"
       + "Power Concentration: " + this.power_concentration.toFixed(2) + "\r\n"
       + "Wealth Concentration: " + this.wealth_concentration.toFixed(2) + "\r\n"
       + "Magic Availability: " + this.magic_availability.toFixed(2) + "\r\n"
@@ -80,10 +80,10 @@ let government = {
   /* generate starting conditions */
   Init()
   {
-    this.form = this.ChooseForm();
+    this.style = this.Choosestyle();
 
     // determine base parameters around type of government
-    switch(this.form)
+    switch(this.style)
     {
       case 'autocracy': // dictator but inherited
       case 'dictatorship': // single authority rules by force

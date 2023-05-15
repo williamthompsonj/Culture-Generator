@@ -1,8 +1,6 @@
 "use strict";
 // utility object namespace
 var util = {
-  dark: false,
-  
   /* Get element object using query syntax. Returns null if nothing found.
     - "foo" gets the first element named <foo>
     - "#foo" gets the first element with id="foo"
@@ -102,8 +100,41 @@ var util = {
     z.innerHTML = val;
   },
 
+  /* update value in objects when onChange occurs */
+  updateElem(elem)
+  {
+    var val = elem.value.trim();
+
+    if(val.toLowerCase() == 'true') // boolean true
+      val = true;
+    else if(val.toLowerCase() == 'false') // boolean false
+      val = false;
+    else if(isNaN(val)) // original string value
+      val = elem.value;
+    else
+      val = Number(val); // number
+
+    let arr = elem.id.split('_');
+    var nam = elem.id.substring(arr[0].length+1);
+
+    switch(arr[0])
+    {
+      case "gov":
+        this.government[nam] = val;
+        break;
+
+      case "pop":
+        this.population[nam] = val;
+        break;
+
+      case "rel":
+        this.religion[nam] = val;
+        break;
+    }
+  },
+
   /* auto-populate form fields based on object props */
-  FillForm(prefix, obj, offset = 100, fixed_length = 2)
+  fillForm(prefix, obj, offset = 100, fixed_length = 2)
   {
     for(var i = 0; i != obj.props.length; i++)
     {
@@ -114,47 +145,4 @@ var util = {
     }
   },
 
-  cookieManager()
-  {
-    var c = this._getCookie();
-  
-    // check if we're setting a new value
-    if (val != '')
-    {
-      
-    }
-  },
-  
-  _getCookie()
-  {
-    var a = document.cookie.split(';');
-    var cookie = [];
-    var s = [];
-
-    for(var i = 0; i != a.length; i++)
-    {
-      s = a[i].trim().split('=');
-      cookie[s[0]] = s[1];
-    }
-    
-    return cookie;
-  },
-  
-  _setCookie(arr)
-  {
-    arr['Expires'] = new Date(8.64e14).toString();
-    arr['darkMode'] = this.darkMode;
-    var c = [];
-    
-    arr.forEach((item, index) => {
-      c.push(index + '=' + item.toString());
-    });
-    
-    document.cookie = c.join('; ');
-  },
-  
-  _delCookie()
-  {
-    document.cookie = 'Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-  }
 };
