@@ -157,11 +157,15 @@
 </select></td>
 </tr>
 </table>
-</fieldset>
 <button
  type="button"
  onClick="government.Init();util.fillForm('gov_', government);"
->Generate Government</button>
+>Random Government</button>
+<button
+ type="button"
+ onClick="government.rollStats();util.fillForm('gov_', government);"
+>Re-roll Government</button>
+</fieldset>
 </form>
 
 <form
@@ -268,11 +272,11 @@
 >%</td>
 </tr>
 </table>
-</fieldset>
 <button
  type="button"
  onClick="population.Init();util.fillForm('pop_', population);"
 >Generate Population</button>
+</fieldset>
 </form>
 
 <form
@@ -379,11 +383,11 @@
 >%</td>
 </tr>
 </table>
-</fieldset>
 <button
  type="button"
  onClick="religion.Init();util.fillForm('rel_', religion);"
 >Generate Religion</button>
+</fieldset>
 </form>
 
 <br><br>

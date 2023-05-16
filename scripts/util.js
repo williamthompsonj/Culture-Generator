@@ -115,33 +115,33 @@ var util = {
       val = Number(val); // number
 
     let arr = elem.id.split('_');
-    var nam = elem.id.substring(arr[0].length+1);
+    var index = elem.id.substring(arr[0].length+1);
 
     switch(arr[0])
     {
       case "gov":
-        this.government[nam] = val;
+        government[index] = val;
         break;
 
       case "pop":
-        this.population[nam] = val;
+        population[index] = val;
         break;
 
       case "rel":
-        this.religion[nam] = val;
+        religion[index] = val;
         break;
     }
   },
 
   /* auto-populate form fields based on object props */
-  fillForm(prefix, obj, offset = 100, fixed_length = 2)
+  fillForm(prefix, obj, precision = 2)
   {
     for(var i = 0; i != obj.props.length; i++)
     {
       if(isNaN(obj[obj.props[i]]))
         this.setValue("#"+prefix+obj.props[i], String(obj[obj.props[i]]).toTitleCase());
       else
-        this.setValue("#"+prefix+obj.props[i], (obj[obj.props[i]] * offset).toFixed(fixed_length));
+        this.setValue("#"+prefix+obj.props[i], Number(obj[obj.props[i]]).toFixed(precision));
     }
   },
 

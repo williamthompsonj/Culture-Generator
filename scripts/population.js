@@ -28,26 +28,26 @@ let population = {
         "*****************************\r\n"
       + "*** Population Conditions ***\r\n"
       + "*****************************\r\n"
-      + "Poverty: " + this.poverty.toFixed(2) + "\r\n"
-      + "Inequality: " + this.inequality.toFixed(2) + "\r\n"
-      + "Corruption: " + this.corruption.toFixed(2) + "\r\n"
-      + "religion: " + this.religion.toFixed(2) + "\r\n"
-      + "Free Choice: " + this.free_choice.toFixed(2) + "\r\n"
-      + "Prejudice: " + this.prejudice.toFixed(2) + "\r\n"
-      + "Free Time: " + this.free_time.toFixed(2) + "\r\n"
-      + "Dissent: " + this.dissent.toFixed(2) + "\r\n"
+      + "Poverty: " + this.poverty + "\r\n"
+      + "Inequality: " + this.inequality + "\r\n"
+      + "Corruption: " + this.corruption + "\r\n"
+      + "religion: " + this.religion + "\r\n"
+      + "Free Choice: " + this.free_choice + "\r\n"
+      + "Prejudice: " + this.prejudice + "\r\n"
+      + "Free Time: " + this.free_time + "\r\n"
+      + "Dissent: " + this.dissent + "\r\n"
     );
   },
 
   Init()
   {
-    this.poverty = Math.range(0.15, 0.45);
-    this.inequality = Math.range(this.poverty, this.poverty + 0.25);
-    this.corruption = Math.range(0.1, 0.5);
-    this.religion = Math.range(0.1, 0.8);
-    this.free_choice = Math.range(0.2, 0.6);
-    this.prejudice = Math.range(0.2, 0.6);
-    this.free_time = Math.range(0.05, 0.4);
-    this.dissent = Math.range(0.1, 0.4);
+    this.poverty = Math.range(15, 45);
+    this.inequality = Math.range(this.poverty, this.poverty + 25);
+    this.corruption = Math.range(10, 50);
+    this.religion = Math.range(10, 80);
+    this.free_choice = Math.range(20, 60);
+    this.prejudice = Math.range(20, 60);
+    this.free_time = Math.range(5, 40);
+    this.dissent = Math.range(10, 40);
   }
 };
