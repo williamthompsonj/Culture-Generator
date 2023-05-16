@@ -236,10 +236,10 @@ let government = {
         this.power_concentration = Math.range(5, 25, 2);
         this.wealth_concentration = Math.range(10, 50, 2);
         this.magic_availability = Math.range(20, 50, 2);
-        this.corruption = Math.range(20, 80, 2);
+        this.corruption = Math.range(30, 70, 2);
         this.taxes = Math.range(5, 10, 2);
-        this.law_enforcement = Math.range(10, 30, 2);
-        this.military = Math.range(0, 25, 2);
+        this.law_enforcement = Math.range(5, 25, 2);
+        this.military = Math.range(0, 15, 2);
         this.bureaucracy = Math.range(0, 25, 2);
         this.diplomacy = Math.range(10, 50, 2);
         break;

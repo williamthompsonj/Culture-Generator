@@ -8,7 +8,7 @@ let population = {
   free_choice: 0, // how much free choice do people get
   prejudice: 0, // how likely are people to show bias towards others
   free_time: 0, // how much free time do average people have
-  dissent: 0, // how likely are people to protest/actively oppose things
+  dissent: 0, // how likely are people to protest/oppose things
 
   // properties of object to iterate
   props: [
