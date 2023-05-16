@@ -41,13 +41,13 @@ let population = {
 
   Init()
   {
-    this.poverty = Math.range(15, 45);
-    this.inequality = Math.range(this.poverty, this.poverty + 25);
-    this.corruption = Math.range(10, 50);
-    this.religion = Math.range(10, 80);
-    this.free_choice = Math.range(20, 60);
-    this.prejudice = Math.range(20, 60);
-    this.free_time = Math.range(5, 40);
-    this.dissent = Math.range(10, 40);
+    this.poverty = Math.range(15, 45, 2);
+    this.inequality = Math.range(this.poverty, this.poverty + 25, 2);
+    this.corruption = Math.range(10, 50, 2);
+    this.religion = Math.range(10, 80, 2);
+    this.free_choice = Math.range(20, 60, 2);
+    this.prejudice = Math.range(20, 60, 2);
+    this.free_time = Math.range(5, 40, 2);
+    this.dissent = Math.range(10, 40, 2);
   }
 };

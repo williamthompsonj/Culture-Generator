@@ -25,7 +25,16 @@ var util = {
       // form element value
       case 'TEXTAREA':
       case 'INPUT':
+        return z.value;
+        break;
+
       case 'SELECT':
+        if(z.selectedIndex == -1)
+        {
+          // if nothing selected, default to first option
+          z.selectedIndex = 0;
+          z.value = z.options[0].value;
+        }
         return z.value;
         break;
 

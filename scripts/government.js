@@ -86,7 +86,7 @@ let government = {
 
   rollStats()
   {
-    if (this.style == '') this.style = util.getValue('gov_style');
+    if (this.style == '') this.style = util.getValue('#gov_style');
   
     // determine base parameters around type of government
     switch(this.style)
