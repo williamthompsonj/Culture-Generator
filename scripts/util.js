@@ -129,15 +129,15 @@ var util = {
     switch(arr[0])
     {
       case "gov":
-        government[index] = val;
+        government.props[index].value = val;
         break;
 
       case "pop":
-        population[index] = val;
+        population.props[index].value = val;
         break;
 
       case "rel":
-        religion[index] = val;
+        religion.props[index].value = val;
         break;
     }
   },
@@ -145,12 +145,16 @@ var util = {
   /* auto-populate form fields based on object props */
   fillForm(prefix, obj, precision = 2)
   {
-    for(var i = 0; i != obj.props.length; i++)
+    let keys = Object.keys(obj.props);
+    for(var i = 0; i != keys.length; i++)
     {
-      if(isNaN(obj[obj.props[i]]))
-        this.setValue("#"+prefix+obj.props[i], String(obj[obj.props[i]]).toTitleCase());
+      let str = "#" + prefix + keys[i];
+      let val = obj.props[keys[i]].value;
+
+      if(isNaN(val))
+        this.setValue(str, String(val).toTitleCase());
       else
-        this.setValue("#"+prefix+obj.props[i], Number(obj[obj.props[i]]).toFixed(precision));
+        this.setValue(str, Number(val).toFixed(precision));
     }
   },
 
