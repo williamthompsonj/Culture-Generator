@@ -1,127 +1,130 @@
 "use strict";
 // define government parameters
-let government = {
-/*
-  power_concentration: 0, // how much power does a small group/individual have
-  magic_availability: 0, // how accessible is magic
-  wealth_concentration: 0, // how rich are the rich
-  corruption: 0, // how much do officials abuse their access for personal gain
-  taxes: 0, // how much does this government collect in taxes
-  law_enforcement: 0, // how strict is internal law enforcement
-  bureaucracy: 0, // how complicated is government process
-  military: 0, // how powerful is external defense
-  diplomacy: 0, // used only for external relations
-  style: ''
-*/
-};
+let government = {};
 
 // properties of object to iterate
 government.props = {
   power_concentration: {
     value: 0,
     title: 'Power Concentration',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How much power does an individual ruler or council have',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   magic_availability: {
     value: 0,
     title: 'Magic Availability',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How accessible is magic',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   wealth_concentration: {
     value: 0,
     title: 'Wealth Concentration',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How much wealth the rich control of the total available resources',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   corruption: {
     value: 0,
     title: 'Corruption',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How much do officials abuse their authority for personal gain',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   taxes: {
     value: 0,
     title: 'Taxation',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How much does this government collect in taxes',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   law_enforcement: {
     value: 0,
     title: 'Law Enforcement',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How strict or effective is internal law enforcement within society',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   bureaucracy: {
     value: 0,
     title: 'Bureaucracy',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How complicated or complex are government processes; how efficient is decision making and action',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   military: {
     value: 0,
     title: 'Military Forces',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How powerful or effective is foreign defense',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   diplomacy: {
     value: 0,
     title: 'External Diplomacy',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How effective is government at interacting with foreign governments or in maintaining foreign relations',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   style: {
     value: '',
-    title: '',
-    description: '',
-    tag: 'select',
-    colspan: 2,
+    title: 'Government Style',
+    description: 'Closest short description of government style',
     options: {
       anarchy: 'Anarchy / No Government',
       autocracy: 'Autocracy',
@@ -144,6 +147,9 @@ government.props = {
       republic: 'Republic',
       satrapy: 'Satrapy',
       theocracy: 'Theocracy'
+    },
+    html_tag: {
+      elem: 'select',
     }
   }
 };
@@ -176,7 +182,7 @@ government.rollStats = function()
   if (p.style.value == '') p.style.value = util.getValue('#gov_style');
 
   // determine base parameters around type of government
-  switch(p.style.value)
+  switch (p.style.value)
   {
     case 'autocracy': // dictator but inherited
     case 'dictatorship': // single authority rules by force

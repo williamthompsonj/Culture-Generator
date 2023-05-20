@@ -1,107 +1,112 @@
 "use strict";
 // define conditions of the population
-let population = {
-/*
-  poverty: 0, // how much of the population is poor vs. average
-  corruption: 0, // how much people take advantage of
-  inequality: 0, // how different is poor vs. rich
-  religion: 0, // how involved in religion are the people
-  free_choice: 0, // how much free choice do people get
-  prejudice: 0, // how likely are people to show bias towards others
-  free_time: 0, // how much free time do average people have
-  dissent: 0, // how likely are people to protest/oppose things
-*/
-};
+let population = {};
 
 // properties of object to iterate
 population.props = {
   poverty: {
     value: 0,
     title: 'Poverty',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How much of the population is below the poverty line',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   corruption: {
     value: 0,
     title: 'Corruption',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How tolerant people are to things that are not lawful or that do not follow convention',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   inequality: {
     value: 0,
     title: 'Inequality',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How big is the difference between poverty and average',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   religion: {
     value: 0,
     title: 'Religion',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How involved or relevant religion is to daily life',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   free_choice: {
     value: 0,
     title: 'Free Choice',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How much control people have over their life choices',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   prejudice: {
     value: 0,
     title: 'Prejudice',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How likely are people to show bias or racism',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   free_time: {
     value: 0,
     title: 'Free Time',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How much free time do average people have',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   },
   dissent: {
     value: 0,
     title: 'Dissent',
-    description: '',
-    tag: 'input',
-    type: 'number',
-    min: 0,
-    max: 100,
-    step: 0.01,
-    afterElem: '%'
+    description: 'How likely are people to protest or oppose things',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
   }
 };
 

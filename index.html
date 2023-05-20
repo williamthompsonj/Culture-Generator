@@ -13,379 +13,44 @@
 </head>
 <body>
 
-<form
- id="gov_collection"
- name="gov_collection"
->
+<form id="gov_form" name="gov_form" class="make_inline">
 <fieldset>
 <legend>Government Settings</legend>
-<table class="gov_conditions cond_table">
-<tr>
-<td><label for="gov_power_concentration">Power Concentration</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_power_concentration"
- name="gov_power_concentration"
->%</td>
-<td><label for="gov_magic_availability">Magic Availability</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_magic_availability"
- name="gov_magic_availability"
->%</td>
-</tr>
-<tr>
-<td><label for="gov_wealth_concentration">Wealth Concentration</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_wealth_concentration"
- name="gov_wealth_concentration"
->%</td>
-<td><label for="gov_corruption">Corruption</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_corruption"
- name="gov_corruption"
->%</td>
-</tr>
-<tr>
-<td><label for="gov_taxes">Taxation</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_taxes"
- name="gov_taxes"
->%</td>
-<td><label for="gov_law_enforcement">Law Enforcement</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_law_enforcement"
- name="gov_law_enforcement"
->%</td>
-</tr>
-<tr>
-<td><label for="gov_bureaucracy">Bureaucracy</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_bureaucracy"
- name="gov_bureaucracy"
->%</td>
-<td><label for="gov_military">Military Forces</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_military"
- name="gov_military"
->%</td>
-</tr>
-<tr>
-<td><label for="gov_diplomacy">External Diplomacy</label></td>
-<td><input
- class="gov"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="gov_diplomacy"
- name="gov_diplomacy"
->%</td>
-<td colspan="2"><select
- class="gov"
- onchange="util.updateElem(this)"
- id="gov_style"
- name="gov_style">
-<option value="anarchy">Anarchy / No Government</option>
-<option value="autocracy">Autocracy</option>
-<option value="bureaucracy">Bureaucracy</option>
-<option value="confederacy">Confederacy</option>
-<option value="democracy">Democracy</option>
-<option value="dictatorship">Dictatorship</option>
-<option value="feudalism">Feudalism</option>
-<option value="gerontocracy">Gerontocracy</option>
-<option value="hierarchy">Hierarchy</option>
-<option value="magocracy">Magocracy</option>
-<option value="matriarchy">Matriarchy</option>
-<option value="militocracy">Militocracy</option>
-<option value="monarchy">Monarchy</option>
-<option value="oligarchy">Oligarchy</option>
-<option value="patriarchy">Patriarchy</option>
-<option value="meritocracy">Meritocracy</option>
-<option value="plutocracy">Plutocracy</option>
-<option value="republic">Republic</option>
-<option value="satrapy">Satrapy</option>
-<option value="kleptocracy">Kleptocracy</option>
-<option value="theocracy">Theocracy</option>
-</select></td>
-</tr>
+<table class="settings_table" id="gov_table" name="gov_table">
+<!--- populate after page load --->
 </table>
-<button
- type="button"
- onClick="government.Init();util.fillForm('gov_', government);"
+<br />
+<button type="button"
+ onClick="government.Init();util.fillForm('gov', government);"
 >Random Government</button>
-<button
- type="button"
- onClick="government.rollStats();util.fillForm('gov_', government);"
+<button type="button"
+ onClick="government.rollStats();util.fillForm('gov', government);"
 >Re-roll Government</button>
 </fieldset>
 </form>
 
-<form
- id="pop_settings"
- name="pop_settings"
->
+<form id="pop_form" name="pop_form" class="make_inline">
 <fieldset>
 <legend>Population Settings</legend>
-<table class="cond_table">
-<tr>
-<td><label for="pop_poverty">Poverty</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_poverty"
- name="pop_poverty"
->%</td>
-<td><label for="pop_corruption">Corruption</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_corruption"
- name="pop_corruption"
->%</td>
-</tr>
-<tr>
-<td><label for="pop_inequality">Inequality</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_inequality"
- name="pop_inequality"
->%</td>
-<td><label for="pop_religion">Religion</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_religion"
- name="pop_religion"
->%</td>
-</tr>
-<tr>
-<td><label for="pop_free_choice">Free Choice</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_free_choice"
- name="pop_free_choice"
->%</td>
-<td><label for="pop_prejudice">Prejudice</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_prejudice"
- name="pop_prejudice"
->%</td>
-</tr>
-<tr>
-<td><label for="pop_free_time">Free Time</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_free_time"
- name="pop_free_time"
->%</td>
-<td><label for="pop_dissent">Dissent</label></td>
-<td><input
- class="pop"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="pop_dissent"
- name="pop_dissent"
->%</td>
-</tr>
+<table class="settings_table" id="pop_table" name="pop_table">
+<!--- populate after page load --->
 </table>
-<button
- type="button"
- onClick="population.Init();util.fillForm('pop_', population);"
+<br />
+<button type="button"
+ onClick="population.Init();util.fillForm('pop', population);"
 >Generate Population</button>
 </fieldset>
 </form>
 
-<form
- id="rel_settings"
- name="rel_settings"
->
+<form id="rel_form" name="rel_form" class="make_inline">
 <fieldset>
 <legend>Religion Settings</legend>
-<table class="cond_table">
-<tr>
-<td><label for="rel_diversity">Diversity</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_diversity"
- name="rel_diversity"
->%</td>
-<td><label for="rel_hostility">Hostility</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_hostility"
- name="rel_hostility"
->%</td>
-</tr>
-<tr>
-<td><label for="rel_order">Order</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_order"
- name="rel_order"
->%</td>
-<td><label for="rel_cultural_significance">Cultural Significance</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_cultural_significance"
- name="rel_cultural_significance"
->%</td>
-</tr>
-<tr>
-<td><label for="rel_prevalence">Prevalence</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_prevalence"
- name="rel_prevalence"
->%</td>
-<td><label for="rel_signs_symbols">Signs & Symbols</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_signs_symbols"
- name="rel_signs_symbols"
->%</td>
-</tr>
-<tr>
-<td><label for="rel_relevance">Relevance</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_relevance"
- name="rel_relevance"
->%</td>
-<td><label for="rel_sacred_texts">Sacred Texts</label></td>
-<td><input
- class="rel"
- onchange="util.updateElem(this)"
- type="number"
- step="0.01"
- min="0"
- max="100"
- id="rel_sacred_texts"
- name="rel_sacred_texts"
->%</td>
-</tr>
+<table class="settings_table" id="rel_table" name="rel_table">
+<!--- populate after page load --->
 </table>
-<button
- type="button"
- onClick="religion.Init();util.fillForm('rel_', religion);"
+<br />
+<button type="button"
+ onClick="religion.Init();util.fillForm('rel', religion);"
 >Generate Religion</button>
 </fieldset>
 </form>
