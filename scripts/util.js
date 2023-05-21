@@ -76,22 +76,8 @@ util.setValue = function(id, val)
   {
     case 'TEXTAREA':
     case 'INPUT':
-      z.value = val;
-      break;
-
     case 'SELECT':
-      for (var i = 0; i != z.options.length; i++)
-      {
-        if (val == z.options[i].text)
-        {
-          z.selectedIndex = i;
-          z.options[i].selected = true;
-        }
-        else
-        {
-          z.options[i].selected = false;
-        }
-      }
+      z.value = val;
       break;
 
     default:
@@ -143,10 +129,10 @@ util.updateElem = function(elem)
   }
 };
 
-util.populateTable = function(prefix, obj)
+util.populateTable = function(obj)
 {
   // ensure table exists before we do anything else
-  let my_table = this.getElem('#' + prefix + '_' + 'table');
+  let my_table = this.getElem('#' + obj.prefix + '_' + 'table');
   if (my_table == null) return;
 
   // iterate over object props keys
@@ -177,7 +163,7 @@ util.populateTable = function(prefix, obj)
       // build title
       label_tag = document.createElement('label');
       label_tag.innerText = p.title;
-      label_tag.htmlFor = prefix + '_' + elem;
+      label_tag.htmlFor = obj.prefix + '_' + elem;
       label_tag.className = 'tooltip';
 
       // build tooltip description
@@ -194,7 +180,7 @@ util.populateTable = function(prefix, obj)
       // build title
       label_tag = document.createElement('label');
       label_tag.innerText = p.title;
-      label_tag.htmlFor = prefix + '_' + elem;
+      label_tag.htmlFor = obj.prefix + '_' + elem;
 
       // add to the td tag
       td1.appendChild(label_tag);
@@ -207,8 +193,8 @@ util.populateTable = function(prefix, obj)
     val_tag.onchange = (event) => {util.updateElem(event.srcElement)};
 
     // set id and name attributes
-    val_tag.id = prefix + '_' + elem;
-    val_tag.name = prefix + '_' + elem;
+    val_tag.id = obj.prefix + '_' + elem;
+    val_tag.name = obj.prefix + '_' + elem;
 
     if (h.elem == 'input')
     {
@@ -220,16 +206,33 @@ util.populateTable = function(prefix, obj)
     }
     else if (h.elem == 'select')
     {
-      // select tag
-      Object.keys(p.options).forEach(index => {
-        // create the option
-        opt_tag = document.createElement('option');
-        opt_tag.text = p.options[index];
-        opt_tag.value = index;
+        // this is a select tag
+      if (Array.isArray(p.options))
+      {
+        // options only contain values, not pairs
+        for (var index = 0; index != p.options.length; index++)
+        {
+          opt_tag = document.createElement('option');
+          opt_tag.text = p.options[index];
+          opt_tag.value = p.options[index];
 
-        // append the option
-        val_tag.appendChild(opt_tag);
-      });
+          // append the option
+          val_tag.appendChild(opt_tag);
+        }
+      }
+      else if (typeof p.options === 'object' && p.options !== null)
+      {
+        // options are key => value pairs
+        Object.keys(p.options).forEach(index => {
+          // create the option
+          opt_tag = document.createElement('option');
+          opt_tag.text = p.options[index];
+          opt_tag.value = index;
+
+          // append the option
+          val_tag.appendChild(opt_tag);
+        });
+      }
     }
 
     // check for text before container
@@ -260,18 +263,18 @@ util.populateTable = function(prefix, obj)
 };
 
 /* auto-populate form fields based on object props */
-util.fillForm = function(prefix, obj, precision = 2)
+util.fillForm = function(obj)
 {
   // iterate over object props keys
   Object.keys(obj.props).forEach(elem =>
   {
-    let str = "#" + prefix + '_'  + elem;
+    let str = "#" + obj.prefix + '_'  + elem;
     let val = obj.props[elem].value;
 
     if (isNaN(val))
-      this.setValue(str, String(val).toTitleCase());
+      this.setValue(str, String(val));
     else
-      this.setValue(str, Number(val).toFixed(precision));
+      this.setValue(str, Number(val));
   });
 
 };

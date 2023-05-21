@@ -1,6 +1,6 @@
 "use strict";
 // define government parameters
-let government = {};
+let government = {prefix: 'gov'};
 
 // properties of object to iterate
 government.props = {
@@ -8,6 +8,19 @@ government.props = {
     value: 0,
     title: 'Power Concentration',
     description: 'How much power does an individual ruler or council have',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
+  },
+  wealth_concentration: {
+    value: 0,
+    title: 'Wealth Concentration',
+    description: 'How much wealth the rich control of the total available resources',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -30,10 +43,10 @@ government.props = {
       text_after: '%'
     }
   },
-  wealth_concentration: {
+  bureaucracy: {
     value: 0,
-    title: 'Wealth Concentration',
-    description: 'How much wealth the rich control of the total available resources',
+    title: 'Bureaucracy',
+    description: 'How complicated or complex are government processes; how efficient is decision making and action',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -73,19 +86,6 @@ government.props = {
     value: 0,
     title: 'Law Enforcement',
     description: 'How strict or effective is internal law enforcement within society',
-    html_tag: {
-      elem: 'input',
-      type: 'number',
-      min: 0,
-      max: 100,
-      step: 0.01,
-      text_after: '%'
-    }
-  },
-  bureaucracy: {
-    value: 0,
-    title: 'Bureaucracy',
-    description: 'How complicated or complex are government processes; how efficient is decision making and action',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -151,21 +151,14 @@ government.props = {
     html_tag: {
       elem: 'select',
     }
-  }
+  },
 };
 
 // select random government style
 government.ChooseStyle = function()
 {
-  // get data to choose from
-  let opts = Object.keys(this.props.style.options);
-
   // pick at random!
-  return opts[
-    Math.floor(
-      Math.random() * opts.length
-    )
-  ];
+  return Object.keys(this.props.style.options).randomValue();
 };
 
 /* generate starting conditions */

@@ -6,7 +6,7 @@ String.prototype.toTitleCase = function()
   let c = this.normalize().replace(/\s+/g, ' ').trim().toLowerCase().split(' ');
 
   // uppercase the first letter
-  for(var i = 0; i != c.length; i++)
+  for (var i = 0; i != c.length; i++)
   {
     if (c[i].length == 1)
     {
@@ -20,4 +20,4 @@ String.prototype.toTitleCase = function()
 
   // return results
   return c.join(' ');
-}
+};

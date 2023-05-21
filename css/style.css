@@ -16,7 +16,7 @@
 /* normal style stuff */
 .results
 {
-  width: 800px;
+  width: 95%;
   height: 600px;
 }
 
@@ -26,8 +26,9 @@
   text-align: right;
 }
 
-#gov_style
+.settings_table select
 {
+  min-width: 5em;
   text-align: center;
 }
 

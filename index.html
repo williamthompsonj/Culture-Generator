@@ -3,12 +3,14 @@
 <head>
 <title>Culture Generator</title>
 <link rel="stylesheet" href="css/style.css">
+<script src="scripts/lang/Array.prototype.js"></script>
 <script src="scripts/lang/Math.js"></script>
 <script src="scripts/lang/String.prototype.js"></script>
 <script src="scripts/util.js"></script>
 <script src="scripts/government.js"></script>
 <script src="scripts/population.js"></script>
 <script src="scripts/religion.js"></script>
+<script src="scripts/eventFactory.js"></script>
 <script src="scripts/ready.js"></script>
 </head>
 <body>
@@ -21,10 +23,10 @@
 </table>
 <br />
 <button type="button"
- onClick="government.Init();util.fillForm('gov', government);"
+ onClick="government.Init();util.fillForm(government);"
 >Random Government</button>
 <button type="button"
- onClick="government.rollStats();util.fillForm('gov', government);"
+ onClick="government.rollStats();util.fillForm(government);"
 >Re-roll Government</button>
 </fieldset>
 </form>
@@ -37,7 +39,7 @@
 </table>
 <br />
 <button type="button"
- onClick="population.Init();util.fillForm('pop', population);"
+ onClick="population.Init();util.fillForm(population);"
 >Generate Population</button>
 </fieldset>
 </form>
@@ -50,17 +52,18 @@
 </table>
 <br />
 <button type="button"
- onClick="religion.Init();util.fillForm('rel', religion);"
+ onClick="religion.Init();util.fillForm(religion);"
 >Generate Religion</button>
 </fieldset>
 </form>
 
 <br><br>
-<label for="results">Results</label>
+<button type="button"
+ onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100));"
+ >Mundane Headlines</button>
 <br>
-<textarea
- class="results"
+<pre
  id="results"
- name="results">Place Holder</textarea>
+ name="results">Place Holder</pre>
 </body>
 </html>

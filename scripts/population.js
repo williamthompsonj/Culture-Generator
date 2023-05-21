@@ -1,6 +1,6 @@
 "use strict";
 // define conditions of the population
-let population = {};
+let population = {prefix: 'pop'};
 
 // properties of object to iterate
 population.props = {
@@ -8,6 +8,19 @@ population.props = {
     value: 0,
     title: 'Poverty',
     description: 'How much of the population is below the poverty line',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
+  },
+  inequality: {
+    value: 0,
+    title: 'Inequality',
+    description: 'How big is the difference between poverty and average',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -30,10 +43,23 @@ population.props = {
       text_after: '%'
     }
   },
-  inequality: {
+  prejudice: {
     value: 0,
-    title: 'Inequality',
-    description: 'How big is the difference between poverty and average',
+    title: 'Prejudice',
+    description: 'How likely are people to show bias or racism',
+    html_tag: {
+      elem: 'input',
+      type: 'number',
+      min: 0,
+      max: 100,
+      step: 0.01,
+      text_after: '%'
+    }
+  },
+  dissent: {
+    value: 0,
+    title: 'Dissent',
+    description: 'How likely are people to protest or oppose things',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -59,20 +85,7 @@ population.props = {
   free_choice: {
     value: 0,
     title: 'Free Choice',
-    description: 'How much control people have over their life choices',
-    html_tag: {
-      elem: 'input',
-      type: 'number',
-      min: 0,
-      max: 100,
-      step: 0.01,
-      text_after: '%'
-    }
-  },
-  prejudice: {
-    value: 0,
-    title: 'Prejudice',
-    description: 'How likely are people to show bias or racism',
+    description: 'How much control people have over life choices such as their occupation, love interests, where they live, or what they can become',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -85,7 +98,7 @@ population.props = {
   free_time: {
     value: 0,
     title: 'Free Time',
-    description: 'How much free time do average people have',
+    description: 'How much time do average people have to do things they want outside of work and sleep',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -95,19 +108,6 @@ population.props = {
       text_after: '%'
     }
   },
-  dissent: {
-    value: 0,
-    title: 'Dissent',
-    description: 'How likely are people to protest or oppose things',
-    html_tag: {
-      elem: 'input',
-      type: 'number',
-      min: 0,
-      max: 100,
-      step: 0.01,
-      text_after: '%'
-    }
-  }
 };
 
 // initialize the religion form
