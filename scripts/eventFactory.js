@@ -33,6 +33,14 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
 
     // final step: resolve articles [a/an]
     temp_result = this.ResolveArticles(temp_result);
+    
+    // normalize white
+    temp_result = temp_result.trim().replace(/\s\s+/g, ' ');
+
+    // Capitalize first word in sentence.
+    let sentence = temp_result.split(' ');
+    sentence[0] = sentence[0].toTitleCase();
+    temp_result = sentence.join(' ');
 
     //save results
     factoryResult.push(temp_result);
@@ -41,7 +49,7 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
   return factoryResult.join("\r\n<br>\r\n<br>");
 };
 
-eventFactory.ResolveActivity = function(data, ChangeCase = true)
+eventFactory.ResolveActivity = function(data)
 {
   // separate string into pieces
   let data_arr = data.split('{');
@@ -68,18 +76,7 @@ eventFactory.ResolveActivity = function(data, ChangeCase = true)
 
   // check if we need to resolve more tokens
   if (data.indexOf('{') != -1)
-    data = this.ResolveActivity(data, false);
-
-  if (ChangeCase)
-  {
-    // normalize white space before proceeding
-    data = data.trim().replace(/\s\s+/g, ' ');
-
-    // Capitalize first word in sentence.
-    let sentence = data.split(' ');
-    sentence[0] = sentence[0].toTitleCase();
-    data = sentence.join(' ');
-  }
+    data = this.ResolveActivity(data);
 
   return data;
 };
@@ -768,6 +765,42 @@ eventFactory.incident.mundane = [
   '{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and {#2-9} children.',
   '{activity.mundane} incident kills {occupation.mundane|race.mundane} with no living relatives.',
   '{food.random} farmer has cart destroyed during high speed chase after local {occupation.mundane} does shenanigans.',
+  
+  // adapted from other websites
+  "[a/an] {characterization.positive} {hero|noble|member of the leader's family|clergy member|leader} died suddenly.",
+  "[a/an] {characterization.random|npc.relevance} {occupation.mundane} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}",
+  "[a/an] {characterization.random|npc.relevance} occupation.mundane was {assassinated|struck down in battle}",
+  "a major article of faith was {lost|stolen}",
+  "a new species {of monster|beneficial to the people} was discovered",
+  "a {noble|religious} order {was disbanded and scattered|fell into disgrace}",
+  "a {peace|settlement|trade} treaty was {signed|broken}",
+  "a series of {reformative|more restrictive} laws were enacted",
+  "an ancient {city|shrine} was discovered",
+  "[a/an] {assassination|avalanche|great violation of temple law|mine cave-in|rebellion of the nobles|regional peasant uprising|terrible flood|successful overthrow of the ruling government} occurred",
+  "an illness decimated the {flocks|herds}",
+  "fighting between '{evil|neutral|good}' temples occurred",
+  "fighting between 'evil' and '{neutral|good}' temples occurred",
+  "fighting between 'neutral' and '{evil|good}' temples occurred",
+  "fighting between 'good' and '{evil|neutral}' temples occurred",
+  "the powers of '{evil|neutrality|good}' made their presence known",
+  "a military campaign was launched {for monetary gain|for 'punitive reasons'|to expand borders|to regain lost territory}",
+  "[a/an] {academy of higher learning|new religion|walled town} was founded",
+  "there was an assassination attempt on a major figure by [a/an] {guild|lesser noble|personal enemy|religious order|state enemy|organizational enemy}",
+  "there was [a/an] {epidemic|disease} with an infection rate of {1|#2-70}% and a mortality rate of {#30-39}%",
+  "there was [a/an] {epidemic|disease} with an infection rate of {#71-80}% and a mortality rate of {#1-10}%",
+  "there was an attack by a group of {allied state|enemy state|internally} sponsored raiders",
+  "there was an attack by a group of {highly organized|poorly organized|peasant} raiders",
+  "there was an advance in {defensive military|engineering|food production|medical|naval|offensive military} technology",
+  "violent crime {increased|decreased} {everywhere|in the cities}",
+  "there was an invasion {for 'punitive reasons'|for the expansion of borders|to increase the national treasury|to regain lost territory}",
+  "a {major|minor} noble house {was destroyed|rose to prominence}",
+  "there was an {assassination attempt|incursion} on a major figure by {the military|foreign interests}",
+  "a {lost|stolen} {artifact|religious text} of the faith was {discovered|recovered}",
+  "the {flocks|herds} were fruitful and multiplied",
+  "the peasants revolted and {installed a new ruler|were violently suppressed|violently murdered the nobles}",
+  "the fields {yielded a bumper crop|withered and died}",
+  "{taxes|pirate attacks} increased",
+  "{active spying|treacherous sabotage|a new star cluster|a forgotten culture} was discovered",
 ];
 
 eventFactory.item.random = function(context = null)
@@ -901,11 +934,16 @@ eventFactory.npc.generic = [
 eventFactory.npc.relevance = [
   'small-time',
   'big-time',
-  'average',
   'major',
+  'minor',
+  'above average',
+  'average',
   'below average',
   'failed',
   'successful',
+  'important',
+  'unimportant',
+  'unknown',
 ];
 
 eventFactory.occupation.random = function(context = null)

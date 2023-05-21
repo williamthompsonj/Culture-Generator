@@ -22,12 +22,10 @@
 <!--- populate after page load --->
 </table>
 <br />
-<button type="button"
- onClick="government.Init();util.fillForm(government);"
->Random Government</button>
-<button type="button"
- onClick="government.rollStats();util.fillForm(government);"
->Re-roll Government</button>
+<button onClick="government.Init();util.fillForm(government);"
+ type="button">Random Government</button>
+<button onClick="government.rollStats();util.fillForm(government);"
+ type="button">Re-roll Government</button>
 </fieldset>
 </form>
 
@@ -38,9 +36,8 @@
 <!--- populate after page load --->
 </table>
 <br />
-<button type="button"
- onClick="population.Init();util.fillForm(population);"
->Generate Population</button>
+<button onClick="population.Init();util.fillForm(population);"
+ type="button">Generate Population</button>
 </fieldset>
 </form>
 
@@ -51,19 +48,15 @@
 <!--- populate after page load --->
 </table>
 <br />
-<button type="button"
- onClick="religion.Init();util.fillForm(religion);"
->Generate Religion</button>
+<button onClick="religion.Init();util.fillForm(religion);"
+ type="button">Generate Religion</button>
 </fieldset>
 </form>
 
 <br><br>
-<button type="button"
- onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100));"
- >Mundane Headlines</button>
+<button onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100));"
+ type="button" >Mundane Headlines</button>
 <br>
-<p
- id="results"
- name="results">Place Holder</p>
+<p id="results" name="results">Place Holder</p>
 </body>
 </html>
