@@ -38,7 +38,7 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
     factoryResult.push(temp_result);
   }
 
-  return factoryResult.join("\r\n\r\n");
+  return factoryResult.join("\r\n<br>\r\n<br>");
 };
 
 eventFactory.ResolveActivity = function(data, ChangeCase = true)

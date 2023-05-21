@@ -6,4 +6,7 @@ document.addEventListener("DOMContentLoaded", () =>
   util.populateTable(government);
   util.populateTable(population);
   util.populateTable(religion);
+  
+  // generate 100 mundane headlines
+  util.setValue('#results', eventFactory.GetActivity('mundane', 100));
 });
