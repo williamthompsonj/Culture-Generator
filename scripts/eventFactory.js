@@ -751,6 +751,17 @@ eventFactory.incident.random = function(context = null)
   ].randomValue();
 };
 
+/*
+  TODO: items that might be interesting but haven't made yet:
+  - a devastating forest fire scorched the land
+  - a horrible earthquake shook the land
+  - a tidal wave smashed the coast
+  - a terrible famine swept the land
+  - terrible monsters walked the land
+  - an old religion died out
+  - a new natural resource was discovered
+  - ancient knowledge was rediscovered
+*/
 eventFactory.incident.mundane = [
   '{characterization.random||npc.relevance} {occupation.mundane|race.mundane} saves {baby|elderly|} {animal.cute|race.mundane} from [a/an] {disaster.mundane}.',
   '{characterization.random||npc.relevance} {occupation.mundane|race.mundane} dies in {activity.mundane} accident.',
@@ -774,7 +785,7 @@ eventFactory.incident.mundane = [
   // adapted from other websites & improved for use here
   "[a/an] {characterization.positive} {hero|noble|member of the leader's family|clergy member|leader} died suddenly.",
   "[a/an] {characterization.random|npc.relevance} {occupation.mundane} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}.",
-  "[a/an] {characterization.random|npc.relevance} occupation.mundane was {assassinated|struck down in battle}.",
+  "[a/an] {characterization.random|npc.relevance} {occupation.mundane} was {assassinated|struck down in battle}.",
   "[a/an] {npc.relevance} article of faith was {lost|stolen|destroyed|hidden away}.",
   "a new species of {monster|plant|animal|insect} was discovered that is {harmful|helpful|beneficial|devastating} to the people.",
   "a {noble|religious} order was {disbanded|scattered} and fell into disgrace.",
