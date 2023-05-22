@@ -785,7 +785,7 @@ eventFactory.incident.mundane = [
   "an illness decimated the {animal.cute}s.",
   "fighting between {evil|neutral|good} temples occurred.",
   "fighting between evil and {neutral|good} temples occurred.",
-  "fighting between neutral and '{evil|good} temples occurred.",
+  "fighting between neutral and {evil|good} temples occurred.",
   "fighting between good and {evil|neutral} temples occurred.",
   "the powers of {evil|neutrality|good} made their presence known.",
   "a military campaign was launched {for monetary gain|for punitive reasons|to expand borders|to regain lost territory|to explore an unknown wasteland}.",
