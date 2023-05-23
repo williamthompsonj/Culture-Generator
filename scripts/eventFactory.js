@@ -17,7 +17,7 @@ let eventFactory = {
 eventFactory.GetActivity = function(level = 'mundane', qty = 1)
 {
   var factoryResult = [];
-  for(var i = 0; i <= qty; i++)
+  for (var i = 0; i <= qty; i++)
   {
     var temp_result;
     switch (level)
@@ -33,7 +33,7 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
 
     // final step: resolve articles [a/an]
     temp_result = this.ResolveArticles(temp_result);
-    
+
     // normalize white
     temp_result = temp_result.trim().replace(/\s\s+/g, ' ');
 
@@ -781,7 +781,7 @@ eventFactory.incident.mundane = [
   '{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and {#2-9} children.',
   '{activity.mundane} incident kills {occupation.mundane|race.mundane} with no living relatives.',
   '{food.random} farmer has cart destroyed during high speed chase after local {occupation.mundane} does shenanigans.',
-  
+
   // adapted from other websites & improved for use here
   "[a/an] {characterization.positive} {hero|noble|member of the leader's family|clergy member|leader} died suddenly.",
   "[a/an] {characterization.random|npc.relevance} {occupation.mundane} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}.",
