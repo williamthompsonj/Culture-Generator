@@ -14,9 +14,9 @@
 }
 
 /* normal style stuff */
-.results
+#results
 {
-  width: 95%;
+  width: 99%;
   height: 600px;
 }
 
