@@ -16,14 +16,93 @@ database.feats = [
   "additionalSpells": [
     {
       "ability": "con",
-      "innate": [
-        {
-          "choose": "level=1|class=Sorcerer"
+      "innate": {
+        "_": {
+          "rest": {
+            "1": [
+              {
+                "choose": "level=1|class=Sorcerer"
+              }
+            ]
+          }
         }
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Sorcerer"
+          }
+        ]
+      }
+    }
+  ],
+  "entries": [
+    "You have manifested an aberrant dragonmark. Determine its appearance and the flaw associated with it. You gain the following benefits:",
+    {
+      "items": [
+        "You learn a {@filter cantrip of your choice from the sorcerer spell list|spells|level=0|class=Sorcerer}. In addition, choose a {@filter 1st-level spell from the sorcerer spell list|spells|level=1|class=Sorcerer}. You learn that spell and can cast it through your mark. Once you cast it, you must finish a short or long rest before you can cast it again through the mark. Constitution is your spellcasting ability for these spells.",
+        "When you cast the 1st-level spell through your mark, you can expend one of your Hit Dice and roll it. If you roll an even number, you gain a number of temporary hit points equal to the number rolled. If you roll an odd number, one random creature within 30 feet of you (not including you) takes force damage equal to the number rolled. If no other creatures are in range, you take the damage."
+      ]
+    },
+    "You also develop a random flaw from the Aberrant Dragonmark Flaws table.",
+    {
+      "caption": "Aberrant Dragonmark Flaws",
+      "colLabels": [
+        "d8",
+        "Flaw"
       ],
-      "known": [
+      "colStyles": [
+        "col-2 text-center",
+        "col-10"
+      ],
+      "rows": [
+        [
+          "1",
+          "Your mark is a source of constant physical pain."
+        ],
+        [
+          "2",
+          "Your mark whispers to you. Its meaning can be unclear."
+        ],
+        [
+          "3",
+          "When you're stressed, the mark hisses audibly."
+        ],
+        [
+          "4",
+          "The skin around the mark is burned, scaly, or withered."
+        ],
+        [
+          "5",
+          "Animals are uneasy around you."
+        ],
+        [
+          "6",
+          "You have a mood swing any time you use your mark."
+        ],
+        [
+          "7",
+          "Your looks change slightly whenever you use the mark."
+        ],
+        [
+          "8",
+          "You have horrific nightmares after you use your mark."
+        ]
+      ]
+    },
+    {
+      "type": "section",
+      "entries": [
         {
-          "choose": "level=0|class=Sorcerer"
+          "entries": [
+            {
+              "name": "Option: Greater Aberrant Powers",
+              "entries": [
+                "At the DM's option, a character who has the Aberrant Dragonmark feat has a chance of manifesting greater power. Upon reaching 10th level, such a character has a {@chance 10|10 percent} chance of gaining an {@filter epic boon|rewards|type=boon} from among the options in chapter 7 of the {@book Dungeon Master's Guide}. If the character fails to gain a boon, they have a {@chance 10|10 percent} chance the next time they gain a level.",
+                "If the character gains a boon, the DM chooses it or determines it randomly. The character also permanently loses one of their Hit Dice, and their hit point maximum is reduced by an amount equal to a roll of that die plus their Constitution modifier (minimum reduction of 1). This reduction can't be reversed by any means."
+              ]
+            }
+          ]
         }
       ]
     }
@@ -38,17 +117,27 @@ database.feats = [
     }
   ],
   "entries": [
-    "You have advantage on Charisma (Deception) and Charisma (Performance) checks when trying to pass yourself off as a different person.",
-    "You can mimic the speech of another person or the sounds made by other creatures. You must have heard the person speaking, or heard the creature make the sound, for at least 1 minute. A successful Wisdom (Insight) check contested by your Charisma (Deception) check allows a listener to determine that the effect is faked."
+    "Skilled at mimicry and dramatics, you gain the following benefits:",
+    {
+      "items": [
+        "You have advantage on Charisma ({@skill Deception}) and Charisma ({@skill Performance}) checks when trying to pass yourself off as a different person.",
+        "You can mimic the speech of another person or the sounds made by other creatures. You must have heard the person speaking, or heard the creature make the sound, for at least 1 minute. A successful Wisdom ({@skill Insight}) check contested by your Charisma ({@skill Deception}) check allows a listener to determine that the effect is faked."
+      ]
+    }
   ]
 },
 {
   "name": "Alert",
   "source": "PHB",
-  "initiative": 5,
   "entries": [
-    "You can't be surprised while you are conscious.",
-    "Other creatures don't gain advantage on attack rolls against you as a result of being unseen by you."
+    "Always on the lookout for danger, you gain the following benefits:",
+    {
+      "items": [
+        "You gain a +5 bonus to initiative.",
+        "You can't be {@quickref Surprise|3|0|surprised} while you are conscious.",
+        "Other creatures don't gain advantage on attack rolls against you as a result of being unseen by you."
+      ]
+    }
   ]
 },
 {
@@ -62,20 +151,35 @@ database.feats = [
   "additionalSpells": [
     {
       "ability": "int",
-      "innate": [
-        {
-          "choose": "level=1|class=Artificer"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Artificer"
+              }
+            ]
+          }
         }
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Artificer"
-        }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Artificer"
+          }
+        ]
+      }
     }
   ],
   "entries": [
-    "You gain proficiency with one type of {@filter artisan's tools|items|type=artisan's tools} of your choice, and you can use that type of tool as a spellcasting focus for any spell you cast that uses Intelligence as its spellcasting ability."
+    "You've learned some of an artificer's inventiveness:",
+    {
+      "items": [
+        "You learn one cantrip of your choice from the {@filter artificer spell list|spells|level=0;1|class=artificer}, and you learn one 1st-level spell of your choice from {@filter that list|spells|level=0;1|class=artificer}. Intelligence is your spellcasting ability for these spells.",
+        "You can cast this feat's 1st-level spell without a spell slot, and you must finish a long rest before you can cast it in this way again. You can also cast the spell using any spell slots you have.",
+        "You gain proficiency with one type of {@filter artisan's tools|items|type=artisan's tools} of your choice, and you can use that type of tool as a spellcasting focus for any spell you cast that uses Intelligence as its spellcasting ability."
+      ]
+    }
   ]
 },
 {
@@ -83,16 +187,24 @@ database.feats = [
   "source": "PHB",
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "When you are {@condition prone}, standing up uses only 5 feet of your movement.",
-    "Climbing doesn't cost you extra movement.",
-    "You can make a running long jump or a running high jump after moving only 5 feet on foot, rather than 10 feet."
+    "You have undergone extensive physical training to gain the following benefits:",
+    {
+      "items": [
+        "When you are {@condition prone}, standing up uses only 5 feet of your movement.",
+        "Climbing doesn't cost you extra movement.",
+        "You can make a running long jump or a running high jump after moving only 5 feet on foot, rather than 10 feet."
+      ]
+    }
   ]
 },
 {
@@ -108,6 +220,7 @@ database.feats = [
     }
   ],
   "entries": [
+    "Your people have extraordinary luck, which you have learned to mystically lend to your companions when you see them falter. You're not sure how you do it; you just wish it, and it happens. Surely a sign of fortune's favor!",
     "When an ally you can see within 30 feet of you rolls a 1 on the {@dice d20} for an attack roll, an ability check, or a saving throw, you can use your reaction to let the ally reroll the die. The ally must use the new roll.",
     "When you use this ability, you can't use your Lucky racial trait before the end of your next turn."
   ]
@@ -125,10 +238,13 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "con",
-        "wis"
-      ]
+      "choose": {
+        "from": [
+          "con",
+          "wis"
+        ],
+        "amount": 1
+      }
     }
   ],
   "toolProficiencies": [
@@ -137,17 +253,28 @@ database.feats = [
     }
   ],
   "entries": [
-    "As part of a short rest, you can cook special food, provided you have ingredients and {@item cook's utensils|phb} on hand. You can prepare enough of this food for a number of creatures equal to 4 + your proficiency bonus. At the end of the short rest, any creature who eats the food and spends one or more Hit Dice to regain hit points regains an extra {@dice 1d8} hit points.",
-    "With one hour of work or when you finish a long rest, you can cook a number of treats equal to your proficiency bonus. These special treats last 8 hours after being made. A creature can use a bonus action to eat one of those treats to gain temporary hit points equal to your proficiency bonus."
+    "Time spent mastering the culinary arts has paid off, granting you the following benefits:",
+    {
+      "items": [
+        "You gain proficiency with {@item cook's utensils} if you don't already have it.",
+        "As part of a short rest, you can cook special food, provided you have ingredients and {@item cook's utensils} on hand. You can prepare enough of this food for a number of creatures equal to 4 + your proficiency bonus. At the end of the short rest, any creature who eats the food and spends one or more Hit Dice to regain hit points regains an extra {@dice 1d8} hit points.",
+        "With one hour of work or when you finish a long rest, you can cook a number of treats equal to your proficiency bonus. These special treats last 8 hours after being made. A creature can use a bonus action to eat one of those treats to gain temporary hit points equal to your proficiency bonus."
+      ]
+    }
   ]
 },
 {
   "name": "Crossbow Expert",
   "source": "PHB",
   "entries": [
-    "You ignore the loading quality of crossbows with which you are proficient.",
-    "Being within 5 feet of a hostile creature doesn't impose disadvantage on your ranged attack rolls.",
-    "When you use the {@action Attack} action and attack with a one-handed weapon, you can use a bonus action to attack with a {@item hand crossbow|phb} you are holding."
+    "Thanks to extensive practice with the crossbow, you gain the following benefits:",
+    {
+      "items": [
+        "You ignore the loading quality of crossbows with which you are proficient.",
+        "Being within 5 feet of a hostile creature doesn't impose disadvantage on your ranged attack rolls.",
+        "When you use the {@action Attack} action and attack with a one-handed weapon, you can use a bonus action to attack with a {@item hand crossbow} you are holding."
+      ]
+    }
   ]
 },
 {
@@ -155,15 +282,23 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "str",
-        "con"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "con"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "Once per turn, when you hit a creature with an attack that deals bludgeoning damage, you can move it 5 feet to an unoccupied space, provided the target is no more than one size larger than you.",
-    "When you score a critical hit that deals bludgeoning damage to a creature, attack rolls against that creature are made with advantage until the start of your next turn."
+    "You are practiced in the art of crushing your enemies, granting you the following benefits:",
+    {
+      "items": [
+        "Once per turn, when you hit a creature with an attack that deals bludgeoning damage, you can move it 5 feet to an unoccupied space, provided the target is no more than one size larger than you.",
+        "When you score a critical hit that deals bludgeoning damage to a creature, attack rolls against that creature are made with advantage until the start of your next turn."
+      ]
+    }
   ]
 },
 {
@@ -196,15 +331,23 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "str",
-        "con",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "con",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "Instead of exhaling destructive energy, you can expend a use of your Breath Weapon trait to roar, forcing each creature of your choice within 30 feet of you to make a Wisdom saving throw (DC 8 + your proficiency bonus + your Charisma modifier). A target automatically succeeds on the save if it can't hear or see you. On a failed save, a target becomes {@condition frightened} of you for 1 minute. If the {@condition frightened} target takes any damage, it can repeat the saving throw, ending the effect on itself on a success."
+    "When angered, you radiate menace. You gain the following benefits:",
+    {
+      "items": [
+        "Instead of exhaling destructive energy, you can expend a use of your Breath Weapon trait to roar, forcing each creature of your choice within 30 feet of you to make a Wisdom saving throw (DC 8 + your proficiency bonus + your Charisma modifier). A target automatically succeeds on the save if it can't hear or see you. On a failed save, a target becomes {@condition frightened} of you for 1 minute. If the {@condition frightened} target takes any damage, it can repeat the saving throw, ending the effect on itself on a success."
+      ]
+    }
   ]
 },
 {
@@ -221,16 +364,24 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "str",
-        "con",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "con",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "Your scales harden. While you aren't wearing armor, you can calculate your AC as 13 + your Dexterity modifier. You can use a shield and still gain this benefit.",
-    "You grow retractable claws from the tips of your fingers. Extending or retracting the claws requires no action. The claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to {@dice 1d4} + your Strength modifier, instead of the normal bludgeoning damage for an unarmed strike."
+    "You manifest scales and claws reminiscent of your draconic ancestors. You gain the following benefits:",
+    {
+      "items": [
+        "Your scales harden. While you aren't wearing armor, you can calculate your AC as 13 + your Dexterity modifier. You can use a shield and still gain this benefit.",
+        "You grow retractable claws from the tips of your fingers. Extending or retracting the claws requires no action. The claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to {@dice 1d4} + your Strength modifier, instead of the normal bludgeoning damage for an unarmed strike."
+      ]
+    }
   ]
 },
 {
@@ -249,33 +400,52 @@ database.feats = [
   "additionalSpells": [
     {
       "ability": "cha",
-      "known": [
-        "detect magic"
-      ],
-      "innate": [
-        "levitate",
-        "dispel magic"
-      ]
+      "innate": {
+        "_": {
+          "will": [
+            "detect magic"
+          ],
+          "daily": {
+            "1e": [
+              "levitate",
+              "dispel magic"
+            ]
+          }
+        }
+      }
     }
+  ],
+  "entries": [
+    "You learn more of the magic typical of dark elves. You learn the {@spell detect magic} spell and can cast it at will, without expending a spell slot. You also learn {@spell levitate} and {@spell dispel magic}, each of which you can cast once without expending a spell slot. You regain the ability to cast those two spells in this way when you finish a long rest. Charisma is your spellcasting ability for all three spells."
   ]
 },
 {
   "name": "Dual Wielder",
   "source": "PHB",
   "entries": [
-    "You gain a +1 bonus to AC while you are wielding a separate melee weapon in each hand.",
-    "You can use two-weapon fighting even when the one-handed melee weapons you are wielding aren't light.",
-    "You can draw or stow two one-handed weapons when you would normally be able to draw or stow only one."
+    "You master fighting with two weapons, gaining the following benefits:",
+    {
+      "items": [
+        "You gain a +1 bonus to AC while you are wielding a separate melee weapon in each hand.",
+        "You can use two-weapon fighting even when the one-handed melee weapons you are wielding aren't light.",
+        "You can draw or stow two one-handed weapons when you would normally be able to draw or stow only one."
+      ]
+    }
   ]
 },
 {
   "name": "Dungeon Delver",
   "source": "PHB",
   "entries": [
-    "You have advantage on Wisdom ({@skill Perception}) and Intelligence ({@skill Investigation}) checks made to detect the presence of secret doors.",
-    "You have advantage on saving throws made to avoid or resist traps.",
-    "You have resistance to the damage dealt by traps.",
-    "Traveling at a fast pace doesn't impose the normal -5 penalty on your passive Wisdom ({@skill Perception}) score."
+    "Alert to the hidden traps and secret doors found in many dungeons, you gain the following benefits:",
+    {
+      "items": [
+        "You have advantage on Wisdom ({@skill Perception}) and Intelligence ({@skill Investigation}) checks made to detect the presence of secret doors.",
+        "You have advantage on saving throws made to avoid or resist traps.",
+        "You have resistance to the damage dealt by traps.",
+        "Traveling at a fast pace doesn't impose the normal -5 penalty on your passive Wisdom ({@skill Perception}) score."
+      ]
+    }
   ]
 },
 {
@@ -287,7 +457,12 @@ database.feats = [
     }
   ],
   "entries": [
-    "When you roll a Hit Die to regain hit points, the minimum number of hit points you regain from the roll equals twice your Constitution modifier (minimum of 2)."
+    "Hardy and resilient, you gain the following benefits:",
+    {
+      "items": [
+        "When you roll a Hit Die to regain hit points, the minimum number of hit points you regain from the roll equals twice your Constitution modifier (minimum of 2)."
+      ]
+    }
   ]
 },
 {
@@ -308,7 +483,12 @@ database.feats = [
     }
   ],
   "entries": [
-    "Whenever you take the {@action Dodge} action in combat, you can spend one Hit Die to heal yourself. Roll the die, add your Constitution modifier, and regain a number of hit points equal to the total (minimum of 1)."
+    "You have the blood of dwarf heroes flowing through your veins. You gain the following benefits:",
+    {
+      "items": [
+        "Whenever you take the {@action Dodge} action in combat, you can spend one Hit Die to heal yourself. Roll the die, add your Constitution modifier, and regain a number of hit points equal to the total (minimum of 1)."
+      ]
+    }
   ]
 },
 {
@@ -316,7 +496,7 @@ database.feats = [
   "source": "TCE",
   "prerequisite": [
     {
-      "spellcasting": true
+      "spellcasting2020": true
     }
   ],
   "optionalfeatureProgression": [
@@ -366,16 +546,24 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "dex",
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "dex",
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "Whenever you have advantage on an attack roll using Dexterity, Intelligence, Wisdom, or Charisma, you can reroll one of the dice once."
+    "The accuracy of elves is legendary, especially that of elf archers and spellcasters. You have uncanny aim with attacks that rely on precision rather than brute force. You gain the following benefits:",
+    {
+      "items": [
+        "Whenever you have advantage on an attack roll using Dexterity, Intelligence, Wisdom, or Charisma, you can reroll one of the dice once."
+      ]
+    }
   ]
 },
 {
@@ -392,14 +580,22 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "dex",
-        "int"
-      ]
+      "choose": {
+        "from": [
+          "dex",
+          "int"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "Immediately after you take damage, you can use a reaction to magically become {@condition invisible} until the end of your next turn or until you attack, deal damage, or force someone to make a saving throw. Once you use this ability, you can't do so again until you finish a short or long rest."
+    "Your people are clever, with a knack for illusion magic. You have learned a magical trick for fading away when you suffer harm. You gain the following benefits:",
+    {
+      "items": [
+        "Immediately after you take damage, you can use a reaction to magically become {@condition invisible} until the end of your next turn or until you attack, deal damage, or force someone to make a saving throw. Once you use this ability, you can't do so again until you finish a short or long rest."
+      ]
+    }
   ]
 },
 {
@@ -417,10 +613,13 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "int",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "languageProficiencies": [
@@ -431,10 +630,23 @@ database.feats = [
   "additionalSpells": [
     {
       "ability": "int",
-      "innate": [
-        {
-          "misty step": "short or long rest"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              "misty step"
+            ]
+          }
         }
+      }
+    }
+  ],
+  "entries": [
+    "Your study of high elven lore has unlocked fey power that few other elves possess, except your eladrin cousins. Drawing on your fey ancestry, you can momentarily stride through the Feywild to shorten your path from one place to another. You gain the following benefits:",
+    {
+      "items": [
+        "You learn to speak, read, and write {@language Sylvan}.",
+        "You learn the {@spell misty step} spell and can cast it once without expending a spell slot. You regain the ability to cast it in this way when you finish a short or long rest. Intelligence is your spellcasting ability for this spell."
       ]
     }
   ]
@@ -444,26 +656,40 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "additionalSpells": [
     {
       "ability": "inherit",
-      "innate": [
-        "misty step",
-        {
-          "choose": "level=1|school=E; D"
+      "innate": {
+        "_": {
+          "daily": {
+            "1e": [
+              "misty step",
+              {
+                "choose": "level=1|school=E;D"
+              }
+            ]
+          }
         }
-      ]
+      }
     }
   ],
   "entries": [
-    "You learn the {@spell misty step} spell and one {@filter 1st-level spell|spells|level=1|school=E; D} of your choice. The {@filter 1st-level spell|spells|level=1|school=E; D} must be from the divination or enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat."
+    "Your exposure to the Feywild's magic has changed you, granting you the following benefits:",
+    {
+      "items": [
+        "You learn the {@spell misty step} spell and one {@filter 1st-level spell|spells|level=1|school=E;D} of your choice. The {@filter 1st-level spell|spells|level=1|school=E;D} must be from the divination or enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat."
+      ]
+    }
   ]
 },
 {
@@ -488,6 +714,10 @@ database.feats = [
         "*": 1
       }
     }
+  ],
+  "entries": [
+    "Your martial training has helped you develop a particular style of fighting. As a result, you learn one {@filter Fighting Style|optionalfeatures|Feature Type=FS:F} option of your choice from the fighter class. If you already have a style, the one you choose must be different.",
+    "Whenever you reach a level that grants the Ability Score Improvement feature, you can replace this feat's fighting style with another one from the fighter class that you don't have."
   ]
 },
 {
@@ -504,31 +734,45 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "int",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "When you roll fire damage for a spell you cast, you can reroll any roll of 1 on the fire damage dice, but you must use the new roll, even if it is another 1.",
-    "Whenever you cast a spell that deals fire damage, you can cause flames to wreathe you until the end of your next turn. The flames don't harm you or your possessions, and they shed bright light out to 30 feet and dim light for an additional 30 feet. While the flames are present, any creature within 5 feet of you that hits you with a melee attack takes {@damage 1d4} fire damage."
+    "You learn to call on hellfire to serve your commands. You gain the following benefits:",
+    {
+      "items": [
+        "When you roll fire damage for a spell you cast, you can reroll any roll of 1 on the fire damage dice, but you must use the new roll, even if it is another 1.",
+        "Whenever you cast a spell that deals fire damage, you can cause flames to wreathe you until the end of your next turn. The flames don't harm you or your possessions, and they shed bright light out to 30 feet and dim light for an additional 30 feet. While the flames are present, any creature within 5 feet of you that hits you with a melee attack takes {@damage 1d4} fire damage."
+      ]
+    }
   ]
 },
 {
   "name": "Gift of the Chromatic Dragon",
   "source": "FTD",
   "entries": [
+    "You've manifested some of the power of chromatic dragons, granting you the following benefits:",
     {
-      "name": "Chromatic Infusion",
-      "description": [
-        "As a bonus action, you can touch a {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon; simple weapon} and infuse it with one of the following damage types: acid, cold, fire, lightning, or poison. For the next minute, the weapon deals an extra {@damage 1d4} damage of the chosen type when it hits. After you use this bonus action, you can't do so again until you finish a long rest."
-      ]
-    },
-    {
-      "name": "Reactive Resistance",
-      "description": [
-        "When you take acid, cold, fire, lightning, or poison damage, you can use your reaction to give yourself resistance to that instance of damage. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+      "style": "list-hang-notitle",
+      "items": [
+        {
+          "name": "Chromatic Infusion",
+          "entries": [
+            "As a bonus action, you can touch a {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} and infuse it with one of the following damage types: acid, cold, fire, lightning, or poison. For the next minute, the weapon deals an extra {@damage 1d4} damage of the chosen type when it hits. After you use this bonus action, you can't do so again until you finish a long rest."
+          ]
+        },
+        {
+          "name": "Reactive Resistance",
+          "entries": [
+            "When you take acid, cold, fire, lightning, or poison damage, you can use your reaction to give yourself resistance to that instance of damage. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+          ]
+        }
       ]
     }
   ]
@@ -538,18 +782,27 @@ database.feats = [
   "source": "FTD",
   "ability": [
     {
-      "choose": [
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
+    "You've manifested some of the power of gem dragons, granting you the following benefits:",
     {
-      "name": "Telekinetic Reprisal",
-      "description": [
-        "When you take damage from a creature that is within 10 feet of you, you can use your reaction to emanate telekinetic energy. The creature that dealt damage to you must make a Strength saving throw (DC equals 8 + your proficiency bonus + the ability modifier of the score increased by this feat). On a failed save, the creature takes {@damage 2d8} force damage and is pushed up to 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+      "style": "list-hang-notitle",
+      "items": [
+        {
+          "name": "Telekinetic Reprisal",
+          "entries": [
+            "When you take damage from a creature that is within 10 feet of you, you can use your reaction to emanate telekinetic energy. The creature that dealt damage to you must make a Strength saving throw (DC equals 8 + your proficiency bonus + the ability modifier of the score increased by this feat). On a failed save, the creature takes {@damage 2d8} force damage and is pushed up to 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+          ]
+        }
       ]
     }
   ]
@@ -566,16 +819,34 @@ database.feats = [
           "cha"
         ]
       },
-      "innate": [
-        "cure wounds"
-      ]
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              "cure wounds"
+            ]
+          }
+        }
+      }
     }
   ],
   "entries": [
+    "You've manifested some of the power of metallic dragons, granting you the following benefits:",
     {
-      "name": "Protective Wings",
-      "description": [
-        "When you or another creature you can see within 5 feet of you is hit by an attack roll, you can use your reaction to manifest spectral wings from your back for a moment. You grant a bonus to the target's AC equal to your proficiency bonus against that attack roll, potentially causing it to miss. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+      "style": "list-hang-notitle",
+      "items": [
+        {
+          "name": "Draconic Healing",
+          "entries": [
+            "You learn the {@spell cure wounds} spell. You can cast this spell without expending a spell slot. Once you cast this spell in this way, you can't do so again until you finish a long rest. You can also cast this spell using spell slots you have. The spell's spellcasting ability is Intelligence, Wisdom, or Charisma when you cast it with this feat (choose when you gain the feat)."
+          ]
+        },
+        {
+          "name": "Protective Wings",
+          "entries": [
+            "You can manifest protective wings that can shield you or others. When you or another creature you can see within 5 feet of you is hit by an attack roll, you can use your reaction to manifest spectral wings from your back for a moment. You grant a bonus to the target's AC equal to your proficiency bonus against that attack roll, potentially causing it to miss. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+          ]
+        }
       ]
     }
   ]
@@ -583,7 +854,6 @@ database.feats = [
 {
   "name": "Grappler",
   "source": "PHB",
-  "srd": true,
   "prerequisite": [
     {
       "ability": [
@@ -594,16 +864,26 @@ database.feats = [
     }
   ],
   "entries": [
-    "You have advantage on attack rolls against a creature you are grappling.",
-    "You can use your action to try to pin a creature {@condition grappled} by you. To do so, make another grapple check. If you succeed, you and the creature are both {@condition restrained} until the grapple ends."
+    "You've developed the skills necessary to hold your own in close-quarters grappling. You gain the following benefits:",
+    {
+      "items": [
+        "You have advantage on attack rolls against a creature you are grappling.",
+        "You can use your action to try to pin a creature {@condition grappled} by you. To do so, make another grapple check. If you succeed, you and the creature are both {@condition restrained} until the grapple ends."
+      ]
+    }
   ]
 },
 {
   "name": "Great Weapon Master",
   "source": "PHB",
   "entries": [
-    "On your turn, when you score a critical hit with a melee weapon or reduce a creature to 0 hit points with one, you can make one melee weapon attack as a bonus action.",
-    "Before you make a melee attack with a heavy weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack's damage."
+    "You've learned to put the weight of a weapon to your advantage, letting its momentum empower your strikes. You gain the following benefits:",
+    {
+      "items": [
+        "On your turn, when you score a critical hit with a melee weapon or reduce a creature to 0 hit points with one, you can make one melee weapon attack as a bonus action.",
+        "Before you make a melee attack with a heavy weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack's damage."
+      ]
+    }
   ]
 },
 {
@@ -620,16 +900,27 @@ database.feats = [
     }
   ],
   "entries": [
-    "You ignore the loading property of firearms.",
-    "Being within 5 feet of a hostile creature doesn't impose disadvantage on your ranged attack rolls."
+    "You have a quick hand and keen eye when employing firearms, granting you the following benefits:",
+    {
+      "items": [
+        "You gain proficiency with firearms (see \"{@variantrule Firearms}\" in the Dungeon Master's Guide).",
+        "You ignore the loading property of firearms.",
+        "Being within 5 feet of a hostile creature doesn't impose disadvantage on your ranged attack rolls."
+      ]
+    }
   ]
 },
 {
   "name": "Healer",
   "source": "PHB",
   "entries": [
-    "When you use a {@item healer's kit|phb} to stabilize a dying creature, that creature also regains 1 hit point.",
-    "As an action, you can spend one use of a {@item healer's kit|phb} to tend to a creature and restore {@dice 1d6 + 4} hit points to it, plus additional hit points equal to the creature's maximum number of Hit Dice. The creature can't regain hit points from this feat again until it finishes a short or long rest."
+    "You are an able physician, allowing you to mend wounds quickly and get your allies back in the fight. You gain the following benefits:",
+    {
+      "items": [
+        "When you use a {@item healer's kit} to stabilize a dying creature, that creature also regains 1 hit point.",
+        "As an action, you can spend one use of a {@item healer's kit} to tend to a creature and restore {@dice 1d6 + 4} hit points to it, plus additional hit points equal to the creature's maximum number of Hit Dice. The creature can't regain hit points from this feat again until it finishes a short or long rest."
+      ]
+    }
   ]
 },
 {
@@ -653,6 +944,14 @@ database.feats = [
     {
       "heavy": true
     }
+  ],
+  "entries": [
+    "You have trained to master the use of heavy armor, gaining the following benefits:",
+    {
+      "items": [
+        "You gain proficiency with heavy armor."
+      ]
+    }
   ]
 },
 {
@@ -673,7 +972,12 @@ database.feats = [
     }
   ],
   "entries": [
-    "While you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from nonmagical attacks is reduced by 3."
+    "You can use your armor to deflect strikes that would kill others. You gain the following benefits:",
+    {
+      "items": [
+        "While you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from nonmagical attacks is reduced by 3."
+      ]
+    }
   ]
 },
 {
@@ -698,7 +1002,13 @@ database.feats = [
     "poison"
   ],
   "entries": [
-    "You have advantage on saving throws against being {@condition poisoned}."
+    "Fiendish blood runs strong in you, unlocking a resilience akin to that possessed by some fiends. You gain the following benefits:",
+    {
+      "items": [
+        "You have resistance to cold and poison damage.",
+        "You have advantage on saving throws against being {@condition poisoned}."
+      ]
+    }
   ]
 },
 {
@@ -726,9 +1036,14 @@ database.feats = [
     }
   ],
   "entries": [
-    "You always know which way is north.",
-    "You always know the number of hours left before the next sunrise or sunset.",
-    "You can accurately recall anything you have seen or heard within the past month."
+    "You have a mind that can track time, direction, and detail with uncanny precision. You gain the following benefits:",
+    {
+      "items": [
+        "You always know which way is north.",
+        "You always know the number of hours left before the next sunrise or sunset.",
+        "You can accurately recall anything you have seen or heard within the past month."
+      ]
+    }
   ]
 },
 {
@@ -736,15 +1051,26 @@ database.feats = [
   "source": "PHB",
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "armorProficiencies": [
     {
       "light": true
+    }
+  ],
+  "entries": [
+    "You have trained to master the use of light armor, gaining the following benefits:",
+    {
+      "items": [
+        "You gain proficiency with light armor."
+      ]
     }
   ]
 },
@@ -762,7 +1088,13 @@ database.feats = [
     }
   ],
   "entries": [
-    "You can ably create written ciphers. Others can't decipher a code you create unless you teach them, they succeed on an Intelligence check (DC equal to your Intelligence score + your proficiency bonus), or they use magic to decipher it."
+    "You have studied languages and codes, gaining the following benefits:",
+    {
+      "items": [
+        "You learn three languages of your choice.",
+        "You can ably create written ciphers. Others can't decipher a code you create unless you teach them, they succeed on an Intelligence check (DC equal to your Intelligence score + your proficiency bonus), or they use magic to decipher it."
+      ]
+    }
   ]
 },
 {
@@ -779,9 +1111,14 @@ database.feats = [
   "name": "Mage Slayer",
   "source": "PHB",
   "entries": [
-    "When a creature within 5 feet of you casts a spell, you can use your reaction to make a melee weapon attack against that creature.",
-    "When you damage a creature that is {@status concentration||concentrating} on a spell, that creature has disadvantage on the saving throw it makes to maintain its {@status concentration}.",
-    "You have advantage on saving throws against spells cast by creatures within 5 feet of you."
+    "You have practiced techniques useful in melee combat against spellcasters, gaining the following benefits:",
+    {
+      "items": [
+        "When a creature within 5 feet of you casts a spell, you can use your reaction to make a melee weapon attack against that creature.",
+        "When you damage a creature that is {@status concentration||concentrating} on a spell, that creature has disadvantage on the saving throw it makes to maintain its {@status concentration}.",
+        "You have advantage on saving throws against spells cast by creatures within 5 feet of you."
+      ]
+    }
   ]
 },
 {
@@ -791,93 +1128,146 @@ database.feats = [
     {
       "name": "Bard Spells",
       "ability": "cha",
-      "innate": [
-        {
-          "choose": "level=1|class=Bard"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Bard"
+              }
+            ]
+          }
         }
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Bard",
-          "count": 2
-        }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Bard",
+            "count": 2
+          }
+        ]
+      }
     },
     {
       "name": "Cleric Spells",
       "ability": "wis",
-      "innate": [
-        {
-          "choose": "level=1|class=Cleric"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Cleric"
+              }
+            ]
+          }
         }
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Cleric",
-          "count": 2
-        }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Cleric",
+            "count": 2
+          }
+        ]
+      }
     },
     {
       "name": "Druid Spells",
       "ability": "wis",
-      "innate": [
-        {
-          "choose": "level=1|class=Druid"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Druid"
+              }
+            ]
+          }
         }
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Druid",
-          "count": 2
-        }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Druid",
+            "count": 2
+          }
+        ]
+      }
     },
     {
       "name": "Sorcerer Spells",
       "ability": "cha",
-      "innate": [
-        {
-          "choose": "level=1|class=Sorcerer"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Sorcerer"
+              }
+            ]
+          }
         }
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Sorcerer",
-          "count": 2
-        }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Sorcerer",
+            "count": 2
+          }
+        ]
+      }
     },
     {
       "name": "Warlock Spells",
       "ability": "cha",
-      "innate": [
-        {
-          "choose": "level=1|class=Warlock"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Warlock"
+              }
+            ]
+          }
         }
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Warlock",
-          "count": 2
-        }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Warlock",
+            "count": 2
+          }
+        ]
+      }
     },
     {
       "name": "Wizard Spells",
       "ability": "int",
-      "innate": [
-        {
-          "choose": "level=1|class=Wizard"
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Wizard"
+              }
+            ]
+          }
         }
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Wizard",
-          "count": 2
-        }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Wizard",
+            "count": 2
+          }
+        ]
+      }
     }
+  ],
+  "entries": [
+    "Choose a class: {@filter bard|spells|level=0;1|class=bard}, {@filter cleric|spells|level=0;1|class=cleric}, {@filter druid|spells|level=0;1|class=druid}, {@filter sorcerer|spells|level=0;1|class=sorcerer}, {@filter warlock|spells|level=0;1|class=warlock}, or {@filter wizard|spells|level=0;1|class=wizard}. You learn two cantrips of your choice from that class's spell list.",
+    "In addition, choose one 1st-level spell to learn from that same list. Using this feat, you can cast the spell once at its lowest level, and you must finish a long rest before you can cast it in this way again.",
+    "Your spellcasting ability for these spells depends on the class you chose: Charisma for {@filter bard|spells|level=0;1|class=bard}, {@filter sorcerer|spells|level=0;1|class=sorcerer}, or {@filter warlock|spells|level=0;1|class=warlock}; Wisdom for {@filter cleric|spells|level=0;1|class=cleric} or {@filter druid|spells|level=0;1|class=druid}; or Intelligence for {@filter wizard|spells|level=0;1|class=wizard}."
   ]
 },
 {
@@ -895,8 +1285,13 @@ database.feats = [
     }
   ],
   "entries": [
-    "You learn two {@filter maneuvers|optionalfeatures|feature type=MV:B} of your choice from among those available to the {@class fighter|phb|Battle Master|Battle Master|phb|2-0} archetype in the fighter class. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice).",
-    "You gain one superiority die, which is a {@dice d6} (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
+    "You have martial training that allows you to perform special combat maneuvers. You gain the following benefits:",
+    {
+      "items": [
+        "You learn two {@filter maneuvers|optionalfeatures|feature type=MV:B} of your choice from among those available to the {@class fighter|Battle Master|Battle Master|2-0} archetype in the fighter class. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice).",
+        "You gain one superiority die, which is a {@dice d6} (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
+      ]
+    }
   ]
 },
 {
@@ -912,8 +1307,13 @@ database.feats = [
     }
   ],
   "entries": [
-    "Wearing medium armor doesn't impose disadvantage on your Dexterity ({@skill Stealth}) checks.",
-    "When you wear medium armor, you can add 3, rather than 2, to your AC if you have a Dexterity of 16 or higher."
+    "You have practiced moving in medium armor to gain the following benefits:",
+    {
+      "items": [
+        "Wearing medium armor doesn't impose disadvantage on your Dexterity ({@skill Stealth}) checks.",
+        "When you wear medium armor, you can add 3, rather than 2, to your AC if you have a Dexterity of 16 or higher."
+      ]
+    }
   ]
 },
 {
@@ -921,7 +1321,7 @@ database.feats = [
   "source": "TCE",
   "prerequisite": [
     {
-      "spellcasting": true
+      "spellcasting2020": true
     }
   ],
   "optionalfeatureProgression": [
@@ -936,17 +1336,27 @@ database.feats = [
     }
   ],
   "entries": [
-    "You learn two {@filter Metamagic|optionalfeatures|Feature Type=MM} options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.",
-    "You gain 2 sorcery points to spend on Metamagic (these points are added to any sorcery points you have from another source but can be used only on Metamagic). You regain all spent sorcery points when you finish a long rest."
+    "You've learned how to exert your will on your spells to alter how they function:",
+    {
+      "items": [
+        "You learn two {@filter Metamagic|optionalfeatures|Feature Type=MM} options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.",
+        "You gain 2 sorcery points to spend on Metamagic (these points are added to any sorcery points you have from another source but can be used only on Metamagic). You regain all spent sorcery points when you finish a long rest."
+      ]
+    }
   ]
 },
 {
   "name": "Mobile",
   "source": "PHB",
-  "speed": 10,
   "entries": [
-    "When you use the {@action Dash} action, {@quickref difficult terrain||3} doesn't cost you extra movement on that turn.",
-    "When you make a melee attack against a creature, you don't provoke opportunity attacks from that creature for the rest of the turn, whether you hit or not."
+    "You are exceptionally speedy and agile. You gain the following benefits:",
+    {
+      "items": [
+        "Your speed increases by 10 feet.",
+        "When you use the {@action Dash} action, {@quickref difficult terrain||3} doesn't cost you extra movement on that turn.",
+        "When you make a melee attack against a creature, you don't provoke opportunity attacks from that creature for the rest of the turn, whether you hit or not."
+      ]
+    }
   ]
 },
 {
@@ -963,16 +1373,27 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "armorProficiencies": [
     {
       "medium": true,
-      "shield|phb": true
+      "shield": true
+    }
+  ],
+  "entries": [
+    "You have trained to master the use of medium armor and shields, gaining the following benefits:",
+    {
+      "items": [
+        "You gain proficiency with medium armor and shields."
+      ]
     }
   ]
 },
@@ -980,9 +1401,14 @@ database.feats = [
   "name": "Mounted Combatant",
   "source": "PHB",
   "entries": [
-    "You have advantage on melee attack rolls against any unmounted creature that is smaller than your mount.",
-    "You can force an attack targeted at your mount to target you instead.",
-    "If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+    "You are a dangerous foe to face while mounted. While you are mounted and aren't {@condition incapacitated}, you gain the following benefits:",
+    {
+      "items": [
+        "You have advantage on melee attack rolls against any unmounted creature that is smaller than your mount.",
+        "You can force an attack targeted at your mount to target you instead.",
+        "If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+      ]
+    }
   ]
 },
 {
@@ -990,15 +1416,23 @@ database.feats = [
   "source": "PHB",
   "ability": [
     {
-      "choose": [
-        "int",
-        "wis"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "wis"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "If you can see a creature's mouth while it is speaking a language you understand, you can interpret what it's saying by reading its lips.",
-    "You have a +5 bonus to your passive Wisdom ({@skill Perception}) and passive Intelligence ({@skill Investigation}) scores."
+    "Quick to notice details of your environment, you gain the following benefits:",
+    {
+      "items": [
+        "If you can see a creature's mouth while it is speaking a language you understand, you can interpret what it's saying by reading its lips.",
+        "You have a +5 bonus to your passive Wisdom ({@skill Perception}) and passive Intelligence ({@skill Investigation}) scores."
+      ]
+    }
   ]
 },
 {
@@ -1015,15 +1449,23 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "str",
-        "con"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "con"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "When you hit with an attack using a {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon; simple weapon}, you can roll one of the weapon's damage dice an additional time and add it as extra damage of the weapon's damage type. Once you use this ability, you can't use it again until you finish a short or long rest.",
-    "Immediately after you use your Relentless Endurance trait, you can use your reaction to make one weapon attack."
+    "Your fury burns tirelessly. You gain the following benefits:",
+    {
+      "items": [
+        "When you hit with an attack using a {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon}, you can roll one of the weapon's damage dice an additional time and add it as extra damage of the weapon's damage type. Once you use this ability, you can't use it again until you finish a short or long rest.",
+        "Immediately after you use your Relentless Endurance trait, you can use your reaction to make one weapon attack."
+      ]
+    }
   ]
 },
 {
@@ -1031,15 +1473,23 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "Once per turn, when you hit a creature with an attack that deals piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.",
-    "When you score a critical hit that deals piercing damage to a creature, you can roll one additional damage die when determining the extra piercing damage the target takes."
+    "You have achieved a penetrating precision in combat, granting you the following benefits:",
+    {
+      "items": [
+        "Once per turn, when you hit a creature with an attack that deals piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.",
+        "When you score a critical hit that deals piercing damage to a creature, you can roll one additional damage die when determining the extra piercing damage the target takes."
+      ]
+    }
   ]
 },
 {
@@ -1051,17 +1501,27 @@ database.feats = [
     }
   ],
   "entries": [
-    "When you make a damage roll that deals poison damage, it ignores resistance to poison damage.",
-    "You can apply poison to a weapon or piece of ammunition as a bonus action, instead of an action.",
-    "You gain proficiency with the {@item poisoner's kit|phb} if you don't already have it. With one hour of work using a {@item poisoner's kit|phb} and expending 50 gp worth of materials, you can create a number of doses of potent poison equal to your proficiency bonus. Once applied to a weapon or piece of ammunition, the poison retains its potency for 1 minute or until you hit with the weapon or ammunition. When a creature takes damage from the coated weapon or ammunition, that creature must succeed on a DC 14 Constitution saving throw or take {@damage 2d8} poison damage and become {@condition poisoned} until the end of your next turn."
+    "You can prepare and deliver deadly poisons, granting you the following benefits:",
+    {
+      "items": [
+        "When you make a damage roll that deals poison damage, it ignores resistance to poison damage.",
+        "You can apply poison to a weapon or piece of ammunition as a bonus action, instead of an action.",
+        "You gain proficiency with the {@item poisoner's kit} if you don't already have it. With one hour of work using a {@item poisoner's kit} and expending 50 gp worth of materials, you can create a number of doses of potent poison equal to your proficiency bonus. Once applied to a weapon or piece of ammunition, the poison retains its potency for 1 minute or until you hit with the weapon or ammunition. When a creature takes damage from the coated weapon or ammunition, that creature must succeed on a DC 14 Constitution saving throw or take {@damage 2d8} poison damage and become {@condition poisoned} until the end of your next turn."
+      ]
+    }
   ]
 },
 {
   "name": "Polearm Master",
   "source": "PHB",
   "entries": [
-    "When you take the {@action Attack} action and attack with only a {@item glaive|phb}, {@item halberd|phb}, {@item quarterstaff|phb}, or {@item spear|phb}, you can use a bonus action to make a melee attack with the opposite end of the weapon; this attack uses the same ability modifier as the primary attack. The weapon's damage die for this attack is a {@dice d4}, and the attack deals bludgeoning damage.",
-    "While you are wielding a {@item glaive|phb}, {@item halberd|phb}, {@item pike|phb}, {@item quarterstaff|phb}, or {@item spear|phb}, other creatures provoke an opportunity attack from you when they enter the reach you have with that weapon."
+    "You can keep your enemies at bay with reach weapons. You gain the following benefits:",
+    {
+      "items": [
+        "When you take the {@action Attack} action and attack with only a {@item glaive}, {@item halberd}, {@item quarterstaff}, or {@item spear}, you can use a bonus action to make a melee attack with the opposite end of the weapon; this attack uses the same ability modifier as the primary attack. The weapon's damage die for this attack is a {@dice d4}, and the attack deals bludgeoning damage.",
+        "While you are wielding a {@item glaive}, {@item halberd}, {@item pike}, {@item quarterstaff}, or {@item spear}, other creatures provoke an opportunity attack from you when they enter the reach you have with that weapon."
+      ]
+    }
   ]
 },
 {
@@ -1084,7 +1544,28 @@ database.feats = [
   ],
   "skillProficiencies": [
     {
-      "any": 1
+      "choose": {
+        "from": [
+          "athletics",
+          "acrobatics",
+          "sleight of hand",
+          "stealth",
+          "arcana",
+          "history",
+          "investigation",
+          "nature",
+          "religion",
+          "animal handling",
+          "insight",
+          "medicine",
+          "perception",
+          "survival",
+          "deception",
+          "intimidation",
+          "performance",
+          "persuasion"
+        ]
+      }
     }
   ],
   "languageProficiencies": [
@@ -1096,6 +1577,15 @@ database.feats = [
     {
       "any": 1
     }
+  ],
+  "entries": [
+    "You have a knack for learning new things. You gain the following benefits:",
+    {
+      "items": [
+        "You gain one {@table skills|skill proficiency} of your choice, one {@filter tool proficiency|items|type=tool;artisan's tools} of your choice, and fluency in one language of your choice.",
+        "Choose one skill in which you have proficiency. You gain expertise with that skill, which means your proficiency bonus is doubled for any ability check you make with it. The skill you choose must be one that isn't already benefiting from a feature, such as Expertise, that doubles your proficiency bonus."
+      ]
+    }
   ]
 },
 {
@@ -1103,25 +1593,39 @@ database.feats = [
   "source": "PHB",
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex",
-        "con",
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex",
+          "con",
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1,
+        "entry": "Increase the chosen ability score by 1, to a maximum of 20."
+      }
     }
   ],
   "savingThrowProficiencies": [
     {
-      "choose": [
-        "str",
-        "dex",
-        "con",
-        "int",
-        "wis",
-        "cha"
+      "choose": {
+        "from": [
+          "str",
+          "dex",
+          "con",
+          "int",
+          "wis",
+          "cha"
+        ]
+      }
+    }
+  ],
+  "entries": [
+    "Choose one ability score. You gain the following benefits:",
+    {
+      "items": [
+        "You gain proficiency in saving throws using the chosen ability."
       ]
     }
   ]
@@ -1140,15 +1644,23 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "While you are holding a double-bladed scimitar with two hands, you gain a +1 bonus to Armor Class.",
-    "A double-bladed scimitar has the finesse property when you wield it."
+    "You are descended from a master of the {@item double-bladed scimitar}, and some of that mastery has passed on to you. You gain the following benefits:",
+    {
+      "items": [
+        "While you are holding a double-bladed scimitar with two hands, you gain a +1 bonus to Armor Class.",
+        "A double-bladed scimitar has the finesse property when you wield it."
+      ]
+    }
   ]
 },
 {
@@ -1170,63 +1682,104 @@ database.feats = [
     {
       "name": "Bard Spells",
       "ability": "cha",
-      "innate": [
-        {
-          "choose": "level=1|class=Bard|components & miscellaneous=ritual",
-          "count": 2
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Bard|components & miscellaneous=ritual",
+                "count": 2
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Cleric Spells",
       "ability": "wis",
-      "innate": [
-        {
-          "choose": "level=1|class=Cleric|components & miscellaneous=ritual",
-          "count": 2
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Cleric|components & miscellaneous=ritual",
+                "count": 2
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Druid Spells",
       "ability": "wis",
-      "innate": [
-        {
-          "choose": "level=1|class=Druid|components & miscellaneous=ritual",
-          "count": 2
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Druid|components & miscellaneous=ritual",
+                "count": 2
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Sorcerer Spells",
       "ability": "cha",
-      "innate": [
-        {
-          "choose": "level=1|class=Sorcerer|components & miscellaneous=ritual",
-          "count": 2
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Sorcerer|components & miscellaneous=ritual",
+                "count": 2
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Warlock Spells",
       "ability": "cha",
-      "innate": [
-        {
-          "choose": "level=1|class=Warlock|components & miscellaneous=ritual",
-          "count": 2
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Warlock|components & miscellaneous=ritual",
+                "count": 2
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Wizard Spells",
       "ability": "int",
-      "innate": [
-        {
-          "choose": "level=1|class=Wizard|components & miscellaneous=ritual",
-          "count": 2
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=Wizard|components & miscellaneous=ritual",
+                "count": 2
+              }
+            ]
+          }
         }
-      ]
+      }
     }
+  ],
+  "entries": [
+    "You have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them.",
+    "When you choose this feat, you acquire a ritual book holding two 1st-level spells of your choice. Choose one of the following classes: {@filter bard|spells|level=1|class=bard|components & miscellaneous=ritual}, {@filter cleric|spells|level=1|class=cleric|components & miscellaneous=ritual}, {@filter druid|spells|level=1|class=druid|components & miscellaneous=ritual}, {@filter sorcerer|spells|level=1|class=sorcerer|components & miscellaneous=ritual}, {@filter warlock|spells|level=1|class=warlock|components & miscellaneous=ritual}, or {@filter wizard|spells|level=1|class=wizard|components & miscellaneous=ritual}. You must choose your spells from that class's spell list, and the spells you choose must have the ritual tag. The class you choose also determines your spellcasting ability for these spells: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard.",
+    "If you come across a spell in written form, such as a magical {@item spell scroll} or a wizard's spellbook, you might be able to add it to your ritual book. The spell must be on the spell list for the class you chose, the spell's level can be no higher than half your level (rounded up), and it must have the ritual tag. The process of copying the spell into your ritual book takes 2 hours per level of the spell, and costs 50 gp per level. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it."
   ]
 },
 {
@@ -1250,24 +1803,37 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "dex",
-        "con",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "dex",
+          "con",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "When a creature you can see hits you with an attack roll, you can use your reaction to force that creature to reroll. Once you use this ability, you can't use it again until you roll initiative at the start of combat or until you finish a short or long rest."
+    "Fortune favors you when someone tries to strike you. You gain the following benefits:",
+    {
+      "items": [
+        "When a creature you can see hits you with an attack roll, you can use your reaction to force that creature to reroll. Once you use this ability, you can't use it again until you roll initiative at the start of combat or until you finish a short or long rest."
+      ]
+    }
   ]
 },
 {
   "name": "Sentinel",
   "source": "PHB",
   "entries": [
-    "When you hit a creature with an opportunity attack, the creature's speed becomes 0 for the rest of the turn.",
-    "Creatures provoke opportunity attacks from you even if they take the {@action Disengage} action before leaving your reach.",
-    "When a creature within 5 feet of you makes an attack against a target other than you (and that target doesn't have this feat), you can use your reaction to make a melee weapon attack against the attacking creature."
+    "You have mastered techniques to take advantage of every drop in any enemy's guard, gaining the following benefits:",
+    {
+      "items": [
+        "When you hit a creature with an opportunity attack, the creature's speed becomes 0 for the rest of the turn.",
+        "Creatures provoke opportunity attacks from you even if they take the {@action Disengage} action before leaving your reach.",
+        "When a creature within 5 feet of you makes an attack against a target other than you (and that target doesn't have this feat), you can use your reaction to make a melee weapon attack against the attacking creature."
+      ]
+    }
   ]
 },
 {
@@ -1275,44 +1841,68 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "additionalSpells": [
     {
       "ability": "inherit",
-      "innate": [
-        "invisibility",
-        {
-          "choose": "level=1|school=I; N"
+      "innate": {
+        "_": {
+          "daily": {
+            "1e": [
+              "invisibility",
+              {
+                "choose": "level=1|school=I;N"
+              }
+            ]
+          }
         }
-      ]
+      }
     }
   ],
   "entries": [
-    "You learn the {@spell invisibility} spell and one {@filter 1st-level spell|spells|level=1|school=I; N} of your choice. The {@filter 1st-level spell|spells|level=1|school=I; N} must be from the illusion or necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat."
+    "Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:",
+    {
+      "items": [
+        "You learn the {@spell invisibility} spell and one {@filter 1st-level spell|spells|level=1|school=I;N} of your choice. The {@filter 1st-level spell|spells|level=1|school=I;N} must be from the illusion or necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat."
+      ]
+    }
   ]
 },
 {
   "name": "Sharpshooter",
   "source": "PHB",
   "entries": [
-    "Attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls.",
-    "Your ranged weapon attacks ignore half cover and three-quarters cover.",
-    "Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack's damage."
+    "You have mastered ranged weapons and can make shots that others find impossible. You gain the following benefits:",
+    {
+      "items": [
+        "Attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls.",
+        "Your ranged weapon attacks ignore half cover and three-quarters cover.",
+        "Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack's damage."
+      ]
+    }
   ]
 },
 {
   "name": "Shield Master",
   "source": "PHB",
   "entries": [
-    "If you take the {@action Attack} action on your turn, you can use a bonus action to try to {@action shove} a creature within 5 feet of you with your shield.",
-    "If you aren't {@condition incapacitated}, you can add your shield's AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you.",
-    "If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw, interposing your shield between yourself and the source of the effect."
+    "You use shields not just for protection but also for offense. You gain the following benefits while you are wielding a {@item shield}:",
+    {
+      "items": [
+        "If you take the {@action Attack} action on your turn, you can use a bonus action to try to {@action shove} a creature within 5 feet of you with your shield.",
+        "If you aren't {@condition incapacitated}, you can add your shield's AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you.",
+        "If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw, interposing your shield between yourself and the source of the effect."
+      ]
+    }
   ]
 },
 {
@@ -1320,24 +1910,57 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex",
-        "con",
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex",
+          "con",
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "skillProficiencies": [
     {
-      "any": 1
+      "choose": {
+        "from": [
+          "athletics",
+          "acrobatics",
+          "sleight of hand",
+          "stealth",
+          "arcana",
+          "history",
+          "investigation",
+          "nature",
+          "religion",
+          "animal handling",
+          "insight",
+          "medicine",
+          "perception",
+          "survival",
+          "deception",
+          "intimidation",
+          "performance",
+          "persuasion"
+        ]
+      }
     }
   ],
   "expertise": [
     {
       "anyProficientSkill": 1
+    }
+  ],
+  "entries": [
+    "You have honed your proficiency with particular skills, granting you the following benefits:",
+    {
+      "items": [
+        "You gain proficiency in one {@table skills|skill} of your choice.",
+        "Choose one skill in which you have proficiency. You gain expertise with that skill, which means your proficiency bonus is doubled for any ability check you make with it. The skill you choose must be one that isn't already benefiting from a feature, such as Expertise, that doubles your proficiency bonus."
+      ]
     }
   ]
 },
@@ -1347,11 +1970,18 @@ database.feats = [
   "skillToolLanguageProficiencies": [
     {
       "choose": [
-        "anySkill",
-        "anyTool"
-      ],
-      "count": 3
+        {
+          "from": [
+            "anySkill",
+            "anyTool"
+          ],
+          "count": 3
+        }
+      ]
     }
+  ],
+  "entries": [
+    "You gain proficiency in any combination of three {@table skills} or {@filter tools|items|type=tools;artisan's tools;instrument;gaming set;vehicle (land);vehicle (water)} of your choice."
   ]
 },
 {
@@ -1367,9 +1997,14 @@ database.feats = [
     }
   ],
   "entries": [
-    "You can try to hide when you are lightly obscured from the creature from which you are hiding.",
-    "When you are hidden from a creature and miss it with a ranged weapon attack, making the attack doesn't reveal your position.",
-    "Dim light doesn't impose disadvantage on your Wisdom ({@skill Perception}) checks relying on sight."
+    "You are expert at slinking through shadows. You gain the following benefits:",
+    {
+      "items": [
+        "You can try to hide when you are lightly obscured from the creature from which you are hiding.",
+        "When you are hidden from a creature and miss it with a ranged weapon attack, making the attack doesn't reveal your position.",
+        "Dim light doesn't impose disadvantage on your Wisdom ({@skill Perception}) checks relying on sight."
+      ]
+    }
   ]
 },
 {
@@ -1377,15 +2012,23 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "Once per turn when you hit a creature with an attack that deals slashing damage, you can reduce the speed of the target by 10 feet until the start of your next turn.",
-    "When you score a critical hit that deals slashing damage to a creature, you grievously wound it. Until the start of your next turn, the target has disadvantage on all attack rolls."
+    "You've learned where to cut to have the greatest results, granting you the following benefits:",
+    {
+      "items": [
+        "Once per turn when you hit a creature with an attack that deals slashing damage, you can reduce the speed of the target by 10 feet until the start of your next turn.",
+        "When you score a critical hit that deals slashing damage to a creature, you grievously wound it. Until the start of your next turn, the target has disadvantage on all attack rolls."
+      ]
+    }
   ]
 },
 {
@@ -1400,61 +2043,85 @@ database.feats = [
     {
       "name": "Bard Spells",
       "ability": "cha",
-      "known": [
-        {
-          "choose": "level=0|class=Bard|spell attack=m; r; o"
-        }
-      ]
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Bard|spell attack=m;r;o",
+            "count": 1
+          }
+        ]
+      }
     },
     {
       "name": "Cleric Spells",
       "ability": "wis",
-      "known": [
-        {
-          "choose": "level=0|class=Cleric|spell attack=m; r; o"
-        }
-      ]
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Cleric|spell attack=m;r;o",
+            "count": 1
+          }
+        ]
+      }
     },
     {
       "name": "Druid Spells",
       "ability": "wis",
-      "known": [
-        {
-          "choose": "level=0|class=Druid|spell attack=m; r; o"
-        }
-      ]
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Druid|spell attack=m;r;o",
+            "count": 1
+          }
+        ]
+      }
     },
     {
       "name": "Sorcerer Spells",
       "ability": "cha",
-      "known": [
-        {
-          "choose": "level=0|class=Sorcerer|spell attack=m; r; o"
-        }
-      ]
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Sorcerer|spell attack=m;r;o",
+            "count": 1
+          }
+        ]
+      }
     },
     {
       "name": "Warlock Spells",
       "ability": "cha",
-      "known": [
-        {
-          "choose": "level=0|class=Warlock|spell attack=m; r; o"
-        }
-      ]
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Warlock|spell attack=m;r;o",
+            "count": 1
+          }
+        ]
+      }
     },
     {
       "name": "Wizard Spells",
       "ability": "int",
-      "known": [
-        {
-          "choose": "level=0|class=Wizard|spell attack=m; r; o"
-        }
-      ]
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Wizard|spell attack=m;r;o",
+            "count": 1
+          }
+        ]
+      }
     }
   ],
   "entries": [
-    "When you cast a spell that requires you to make an attack roll, the spell's range is doubled.",
-    "Your ranged spell attacks ignore half cover and three-quarters cover."
+    "You have learned techniques to enhance your attacks with certain kinds of spells, gaining the following benefits:",
+    {
+      "items": [
+        "When you cast a spell that requires you to make an attack roll, the spell's range is doubled.",
+        "Your ranged spell attacks ignore half cover and three-quarters cover.",
+        "You learn one cantrip that requires an attack roll. Choose the cantrip from the {@filter bard|spells|level=0|class=bard|spell attack=m;r;o}, {@filter cleric|spells|level=0|class=cleric|spell attack=m;r;o}, {@filter druid|spells|level=0|class=druid|spell attack=m;r;o}, {@filter sorcerer|spells|level=0|class=sorcerer|spell attack=m;r;o}, {@filter warlock|spells|level=0|class=warlock|spell attack=m;r;o}, or {@filter wizard|spells|level=0|class=wizard|spell attack=m;r;o} spell list. Your spellcasting ability for this cantrip depends on the spell list you chose from: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard."
+      ]
+    }
   ]
 },
 {
@@ -1475,23 +2142,34 @@ database.feats = [
   ],
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "skillProficiencies": [
     {
-      "choose": [
-        "acrobatics",
-        "athletics"
-      ]
+      "choose": {
+        "from": [
+          "acrobatics",
+          "athletics"
+        ]
+      }
     }
   ],
-  "speed": 5,
   "entries": [
-    "You have advantage on any Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check you make to escape from being {@condition grappled}."
+    "You are uncommonly nimble for your race. You gain the following benefits:",
+    {
+      "items": [
+        "Increase your walking speed by 5 feet.",
+        "You gain proficiency in the {@skill Acrobatics} or {@skill Athletics} skill (your choice).",
+        "You have advantage on any Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check you make to escape from being {@condition grappled}."
+      ]
+    }
   ]
 },
 {
@@ -1507,15 +2185,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "light",
-        "sacred flame"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=cleric; wizard"
+      "known": {
+        "_": [
+          "light",
+          "sacred flame"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=cleric;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Lorehold 2",
@@ -1526,15 +2212,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "light",
-        "thaumaturgy"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=cleric; wizard"
+      "known": {
+        "_": [
+          "light",
+          "thaumaturgy"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=cleric;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Lorehold 3",
@@ -1545,15 +2239,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "sacred flame",
-        "thaumaturgy"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=cleric; wizard"
+      "known": {
+        "_": [
+          "sacred flame",
+          "thaumaturgy"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=cleric;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Prismari 1",
@@ -1564,15 +2266,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "fire bolt",
-        "prestidigitation"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=bard; sorcerer"
+      "known": {
+        "_": [
+          "fire bolt",
+          "prestidigitation"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=bard;sorcerer"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Prismari 2",
@@ -1583,15 +2293,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "fire bolt",
-        "ray of frost"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=bard; sorcerer"
+      "known": {
+        "_": [
+          "fire bolt",
+          "ray of frost"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=bard;sorcerer"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Prismari 3",
@@ -1602,15 +2320,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "prestidigitation",
-        "ray of frost"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=bard; sorcerer"
+      "known": {
+        "_": [
+          "prestidigitation",
+          "ray of frost"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=bard;sorcerer"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Quandrix 1",
@@ -1621,15 +2347,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "druidcraft",
-        "guidance"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=druid; wizard"
+      "known": {
+        "_": [
+          "druidcraft",
+          "guidance"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=druid;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Quandrix 2",
@@ -1640,15 +2374,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "druidcraft",
-        "mage hand"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=druid; wizard"
+      "known": {
+        "_": [
+          "druidcraft",
+          "mage hand"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=druid;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Quandrix 3",
@@ -1659,15 +2401,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "guidance",
-        "mage hand"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=druid; wizard"
+      "known": {
+        "_": [
+          "guidance",
+          "mage hand"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=druid;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Silverquill 1",
@@ -1678,15 +2428,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "sacred flame",
-        "thaumaturgy"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=bard; cleric"
+      "known": {
+        "_": [
+          "sacred flame",
+          "thaumaturgy"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=bard;cleric"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Silverquill 2",
@@ -1697,15 +2455,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "sacred flame",
-        "vicious mockery"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=bard; cleric"
+      "known": {
+        "_": [
+          "sacred flame",
+          "vicious mockery"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=bard;cleric"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Silverquill 3",
@@ -1716,15 +2482,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "thaumaturgy",
-        "vicious mockery"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=bard; cleric"
+      "known": {
+        "_": [
+          "thaumaturgy",
+          "vicious mockery"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=bard;cleric"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Witherbloom 1",
@@ -1735,15 +2509,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "chill touch",
-        "druidcraft"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=druid; wizard"
+      "known": {
+        "_": [
+          "chill touch",
+          "druidcraft"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=druid;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Witherbloom 2",
@@ -1754,15 +2536,23 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "chill touch",
-        "spare the dying"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=druid; wizard"
+      "known": {
+        "_": [
+          "chill touch",
+          "spare the dying"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=druid;wizard"
+              }
+            ]
+          }
         }
-      ]
+      }
     },
     {
       "name": "Witherbloom 3",
@@ -1773,14 +2563,68 @@ database.feats = [
           "cha"
         ]
       },
-      "known": [
-        "druidcraft",
-        "spare the dying"
-      ],
-      "innate": [
-        {
-          "choose": "level=1|class=druid; wizard"
+      "known": {
+        "_": [
+          "druidcraft",
+          "spare the dying"
+        ]
+      },
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              {
+                "choose": "level=1|class=druid;wizard"
+              }
+            ]
+          }
         }
+      }
+    }
+  ],
+  "entries": [
+    "You have studied some magical theory and have learned a few spells associated with Strixhaven University.",
+    "Choose one of Strixhaven's colleges: Lorehold, Prismari, Quandrix, Silverquill, or Witherbloom. You learn two cantrips and one 1st-level spell based on the college you choose, as specified in the Strixhaven Spells table.",
+    "You can cast the chosen 1st-level spell without a spell slot, and you must finish a long rest before you can cast it in this way again. You can also cast the spell using any spell slots you have.",
+    "Your spellcasting ability for this feat's spells is Intelligence, Wisdom, or Charisma (choose when you select this feat).",
+    {
+      "caption": "Strixhaven Spells",
+      "colLabels": [
+        "College",
+        "Cantrips",
+        "1st-Level Spell"
+      ],
+      "colStyles": [
+        "col-2",
+        "col-5",
+        "col-5"
+      ],
+      "rows": [
+        [
+          "Lorehold",
+          "Choose two from {@spell light}, {@spell sacred flame}, and {@spell thaumaturgy}.",
+          "Choose one 1st-level {@filter cleric or wizard spell|spells|level=1|class=cleric;wizard}."
+        ],
+        [
+          "Prismari",
+          "Choose two from {@spell fire bolt}, {@spell prestidigitation}, and {@spell ray of frost}.",
+          "Choose one 1st-level {@filter bard or sorcerer spell|spells|level=1|class=bard;sorcerer}."
+        ],
+        [
+          "Quandrix",
+          "Choose two from {@spell druidcraft}, {@spell guidance}, and {@spell mage hand}.",
+          "Choose one 1st-level {@filter druid or wizard spell|spells|level=1|class=druid;wizard}."
+        ],
+        [
+          "Silverquill",
+          "Choose two from {@spell sacred flame}, {@spell thaumaturgy}, and {@spell vicious mockery}.",
+          "Choose one 1st-level {@filter bard or cleric spell|spells|level=1|class=bard;cleric}."
+        ],
+        [
+          "Witherbloom",
+          "Choose two from {@spell chill touch}, {@spell druidcraft}, and {@spell spare the dying}.",
+          "Choose one 1st-level {@filter druid or wizard spell|spells|level=1|class=druid;wizard}."
+        ]
       ]
     }
   ]
@@ -1792,25 +2636,45 @@ database.feats = [
     {
       "level": 4,
       "feat": [
-        "strixhaven initiate|scc"
+        "strixhaven initiate"
       ]
     }
   ],
   "additionalSpells": [
     {
-      "ritual": [
-        "find familiar"
-      ]
+      "innate": {
+        "_": {
+          "ritual": [
+            "find familiar"
+          ]
+        }
+      }
     }
   ],
   "entries": [
-    "When you take the {@action Attack} action on your turn, you can forgo one attack to allow your mascot familiar to make one attack of its own with its reaction.",
-    "If your mascot familiar is within 60 feet of you, you can teleport as an action, swapping places with the familiar. If your destination space is too small for you to occupy, the teleportation fails and is wasted. Once you teleport in this way, you can't do so again until you finish a long rest, unless you expend a spell slot of 2nd level or higher to do it again."
+    "You have learned how to summon a Strixhaven mascot to assist you, granting you these benefits:",
+    {
+      "items": [
+        "You can cast the {@spell find familiar} spell as a ritual. Your familiar can take the form of the mascot associated with the college you chose for the Strixhaven Initiate feat: a {@creature spirit statue mascot} (Lorehold), an {@creature art elemental mascot} (Prismari), a {@creature fractal mascot} (Quandrix), an {@creature inkling mascot} (Silverquill), or a {@creature pest mascot} (Witherbloom).",
+        "When you take the {@action Attack} action on your turn, you can forgo one attack to allow your mascot familiar to make one attack of its own with its reaction.",
+        "If your mascot familiar is within 60 feet of you, you can teleport as an action, swapping places with the familiar. If your destination space is too small for you to occupy, the teleportation fails and is wasted. Once you teleport in this way, you can't do so again until you finish a long rest, unless you expend a spell slot of 2nd level or higher to do it again."
+      ]
+    }
   ]
 },
 {
   "name": "Svirfneblin Magic",
   "source": "MTF",
+  "additionalSources": [
+    {
+      "source": "EEPC",
+      "page": 7
+    },
+    {
+      "source": "SCAG",
+      "page": 115
+    }
+  ],
   "prerequisite": [
     {
       "race": [
@@ -1824,15 +2688,25 @@ database.feats = [
   "additionalSpells": [
     {
       "ability": "int",
-      "known": [
-        "nondetection"
-      ],
-      "innate": [
-        "blindness/deafness",
-        "blur",
-        "disguise self"
-      ]
+      "innate": {
+        "_": {
+          "will": [
+            "nondetection"
+          ],
+          "daily": {
+            "1e": [
+              "blindness/deafness",
+              "blur",
+              "disguise self"
+            ]
+          }
+        }
+      }
     }
+  ],
+  "entries": [
+    "You have inherited the innate spellcasting ability of your ancestors. This ability allows you to cast {@spell nondetection} on yourself at will, without needing a material component. You can also cast each of the following spells once with this ability: {@spell blindness/deafness}, {@spell blur}, and {@spell disguise self}. You regain the ability to cast these spells when you finish a long rest.",
+    "Intelligence is your spellcasting ability for these spells, and you cast them at their lowest possible levels."
   ]
 },
 {
@@ -1840,16 +2714,24 @@ database.feats = [
   "source": "PHB",
   "ability": [
     {
-      "choose": [
-        "str",
-        "con"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "con"
+        ],
+        "amount": 1
+      }
     }
   ],
   "entries": [
-    "You are proficient with improvised weapons.",
-    "Your unarmed strike uses a {@damage d4} for damage.",
-    "When you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target."
+    "Accustomed to rough-and-tumble fighting using whatever weapons happen to be at hand, you gain the following benefits:",
+    {
+      "items": [
+        "You are proficient with improvised weapons.",
+        "Your unarmed strike uses a {@damage d4} for damage.",
+        "When you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target."
+      ]
+    }
   ]
 },
 {
@@ -1857,24 +2739,34 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "additionalSpells": [
     {
       "ability": "inherit",
-      "known": [
-        "mage hand"
-      ]
+      "known": {
+        "_": [
+          "mage hand"
+        ]
+      }
     }
   ],
   "entries": [
-    "You learn the {@spell mage hand} cantrip. You can cast it without verbal or somatic components, and you can make the spectral hand {@condition invisible}. If you already know this spell, its range increases by 30 feet when you cast it. Its spellcasting ability is the ability increased by this feat.",
-    "As a bonus action, you can try to telekinetically shove one creature you can see within 30 feet of you. When you do so, the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward you or away from you. A creature can willingly fail this save."
+    "You learn to move things with your mind, granting you the following benefits:",
+    {
+      "items": [
+        "You learn the {@spell mage hand} cantrip. You can cast it without verbal or somatic components, and you can make the spectral hand {@condition invisible}. If you already know this spell, its range increases by 30 feet when you cast it. Its spellcasting ability is the ability increased by this feat.",
+        "As a bonus action, you can try to telekinetically shove one creature you can see within 30 feet of you. When you do so, the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward you or away from you. A creature can willingly fail this save."
+      ]
+    }
   ]
 },
 {
@@ -1882,24 +2774,38 @@ database.feats = [
   "source": "TCE",
   "ability": [
     {
-      "choose": [
-        "int",
-        "wis",
-        "cha"
-      ]
+      "choose": {
+        "from": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "amount": 1
+      }
     }
   ],
   "additionalSpells": [
     {
       "ability": "inherit",
-      "innate": [
-        "detect thoughts"
-      ]
+      "innate": {
+        "_": {
+          "daily": {
+            "1": [
+              "detect thoughts"
+            ]
+          }
+        }
+      }
     }
   ],
   "entries": [
-    "You can speak telepathically to any creature you can see within 60 feet of you. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.",
-    "You can cast the {@spell detect thoughts} spell, requiring no spell slot or components, and you must finish a long rest before you can cast it this way again. Your spellcasting ability for the spell is the ability increased by this feat. If you have spell slots of 2nd level or higher, you can cast this spell with them."
+    "You awaken the ability to mentally connect with others, granting you the following benefits:",
+    {
+      "items": [
+        "You can speak telepathically to any creature you can see within 60 feet of you. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.",
+        "You can cast the {@spell detect thoughts} spell, requiring no spell slot or components, and you must finish a long rest before you can cast it this way again. Your spellcasting ability for the spell is the ability increased by this feat. If you have spell slots of 2nd level or higher, you can cast this spell with them."
+      ]
+    }
   ]
 },
 {
@@ -1918,9 +2824,14 @@ database.feats = [
     }
   ],
   "entries": [
-    "You have advantage on Constitution saving throws that you make to maintain your {@status concentration} on a spell when you take damage.",
-    "You can perform the somatic components of spells even when you have weapons or a {@item shield|phb} in one or both hands.",
-    "When a hostile creature's movement provokes an opportunity attack from you, you can use your reaction to cast a spell at the creature, rather than making an opportunity attack. The spell must have a casting time of 1 action and must target only that creature."
+    "You have practiced casting spells in the midst of combat, learning techniques that grant you the following benefits:",
+    {
+      "items": [
+        "You have advantage on Constitution saving throws that you make to maintain your {@status concentration} on a spell when you take damage.",
+        "You can perform the somatic components of spells even when you have weapons or a {@item shield} in one or both hands.",
+        "When a hostile creature's movement provokes an opportunity attack from you, you can use your reaction to cast a spell at the creature, rather than making an opportunity attack. The spell must have a casting time of 1 action and must target only that creature."
+      ]
+    }
   ]
 },
 {
@@ -1928,18 +2839,29 @@ database.feats = [
   "source": "PHB",
   "ability": [
     {
-      "choose": [
-        "str",
-        "dex"
-      ]
+      "choose": {
+        "from": [
+          "str",
+          "dex"
+        ],
+        "amount": 1
+      }
     }
   ],
   "weaponProficiencies": [
     {
       "choose": {
-        "fromFilter": "type=martial weapon; mundane weapon|miscellaneous=mundane",
+        "fromFilter": "type=martial weapon;mundane weapon|miscellaneous=mundane",
         "count": 4
       }
+    }
+  ],
+  "entries": [
+    "You have practiced extensively with a variety of weapons, gaining the following benefits:",
+    {
+      "items": [
+        "You gain proficiency with four weapons of your choice. Each one must be a simple or a martial weapon."
+      ]
     }
   ]
 },
@@ -1959,16 +2881,27 @@ database.feats = [
   "additionalSpells": [
     {
       "ability": "wis",
-      "innate": [
-        "longstrider",
-        "pass without trace"
-      ],
-      "known": [
-        {
-          "choose": "level=0|class=Druid"
+      "innate": {
+        "_": {
+          "daily": {
+            "1e": [
+              "longstrider",
+              "pass without trace"
+            ]
+          }
         }
-      ]
+      },
+      "known": {
+        "_": [
+          {
+            "choose": "level=0|class=Druid"
+          }
+        ]
+      }
     }
+  ],
+  "entries": [
+    "You learn the magic of the primeval woods, which are revered and protected by your people. You learn one druid cantrip of your choice. You also learn the {@spell longstrider} and {@spell pass without trace} spells, each of which you can cast once without expending a spell slot. You regain the ability to cast these two spells in this way when you finish a long rest. Wisdom is your spellcasting ability for all three spells."
   ]
 }
 ];

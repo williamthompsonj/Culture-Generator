@@ -656,7 +656,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -876,7 +876,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table B"
@@ -1136,7 +1135,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -1204,7 +1202,7 @@ database.items = [
       "rows": [
         [
           "01-20",
-          "The symbol of {@creature Acererak|ToA} is burned into your flesh, a curse that can only be removed with a {@spell remove curse} spell or similar magic. Until the curse ends, your hit points can't be restored by magic."
+          "The symbol of {@creature Acererak} is burned into your flesh, a curse that can only be removed with a {@spell remove curse} spell or similar magic. Until the curse ends, your hit points can't be restored by magic."
         ],
         [
           "21-35",
@@ -1624,7 +1622,7 @@ database.items = [
   "reqAttune": "by a member of the Azorius guild",
   "reqAttuneTags": [
     {
-      "background": "azorius functionary|ggr"
+      "background": "azorius functionary"
     }
   ],
   "wondrous": true,
@@ -1789,7 +1787,6 @@ database.items = [
   },
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table A",
@@ -2445,11 +2442,11 @@ database.items = [
         ],
         [
           "9",
-          "Hostile {@creature space eel|BAM} (see {@book Boo's Astral Menagerie|BAM}; feeds up to twelve people)"
+          "Hostile {@creature space eel} (see {@book Boo's Astral Menagerie}; feeds up to twelve people)"
         ],
         [
           "10",
-          "Hostile {@creature gray scavver|BAM} (see {@book Boo's Astral Menagerie|BAM}; feeds up to twenty people), some other creature of the DM's choosing, or an Tiny object of the DM's choosing"
+          "Hostile {@creature gray scavver} (see {@book Boo's Astral Menagerie}; feeds up to twenty people), some other creature of the DM's choosing, or an Tiny object of the DM's choosing"
         ]
       ]
     }
@@ -2707,7 +2704,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -2738,7 +2734,7 @@ database.items = [
   "type": "INS",
   "rarity": "none",
   "entries": [
-    "Pan pipes or satyr pipes, also known as the shalm, these are sacred to {@deity Lliira|Faer&ucirc;nian|scag} and popular with wood elf and wild elf bards."
+    "Pan pipes or satyr pipes, also known as the shalm, these are sacred to {@deity Lliira|Faer&ucirc;nian} and popular with wood elf and wild elf bards."
   ]
 },
 {
@@ -2942,9 +2938,9 @@ database.items = [
   "dmg2": "1d8",
   "bonusWeapon": "+2",
   "entries": [
-    "Kavan was a ruthless chieftain whose tribe lived in the Balinok Mountains centuries before the arrival of {@creature Strahd von Zarovich|CoS}. Although he was very much alive, Kavan had some traits in common with vampires: he slept during the day and hunted at night, he drank the blood of his prey, and he lived underground. In battle, he wielded a spear stained with blood. His was the first blood spear, a weapon that drains life from those it kills and transfers that life to its wielder, imbuing that individual with the stamina to keep fighting.",
+    "Kavan was a ruthless chieftain whose tribe lived in the Balinok Mountains centuries before the arrival of {@creature Strahd von Zarovich}. Although he was very much alive, Kavan had some traits in common with vampires: he slept during the day and hunted at night, he drank the blood of his prey, and he lived underground. In battle, he wielded a spear stained with blood. His was the first blood spear, a weapon that drains life from those it kills and transfers that life to its wielder, imbuing that individual with the stamina to keep fighting.",
     "When you hit with a melee attack using this magic spear and reduce the target to 0 hit points, you gain {@dice 2d6} temporary hit points.",
-    "Any creature can wield the spear, but only the character {@adventure chosen by Kavan|CoS|14|Blood Spear of Kavan} to wield it gains a +2 bonus to attack and damage rolls made with this magic weapon."
+    "Any creature can wield the spear, but only the character {@adventure chosen by Kavan|14|Blood Spear of Kavan} to wield it gains a +2 bonus to attack and damage rolls made with this magic weapon."
   ]
 },
 {
@@ -3131,7 +3127,7 @@ database.items = [
     "A bombard can float and sail on water, but it can't land safely on the ground (its keel would cause it to roll on its side)."
   ],
   "seeAlsoVehicle": [
-    "Bombard|AAG"
+    "Bombard"
   ]
 },
 {
@@ -3171,7 +3167,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -3199,7 +3194,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "levitate"
@@ -3226,7 +3220,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -3249,7 +3242,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -3278,7 +3270,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -3308,7 +3299,7 @@ database.items = [
   "reqAttune": "by a member of the Boros guild",
   "reqAttuneTags": [
     {
-      "background": "boros legionnaire|ggr"
+      "background": "boros legionnaire"
     }
   ],
   "wondrous": true,
@@ -3421,7 +3412,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -3440,7 +3430,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -3651,7 +3640,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -4021,7 +4009,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table B"
@@ -4638,7 +4625,7 @@ database.items = [
       "type": "entries",
       "name": "Part of a Whole",
       "entries": [
-        "While this component is not installed in the {@item Orrery of the Wanderer|AI}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
+        "While this component is not installed in the {@item Orrery of the Wanderer}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
       ]
     }
   ]
@@ -4861,7 +4848,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -4891,7 +4877,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -4910,7 +4895,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "polymorph"
@@ -4935,7 +4919,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table B"
@@ -5118,7 +5101,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -5518,8 +5501,8 @@ database.items = [
     "Wizard"
   ],
   "entries": [
-    "An etched crystal sphere the size of a grapefruit hums faintly and pulses with irregular flares of inner light. While you are touching the crystal, you can retrieve and store information and spells within the crystal at the same rate as reading and writing. When found, the crystal contains the following spells: {@spell detect thoughts}, {@spell intellect fortress|TCE}, {@spell Rary's telepathic bond}, {@spell sending}, {@spell telekinesis}, {@spell Tasha's mind whip|TCE}, and {@spell Tenser's floating disk}. It functions as a spellbook for you, with its spells and other writing psychically encoded within it.",
-    "While you are holding the crystal, you can use it as a spellcasting focus for your wizard spells, and you know the {@spell mage hand}, {@spell mind sliver|TCE} (appears in this book), and {@spell message} cantrips if you don't already know them.",
+    "An etched crystal sphere the size of a grapefruit hums faintly and pulses with irregular flares of inner light. While you are touching the crystal, you can retrieve and store information and spells within the crystal at the same rate as reading and writing. When found, the crystal contains the following spells: {@spell detect thoughts}, {@spell intellect fortress}, {@spell Rary's telepathic bond}, {@spell sending}, {@spell telekinesis}, {@spell Tasha's mind whip}, and {@spell Tenser's floating disk}. It functions as a spellbook for you, with its spells and other writing psychically encoded within it.",
+    "While you are holding the crystal, you can use it as a spellcasting focus for your wizard spells, and you know the {@spell mage hand}, {@spell mind sliver} (appears in this book), and {@spell message} cantrips if you don't already know them.",
     "The crystal has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
     {
       "type": "list",
@@ -5749,7 +5732,7 @@ database.items = [
     "Damselfly ship owners are a proud lot, fond of painting their ships in colorful patterns as well as customizing their vessels with special equipment. Large, private gatherings of damselfly ship owners are not uncommon; they use these get-togethers to show off their ships and to race one another through asteroid belts and other obstacle courses, either for rewards or bragging rights."
   ],
   "seeAlsoVehicle": [
-    "Damselfly Ship|AAG"
+    "Damselfly Ship"
   ]
 },
 {
@@ -6220,9 +6203,9 @@ database.items = [
   "rarity": "very rare",
   "wondrous": true,
   "entries": [
-    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air|PotA}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
+    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
     "A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air|PotA} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
+    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
     "Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use.",
     {
       "name": "Earth Orb",
@@ -6239,9 +6222,9 @@ database.items = [
   "rarity": "very rare",
   "wondrous": true,
   "entries": [
-    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air|PotA}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
+    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
     "A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air|PotA} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
+    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
     "Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use.",
     {
       "name": "Fire Orb",
@@ -6258,9 +6241,9 @@ database.items = [
   "rarity": "very rare",
   "wondrous": true,
   "entries": [
-    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air|PotA}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
+    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
     "A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air|PotA} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
+    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
     "Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use.",
     {
       "name": "Water Orb",
@@ -6340,7 +6323,7 @@ database.items = [
       "type": "entries",
       "name": "Part of a Whole",
       "entries": [
-        "While this component is not installed in the {@item Orrery of the Wanderer|AI}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
+        "While this component is not installed in the {@item Orrery of the Wanderer}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
       ]
     }
   ]
@@ -6357,7 +6340,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -6387,7 +6369,7 @@ database.items = [
   "reqAttune": "by a member of the Dimir guild",
   "reqAttuneTags": [
     {
-      "background": "dimir operative|ggr"
+      "background": "dimir operative"
     }
   ],
   "wondrous": true,
@@ -6552,7 +6534,7 @@ database.items = [
   "reqAttune": "by a warforged",
   "reqAttuneTags": [
     {
-      "race": "warforged|erlw"
+      "race": "warforged"
     }
   ],
   "wondrous": true,
@@ -6685,7 +6667,7 @@ database.items = [
   "rarity": "none",
   "value": 100,
   "entries": [
-    "Gold coin, half again as large as a {@item nib|wdh} (1 dragon = 100 {@item nib|wdh|nibs})"
+    "Gold coin, half again as large as a {@item nib} (1 dragon = 100 {@item nib})"
   ]
 },
 {
@@ -7347,22 +7329,22 @@ database.items = [
         [
           "1",
           "Air",
-          "{@item Elemental Essence Shard (Air)|TCE}"
+          "{@item Elemental Essence Shard (Air)}"
         ],
         [
           "2",
           "Earth",
-          "{@item Elemental Essence Shard (Earth)|TCE}"
+          "{@item Elemental Essence Shard (Earth)}"
         ],
         [
           "3",
           "Fire",
-          "{@item Elemental Essence Shard (Fire)|TCE}"
+          "{@item Elemental Essence Shard (Fire)}"
         ],
         [
           "4",
           "Water",
-          "{@item Elemental Essence Shard (Water)|TCE}"
+          "{@item Elemental Essence Shard (Water)}"
         ]
       ]
     }
@@ -7695,7 +7677,7 @@ database.items = [
       "items": [
         "a {@item backpack}",
         "a {@item bedroll}",
-        "2 {@item Costume Clothes|costumes}",
+        "2 {@item Costume Clothestumes}",
         "5 {@item candle|candles}",
         "5 days of {@item Rations (1 day)|rations}",
         "a {@item waterskin}",
@@ -7870,7 +7852,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "charm person"
@@ -7904,7 +7885,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -7962,7 +7942,7 @@ database.items = [
       "type": "entries",
       "name": "Part of a Whole",
       "entries": [
-        "While this component is not installed in the {@item Orrery of the Wanderer|AI}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
+        "While this component is not installed in the {@item Orrery of the Wanderer}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
       ]
     }
   ],
@@ -8016,7 +7996,7 @@ database.items = [
   "reqAttune": true,
   "wondrous": true,
   "entries": [
-    "This bright plume is made from the feather of a {@creature diatryma|wdh} (pronounced dee-ah-TRY-mah), a Large, colorful, flightless bird native to the Underdark. If you use an action to speak the command word and throw the feather into a Large unoccupied space on the ground within 5 feet of you, the feather becomes a living diatryma for up to 6 hours, after which it reverts to its feather form. It reverts to feather form early if it drops to 0 hit points or if you use an action to speak the command word again while touching the bird.",
+    "This bright plume is made from the feather of a {@creature diatryma} (pronounced dee-ah-TRY-mah), a Large, colorful, flightless bird native to the Underdark. If you use an action to speak the command word and throw the feather into a Large unoccupied space on the ground within 5 feet of you, the feather becomes a living diatryma for up to 6 hours, after which it reverts to its feather form. It reverts to feather form early if it drops to 0 hit points or if you use an action to speak the command word again while touching the bird.",
     "When the diatryma reverts to feather form, the magic of the feather can't be used again until 7 days have passed.",
     "The diatryma uses the statistics of an {@creature axe beak}, except that its beak deals piercing damage instead of slashing damage. The creature is friendly to you and your companions, and it can be used as a mount. It understands your languages and obeys your spoken commands. If you issue no commands, the diatryma defends itself but takes no other actions."
   ]
@@ -8507,8 +8487,8 @@ database.items = [
     "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature.",
     "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions.",
     "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.",
-    "{@creature giant fly|dmg|Ebony Fly}.",
-    "This ebony statuette is carved in the likeness of a horsefly. It can become a {@creature giant fly|dmg} for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 days have passed."
+    "{@creature giant fly|Ebony Fly}.",
+    "This ebony statuette is carved in the likeness of a horsefly. It can become a {@creature giant fly} for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 days have passed."
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -8654,10 +8634,10 @@ database.items = [
   "reqAttune": "by a creature with the Mark of Finding",
   "reqAttuneTags": [
     {
-      "race": "half-orc (variant; mark of finding)|erlw"
+      "race": "half-orc (variant; mark of finding)"
     },
     {
-      "race": "human (variant; mark of finding)|erlw"
+      "race": "human (variant; mark of finding)"
     }
   ],
   "wondrous": true,
@@ -8738,7 +8718,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -8883,7 +8863,7 @@ database.items = [
     "Typical weapons on a flying fish ship include a forward-mounted mangonel and an aftmounted ballista."
   ],
   "seeAlsoVehicle": [
-    "Flying Fish Ship|AAG"
+    "Flying Fish Ship"
   ]
 },
 {
@@ -8917,7 +8897,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -9141,7 +9121,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -9220,7 +9199,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -9404,7 +9382,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -9422,7 +9399,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -9439,7 +9415,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -9463,7 +9438,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table B"
@@ -9691,7 +9665,7 @@ database.items = [
   "reqAttune": "by a member of the Golgari guild",
   "reqAttuneTags": [
     {
-      "background": "golgari agent|ggr"
+      "background": "golgari agent"
     }
   ],
   "wondrous": true,
@@ -9779,7 +9753,7 @@ database.items = [
   "reqAttune": "by a member of the Gruul guild",
   "reqAttuneTags": [
     {
-      "background": "gruul anarch|ggr"
+      "background": "gruul anarch"
     }
   ],
   "wondrous": true,
@@ -9837,7 +9811,7 @@ database.items = [
       "name": "Vampiric Strike",
       "type": "entries",
       "entries": [
-        "The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to regain a number of hit points equal to the damage dealt by the weapon. Each time a charge is spent, red blood oozes from the staff's pores, and you must succeed on a DC 12 Wisdom saving throw or be afflicted with {@table Short-Term Madness|DMG|short term madness} (see \"{@variantrule Madness|DMG}\" in chapter 8 of the Dungeon Master's Guide)."
+        "The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to regain a number of hit points equal to the damage dealt by the weapon. Each time a charge is spent, red blood oozes from the staff's pores, and you must succeed on a DC 12 Wisdom saving throw or be afflicted with {@table Short-Term Madness|short term madness} (see \"{@variantrule Madness}\" in chapter 8 of the Dungeon Master's Guide)."
       ]
     },
     {
@@ -9899,7 +9873,7 @@ database.items = [
     "Hammerhead ships are popular craft, especially among pirates and merchants carrying heavy cargo. They can float on water and sail across it, but they aren't built to land on the ground (their keels would cause them to tip to one side). Standard weapons on a hammerhead ship include fore and aft mangonels, a ballista, and a reinforced bow for ramming."
   ],
   "seeAlsoVehicle": [
-    "Hammerhead Ship|AAG"
+    "Hammerhead Ship"
   ]
 },
 {
@@ -9918,7 +9892,7 @@ database.items = [
   "rarity": "none",
   "value": 5000,
   "entries": [
-    "Platinum crescent inset with electrum, about three inches long with a hole large enough for a {@item nib|wdh} to fit in (1 harbor moon = 5,000 {@item nib|wdh|nibs})"
+    "Platinum crescent inset with electrum, about three inches long with a hole large enough for a {@item nib} to fit in (1 harbor moon = 5,000 {@item nib})"
   ]
 },
 {
@@ -9936,7 +9910,7 @@ database.items = [
       "name": "Curse",
       "entries": [
         "Attuning to Harkon's Bite curses you until either Harkon Lukas removes the necklace from you or you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot remove the necklace.",
-        "Upon donning or removing the necklace, whether you are attuned to it or not, you are afflicted with {@variantrule Player Characters as Lycanthropes|mm|werewolf lycanthropy} as detailed in the Monster Manual. The curse lasts until the dawn after the next full moon. If you are still wearing the necklace at this time, you are afflicted with the lycanthropy again."
+        "Upon donning or removing the necklace, whether you are attuned to it or not, you are afflicted with {@variantrule Player Characters as Lycanthropes|werewolf lycanthropy} as detailed in the Monster Manual. The curse lasts until the dawn after the next full moon. If you are still wearing the necklace at this time, you are afflicted with the lycanthropy again."
       ]
     }
   ]
@@ -9953,7 +9927,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "disguise self"
@@ -10018,7 +9991,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -10173,7 +10145,7 @@ database.items = [
     "This bulky, eyeless helmet is made for a {@creature pit fiend} but magically resizes to fit the heads of other wearers.",
     "While wearing the helm, you can see out of it as though you weren't wearing it. In addition, you know the exact location and type of all devils within 1,000 feet of you. You can telepathically communicate with a devil within range, or you can broadcast your thoughts to all devils within range. The devils receiving your broadcasted thoughts have no special means of replying to them.",
     "The helm has 3 charges. As an action, you can expend 1 charge to cast {@spell dominate monster} (save DC 21), which affects devils only. (The spell fails and the charge is wasted if you target any creature that's not a devil.) If a devil can see you when you cast this spell on it, the devil knows you tried to charm it. The helm regains all its charges 24 hours after its last charge is expended.",
-    "If you are not a devil, using the helm's {@spell dominate monster} property in the Nine Hells has a {@chance 20|20 percent} chance of attracting a {@creature narzugon|MTF}, which arrives on the back of a {@creature nightmare} mount in {@dice 1d4} hours. The narzugon tries to recover the helm, killing you if necessary to obtain it. If it gets the helm, the narzugon tries to deliver it to its infernal master."
+    "If you are not a devil, using the helm's {@spell dominate monster} property in the Nine Hells has a {@chance 20|20 percent} chance of attracting a {@creature narzugon}, which arrives on the back of a {@creature nightmare} mount in {@dice 1d4} hours. The narzugon tries to recover the helm, killing you if necessary to obtain it. If it gets the helm, the narzugon tries to deliver it to its infernal master."
   ],
   "attachedSpells": [
     "dominate monster"
@@ -10192,7 +10164,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "detect thoughts",
@@ -10587,7 +10558,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -10670,7 +10640,7 @@ database.items = [
   "type": "G",
   "rarity": "none",
   "entries": [
-    "Before you finish making a character, roll once on the Horror Trinkets table for a unique object your character has with them at the start of their adventuring career. These trinkets hint toward various horrific tales and might lead to dreadful revelations or be nothing more than grim keepsakes. At the DM's discretion any of these trinkets might also be a Mist talisman (detailed in {@book chapter 3|VRGR|3|Mist Talismans}), a focal item that can lead the bearer through the Mists to a particular Domain of Dread.",
+    "Before you finish making a character, roll once on the Horror Trinkets table for a unique object your character has with them at the start of their adventuring career. These trinkets hint toward various horrific tales and might lead to dreadful revelations or be nothing more than grim keepsakes. At the DM's discretion any of these trinkets might also be a Mist talisman (detailed in {@book chapter 3|3|Mist Talismans}), a focal item that can lead the bearer through the Mists to a particular Domain of Dread.",
     {
       "type": "table",
       "caption": "Horror Trinkets",
@@ -12055,11 +12025,11 @@ database.items = [
   "rechargeAmount": "{@dice 1d3}",
   "charges": 3,
   "entries": [
-    "This ring, adorned with the symbol of Izzet, allows you to cast {@spell chaos bolt|XGE}. A guild signet is sometimes awarded to a guild member whose renown score in that guild is 5 or higher, as a reward for performing special services for the guild. Aside from its magical properties, the ring is also an indicator of Izzet's recognition and favor.",
+    "This ring, adorned with the symbol of Izzet, allows you to cast {@spell chaos bolt}. A guild signet is sometimes awarded to a guild member whose renown score in that guild is 5 or higher, as a reward for performing special services for the guild. Aside from its magical properties, the ring is also an indicator of Izzet's recognition and favor.",
     "A signet has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. While wearing it, you can expend 1 charge to cast the associated spell (save DC 13)."
   ],
   "attachedSpells": [
-    "chaos bolt|XGE"
+    "chaos bolt"
   ]
 },
 {
@@ -12069,13 +12039,13 @@ database.items = [
   "reqAttune": "by a member of the Izzet guild",
   "reqAttuneTags": [
     {
-      "background": "izzet engineer|ggr"
+      "background": "izzet engineer"
     }
   ],
   "wondrous": true,
   "entries": [
-    "Formed of carved and polished red and blue stone, the keyrune includes bits of cable and wire. One end resembles a humanlike head, suggesting the jagged elemental form of the {@creature galvanice weird|GGR} that it can become for a duration of 3 hours. In this form, it will serve you as a bodyguard, lift and carry things for you, act as a test subject for your experiments, or aid you in any other way that its capabilities allow.",
-    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature galvanice weird|GGR}. If there isn't enough space for the creature, the keyrune doesn't transform.",
+    "Formed of carved and polished red and blue stone, the keyrune includes bits of cable and wire. One end resembles a humanlike head, suggesting the jagged elemental form of the {@creature galvanice weird} that it can become for a duration of 3 hours. In this form, it will serve you as a bodyguard, lift and carry things for you, act as a test subject for your experiments, or aid you in any other way that its capabilities allow.",
+    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature galvanice weird}. If there isn't enough space for the creature, the keyrune doesn't transform.",
     "The creature is friendly to you, your companions, and other members of your guild (unless those guild members are hostile to you). It understands your languages and obeys your spoken commands. If you issue no commands, the creature takes the {@action Dodge} action and moves to avoid danger.",
     "At the end of the duration, the creature reverts to its keyrune form. It reverts early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature reverts to its keyrune form, it can't transform again until 36 hours have passed."
   ]
@@ -12380,7 +12350,7 @@ database.items = [
   "reqAttune": "by a creature with the Mark of Warding",
   "reqAttuneTags": [
     {
-      "race": "dwarf (mark of warding)|erlw"
+      "race": "dwarf (mark of warding)"
     }
   ],
   "wondrous": true,
@@ -12492,7 +12462,7 @@ database.items = [
     "A lamprey can float on water, though it can't land safely on the ground. Lamprey ships that land on the ground have the distressing habit of rolling over, as more than a few crews have discovered to their dismay."
   ],
   "seeAlsoVehicle": [
-    "Lamprey Ship|AAG"
+    "Lamprey Ship"
   ]
 },
 {
@@ -12507,7 +12477,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table B"
@@ -12772,7 +12741,7 @@ database.items = [
     "Wizard"
   ],
   "entries": [
-    "With covers made of skin and fittings of bone, this tome is cold to the touch, and it whispers faintly. When found, the book contains the following spells, which are wizard spells for you while you are attuned to the book: {@spell animate dead}, {@spell circle of death}, {@spell false life}, {@spell finger of death}, {@spell speak with dead}, {@spell summon undead|TCE}, and {@spell vampiric touch}. It functions as a spellbook for you.",
+    "With covers made of skin and fittings of bone, this tome is cold to the touch, and it whispers faintly. When found, the book contains the following spells, which are wizard spells for you while you are attuned to the book: {@spell animate dead}, {@spell circle of death}, {@spell false life}, {@spell finger of death}, {@spell speak with dead}, {@spell summon undead}, and {@spell vampiric touch}. It functions as a spellbook for you.",
     "While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
     "The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
     {
@@ -12857,7 +12826,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -12915,7 +12884,7 @@ database.items = [
     "A living ship can float on water and sail across it, but it can't land safely on the ground (its keel would cause it to roll on its side). Its standard weaponry is an aft-mounted ballista."
   ],
   "seeAlsoVehicle": [
-    "Living Ship|AAG"
+    "Living Ship"
   ]
 },
 {
@@ -13084,7 +13053,7 @@ database.items = [
   "grantsProficiency": true,
   "entries": [
     "While holding this {@item lyre}, you can cast {@spell mending} as an action. You can also play the {@item lyre} as a reaction when an object or a structure you can see within 300 feet of you takes damage, causing it to be immune to that damage and any further damage of the same type until the start of your next turn.",
-    "In addition, you can play the {@item lyre} as an action to cast {@spell fabricate}, {@spell move earth}, {@spell passwall}, or {@spell summon construct|TCE}, and that spell can't be cast from it again until the next dawn."
+    "In addition, you can play the {@item lyre} as an action to cast {@spell fabricate}, {@spell move earth}, {@spell passwall}, or {@spell summon construct}, and that spell can't be cast from it again until the next dawn."
   ],
   "attachedSpells": [
     "fabricate",
@@ -13596,7 +13565,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "detect thoughts"
@@ -13768,7 +13736,7 @@ database.items = [
         ],
         [
           "2",
-          "{@spell chaos bolt|XGE}"
+          "{@spell chaos bolt}"
         ],
         [
           "3",
@@ -14133,7 +14101,7 @@ database.items = [
     "As an action, a creature attuned to a nautiloid's spelljamming helm and in physical contact with the ship can transport the nautiloid and all creatures and objects aboard it to a different plane of existence, at or near a destination envisioned by the spelljammer (or to a random location on the plane if no destination is envisioned). This property is a feature of the ship, not the spelljamming helm. Each time this property is used, roll a {@dice d6}. On a 5-6, the property recharges after 1 minute; otherwise, it can't be used again for 24 hours."
   ],
   "seeAlsoVehicle": [
-    "Nautiloid|AAG"
+    "Nautiloid"
   ]
 },
 {
@@ -14365,7 +14333,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -14438,7 +14406,7 @@ database.items = [
     "Nightspiders are designed for space travel alone and can't float on water or land safely on the ground (the weight of the ship would snap its spindly legs, destroying its weblike rigging in the process). Standard weaponry on a nightspider includes four ballistae (two forward-facing and two aft-facing) and a forward-facing mangonel."
   ],
   "seeAlsoVehicle": [
-    "Nightspider|AAG"
+    "Nightspider"
   ]
 },
 {
@@ -14813,7 +14781,7 @@ database.items = [
   "bonusAc": "+2",
   "entries": [
     "While holding this shield, you have a +2 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.",
-    "The shield is emblazoned with a stylized silver dragon that is the emblem of the Order of the Silver Dragon (see {@adventure {@i Curse of Strahd}, chapter 7|CoS|7|The Order of the Silver Dragon}). The shield whispers warnings to its bearer, granting a +2 bonus to initiative if the bearer isn't {@condition incapacitated}.",
+    "The shield is emblazoned with a stylized silver dragon that is the emblem of the Order of the Silver Dragon (see {@adventure {@i Curse of Strahd}, chapter 7|7|The Order of the Silver Dragon}). The shield whispers warnings to its bearer, granting a +2 bonus to initiative if the bearer isn't {@condition incapacitated}.",
     "A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time."
   ]
 },
@@ -14852,13 +14820,13 @@ database.items = [
   "reqAttune": "by a member of the Orzhov guild",
   "reqAttuneTags": [
     {
-      "background": "orzhov representative|ggr"
+      "background": "orzhov representative"
     }
   ],
   "wondrous": true,
   "entries": [
-    "This keyrune is carved from white marble with veins of black. The end is shaped like a thrull's head, with a gold faceplate affixed. On command, the keyrune transforms into a {@creature winged thrull|GGR} for up to 2 hours. If you don't come from an Orzhov oligarch family, it serves you grudgingly, clownishly aping your movements and mannerisms while carrying out your orders.",
-    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature winged thrull|GGR}. If there isn't enough space for the creature, the keyrune doesn't transform.",
+    "This keyrune is carved from white marble with veins of black. The end is shaped like a thrull's head, with a gold faceplate affixed. On command, the keyrune transforms into a {@creature winged thrull} for up to 2 hours. If you don't come from an Orzhov oligarch family, it serves you grudgingly, clownishly aping your movements and mannerisms while carrying out your orders.",
+    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature winged thrull}. If there isn't enough space for the creature, the keyrune doesn't transform.",
     "The creature is friendly to you, your companions, and other members of your guild (unless those guild members are hostile to you). It understands your languages and obeys your spoken commands. If you issue no commands, the creature takes the {@action Dodge} action and moves to avoid danger.",
     "At the end of the duration, the creature reverts to its keyrune form. It reverts early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature reverts to its keyrune form, it can't transform again until 36 hours have passed."
   ]
@@ -14898,22 +14866,22 @@ database.items = [
         [
           "1",
           "Lawful",
-          "{@item Outer Essence Shard (Lawful)|TCE}"
+          "{@item Outer Essence Shard (Lawful)}"
         ],
         [
           "2",
           "Chaotic",
-          "{@item Outer Essence Shard (Chaotic)|TCE}"
+          "{@item Outer Essence Shard (Chaotic)}"
         ],
         [
           "3",
           "Good",
-          "{@item Outer Essence Shard (Good)|TCE}"
+          "{@item Outer Essence Shard (Good)}"
         ],
         [
           "4",
           "Evil",
-          "{@item Outer Essence Shard (Evil)|TCE}"
+          "{@item Outer Essence Shard (Evil)}"
         ]
       ]
     }
@@ -15383,7 +15351,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -15482,7 +15449,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -15507,7 +15473,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -15597,7 +15562,7 @@ database.items = [
     "Wizard"
   ],
   "entries": [
-    "The pages of this book are bound in fiend hide, and its cover is embossed with a diagram of the Great Wheel of the multiverse. When found, the book contains the following spells: {@spell banishment}, {@spell find familiar}, {@spell gate}, {@spell magic circle}, {@spell planar binding}, and {@spell summon elemental|TCE}. It functions as a spellbook for you.",
+    "The pages of this book are bound in fiend hide, and its cover is embossed with a diagram of the Great Wheel of the multiverse. When found, the book contains the following spells: {@spell banishment}, {@spell find familiar}, {@spell gate}, {@spell magic circle}, {@spell planar binding}, and {@spell summon elemental}. It functions as a spellbook for you.",
     "While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
     "The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
     {
@@ -15703,7 +15668,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -15721,7 +15686,7 @@ database.items = [
   "value": 5000,
   "entries": [
     "A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons.",
-    "Additionally, the {@book Crafting and Harvesting Poison|dmg|8|Crafting and Harvesting Poison} rules require the use of a poisoner's kit."
+    "Additionally, the {@book Crafting and Harvesting Poison|8|Crafting and Harvesting Poison} rules require the use of a poisoner's kit."
   ],
   "additionalEntries": [
     "A poisoner's kit is a favored resource for thieves, assassins, and others who engage in skulduggery. It allows you to apply poisons and create them from various materials. Your knowledge of poisons also helps you treat them.",
@@ -16653,7 +16618,7 @@ database.items = [
   "rarity": "common",
   "wondrous": true,
   "entries": [
-    "This small capsule is made of beeswax blended with sand and a variety of enchanted water plants. A creature who consumes a pressure capsule ignores the effects of swimming at depths greater than 100 feet (see \"{@book Unusual Environments|dmg|5|Unusual Environments}\" in chapter 5 of the Dungeon Master's Guide)."
+    "This small capsule is made of beeswax blended with sand and a variety of enchanted water plants. A creature who consumes a pressure capsule ignores the effects of swimming at depths greater than 100 feet (see \"{@book Unusual Environments|5|Unusual Environments}\" in chapter 5 of the Dungeon Master's Guide)."
   ]
 },
 {
@@ -16759,7 +16724,7 @@ database.items = [
   "weight": 5,
   "entries": [
     "Each professor orb takes the form of a smooth, solid, 5-pound sphere of smoky gray quartz about the size of a grapefruit. Close examination reveals two or more pinpricks of silver light deep inside the sphere.",
-    "A Professor Orb is sentient and has the personality of a scholar. Its alignment is determined by rolling on the alignment table in the \"{@book Sentient Magic Items|DMG|7|Sentient Magic Items}\" section in chapter 7 of the {@book Dungeon Master's Guide|dmg}. Regardless of its disposition, the orb has an Intelligence of 18, and Wisdom and Charisma scores determined by rolling {@dice 3d6} for each ability. The orb speaks, reads, and understands four languages, and can see and hear normally out to a range of 60 feet. Unlike most sentient items, the orb has no will of its own and can't initiate a conflict with the creature in possession of it.",
+    "A Professor Orb is sentient and has the personality of a scholar. Its alignment is determined by rolling on the alignment table in the \"{@book Sentient Magic Items|7|Sentient Magic Items}\" section in chapter 7 of the {@book Dungeon Master's Guide}. Regardless of its disposition, the orb has an Intelligence of 18, and Wisdom and Charisma scores determined by rolling {@dice 3d6} for each ability. The orb speaks, reads, and understands four languages, and can see and hear normally out to a range of 60 feet. Unlike most sentient items, the orb has no will of its own and can't initiate a conflict with the creature in possession of it.",
     "A Professor Orb has extensive knowledge of four narrow academic subjects. When making an Intelligence check to recall lore from any of its areas of expertise, the orb has a +9 bonus to its roll (including its Intelligence modifier).",
     "In addition to the knowledge it possesses, a professor orb can cast the {@spell mage hand} cantrip at will. It uses the spell only to transport itself. Its spellcasting ability is Intelligence."
   ],
@@ -16844,7 +16809,7 @@ database.items = [
   ],
   "wondrous": true,
   "entries": [
-    "This crystal grants you telepathy for as long as you remain attuned to it. See the {@book introduction of the Monster Manual|MM|0|Telepathy} for rules on how this telepathy works.",
+    "This crystal grants you telepathy for as long as you remain attuned to it. See the {@book introduction of the Monster Manual|0|Telepathy} for rules on how this telepathy works.",
     "The crystal also glows with a purplish inner light while you are attuned to it.",
     "The higher your intelligence, the greater the light's intensity and the greater the range of the telepathy (see the Psi Crystal Properties table).",
     {
@@ -16898,7 +16863,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -17106,7 +17071,6 @@ database.items = [
   },
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -17125,7 +17089,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -17163,13 +17127,13 @@ database.items = [
   "reqAttune": "by a member of the Rakdos guild",
   "reqAttuneTags": [
     {
-      "background": "rakdos cultist|ggr"
+      "background": "rakdos cultist"
     }
   ],
   "wondrous": true,
   "entries": [
-    "This dark granite keyrune is marbled with scarlet veins and carved with the leering visage of a mischievous demon. When activated, it transforms into a {@creature cackler|GGR} for up to 1 hour.",
-    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature cackler|GGR}. If there isn't enough space for the creature, the keyrune doesn't transform.",
+    "This dark granite keyrune is marbled with scarlet veins and carved with the leering visage of a mischievous demon. When activated, it transforms into a {@creature cackler} for up to 1 hour.",
+    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature cackler}. If there isn't enough space for the creature, the keyrune doesn't transform.",
     "The creature is friendly to you, your companions, and other members of your guild (unless those guild members are hostile to you). It understands your languages and obeys your spoken commands. If you issue no commands, the creature takes the {@action Dodge} action and moves to avoid danger.",
     "At the end of the duration, the creature reverts to its keyrune form. It reverts early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature reverts to its keyrune form, it can't transform again until 36 hours have passed."
   ]
@@ -17446,7 +17410,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -17464,7 +17427,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "jump"
@@ -17503,7 +17465,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -17571,7 +17532,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -17836,7 +17796,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -17873,7 +17832,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table G"
@@ -18205,7 +18163,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table B"
@@ -18264,7 +18221,7 @@ database.items = [
       "type": "entries",
       "name": "Part of a Whole",
       "entries": [
-        "While this component is not installed in the {@item Orrery of the Wanderer|AI}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
+        "While this component is not installed in the {@item Orrery of the Wanderer}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
       ]
     }
   ]
@@ -18615,7 +18572,7 @@ database.items = [
     "Scorpion ships are archaic metal warships that have never lost their popularity, largely because of their versatility. Articulated legs enable a scorpion ship to land safely on the ground and move across a solid surface at a walking speed of 30 feet. The ship can't float on water, however. A ballista is mounted on the top deck, and a mangonel is perched on the end of the tail. The ship's two claws are relatively inefficient in combat, but a claw that grabs a creature can quickly take it out of action."
   ],
   "seeAlsoVehicle": [
-    "Scorpion Ship|AAG"
+    "Scorpion Ship"
   ]
 },
 {
@@ -18625,7 +18582,7 @@ database.items = [
   "reqAttune": "by a creature with the Mark of Scribing",
   "reqAttuneTags": [
     {
-      "race": "gnome (mark of scribing)|erlw"
+      "race": "gnome (mark of scribing)"
     }
   ],
   "wondrous": true,
@@ -18776,7 +18733,7 @@ database.items = [
   "reqAttune": "by a member of the Selesnya guild",
   "reqAttuneTags": [
     {
-      "background": "selesnya initiate|ggr"
+      "background": "selesnya initiate"
     }
   ],
   "wondrous": true,
@@ -18869,7 +18826,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "sending"
@@ -19000,7 +18956,7 @@ database.items = [
   "rarity": "none",
   "value": 10,
   "entries": [
-    "Silver coin, slightly smaller than the nib (1 shard = 10 {@item nib|wdh|nibs})"
+    "Silver coin, slightly smaller than the nib (1 shard = 10 {@item nib})"
   ]
 },
 {
@@ -19334,7 +19290,7 @@ database.items = [
     "Standard weaponry on a shrike ship includes three ballistae-one on the forecastle, one in the middle of the top deck, and one on the sterncastle. In a desperate situation, the ship's reinforced bow can be used as a piercing ram."
   ],
   "seeAlsoVehicle": [
-    "Shrike Ship|AAG"
+    "Shrike Ship"
   ]
 },
 {
@@ -19533,13 +19489,13 @@ database.items = [
   "reqAttune": "by a member of the Simic guild",
   "reqAttuneTags": [
     {
-      "background": "simic scientist|ggr"
+      "background": "simic scientist"
     }
   ],
   "wondrous": true,
   "entries": [
-    "This keyrune is assembled from coral, mother-of-pearl, and chrome and adorned with the spirals and curves characteristic of Simic ornamentation. The head resembles the shell of a sea creature. On command, the keyrune turns into a {@creature category 1 krasis|GGR} that has the Grabber and Stabilizing Legs adaptations. The transformation lasts for up to 5 hours.",
-    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature category 1 krasis|GGR} that has the Grabber and Stabilizing Legs adaptations. If there isn't enough space for the creature, the keyrune doesn't transform.",
+    "This keyrune is assembled from coral, mother-of-pearl, and chrome and adorned with the spirals and curves characteristic of Simic ornamentation. The head resembles the shell of a sea creature. On command, the keyrune turns into a {@creature category 1 krasis} that has the Grabber and Stabilizing Legs adaptations. The transformation lasts for up to 5 hours.",
+    "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a {@creature category 1 krasis} that has the Grabber and Stabilizing Legs adaptations. If there isn't enough space for the creature, the keyrune doesn't transform.",
     "The creature is friendly to you, your companions, and other members of your guild (unless those guild members are hostile to you). It understands your languages and obeys your spoken commands. If you issue no commands, the creature takes the {@action Dodge} action and moves to avoid danger.",
     "At the end of the duration, the creature reverts to its keyrune form. It reverts early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature reverts to its keyrune form, it can't transform again until 36 hours have passed."
   ]
@@ -19682,7 +19638,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -19954,7 +19909,7 @@ database.items = [
       "name": "Freeing a Soul",
       "entries": [
         "Casting a spell that removes a curse on a soul coin frees the soul trapped within it, as does expending all of the coin's charges. The coin itself rusts from within and is destroyed once the soul is released. A freed soul travels to the realm of the god it served or the outer plane most closely tied to its alignment (DM's choice). The souls of lawful evil creatures released from soul coins typically emerge from the River Styx as {@creature lemure} devils.",
-        "A soul can also be freed by destroying the coin that contains it. A soul coin has AC 19, 1 hit point for each charge it has remaining, and immunity to all damage except that which is dealt by a {@item hellfire weapon|bgdia} or an infernal war machine's furnace (see \"{@adventure Soul Fuel|bgdia|11|Soul Fuel}\").",
+        "A soul can also be freed by destroying the coin that contains it. A soul coin has AC 19, 1 hit point for each charge it has remaining, and immunity to all damage except that which is dealt by a {@item hellfire weapon} or an infernal war machine's furnace (see \"{@adventure Soul Fuel|11|Soul Fuel}\").",
         "Freeing a soul from a soul coin is considered a good act, even if the soul belongs to an evil creature."
       ]
     },
@@ -19984,7 +19939,7 @@ database.items = [
     "The space galleon is a mainstay among the host of vessels that ply Wildspace and the Astral Sea. Space galleons can easily pass for ordinary seafaring galleons. Because they can land on water and move across it like their namesakes, they can sail into ports on terrestrial worlds without attracting undue attention. Like an ordinary galleon, a space galleon isn't built to land on the ground (its keel would cause it to roll on its side). The ship's standard weaponry includes two forward-mounted ballistae and an aft-mounted mangonel."
   ],
   "seeAlsoVehicle": [
-    "Space Galleon|AAG"
+    "Space Galleon"
   ]
 },
 {
@@ -20360,8 +20315,8 @@ database.items = [
       "type": "inset",
       "name": "Cost of a Spelljamming Helm",
       "entries": [
-        "A spelljamming helm propels and steers a ship much as sails, oars, and rudders work on a seafaring vessel, and a spelljamming helm is easy to create if one has the proper spell. {@spell Create spelljamming helm|AAG} has a material component cost of 5,000 gp, so that's the least one can pay to acquire a spelljamming helm.",
-        "Wildspace merchants, including {@creature dohwar|BAM|dohwars} and {@creature mercane|BAM|mercanes} (both described in {@book Boo's Astral Menagerie|BAM}), typically sell a spelljamming helm for substantially more than it cost to make. How much more depends on the market, but 7,500 gp would be a reasonable demand. A desperate buyer in a seller's market might pay 10,000 gp or more."
+        "A spelljamming helm propels and steers a ship much as sails, oars, and rudders work on a seafaring vessel, and a spelljamming helm is easy to create if one has the proper spell. {@spell Create spelljamming helm} has a material component cost of 5,000 gp, so that's the least one can pay to acquire a spelljamming helm.",
+        "Wildspace merchants, including {@creature dohwar|dohwars} and {@creature mercane|mercanes} (both described in {@book Boo's Astral Menagerie}), typically sell a spelljamming helm for substantially more than it cost to make. How much more depends on the market, but 7,500 gp would be a reasonable demand. A desperate buyer in a seller's market might pay 10,000 gp or more."
       ]
     }
   ]
@@ -20535,7 +20490,7 @@ database.items = [
     "Squid ships can float and sail on water, and they can land on the ground."
   ],
   "seeAlsoVehicle": [
-    "Squid Ship|AAG"
+    "Squid Ship"
   ]
 },
 {
@@ -20687,7 +20642,7 @@ database.items = [
   "staff": true,
   "entries": [
     "This staff of polished gray wood bears numerous runes carved along its length. The staff has 10 charges and regains {@dice 1d6 + 4} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff turns into dust and is destroyed.",
-    "While holding the staff, you can use an action to expend 2 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: {@spell fortune's favor|egw} (2 charges), {@spell pulse wave|egw} (3 charges), or {@spell gravity sinkhole|egw} (4 charges).",
+    "While holding the staff, you can use an action to expend 2 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: {@spell fortune's favor} (2 charges), {@spell pulse wave} (3 charges), or {@spell gravity sinkhole} (4 charges).",
     {
       "type": "entries",
       "name": "New Possibility",
@@ -20697,9 +20652,9 @@ database.items = [
     }
   ],
   "attachedSpells": [
-    "fortune's favor|egw",
-    "pulse wave|egw",
-    "gravity sinkhole|egw"
+    "fortune's favor",
+    "pulse wave",
+    "gravity sinkhole"
   ]
 },
 {
@@ -21349,7 +21304,7 @@ database.items = [
     "A star moth's hull is fashioned from a grown and sculpted organic substance, and its enormous, decorative wings are made of shimmering crystal. The vessel is built for space travel, but its design does enable it to float on water or land safely on the ground. Standard weaponry includes two ballistae nestled in the star moth's eye holes and a mangonel mounted above the bridge."
   ],
   "seeAlsoVehicle": [
-    "Star Moth|AAG"
+    "Star Moth"
   ]
 },
 {
@@ -21542,7 +21497,7 @@ database.items = [
   "rarity": "none",
   "value": 1000,
   "entries": [
-    "Platinum coin, twice as large as a {@item nib|wdh} (1 sun = 1,000 {@item nib|wdh|nibs})"
+    "Platinum coin, twice as large as a {@item nib} (1 sun = 1,000 {@item nib})"
   ]
 },
 {
@@ -21686,7 +21641,7 @@ database.items = [
   "rarity": "none",
   "value": 200,
   "entries": [
-    "Brass coin, about two inches square with a hold large enough for a {@item nib|wdh} to fit in (1 taol = 200 {@item nib|wdh|nibs})"
+    "Brass coin, about two inches square with a hold large enough for a {@item nib} to fit in (1 taol = 200 {@item nib})"
   ]
 },
 {
@@ -21922,7 +21877,7 @@ database.items = [
   "tattoo": true,
   "hasRefs": true,
   "entries": [
-    "{#itemEntry Absorbing Tattoo|TCE}"
+    "{#itemEntry Absorbing Tattoo}"
   ]
 },
 {
@@ -21963,7 +21918,7 @@ database.items = [
       "type": "entries",
       "name": "Part of a Whole",
       "entries": [
-        "While this component is not installed in the {@item Orrery of the Wanderer|AI}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
+        "While this component is not installed in the {@item Orrery of the Wanderer}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
       ]
     }
   ],
@@ -23777,7 +23732,7 @@ database.items = [
     "Standard weaponry on a turtle ship includes three forward-mounted ballistae and a rear-facing mangonel. These weapons can't be used while the ship is underwater."
   ],
   "seeAlsoVehicle": [
-    "Turtle Ship|AAG"
+    "Turtle Ship"
   ]
 },
 {
@@ -23829,7 +23784,7 @@ database.items = [
     "A tyrant ship can't float on water, but it can safely land on the ground."
   ],
   "seeAlsoVehicle": [
-    "Tyrant Ship|AAG"
+    "Tyrant Ship"
   ]
 },
 {
@@ -23941,7 +23896,7 @@ database.items = [
   "rarity": "common",
   "wondrous": true,
   "entries": [
-    "This clockwork device resembles a metal crab the size of a dinner plate. Every action used to wind up the device allows it to operate for 1 minute, to a maximum of 10 minutes. While operational, the item uses the accompanying {@creature Vox Seeker|EGW} stat block. This automaton is under the DM's control. A vox seeker reduced to 0 hit points is destroyed."
+    "This clockwork device resembles a metal crab the size of a dinner plate. Every action used to wind up the device allows it to operate for 1 minute, to a maximum of 10 minutes. While operational, the item uses the accompanying {@creature Vox Seeker} stat block. This automaton is under the DM's control. A vox seeker reduced to 0 hit points is destroyed."
   ]
 },
 {
@@ -23996,7 +23951,7 @@ database.items = [
   "reqAttune": "by a warforged",
   "reqAttuneTags": [
     {
-      "race": "warforged|erlw"
+      "race": "warforged"
     }
   ],
   "wondrous": true,
@@ -24215,7 +24170,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "attachedSpells": [
     "detect magic"
@@ -24323,7 +24277,7 @@ database.items = [
   "charges": 3,
   "entries": [
     "This wand has 3 charges. While holding it, you can use an action to expend 1 of its charges and target a humanoid you can see within 30 feet of you. The target must succeed on a DC 10 Charisma saving throw or be forced to scowl for 1 minute.",
-    "The wand regains all expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand transforms into a {@item wand of smiles|xge}."
+    "The wand regains all expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand transforms into a {@item wand of smiles}."
   ]
 },
 {
@@ -24341,7 +24295,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table B"
@@ -24359,7 +24312,7 @@ database.items = [
   "charges": 3,
   "entries": [
     "This wand has 3 charges. While holding it, you can use an action to expend 1 of its charges and target a humanoid you can see within 30 feet of you. The target must succeed on a DC 10 Charisma saving throw or be forced to smile for 1 minute.",
-    "The wand regains all expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand transforms into a {@item wand of scowls|xge}."
+    "The wand regains all expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand transforms into a {@item wand of scowls}."
   ]
 },
 {
@@ -24617,7 +24570,7 @@ database.items = [
     "The ship's raised back provides high ground for a weapon emplacement, which is typically equipped with a ballista."
   ],
   "seeAlsoVehicle": [
-    "Wasp Ship|AAG"
+    "Wasp Ship"
   ]
 },
 {
@@ -24773,7 +24726,7 @@ database.items = [
       "type": "entries",
       "name": "Part of a Whole",
       "entries": [
-        "While this component is not installed in the {@item Orrery of the Wanderer|AI}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
+        "While this component is not installed in the {@item Orrery of the Wanderer}, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
       ]
     }
   ],
@@ -24899,7 +24852,6 @@ database.items = [
   ],
   "optionalfeatures": [
     "replicate magic item",
-    "replicate magic item|uaartificerrevisited"
   ],
   "lootTables": [
     "Magic Item Table F"
@@ -24958,7 +24910,7 @@ database.items = [
   "bonusWeapon": "+1",
   "entries": [
     "You have a +1 bonus to attack and damage rolls made with this magic weapon.",
-    "This greatsword is made of an unknown black metal. In most cases, it works as a {@item +1 greatsword}. But when used against a {@creature thessalhydra|hftt}, it works as a {@item +3 greatsword}. While in the Upside Down, it works as a +4 greatsword."
+    "This greatsword is made of an unknown black metal. In most cases, it works as a {@item +1 greatsword}. But when used against a {@creature thessalhydra}, it works as a {@item +3 greatsword}. While in the Upside Down, it works as a +4 greatsword."
   ]
 },
 {

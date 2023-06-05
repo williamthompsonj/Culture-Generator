@@ -39,52 +39,52 @@ database.item_groups = [
             [
               "1",
               "Green",
-              "{@item Acid Absorbing Tattoo|TCE}"
+              "{@item Acid Absorbing Tattoo}"
             ],
             [
               "2",
               "Blue",
-              "{@item Cold Absorbing Tattoo|TCE}"
+              "{@item Cold Absorbing Tattoo}"
             ],
             [
               "3",
               "Red",
-              "{@item Fire Absorbing Tattoo|TCE}"
+              "{@item Fire Absorbing Tattoo}"
             ],
             [
               "4",
               "White",
-              "{@item Force Absorbing Tattoo|TCE}"
+              "{@item Force Absorbing Tattoo}"
             ],
             [
               "5",
               "Yellow",
-              "{@item Lightning Absorbing Tattoo|TCE}"
+              "{@item Lightning Absorbing Tattoo}"
             ],
             [
               "6",
               "Black",
-              "{@item Necrotic Absorbing Tattoo|TCE}"
+              "{@item Necrotic Absorbing Tattoo}"
             ],
             [
               "7",
               "Violet",
-              "{@item Poison Absorbing Tattoo|TCE}"
+              "{@item Poison Absorbing Tattoo}"
             ],
             [
               "8",
               "Silver",
-              "{@item Psychic Absorbing Tattoo|TCE}"
+              "{@item Psychic Absorbing Tattoo}"
             ],
             [
               "9",
               "Gold",
-              "{@item Radiant Absorbing Tattoo|TCE}"
+              "{@item Radiant Absorbing Tattoo}"
             ],
             [
               "10",
               "Orange",
-              "{@item Thunder Absorbing Tattoo|TCE}"
+              "{@item Thunder Absorbing Tattoo}"
             ]
           ]
         }
@@ -99,16 +99,16 @@ database.item_groups = [
     }
   ],
   "items": [
-    "Acid Absorbing Tattoo|TCE",
-    "Cold Absorbing Tattoo|TCE",
-    "Fire Absorbing Tattoo|TCE",
-    "Force Absorbing Tattoo|TCE",
-    "Lightning Absorbing Tattoo|TCE",
-    "Necrotic Absorbing Tattoo|TCE",
-    "Poison Absorbing Tattoo|TCE",
-    "Psychic Absorbing Tattoo|TCE",
-    "Radiant Absorbing Tattoo|TCE",
-    "Thunder Absorbing Tattoo|TCE"
+    "Acid Absorbing Tattoo",
+    "Cold Absorbing Tattoo",
+    "Fire Absorbing Tattoo",
+    "Force Absorbing Tattoo",
+    "Lightning Absorbing Tattoo",
+    "Necrotic Absorbing Tattoo",
+    "Poison Absorbing Tattoo",
+    "Psychic Absorbing Tattoo",
+    "Radiant Absorbing Tattoo",
+    "Thunder Absorbing Tattoo"
   ]
 },
 {
@@ -123,11 +123,11 @@ database.item_groups = [
     "Wizard"
   ],
   "items": [
-    "Crystal|phb",
-    "Orb|phb",
-    "Rod|phb",
-    "Staff|phb",
-    "Wand|phb"
+    "Crystal",
+    "Orb",
+    "Rod",
+    "Staff",
+    "Wand"
   ]
 },
 {
@@ -209,7 +209,7 @@ database.item_groups = [
 {
   "name": "Armor of Vulnerability",
   "source": "DMG",
-  "baseItem": "plate armor|phb",
+  "baseItem": "plate armor",
   "type": "HA",
   "tier": "major",
   "rarity": "rare",
@@ -234,23 +234,23 @@ database.item_groups = [
   "type": "AT",
   "rarity": "none",
   "items": [
-    "Alchemist's Supplies|PHB",
-    "Brewer's Supplies|PHB",
-    "Calligrapher's Supplies|PHB",
-    "Carpenter's Tools|PHB",
-    "Cartographer's Tools|PHB",
-    "Cobbler's Tools|PHB",
-    "Cook's Utensils|PHB",
-    "Glassblower's Tools|PHB",
-    "Jeweler's Tools|PHB",
-    "Leatherworker's Tools|PHB",
-    "Mason's Tools|PHB",
-    "Painter's Supplies|PHB",
-    "Potter's Tools|PHB",
-    "Smith's Tools|PHB",
-    "Tinker's Tools|PHB",
-    "Weaver's Tools|PHB",
-    "Woodcarver's Tools|PHB"
+    "Alchemist's Supplies",
+    "Brewer's Supplies",
+    "Calligrapher's Supplies",
+    "Carpenter's Tools",
+    "Cartographer's Tools",
+    "Cobbler's Tools",
+    "Cook's Utensils",
+    "Glassblower's Tools",
+    "Jeweler's Tools",
+    "Leatherworker's Tools",
+    "Mason's Tools",
+    "Painter's Supplies",
+    "Potter's Tools",
+    "Smith's Tools",
+    "Tinker's Tools",
+    "Weaver's Tools",
+    "Woodcarver's Tools"
   ]
 },
 {
@@ -306,27 +306,27 @@ database.item_groups = [
       ],
       "rows": [
         [
-          "{@item Black Chromatic Rose|WBtW|Black}",
+          "{@item Black Chromatic Rose|Black}",
           "Drips acid",
           "Acid"
         ],
         [
-          "{@item Blue Chromatic Rose|WBtW|Blue}",
+          "{@item Blue Chromatic Rose|Blue}",
           "Crackles with lightning",
           "Lightning"
         ],
         [
-          "{@item Green Chromatic Rose|WBtW|Green}",
+          "{@item Green Chromatic Rose|Green}",
           "Issues green gas",
           "Poison"
         ],
         [
-          "{@item Red Chromatic Rose|WBtW|Red}",
+          "{@item Red Chromatic Rose|Red}",
           "Wreathed in fire",
           "Fire"
         ],
         [
-          "{@item White Chromatic Rose|WBtW|White}",
+          "{@item White Chromatic Rose|White}",
           "Covered in frost",
           "Cold"
         ]
@@ -334,11 +334,11 @@ database.item_groups = [
     }
   ],
   "items": [
-    "Black Chromatic Rose|WBtW",
-    "Blue Chromatic Rose|WBtW",
-    "Green Chromatic Rose|WBtW",
-    "Red Chromatic Rose|WBtW",
-    "White Chromatic Rose|WBtW"
+    "Black Chromatic Rose",
+    "Blue Chromatic Rose",
+    "Green Chromatic Rose",
+    "Red Chromatic Rose",
+    "White Chromatic Rose"
   ]
 },
 {
@@ -347,16 +347,16 @@ database.item_groups = [
   "rarity": "very rare",
   "wondrous": true,
   "entries": [
-    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air|PotA}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
+    "A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
     "A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air|PotA} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
+    "A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
     "Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use."
   ],
   "items": [
-    "Devastation Orb of Air|PotA",
-    "Devastation Orb of Earth|PotA",
-    "Devastation Orb of Fire|PotA",
-    "Devastation Orb of Water|PotA"
+    "Devastation Orb of Air",
+    "Devastation Orb of Earth",
+    "Devastation Orb of Fire",
+    "Devastation Orb of Water"
   ]
 },
 {
@@ -395,10 +395,10 @@ database.item_groups = [
     "Druid"
   ],
   "items": [
-    "Sprig of mistletoe|phb",
-    "Totem|phb",
-    "Wooden staff|phb",
-    "Yew wand|phb"
+    "Sprig of mistletoe",
+    "Totem",
+    "Wooden staff",
+    "Yew wand"
   ]
 },
 {
@@ -426,10 +426,10 @@ database.item_groups = [
   "type": "GS",
   "rarity": "none",
   "items": [
-    "Dice Set|PHB",
-    "Dragonchess Set|PHB",
-    "Playing Card Set|PHB",
-    "Three-Dragon Ante Set|PHB"
+    "Dice Set",
+    "Dragonchess Set",
+    "Playing Card Set",
+    "Three-Dragon Ante Set"
   ]
 },
 {
@@ -443,16 +443,16 @@ database.item_groups = [
     "A guild signet is sometimes awarded to a guild member whose renown score in that guild is 5 or higher, as a reward for performing special services for the guild. Aside from its magical properties, the ring is also an indicator of the guild's recognition and favor."
   ],
   "items": [
-    "Azorius Guild Signet|GGR",
-    "Boros Guild Signet|GGR",
-    "Dimir Guild Signet|GGR",
-    "Golgari Guild Signet|GGR",
-    "Gruul Guild Signet|GGR",
-    "Izzet Guild Signet|GGR",
-    "Orzhov Guild Signet|GGR",
-    "Rakdos Guild Signet|GGR",
-    "Selesnya Guild Signet|GGR",
-    "Simic Guild Signet|GGR"
+    "Azorius Guild Signet",
+    "Boros Guild Signet",
+    "Dimir Guild Signet",
+    "Golgari Guild Signet",
+    "Gruul Guild Signet",
+    "Izzet Guild Signet",
+    "Orzhov Guild Signet",
+    "Rakdos Guild Signet",
+    "Selesnya Guild Signet",
+    "Simic Guild Signet"
   ]
 },
 {
@@ -466,9 +466,9 @@ database.item_groups = [
     "Paladin"
   ],
   "items": [
-    "Amulet|phb",
-    "Emblem|phb",
-    "Reliquary|phb"
+    "Amulet",
+    "Emblem",
+    "Reliquary"
   ]
 },
 {
@@ -495,49 +495,49 @@ database.item_groups = [
       ],
       "rows": [
         [
-          "{@item Imbued Wood (Fernian Ash)|ERLW|Fernian Ash}",
+          "{@item Imbued Wood (Fernian Ash)|Fernian Ash}",
           "Fire"
         ],
         [
-          "{@item Imbued Wood (Irian Rosewood)|ERLW|Irian Rosewood}",
+          "{@item Imbued Wood (Irian Rosewood)|Irian Rosewood}",
           "Radiant"
         ],
         [
-          "{@item Imbued Wood (Kythrian Manchineel)|ERLW|Kythrian Manchineel}",
+          "{@item Imbued Wood (Kythrian Manchineel)|Kythrian Manchineel}",
           "Acid or poison"
         ],
         [
-          "{@item Imbued Wood (Lamannian Oak)|ERLW|Lamannian Oak}",
+          "{@item Imbued Wood (Lamannian Oak)|Lamannian Oak}",
           "Lightning or thunder"
         ],
         [
-          "{@item Imbued Wood (Mabaran Ebony)|ERLW|Mabaran Ebony}",
+          "{@item Imbued Wood (Mabaran Ebony)|Mabaran Ebony}",
           "Necrotic"
         ],
         [
-          "{@item Imbued Wood (Risian Pine)|ERLW|Risian Pine}",
+          "{@item Imbued Wood (Risian Pine)|Risian Pine}",
           "Cold"
         ],
         [
-          "{@item Imbued Wood (Shavarran Birch)|ERLW|Shavarran Birch}",
+          "{@item Imbued Wood (Shavarran Birch)|Shavarran Birch}",
           "Force"
         ],
         [
-          "{@item Imbued Wood (Xorian Wenge)|ERLW|Xorian Wenge}",
+          "{@item Imbued Wood (Xorian Wenge)|Xorian Wenge}",
           "Psychic"
         ]
       ]
     }
   ],
   "items": [
-    "Imbued Wood (Fernian Ash)|ERLW",
-    "Imbued Wood (Irian Rosewood)|ERLW",
-    "Imbued Wood (Kythrian Manchineel)|ERLW",
-    "Imbued Wood (Lamannian Oak)|ERLW",
-    "Imbued Wood (Mabaran Ebony)|ERLW",
-    "Imbued Wood (Risian Pine)|ERLW",
-    "Imbued Wood (Shavarran Birch)|ERLW",
-    "Imbued Wood (Xorian Wenge)|ERLW"
+    "Imbued Wood (Fernian Ash)",
+    "Imbued Wood (Irian Rosewood)",
+    "Imbued Wood (Kythrian Manchineel)",
+    "Imbued Wood (Lamannian Oak)",
+    "Imbued Wood (Mabaran Ebony)",
+    "Imbued Wood (Risian Pine)",
+    "Imbued Wood (Shavarran Birch)",
+    "Imbued Wood (Xorian Wenge)"
   ]
 },
 {
@@ -547,12 +547,12 @@ database.item_groups = [
   "reqAttune": true,
   "wondrous": true,
   "items": [
-    "Ioun Stone, Supreme Intellect|LLK",
-    "Ioun Stone, Historical Knowledge|LLK",
-    "Ioun Stone, Natural Knowledge|LLK",
-    "Ioun Stone, Religious Knowledge|LLK",
-    "Ioun Stone, Language Knowledge|LLK",
-    "Ioun Stone, Self-Preservation|LLK"
+    "Ioun Stone, Supreme Intellect",
+    "Ioun Stone, Historical Knowledge",
+    "Ioun Stone, Natural Knowledge",
+    "Ioun Stone, Religious Knowledge",
+    "Ioun Stone, Language Knowledge",
+    "Ioun Stone, Self-Preservation"
   ]
 },
 {
@@ -578,16 +578,16 @@ database.item_groups = [
   "type": "INS",
   "rarity": "none",
   "items": [
-    "Bagpipes|PHB",
-    "Drum|PHB",
-    "Dulcimer|PHB",
-    "Flute|PHB",
-    "Horn|PHB",
-    "Lute|PHB",
-    "Lyre|PHB",
-    "Pan Flute|PHB",
-    "Shawm|PHB",
-    "Viol|PHB"
+    "Bagpipes",
+    "Drum",
+    "Dulcimer",
+    "Flute",
+    "Horn",
+    "Lute",
+    "Lyre",
+    "Pan Flute",
+    "Shawm",
+    "Viol"
   ]
 },
 {
@@ -596,18 +596,18 @@ database.item_groups = [
   "type": "INS",
   "rarity": "none",
   "items": [
-    "Birdpipes|SCAG",
-    "Glaur|SCAG",
-    "Hand Drum|SCAG",
-    "Longhorn|SCAG",
-    "Shawm|SCAG",
-    "Songhorn|SCAG",
-    "Tantan|SCAG",
-    "Thelarr|SCAG",
-    "Tocken|SCAG",
-    "Wargong|SCAG",
-    "Yarting|SCAG",
-    "Zulkoon|SCAG"
+    "Birdpipes",
+    "Glaur",
+    "Hand Drum",
+    "Longhorn",
+    "Shawm",
+    "Songhorn",
+    "Tantan",
+    "Thelarr",
+    "Tocken",
+    "Wargong",
+    "Yarting",
+    "Zulkoon"
   ]
 },
 {
@@ -635,49 +635,49 @@ database.item_groups = [
       ],
       "rows": [
         [
-          "{@item Orb of Shielding (Fernian Basalt)|ERLW|Fernian basalt}",
+          "{@item Orb of Shielding (Fernian Basalt)|Fernian basalt}",
           "Fire"
         ],
         [
-          "{@item Orb of Shielding (Irian Quartz)|ERLW|Irian quartz}",
+          "{@item Orb of Shielding (Irian Quartz)|Irian quartz}",
           "Radiant"
         ],
         [
-          "{@item Orb of Shielding (Kythrian Skarn)|ERLW|Kythrian skarn}",
+          "{@item Orb of Shielding (Kythrian Skarn)|Kythrian skarn}",
           "Acid and poison"
         ],
         [
-          "{@item Orb of Shielding (Lamannian Flint)|ERLW|Lamannian flint}",
+          "{@item Orb of Shielding (Lamannian Flint)|Lamannian flint}",
           "Lightning and thunder"
         ],
         [
-          "{@item Orb of Shielding (Mabaran Obsidian)|ERLW|Mabaran obsidian}",
+          "{@item Orb of Shielding (Mabaran Obsidian)|Mabaran obsidian}",
           "Necrotic"
         ],
         [
-          "{@item Orb of Shielding (Risian Shale)|ERLW|Risian shale}",
+          "{@item Orb of Shielding (Risian Shale)|Risian shale}",
           "Cold"
         ],
         [
-          "{@item Orb of Shielding (Shavarran Chert)|ERLW|Shavarran chert}",
+          "{@item Orb of Shielding (Shavarran Chert)|Shavarran chert}",
           "Force"
         ],
         [
-          "{@item Orb of Shielding (Xorian Marble)|ERLW|Xorian marble}",
+          "{@item Orb of Shielding (Xorian Marble)|Xorian marble}",
           "Psychic"
         ]
       ]
     }
   ],
   "items": [
-    "Orb of Shielding (Fernian Basalt)|ERLW",
-    "Orb of Shielding (Irian Quartz)|ERLW",
-    "Orb of Shielding (Kythrian Skarn)|ERLW",
-    "Orb of Shielding (Lamannian Flint)|ERLW",
-    "Orb of Shielding (Mabaran Obsidian)|ERLW",
-    "Orb of Shielding (Risian Shale)|ERLW",
-    "Orb of Shielding (Shavarran Chert)|ERLW",
-    "Orb of Shielding (Xorian Marble)|ERLW"
+    "Orb of Shielding (Fernian Basalt)",
+    "Orb of Shielding (Irian Quartz)",
+    "Orb of Shielding (Kythrian Skarn)",
+    "Orb of Shielding (Lamannian Flint)",
+    "Orb of Shielding (Mabaran Obsidian)",
+    "Orb of Shielding (Risian Shale)",
+    "Orb of Shielding (Shavarran Chert)",
+    "Orb of Shielding (Xorian Marble)"
   ]
 },
 {
