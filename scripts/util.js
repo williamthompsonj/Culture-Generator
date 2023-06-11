@@ -278,3 +278,24 @@ util.fillForm = function(obj)
   });
 
 };
+
+/* load JSON data into window.dataset object */
+util.loadJson = function (uri, set_name, subset = '')
+{
+  // ensure dataset exists in window
+  if (!Object.hasOwn(window, 'dataset')) window.dataset = {};
+  
+  fetch(uri)
+    .then(response => response.json())
+    .then(data =>
+    {
+      if (subset == '')
+      {
+        window.dataset[set_name] = data;
+      }
+      else
+      {
+        window.dataset[set_name] = data[subset];
+      }
+    });
+};
