@@ -38,11 +38,6 @@
 <script src="scripts/lang/Math.js"></script>
 <script src="scripts/lang/String.prototype.js"></script>
 <script src="scripts/util.js"></script>
-<script src="scripts/government.js"></script>
-<script src="scripts/population.js"></script>
-<script src="scripts/religion.js"></script>
-<script src="scripts/eventFactory.js"></script>
-<script src="scripts/npcFactory.js"></script>
 <script>
 // load JSON so we have data to use
 util.loadJson('./json/backgrounds.json', 'backgrounds');
@@ -52,9 +47,15 @@ util.loadJson('./json/items.json', 'items');
 util.loadJson('./json/languages.json', 'languages');
 util.loadJson('./json/races.json', 'races');
 util.loadJson('./json/skills.json', 'skills');
-util.loadJson('./json/spells-phb.json', 'spells');
-util.loadJson('./json/subraces.json', 'subraces');
+util.loadJson('./json/spells.json', 'spells');
+util.loadJson('./json/markov_names.json', 'markov_names');
 </script>
+<script src="scripts/markovNames.js"></script>
+<script src="scripts/npcFactory.js"></script>
+<script src="scripts/government.js"></script>
+<script src="scripts/population.js"></script>
+<script src="scripts/religion.js"></script>
+<script src="scripts/eventFactory.js"></script>
 <script src="scripts/ready.js"></script>
 </head>
 <body>
@@ -97,6 +98,10 @@ util.loadJson('./json/subraces.json', 'subraces');
 </fieldset>
 </form>
 
+<br><br>
+<button onClick="markovNames.more_names();"
+ type="button">Generate Names</button>
+<div id="output"></div>
 <br><br>
 <button onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100)); "
  type="button">Mundane Headlines</button>

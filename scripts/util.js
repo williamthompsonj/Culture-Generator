@@ -284,7 +284,7 @@ util.loadJson = function (uri, set_name, subset = '')
 {
   // ensure dataset exists in window
   if (!Object.hasOwn(window, 'dataset')) window.dataset = {};
-  
+
   fetch(uri)
     .then(response => response.json())
     .then(data =>
