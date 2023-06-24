@@ -9,9 +9,10 @@ let markovNames = {};
 markovNames.chain_cache = {};
 markovNames.name_set = {};
 
-markovNames.more_names = function(qty = 20, b = "egyptian")
+markovNames.more_names = function(qty = 20, b = "")
 {
-  b = Object.keys(window.dataset['training_data']).randomValue();
+  if (b == '')
+    b = Object.keys(window.dataset['training_data']).randomValue();
   //b = 'tolkienesque_forenames';
   var a = this.name_list(b, qty);
   util.setValue("#output", 'Source: ' + b + '<br><br>' + a.join(", "));
