@@ -7,67 +7,67 @@
 'use strict';
 let markovNames = {};
 markovNames.chain_cache = {};
+markovNames.name_set = {};
 
-markovNames.more_names = function()
+markovNames.more_names = function(qty = 20, b = "egyptian")
 {
-  var a = this.name_list("egyptian", 50); // static qty of names
-  util.setValue("#output", a.join(", "));
-}
+  b = Object.keys(window.dataset['training_data']).randomValue();
+  //b = 'tolkienesque_forenames';
+  var a = this.name_list(b, qty);
+  util.setValue("#output", 'Source: ' + b + '<br><br>' + a.join(", "));
+};
 
 markovNames.generate_name = function(b)
 {
   let a;
-  return (a = this.markov_chain(b)) ? this.markov_name(a) : "Nothing!";
-}
+  return (a = this.markov_chain(b)) ? this.markov_name(a) : "";
+};
 
 markovNames.name_list = function(b, a)
 {
-  this.name_set = {egyptian:window.dataset['markov_names'][b]};
+  this.name_set[b] = window.dataset['training_data'][b];
   let c = [];
-  let d;
-  for (d = 0; d < a; d++)
+  for (let d = 0; d < a; d++)
   {
-    c.push(this.generate_name(b));
+    c.push(
+      this.formatName(
+        this.generate_name(b)
+    ));
   }
-  return c
-}
+  return c;
+};
 
 markovNames.markov_chain = function(b)
 {
   var a;
-  if (a = this.chain_cache[b])
-    return a;
+  if (a = this.chain_cache[b]) return a;
 
   let c;
   if ((c = this.name_set[b]) && c.length && (a = this.construct_chain(c)))
     return this.chain_cache[b] = a
 
-  return !1
-}
+  return false
+};
 
 markovNames.construct_chain = function(b)
 {
   let a = {};
-  let c;
 
-  for (c = 0; c < b.length; c++)
+  for (let c = 0; c < b.length; c++)
   {
     let g = b[c].split(/\s+/);
     a = this.incr_chain(a, "parts", g.length);
-    let f;
 
-    for (f = 0; f < g.length; f++)
+    for (let f = 0; f < g.length; f++)
     {
       var d = g[f];
+      var e = d.charAt(0);
       a = this.incr_chain(a, "name_len", d.length);
-
-      var e = d.substr(0, 1);
       a = this.incr_chain(a, "initial", e);
 
       for (d = d.substr(1); 0 < d.length;)
       {
-        let h = d.substr(0, 1);
-
+        let h = d.charAt(0);
         a = this.incr_chain(a, e, h);
         d = d.substr(1);
         e = h
@@ -76,13 +76,13 @@ markovNames.construct_chain = function(b)
   }
 
   return this.scale_chain(a)
-}
+};
 
 markovNames.incr_chain = function(b, a, c)
 {
   b[a] ? b[a][c] ? b[a][c]++ : b[a][c] = 1 : (b[a] = {}, b[a][c] = 1);
   return b
-}
+};
 
 markovNames.scale_chain = function(b)
 {
@@ -101,17 +101,15 @@ markovNames.scale_chain = function(b)
   });
 
   b.table_len = a;
-
   return b
-}
+};
 
 markovNames.markov_name = function(b)
 {
   let a = this.select_link(b, "parts");
   let c = [];
-  let d;
 
-  for (d = 0; d < a; d++)
+  for (let d = 0; d < a; d++)
   {
     let g = this.select_link(b, "name_len");
     var e = this.select_link(b, "initial");
@@ -121,8 +119,7 @@ markovNames.markov_name = function(b)
     {
       e = this.select_link(b, e);
 
-      if (!e)
-        break;
+      if (!e) break;
 
       f += e
     }
@@ -131,29 +128,40 @@ markovNames.markov_name = function(b)
   }
 
   return c.join(" ")
-}
+};
 
 markovNames.select_link = function(b, a)
 {
   var c = b.table_len[a];
 
-  if (!c)
-    return !1;
+  if (!c) return false;
 
   c = Math.floor(Math.random() * c);
 
   let d = Object.keys(b[a]);
   let e = 0;
-  let g;
 
-  for (g = 0; g < d.length; g++)
+  for (let g = 0; g < d.length; g++)
   {
     let f = d[g];
-
     e += b[a][f];
-    
-    if (e > c)
-      return f
+
+    if (e > c) return f;
   }
-  return !1
-}
+  return false;
+};
+
+// don't allow more than 2 of each letter in a row
+markovNames.formatName = function(a)
+{
+  let b = a.charAt(0);
+  for (let i = 1; i != a.length; i++)
+  {
+    let c = b.charAt(b.length-1);
+    if (c != a.charAt(i) || c != a.charAt(i+1))
+    {
+        b = b + a[i];
+    }
+  }
+  return b;
+};
