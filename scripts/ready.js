@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", () =>
   util.populateTable(population);
   util.populateTable(religion);
 
+  // initialize forms
+  government.Init();
+  population.Init();
+  religion.Init();
+  util.fillForm(government);
+  util.fillForm(population);
+  util.fillForm(religion);
+
   // generate 100 mundane headlines
   util.setValue('#results', eventFactory.GetActivity('mundane', 100));
+
+  // generate 100 random namespaces
+  //markovNames.more_names(100);
+
 });

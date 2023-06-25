@@ -1,5 +1,5 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Shamelessly acquired and adapted from https://donjon.bin.sh/name/markov.html
+// Adapted from https://donjon.bin.sh/name/markov.html
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //
 // written and released to the public domain by drow <drow@bin.sh>
@@ -7,118 +7,193 @@
 'use strict';
 let markovNames = {};
 markovNames.chain_cache = {};
-markovNames.name_set = {};
 
-markovNames.more_names = function(qty = 20, b = "")
+markovNames.more_names = function(qty = 20, data_name = "")
 {
-  if (b == '')
-    b = Object.keys(window.dataset['training_data']).randomValue();
-  //b = 'tolkienesque_forenames';
-  var a = this.name_list(b, qty);
-  util.setValue("#output", 'Source: ' + b + '<br><br>' + a.join(", "));
+  if (qty < 1)
+    return;
+
+  if (data_name == '')
+    data_name = Object.keys(window.dataset['training_data']).randomValue();
+
+  var names = Array.from(this.name_list(data_name, qty));
+  util.setValue("#output", 'Source: ' + data_name + '<br><br>' + names.join(", "));
 };
 
-markovNames.generate_name = function(b)
+markovNames.name_list = function(data_name, qty)
 {
-  let a;
-  return (a = this.markov_chain(b)) ? this.markov_name(a) : "";
-};
+  // save names as a unique set
+  let names = new Set();
+  let counter = 0;
+  let max = qty * 1.5;
 
-markovNames.name_list = function(b, a)
-{
-  this.name_set[b] = window.dataset['training_data'][b];
-  let c = [];
-  for (let d = 0; d < a; d++)
+  while (names.size < qty)
   {
-    c.push(
+    counter++;
+    names.add(
       this.formatName(
-        this.generate_name(b)
+        this.generate_name(data_name)
     ));
+
+    // prevent never-ending loop
+    if (counter > max)
+      break;
   }
-  return c;
+  return names;
 };
 
-markovNames.markov_chain = function(b)
+markovNames.generate_name = function(data_name)
 {
-  var a;
-  if (a = this.chain_cache[b]) return a;
+  let cache = this.markov_chain(data_name);
 
-  let c;
-  if ((c = this.name_set[b]) && c.length && (a = this.construct_chain(c)))
-    return this.chain_cache[b] = a
-
-  return false
-};
-
-markovNames.construct_chain = function(b)
-{
-  let a = {};
-
-  for (let c = 0; c < b.length; c++)
+  if (cache)
   {
-    let g = b[c].split(/\s+/);
-    a = this.incr_chain(a, "parts", g.length);
+    return this.markov_name(cache);
+  }
+  else
+  {
+    return "";
+  }
+};
 
-    for (let f = 0; f < g.length; f++)
+markovNames.markov_chain = function(data_name)
+{
+  var cache = this.chain_cache[data_name];
+  if (cache)
+    return cache;
+
+  let names = window.dataset['training_data'][data_name];
+  cache = this.construct_chain(names);
+
+  // check we have a name_set and cache
+  if (!names || !names.length || !cache)
+  {
+    return false;
+  }
+
+  this.chain_cache[data_name] = cache;
+  return cache;
+};
+
+markovNames.construct_chain = function(names)
+{
+  let chain = {};
+
+  for (let c = 0; c < names.length; c++)
+  {
+    // split name into parts if it has white space
+    let parts = names[c].split(/\s+/);
+    chain = this.incr_chain(chain, "parts", parts.length);
+
+    for (let f = 0; f < parts.length; f++)
     {
-      var d = g[f];
-      var e = d.charAt(0);
-      a = this.incr_chain(a, "name_len", d.length);
-      a = this.incr_chain(a, "initial", e);
+      var word = parts[f];
+      var pieces = this.word_split(word);
+      var e = pieces.shift();
 
-      for (d = d.substr(1); 0 < d.length;)
+      // capture word length and starting piece
+      chain = this.incr_chain(chain, "name_len", word.length);
+      chain = this.incr_chain(chain, "initial", e);
+
+      while (pieces.length)
       {
-        let h = d.charAt(0);
-        a = this.incr_chain(a, e, h);
-        d = d.substr(1);
+        let h = pieces.shift();
+        chain = this.incr_chain(chain, e, h);
         e = h
       }
     }
   }
 
-  return this.scale_chain(a)
+  return this.scale_chain(chain);
 };
 
-markovNames.incr_chain = function(b, a, c)
+// break apart word at vowels
+markovNames.word_split = function(word)
 {
-  b[a] ? b[a][c] ? b[a][c]++ : b[a][c] = 1 : (b[a] = {}, b[a][c] = 1);
-  return b
+  // https://www.30secondsofcode.org/js/s/remove-accents/
+  //
+  // Use String.prototype.normalize() to convert the string to a normalized Unicode format
+  // Use String.prototype.replace() to replace diacritical marks in the given Unicode
+  // range by empty strings
+  let safe = word.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+  // insert space before each vowel
+  safe = safe.replaceAll('a', ' a')
+    .replaceAll('e', ' e')
+    .replaceAll('i', ' i')
+    .replaceAll('o', ' o')
+    .replaceAll('u', ' u');
+
+  // remove space at ends and split
+  safe = safe.trim().split(' ');
+
+  for (let i = 0; i < safe.length; i++)
+  {
+    safe[i] = word.substring(0, safe[i].length);
+    word = word.substring(safe[i].length);
+  }
+
+  return safe;
 };
 
-markovNames.scale_chain = function(b)
+markovNames.incr_chain = function(chain, part, len)
+{
+  // check if chain part exists
+  if (chain[part])
+  {
+    // check how many times
+    if (chain[part][len])
+    {
+      chain[part][len]++;
+    }
+    else
+    {
+      chain[part][len] = 1;
+    }
+  }
+  else
+  {
+    // chain doesn't exist, make it
+    chain[part] = {};
+    chain[part][len] = 1;
+  }
+  return chain;
+};
+
+markovNames.scale_chain = function(chain)
 {
   let a = {};
 
-  Object.keys(b).forEach(c =>
+  Object.keys(chain).forEach(c =>
   {
     a[c] = 0;
 
-    Object.keys(b[c]).forEach(d =>
+    Object.keys(chain[c]).forEach(d =>
     {
-      let e = Math.floor(Math.pow(b[c][d], 1.3));
-      b[c][d] = e;
+      let e = Math.floor(Math.pow(chain[c][d], 1.3));
+      chain[c][d] = e;
       a[c] += e
     })
   });
 
-  b.table_len = a;
-  return b
+  chain.table_len = a;
+  return chain;
 };
 
-markovNames.markov_name = function(b)
+markovNames.markov_name = function(cache)
 {
-  let a = this.select_link(b, "parts");
+  let a = this.select_link(cache, "parts");
   let c = [];
 
   for (let d = 0; d < a; d++)
   {
-    let g = this.select_link(b, "name_len");
-    var e = this.select_link(b, "initial");
+    let g = this.select_link(cache, "name_len");
+    var e = this.select_link(cache, "initial");
     let f = e;
 
-    for (; f.length < g;)
+    while (f.length < g)
     {
-      e = this.select_link(b, e);
+      e = this.select_link(cache, e);
 
       if (!e) break;
 
@@ -131,38 +206,40 @@ markovNames.markov_name = function(b)
   return c.join(" ")
 };
 
-markovNames.select_link = function(b, a)
+markovNames.select_link = function(cache, part)
 {
-  var c = b.table_len[a];
+  var c = cache.table_len[part];
 
-  if (!c) return false;
+  if (!c)
+    return false;
 
   c = Math.floor(Math.random() * c);
 
-  let d = Object.keys(b[a]);
+  let d = Object.keys(cache[part]);
   let e = 0;
 
   for (let g = 0; g < d.length; g++)
   {
     let f = d[g];
-    e += b[a][f];
+    e += cache[part][f];
 
-    if (e > c) return f;
+    if (e > c)
+    return f;
   }
   return false;
 };
 
 // don't allow more than 2 of each letter in a row
-markovNames.formatName = function(a)
+markovNames.formatName = function(name)
 {
-  let b = a.charAt(0);
-  for (let i = 1; i != a.length; i++)
+  let str = name.charAt(0);
+  for (let i = 1; i < name.length; i++)
   {
-    let c = b.charAt(b.length-1);
-    if (c != a.charAt(i) || c != a.charAt(i+1))
+    let check = str.charAt(str.length-1);
+    if (check != name.charAt(i) || check != name.charAt(i+1))
     {
-        b = b + a[i];
+        str = str + name[i];
     }
   }
-  return b;
+  return str;
 };
