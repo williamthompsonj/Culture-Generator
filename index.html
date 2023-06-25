@@ -89,8 +89,12 @@ util.loadJson('./json/training_data.json', 'training_data');
 </form>
 
 <br><br>
-<button onClick="markovNames.more_names(100);"
- type="button">Generate Names</button>
+<button onClick="markovNames.more_names();"
+ type="button">Random Names</button>
+<select id="markov_select"></select>
+<!--- populate after page load --->
+<button onClick="util.getNameDatasets();" id="markov_button"
+ type="button">Populate</button>
 <div id="output"></div>
 <br><br>
 <button onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100)); "

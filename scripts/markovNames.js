@@ -10,7 +10,7 @@ markovNames.chain_cache = {};
 
 markovNames.names_from_select = function(qty = 100)
 {
-  this.more_names(qty, data_name = util.getValue('#markov_select'));
+  this.more_names(qty, util.getValue('#markov_select'));
 };
 
 markovNames.more_names = function(qty = 100, data_name = '')
@@ -130,7 +130,7 @@ markovNames.word_split = function(word)
     .replaceAll('o', ' o ')
     .replaceAll('u', ' u ')
     .replaceAll('y', ' y ');
-  
+
   // normalize white space and split
   safe = safe
     .trim()
@@ -146,10 +146,10 @@ markovNames.word_split = function(word)
     while (safe[i].length > 0)
     {
       let len = 1;
-      
+
       if (safe[i].length > 1)
         len = 2;
-      
+
       let str = word.substring(0, len);
       if (str.length > 0)
         result.push(str.trim());

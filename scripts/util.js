@@ -273,13 +273,21 @@ util.populateSelect = function(id, data)
 
   if (!elem)
     return;
-  
-  // options are key => value pairs
-  Object.keys(data).forEach(index =>
+
+  // cycle through array
+  data.forEach(index =>
   {
+    // make pretty display name for the option
+    let display = index.split('_');
+    for (let i = 0; i < display.length; i++)
+    {
+      display[i] = display[i].toTitleCase();
+    }
+    display = display.join(' ');
+
     // create the option
-    opt_tag = document.createElement('option');
-    opt_tag.text = p.options[index];
+    let opt_tag = document.createElement('option');
+    opt_tag.text = display;
     opt_tag.value = index;
 
     // append the option
@@ -330,4 +338,19 @@ util.loadJson = function (uri, set_name, subset = '', callback = null, params = 
         callback();
     }
   });
+};
+
+util.getNameDatasets = function()
+{
+  // populate the markov name select options
+  util.populateSelect('#markov_select', Object.keys(window.dataset.training_data));
+
+  // get the button text
+  let button = this.getElem('#markov_button');
+
+  if (!button)
+    return;
+
+  button.innerText = '<- Generate Names';
+  button.click = markovNames.names_from_select();
 };

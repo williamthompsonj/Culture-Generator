@@ -17,8 +17,4 @@ document.addEventListener("DOMContentLoaded", () =>
 
   // generate 100 mundane headlines
   util.setValue('#results', eventFactory.GetActivity('mundane', 100));
-
-  // generate 100 random namespaces
-  //util.populateSelect('#markov_select', Object.keys(window.dataset.training_data));
-
 });
