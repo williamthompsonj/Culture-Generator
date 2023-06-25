@@ -267,6 +267,26 @@ util.populateTable = function(obj)
   });
 };
 
+util.populateSelect = function(id, data)
+{
+  let elem = this.getElem(id);
+
+  if (!elem)
+    return;
+  
+  // options are key => value pairs
+  Object.keys(data).forEach(index =>
+  {
+    // create the option
+    opt_tag = document.createElement('option');
+    opt_tag.text = p.options[index];
+    opt_tag.value = index;
+
+    // append the option
+    elem.appendChild(opt_tag);
+  });
+};
+
 /* auto-populate form fields based on object props */
 util.fillForm = function(obj)
 {

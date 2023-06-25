@@ -8,7 +8,12 @@
 let markovNames = {};
 markovNames.chain_cache = {};
 
-markovNames.more_names = function(qty = 20, data_name = "")
+markovNames.names_from_select = function(qty = 100)
+{
+  this.more_names(qty, data_name = util.getValue('#markov_select'));
+};
+
+markovNames.more_names = function(qty = 100, data_name = '')
 {
   if (qty < 1)
     return;
@@ -88,16 +93,16 @@ markovNames.construct_chain = function(names)
     for (let f = 0; f < parts.length; f++)
     {
       var word = parts[f];
-      var pieces = this.word_split(word);
-      var e = pieces.shift();
+      var chunks = this.word_split(word);
+      var e = chunks.shift();
 
-      // capture word length and starting piece
+      // capture word length and starting chunks
       chain = this.incr_chain(chain, "name_len", word.length);
       chain = this.incr_chain(chain, "initial", e);
 
-      while (pieces.length)
+      while (chunks.length)
       {
-        let h = pieces.shift();
+        let h = chunks.shift();
         chain = this.incr_chain(chain, e, h);
         e = h
       }
@@ -107,7 +112,7 @@ markovNames.construct_chain = function(names)
   return this.scale_chain(chain);
 };
 
-// break apart word at vowels
+// break apart word at vowels or 2 characters
 markovNames.word_split = function(word)
 {
   // https://www.30secondsofcode.org/js/s/remove-accents/
@@ -117,23 +122,42 @@ markovNames.word_split = function(word)
   // range by empty strings
   let safe = word.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
-  // insert space before each vowel
-  safe = safe.replaceAll('a', ' a')
-    .replaceAll('e', ' e')
-    .replaceAll('i', ' i')
-    .replaceAll('o', ' o')
-    .replaceAll('u', ' u');
+  // isolate vowels
+  safe = safe
+    .replaceAll('a', ' a ')
+    .replaceAll('e', ' e ')
+    .replaceAll('i', ' i ')
+    .replaceAll('o', ' o ')
+    .replaceAll('u', ' u ')
+    .replaceAll('y', ' y ');
+  
+  // normalize white space and split
+  safe = safe
+    .trim()
+    .replaceAll('  ', ' ')
+    .split(' ');
 
-  // remove space at ends and split
-  safe = safe.trim().split(' ');
+  var result = [];
 
+  // take 1 or 2 consonants at a time
   for (let i = 0; i < safe.length; i++)
   {
-    safe[i] = word.substring(0, safe[i].length);
-    word = word.substring(safe[i].length);
+    safe[i] = safe[i].trim();
+    while (safe[i].length > 0)
+    {
+      let len = 1;
+      
+      if (safe[i].length > 1)
+        len = 2;
+      
+      let str = word.substring(0, len);
+      if (str.length > 0)
+        result.push(str.trim());
+      safe[i] = safe[i].substring(len);
+      word = word.substring(len);
+    }
   }
-
-  return safe;
+  return result;
 };
 
 markovNames.incr_chain = function(chain, part, len)
