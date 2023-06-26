@@ -21,8 +21,13 @@ markovNames.more_names = function(qty = 100, data_name = '')
   if (data_name == '')
     data_name = Object.keys(window.dataset['training_data']).randomValue();
 
-  var names = Array.from(this.name_list(data_name, qty));
-  util.setValue("#output", 'Source: ' + data_name + '<br><br>' + names.join(", "));
+  var names = Array
+    .from(
+      this.name_list(data_name, qty)
+    )
+    .join(", ")
+    .toTitleCase();
+  util.setValue("#output", 'Source: ' + data_name + '<br><br>' + names);
 };
 
 markovNames.name_list = function(data_name, qty)
@@ -30,19 +35,20 @@ markovNames.name_list = function(data_name, qty)
   // save names as a unique set
   let names = new Set();
   let counter = 0;
-  let max = qty * 1.5;
+  let max = qty * 2;
 
   while (names.size < qty)
   {
+    // prevent never-ending loop
+    if (counter > max)
+      break;
+    
     counter++;
+    
     names.add(
       this.formatName(
         this.generate_name(data_name)
     ));
-
-    // prevent never-ending loop
-    if (counter > max)
-      break;
   }
   return names;
 };
@@ -115,26 +121,25 @@ markovNames.construct_chain = function(names)
 // break apart word at vowels or 2 characters
 markovNames.word_split = function(word)
 {
-  // https://www.30secondsofcode.org/js/s/remove-accents/
-  //
-  // Use String.prototype.normalize() to convert the string to a normalized Unicode format
-  // Use String.prototype.replace() to replace diacritical marks in the given Unicode
-  // range by empty strings
-  let safe = word.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  // normalize word passed so it behaves consistently
+  word = word.normalize();
+  
+  // normalize string and make lowercase
+  let safe = word
+    .normalize()
+    .toLowerCase();
 
-  // isolate vowels
-  safe = safe
-    .replaceAll('a', ' a ')
-    .replaceAll('e', ' e ')
-    .replaceAll('i', ' i ')
-    .replaceAll('o', ' o ')
-    .replaceAll('u', ' u ')
-    .replaceAll('y', ' y ');
+  // isolate everything that's not normal alphabet except vowels
+  let c = safe.replace(/[b-df-hj-np-tv-xz]+/g, '');
+  for (let i = 0; i < c.length; i++)
+  {
+    safe = safe.replaceAll(c.charAt(i), ' '+c.charAt(i)+' ');
+  }
 
   // normalize white space and split
   safe = safe
     .trim()
-    .replaceAll('  ', ' ')
+    .replace(/\s\s+/g, ' ')
     .split(' ');
 
   var result = [];
@@ -206,28 +211,34 @@ markovNames.scale_chain = function(chain)
 
 markovNames.markov_name = function(cache)
 {
-  let a = this.select_link(cache, "parts");
+  let parts = this.select_link(cache, "parts");
   let c = [];
 
-  for (let d = 0; d < a; d++)
+  for (let d = 0; d < parts; d++)
   {
-    let g = this.select_link(cache, "name_len");
-    var e = this.select_link(cache, "initial");
-    let f = e;
+    let name_len = this.select_link(cache, "name_len");
+    var chunk = this.select_link(cache, "initial");
+    let word = chunk;
 
-    while (f.length < g)
+    while (word.length < name_len)
     {
-      e = this.select_link(cache, e);
+      chunk = this.select_link(cache, chunk);
 
-      if (!e) break;
+      if (!chunk)
+        break;
 
-      f += e
+      word += chunk;
     }
 
-    c.push(f)
+    c.push(word);
   }
-
-  return c.join(" ")
+  c = String(c.join(" "));
+  
+  // ensure it's at least 2 characters
+  if (c.length > 1)
+    return c;
+  
+  return this.markov_name(cache);
 };
 
 markovNames.select_link = function(cache, part)

@@ -277,13 +277,8 @@ util.populateSelect = function(id, data)
   // cycle through array
   data.forEach(index =>
   {
-    // make pretty display name for the option
-    let display = index.split('_');
-    for (let i = 0; i < display.length; i++)
-    {
-      display[i] = display[i].toTitleCase();
-    }
-    display = display.join(' ');
+    // make pretty display names
+    let display = index.replaceAll('_', ' ').toTitleCase();
 
     // create the option
     let opt_tag = document.createElement('option');

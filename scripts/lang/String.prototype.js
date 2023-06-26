@@ -1,6 +1,6 @@
 "use strict";
 // Returns String With Title Case
-String.prototype.toTitleCase = function()
+String.prototype.toTitleCase = function(chars = "—-'—")
 {
   // lowercase and normalize white space
   let c = this.normalize().replace(/\s+/g, ' ').trim().toLowerCase().split(' ');
@@ -18,6 +18,25 @@ String.prototype.toTitleCase = function()
     }
   };
 
+  // turn into a string
+  c = c.join(' ');
+
+  // capitalize after special characters
+  for (let i = 0; i < chars.length; i++)
+  {
+    let index = chars.charAt(i);
+    
+    if (c.indexOf(index) == -1)
+      continue;
+    
+    c = c.split(index);
+    for (let i = 1; i < c.length; i++)
+    {
+      c[i] = c[i].charAt(0).toUpperCase() + c[i].substring(1);
+    }
+    c = c.join(index);
+  }
+  
   // return results
-  return c.join(' ');
+  return c;
 };
