@@ -28,6 +28,11 @@
 <script src="scripts/lang/Math.js"></script>
 <script src="scripts/lang/String.prototype.js"></script>
 <script src="scripts/util.js"></script>
+<script src="scripts/markovNames.js"></script>
+<script src="scripts/npcFactory.js"></script>
+<script src="scripts/government.js"></script>
+<script src="scripts/population.js"></script>
+<script src="scripts/religion.js"></script>
 <script>
 // load JSON so we have data to use
 util.loadJson('./json/backgrounds.json', 'backgrounds');
@@ -40,11 +45,6 @@ util.loadJson('./json/skills.json', 'skills');
 util.loadJson('./json/spells.json', 'spells');
 util.loadJson('./json/training_data.json', 'training_data');
 </script>
-<script src="scripts/markovNames.js"></script>
-<script src="scripts/npcFactory.js"></script>
-<script src="scripts/government.js"></script>
-<script src="scripts/population.js"></script>
-<script src="scripts/religion.js"></script>
 <script src="scripts/eventFactory.js"></script>
 <script src="scripts/ready.js"></script>
 </head>
@@ -57,9 +57,9 @@ util.loadJson('./json/training_data.json', 'training_data');
 <!--- populate after page load --->
 </table>
 <br />
-<button onClick="government.Init(); util.fillForm(government); "
+<button onClick="government.Init(); util.fillForm(government);"
  type="button">Random Government</button>
-<button onClick="government.rollStats(); util.fillForm(government); "
+<button onClick="government.rollStats(); util.fillForm(government);"
  type="button">Re-roll Government</button>
 </fieldset>
 </form>
@@ -71,7 +71,7 @@ util.loadJson('./json/training_data.json', 'training_data');
 <!--- populate after page load --->
 </table>
 <br />
-<button onClick="population.Init(); util.fillForm(population); "
+<button onClick="population.Init(); util.fillForm(population);"
  type="button">Generate Population</button>
 </fieldset>
 </form>
@@ -83,24 +83,37 @@ util.loadJson('./json/training_data.json', 'training_data');
 <!--- populate after page load --->
 </table>
 <br />
-<button onClick="religion.Init(); util.fillForm(religion); "
+<button onClick="religion.Init(); util.fillForm(religion);"
  type="button">Generate Religion</button>
 </fieldset>
 </form>
 
 <br><br>
+
+<form id="markov_form" name="markov_form">
+<fieldset>
+<legend>Name Generator</legend>
 <button onClick="markovNames.more_names();"
- type="button">Random Names</button>
+ type="button">Random</button>
 <select id="markov_select"></select>
 <!--- populate after page load --->
 <button onClick="util.getNameDatasets();" id="markov_button"
  type="button">Populate</button>
 <div id="output"></div>
+</fieldset>
+</form>
+
 <br><br>
-<button onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100)); "
+
+<form id="headline_form" name="headline_form">
+<fieldset>
+<legend>Random Headlines</legend>
+<button onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100));"
  type="button">Mundane Headlines</button>
-<br>
+</fieldset>
+</form>
 <p id="results" name="results">Place Holder</p>
+
 </body>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9PGR9487Y"></script>

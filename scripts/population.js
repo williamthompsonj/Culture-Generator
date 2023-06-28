@@ -48,7 +48,7 @@ population.props = {
   corruption: {
     value: 0,
     title: 'Corruption',
-    description: 'How tolerant people are to things that are not lawful or that do not follow convention',
+    description: 'How tolerant people are toward unlawful or unconventional things',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -61,7 +61,7 @@ population.props = {
   prejudice: {
     value: 0,
     title: 'Prejudice',
-    description: 'How likely are people to show bias or racism',
+    description: 'How likely people are to show bias or racism',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -74,7 +74,7 @@ population.props = {
   dissent: {
     value: 0,
     title: 'Dissent',
-    description: 'How likely are people to protest or oppose things',
+    description: 'How likely people are to protest or oppose things',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -87,7 +87,7 @@ population.props = {
   religion: {
     value: 0,
     title: 'Religion',
-    description: 'How involved or relevant religion is to daily life',
+    description: 'How much of the population is religious',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -100,7 +100,7 @@ population.props = {
   free_choice: {
     value: 0,
     title: 'Free Choice',
-    description: 'How much control people have over life choices such as their occupation, love interests, where they live, or what they can become',
+    description: 'How much control people have over life choices: occupation, love interest, life style, etc.',
     html_tag: {
       elem: 'input',
       type: 'number',

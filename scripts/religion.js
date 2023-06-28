@@ -28,7 +28,7 @@ religion.props = {
   order: {
     value: 0,
     title: 'Order',
-    description: 'How well structured are the major religions',
+    description: 'How organized are the major religions',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -41,7 +41,7 @@ religion.props = {
   cultural_significance: {
     value: 0,
     title: 'Cultural Significance',
-    description: 'How much frequent things in this culture make reference to religious terms, events, sites, or related things',
+    description: 'How relevant this culture finds religious terms, events, sites, or related things',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -54,7 +54,7 @@ religion.props = {
   prevalence: {
     value: 0,
     title: 'Prevalence',
-    description: 'How much influence these religions have over daily life such as marriage, government processes, which days are sacred or are observed by the masses, etc.',
+    description: 'How influential religions are in daily life: marriage, government, holidays, etc.',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -67,7 +67,7 @@ religion.props = {
   sacred_sites: {
     value: 0,
     title: 'Sacred Sites',
-    description: 'How many major holy sites are present to include major shrines, head temples, locations of sacred events or battles, etc.',
+    description: 'Major holy sites present including major shrines, head temples, locations of sacred events or battles, etc.',
     options: Array.from({ length: 10 }, (value, index) => index+3),
     html_tag: {
       elem: 'select',

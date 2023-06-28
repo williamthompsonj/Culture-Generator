@@ -25,10 +25,10 @@ String.prototype.toTitleCase = function(chars = "—-'—")
   for (let i = 0; i < chars.length; i++)
   {
     let index = chars.charAt(i);
-    
+
     if (c.indexOf(index) == -1)
       continue;
-    
+
     c = c.split(index);
     for (let i = 1; i < c.length; i++)
     {
@@ -36,7 +36,7 @@ String.prototype.toTitleCase = function(chars = "—-'—")
     }
     c = c.join(index);
   }
-  
+
   // return results
   return c;
 };

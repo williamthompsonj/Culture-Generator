@@ -7,7 +7,7 @@ government.props = {
   power_concentration: {
     value: 0,
     title: 'Power Concentration',
-    description: 'How much power does an individual ruler or council have',
+    description: 'How much power individual rulers or councils have',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -46,7 +46,7 @@ government.props = {
   bureaucracy: {
     value: 0,
     title: 'Bureaucracy',
-    description: 'How complicated or complex are government processes; how efficient is decision making and action',
+    description: 'How complex government processes are; how efficient is decision making and action',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -59,7 +59,7 @@ government.props = {
   corruption: {
     value: 0,
     title: 'Corruption',
-    description: 'How much do officials abuse their authority for personal gain',
+    description: 'How much officials abuse their authority for personal gain',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -72,7 +72,7 @@ government.props = {
   taxes: {
     value: 0,
     title: 'Taxation',
-    description: 'How much does this government collect in taxes',
+    description: 'How much this government collects in taxes',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -85,7 +85,7 @@ government.props = {
   law_enforcement: {
     value: 0,
     title: 'Law Enforcement',
-    description: 'How strict or effective is internal law enforcement within society',
+    description: 'How strict or effective internal law enforcement is within society',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -98,7 +98,7 @@ government.props = {
   military: {
     value: 0,
     title: 'Military Forces',
-    description: 'How powerful or effective is foreign defense',
+    description: 'How powerful or effective foreign defense is',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -111,7 +111,7 @@ government.props = {
   diplomacy: {
     value: 0,
     title: 'External Diplomacy',
-    description: 'How effective is government at interacting with foreign governments or in maintaining foreign relations',
+    description: 'Effectiveness at interacting with foreign governments/foreign relations',
     html_tag: {
       elem: 'input',
       type: 'number',
@@ -124,7 +124,7 @@ government.props = {
   style: {
     value: '',
     title: 'Government Style',
-    description: 'Closest short description of government style',
+    description: 'Short name for governing style',
     options: {
       anarchy: 'Anarchy / No Government',
       autocracy: 'Autocracy',
@@ -172,7 +172,8 @@ government.rollStats = function()
 {
   // local reference so it can change if needed.
   let p = this.props;
-  if (p.style.value == '') p.style.value = util.getValue('#gov_style');
+  if (p.style.value == '')
+    p.style.value = util.getValue('#gov_style');
 
   // determine base parameters around type of government
   switch (p.style.value)

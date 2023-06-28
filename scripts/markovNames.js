@@ -18,8 +18,15 @@ markovNames.more_names = function(qty = 100, data_name = '')
   if (qty < 1)
     return;
 
+  if (util.getElem('#markov_select').options.length < 1)
+    util.getNameDatasets();
+
   if (data_name == '')
+  {
     data_name = Object.keys(window.dataset['training_data']).randomValue();
+    util.setValue('#markov_select', data_name);
+  }
+
 
   var names = Array
     .from(
@@ -27,7 +34,13 @@ markovNames.more_names = function(qty = 100, data_name = '')
     )
     .join(", ")
     .toTitleCase();
-  util.setValue("#output", 'Source: ' + data_name + '<br><br>' + names);
+
+  util.setValue("#output",
+    'Source: '
+    + data_name.replaceAll('_', ' ').toTitleCase()
+    + '<br><br>'
+    + names
+  );
 };
 
 markovNames.name_list = function(data_name, qty)
@@ -36,18 +49,22 @@ markovNames.name_list = function(data_name, qty)
   let names = new Set();
   let counter = 0;
   let max = qty * 2;
+  let str = '';
 
   while (names.size < qty)
   {
     // prevent never-ending loop
     if (counter > max)
       break;
-    
+
     counter++;
-    
+
+    str = this.generate_name(data_name);
+
+    if (str)
     names.add(
       this.formatName(
-        this.generate_name(data_name)
+        str
     ));
   }
   return names;
@@ -61,10 +78,8 @@ markovNames.generate_name = function(data_name)
   {
     return this.markov_name(cache);
   }
-  else
-  {
-    return "";
-  }
+
+  return "";
 };
 
 markovNames.markov_chain = function(data_name)
@@ -121,13 +136,15 @@ markovNames.construct_chain = function(names)
 // break apart word at vowels or 2 characters
 markovNames.word_split = function(word)
 {
-  // normalize word passed so it behaves consistently
-  word = word.normalize();
-  
-  // normalize string and make lowercase
-  let safe = word
+  // normalize, make lowercase, normalize white space
+  word = word
     .normalize()
-    .toLowerCase();
+    .toLowerCase()
+    .trim()
+    .replace(/\s\s+/g, ' ');
+
+  // make copy of word
+  let safe = String(word);
 
   // isolate everything that's not normal alphabet except vowels
   let c = safe.replace(/[b-df-hj-np-tv-xz]+/g, '');
@@ -156,8 +173,8 @@ markovNames.word_split = function(word)
         len = 2;
 
       let str = word.substring(0, len);
-      if (str.length > 0)
-        result.push(str.trim());
+      result.push(str);
+
       safe[i] = safe[i].substring(len);
       word = word.substring(len);
     }
@@ -233,11 +250,11 @@ markovNames.markov_name = function(cache)
     c.push(word);
   }
   c = String(c.join(" "));
-  
+
   // ensure it's at least 2 characters
   if (c.length > 1)
     return c;
-  
+
   return this.markov_name(cache);
 };
 
