@@ -325,7 +325,7 @@ util.loadJson = function (uri, set_name, subset = '', callback = null, params = 
       window.dataset[set_name] = data[subset];
     }
 
-    if (typeof callback === "function")
+    if (typeof callback === 'function')
     {
       if (params != null)
         callback(params);
@@ -341,7 +341,7 @@ util.getNameDatasets = function()
   util.populateSelect('#markov_select', Object.keys(window.dataset.training_data));
 
   // get the button text
-  let button = this.getElem('#markov_button');
+  let button = util.getElem('#markov_button');
 
   if (!button)
     return;

@@ -27,7 +27,6 @@ markovNames.more_names = function(qty = 100, data_name = '')
     util.setValue('#markov_select', data_name);
   }
 
-
   var names = Array
     .from(
       this.name_list(data_name, qty)
