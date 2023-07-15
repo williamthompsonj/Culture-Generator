@@ -78,7 +78,7 @@ religion.props = {
 religion.Init = function()
 {
   // local reference so it can change if needed.
-  let p = this.props;
+  let p = religion.props;
 
   p.diversity.value = p.diversity.options.randomValue();
   p.hostility.value = Math.range(0, 50, 2);

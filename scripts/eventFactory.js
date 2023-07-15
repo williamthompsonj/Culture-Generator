@@ -24,7 +24,7 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
     {
       case 'mundane':
       default:
-        temp_result = this.ResolveActivity(this.incident.random());
+        temp_result = eventFactory.ResolveActivity(eventFactory.incident.random());
         break;
     }
 
@@ -32,7 +32,7 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
     temp_result = temp_result.replace(/\s\s+/, ' ');
 
     // final step: resolve articles [a/an]
-    temp_result = this.ResolveArticles(temp_result);
+    temp_result = eventFactory.ResolveArticles(temp_result);
 
     // normalize white
     temp_result = temp_result.trim().replace(/\s\s+/g, ' ');
@@ -68,7 +68,7 @@ eventFactory.ResolveActivity = function(data)
     let token = data_arr[i].substring(0, data_arr[i].indexOf('}'));
 
     // replace token with a value
-    data_arr[i] = this.ResolveToken(token) + data_arr[i].substring(token.length+1).replace('}', '');
+    data_arr[i] = eventFactory.ResolveToken(token) + data_arr[i].substring(token.length+1).replace('}', '');
   }
 
   // put string back together
@@ -76,7 +76,7 @@ eventFactory.ResolveActivity = function(data)
 
   // check if we need to resolve more tokens
   if (data.indexOf('{') != -1)
-    data = this.ResolveActivity(data);
+    data = eventFactory.ResolveActivity(data);
 
   return data;
 };

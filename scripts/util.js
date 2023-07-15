@@ -17,7 +17,7 @@ util.getElem = function(id)
 /* Get element value */
 util.getValue = function(id)
 {
-  let z = this.getElem(id);
+  let z = util.getElem(id);
   if (z == null)
   return '';
 
@@ -49,7 +49,7 @@ util.getValue = function(id)
 /* Get element inner HTML */
 util.getHtml = function(id)
 {
-  let z = this.getElem(id);
+  let z = util.getElem(id);
   if (z == null)
   return '';
 
@@ -59,17 +59,17 @@ util.getHtml = function(id)
 /* Set element object */
 util.setElem = function(id, val)
 {
-  let z = this.getElem(id);
+  let z = util.getElem(id);
   if (z == null)
   return;
 
-  this.getElem(id) = val;
+  util.getElem(id) = val;
 };
 
 /* Set element value */
 util.setValue = function(id, val)
 {
-  let z = this.getElem(id);
+  let z = util.getElem(id);
   if (z == null)
   return;
 
@@ -90,7 +90,7 @@ util.setValue = function(id, val)
 /* Set element inner HTML */
 util.setHtml = function(id, val)
 {
-  let z = this.getElem(id);
+  let z = util.getElem(id);
   if (z == null)
   return;
 
@@ -133,7 +133,7 @@ util.updateElem = function(elem)
 util.populateTable = function(obj)
 {
   // ensure table exists before we do anything else
-  let my_table = this.getElem('#' + obj.prefix + '_' + 'table');
+  let my_table = util.getElem('#' + obj.prefix + '_' + 'table');
   if (my_table == null) return;
 
   // iterate over object props keys
@@ -269,7 +269,7 @@ util.populateTable = function(obj)
 
 util.populateSelect = function(id, data)
 {
-  let elem = this.getElem(id);
+  let elem = util.getElem(id);
 
   if (!elem)
     return;
@@ -300,9 +300,9 @@ util.fillForm = function(obj)
       let val = obj.props[elem].value;
 
       if (isNaN(val))
-        this.setValue(str, String(val));
+        util.setValue(str, String(val));
       else
-        this.setValue(str, Number(val));
+        util.setValue(str, Number(val));
     });
 };
 

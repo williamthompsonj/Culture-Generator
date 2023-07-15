@@ -6,7 +6,7 @@ let population = {prefix: 'pop'};
 population.Init = function()
 {
   // local reference so it can change if needed.
-  let p = this.props;
+  let p = population.props;
 
   p.poverty.value = Math.range(15, 45, 2);
   p.inequality.value = Math.range(p.poverty.value, p.poverty.value + 25, 2);

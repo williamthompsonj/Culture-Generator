@@ -10,7 +10,7 @@ markovNames.chain_cache = {};
 
 markovNames.names_from_select = function(qty = 100)
 {
-  this.more_names(qty, util.getValue('#markov_select'));
+  markovNames.more_names(qty, util.getValue('#markov_select'));
 };
 
 markovNames.more_names = function(qty = 100, data_name = '')
@@ -29,7 +29,7 @@ markovNames.more_names = function(qty = 100, data_name = '')
 
   var names = Array
     .from(
-      this.name_list(data_name, qty)
+      markovNames.name_list(data_name, qty)
     )
     .join(", ")
     .toTitleCase();
@@ -58,11 +58,11 @@ markovNames.name_list = function(data_name, qty)
 
     counter++;
 
-    str = this.generate_name(data_name);
+    str = markovNames.generate_name(data_name);
 
     if (str)
     names.add(
-      this.formatName(
+      markovNames.formatName(
         str
     ));
   }
@@ -71,11 +71,11 @@ markovNames.name_list = function(data_name, qty)
 
 markovNames.generate_name = function(data_name)
 {
-  let cache = this.markov_chain(data_name);
+  let cache = markovNames.markov_chain(data_name);
 
   if (cache)
   {
-    return this.markov_name(cache);
+    return markovNames.markov_name(cache);
   }
 
   return "";
@@ -83,12 +83,12 @@ markovNames.generate_name = function(data_name)
 
 markovNames.markov_chain = function(data_name)
 {
-  var cache = this.chain_cache[data_name];
+  var cache = markovNames.chain_cache[data_name];
   if (cache)
     return cache;
 
   let names = window.dataset['training_data'][data_name];
-  cache = this.construct_chain(names);
+  cache = markovNames.construct_chain(names);
 
   // check we have a name_set and cache
   if (!names || !names.length || !cache)
@@ -96,7 +96,7 @@ markovNames.markov_chain = function(data_name)
     return false;
   }
 
-  this.chain_cache[data_name] = cache;
+  markovNames.chain_cache[data_name] = cache;
   return cache;
 };
 
@@ -108,28 +108,28 @@ markovNames.construct_chain = function(names)
   {
     // split name into parts if it has white space
     let parts = names[c].split(/\s+/);
-    chain = this.incr_chain(chain, "parts", parts.length);
+    chain = markovNames.incr_chain(chain, "parts", parts.length);
 
     for (let f = 0; f < parts.length; f++)
     {
       var word = parts[f];
-      var chunks = this.word_split(word);
+      var chunks = markovNames.word_split(word);
       var e = chunks.shift();
 
       // capture word length and starting chunks
-      chain = this.incr_chain(chain, "name_len", word.length);
-      chain = this.incr_chain(chain, "initial", e);
+      chain = markovNames.incr_chain(chain, "name_len", word.length);
+      chain = markovNames.incr_chain(chain, "initial", e);
 
       while (chunks.length)
       {
         let h = chunks.shift();
-        chain = this.incr_chain(chain, e, h);
+        chain = markovNames.incr_chain(chain, e, h);
         e = h
       }
     }
   }
 
-  return this.scale_chain(chain);
+  return markovNames.scale_chain(chain);
 };
 
 // break apart word at vowels or 2 characters
@@ -227,18 +227,18 @@ markovNames.scale_chain = function(chain)
 
 markovNames.markov_name = function(cache)
 {
-  let parts = this.select_link(cache, "parts");
+  let parts = markovNames.select_link(cache, "parts");
   let c = [];
 
   for (let d = 0; d < parts; d++)
   {
-    let name_len = this.select_link(cache, "name_len");
-    var chunk = this.select_link(cache, "initial");
+    let name_len = markovNames.select_link(cache, "name_len");
+    var chunk = markovNames.select_link(cache, "initial");
     let word = chunk;
 
     while (word.length < name_len)
     {
-      chunk = this.select_link(cache, chunk);
+      chunk = markovNames.select_link(cache, chunk);
 
       if (!chunk)
         break;
@@ -254,7 +254,7 @@ markovNames.markov_name = function(cache)
   if (c.length > 1)
     return c;
 
-  return this.markov_name(cache);
+  return markovNames.markov_name(cache);
 };
 
 markovNames.select_link = function(cache, part)

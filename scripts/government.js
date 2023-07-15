@@ -158,20 +158,20 @@ government.props = {
 government.ChooseStyle = function()
 {
   // pick at random!
-  return Object.keys(this.props.style.options).randomValue();
+  return Object.keys(government.props.style.options).randomValue();
 };
 
 /* generate starting conditions */
 government.Init = function()
 {
-  this.props.style.value = this.ChooseStyle();
-  this.rollStats()
+  government.props.style.value = government.ChooseStyle();
+  government.rollStats()
 };
 
 government.rollStats = function()
 {
   // local reference so it can change if needed.
-  let p = this.props;
+  let p = government.props;
   if (p.style.value == '')
     p.style.value = util.getValue('#gov_style');
 
