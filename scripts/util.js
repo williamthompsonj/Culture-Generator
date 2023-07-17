@@ -1,6 +1,6 @@
 "use strict";
 // utility object namespace
-var util = {};
+let util = {};
 
 /* Get first element using query syntax, returns null if nothing found.
   - "foo" first tag <foo>
