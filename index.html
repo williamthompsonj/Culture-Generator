@@ -35,11 +35,11 @@ util.loadJson('./json/backgrounds.json', 'backgrounds');
 util.loadJson('./json/feats.json', 'feats');
 util.loadJson('./json/item_groups.json', 'item_groups');
 util.loadJson('./json/items.json', 'items');
-util.loadJson('./json/languages.json', 'languages');
 util.loadJson('./json/races.json', 'races');
 util.loadJson('./json/skills.json', 'skills');
 util.loadJson('./json/spells.json', 'spells');
 */
+util.loadJson('./json/languages.json', 'languages');
 util.loadJson('./json/training_data.json', 'training_data', '', util.getNameDatasets);
 </script>
 <script src="scripts/eventFactory.js"></script>
@@ -47,8 +47,43 @@ util.loadJson('./json/training_data.json', 'training_data', '', util.getNameData
 </head>
 <body>
 
-<form id="gov_form" name="gov_form" class="make_inline">
+<form id="markov_form" name="markov_form">
 <fieldset>
+<legend>Name Generator</legend>
+<button onClick="markovNames.more_names();"
+ type="button">Random</button>
+<select id="markov_select"></select>
+<!--- populate after page load --->
+<button onClick="util.getNameDatasets();" id="markov_button"
+ type="button">Populate</button>
+<div id="output"></div>
+</fieldset>
+</form>
+
+<br><br>
+
+<form id="generation_headline_form" name="generation_headline_form" class="make_inline max30em">
+<fieldset>
+<legend>Generation Headlines</legend>
+<button onClick="util.setValue('#generation_results', eventFactory.GetActivity('generation', 50));"
+ type="button">Mundane Headlines</button>
+<p id="generation_results" name="generation_results">Place Holder</p>
+</fieldset>
+</form>
+
+<form id="mundane_headline_form" name="mundane_headline_form" class="make_inline max30em">
+<fieldset>
+<legend>Mundane Headlines</legend>
+<button onClick="util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 50));"
+ type="button">Mundane Headlines</button>
+<p id="mundane_results" name="mundane_results">Place Holder</p>
+</fieldset>
+</form>
+
+<br><br>
+
+<form id="gov_form" name="gov_form" class="make_inline">
+  <fieldset>
 <legend>Government Settings</legend>
 <table class="settings_table" id="gov_table" name="gov_table">
 <!--- populate after page load --->
@@ -82,41 +117,6 @@ util.loadJson('./json/training_data.json', 'training_data', '', util.getNameData
 <br />
 <button onClick="religion.Init(); util.fillForm(religion);"
  type="button">Generate Religion</button>
-</fieldset>
-</form>
-
-<br><br>
-
-<form id="markov_form" name="markov_form">
-<fieldset>
-<legend>Name Generator</legend>
-<button onClick="markovNames.more_names();"
- type="button">Random</button>
-<select id="markov_select"></select>
-<!--- populate after page load --->
-<button onClick="util.getNameDatasets();" id="markov_button"
- type="button">Populate</button>
-<div id="output"></div>
-</fieldset>
-</form>
-
-<br><br>
-
-<form id="generation_headline_form" name="generation_headline_form" class="make_inline max30em">
-<fieldset>
-<legend>Generation Headlines</legend>
-<button onClick="util.setValue('#generation_results', eventFactory.GetActivity('generation', 50));"
- type="button">Mundane Headlines</button>
-<p id="generation_results" name="generation_results">Place Holder</p>
-</fieldset>
-</form>
-
-<form id="mundane_headline_form" name="mundane_headline_form" class="make_inline max30em">
-<fieldset>
-<legend>Mundane Headlines</legend>
-<button onClick="util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 50));"
- type="button">Mundane Headlines</button>
-<p id="mundane_results" name="mundane_results">Place Holder</p>
 </fieldset>
 </form>
 
