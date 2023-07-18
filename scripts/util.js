@@ -307,7 +307,7 @@ util.fillForm = function(obj)
 };
 
 /* load JSON data into window.dataset object */
-util.loadJson = function (uri, set_name, subset = '', callback = null, params = null)
+util.loadJson = function (uri, set_name, subset = '', callback = null, params = NaN)
 {
   // ensure dataset exists in window
   if (!Object.hasOwn(window, 'dataset')) window.dataset = {};
@@ -327,7 +327,7 @@ util.loadJson = function (uri, set_name, subset = '', callback = null, params = 
 
     if (typeof callback === 'function')
     {
-      if (params != null)
+      if (params != NaN)
         callback(params);
       else
         callback();

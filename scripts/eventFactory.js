@@ -745,6 +745,10 @@ eventFactory.food.vegetable = [
   'zucchini',
 ];
 
+eventFactory.incident.natural = [
+
+];
+
 eventFactory.incident.generation = [
   // adapted from other websites & improved for use here
   "[a/an] {characterization.positive} {hero|noble|member of the leader's family|clergy member|leader} died suddenly.",
