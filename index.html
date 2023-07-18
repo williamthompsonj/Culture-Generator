@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<!--
-  Copyright (c) William J. Thompson 2023.
-  Version 0.2 (July 2023)
-
-  This tool currently generates mundane headlines, names, and will eventually
-  generate both stat blocks and a timeline using metrics to influence what is
-  most likely to occur. It generates unique names using Markov chains.
-
-  For now, enjoy the random mundane headlines.
-
-  If you really REALLY want to contact me, send it here:
-  william dot thompsonj at gmail dot com
--->
 <html class="darkmode">
 <head>
 <title>Culture Generator</title>
 <link rel="stylesheet" href="css/style.css">
-
 <script src="lang/Array.prototype.js"></script>
 <script src="lang/Math.js"></script>
 <script src="lang/String.prototype.js"></script>
@@ -35,17 +21,29 @@ util.loadJson('./json/backgrounds.json', 'backgrounds');
 util.loadJson('./json/feats.json', 'feats');
 util.loadJson('./json/item_groups.json', 'item_groups');
 util.loadJson('./json/items.json', 'items');
+util.loadJson('./json/languages.json', 'languages');
 util.loadJson('./json/races.json', 'races');
 util.loadJson('./json/skills.json', 'skills');
 util.loadJson('./json/spells.json', 'spells');
 */
-util.loadJson('./json/languages.json', 'languages');
 util.loadJson('./json/training_data.json', 'training_data', '', util.getNameDatasets);
 </script>
 <script src="scripts/eventFactory.js"></script>
 <script src="scripts/ready.js"></script>
 </head>
 <body>
+
+<p class="tooltip">
+
+<span class="whatthis">What's all this? &#x1F42D; &#x1F5B0;</span>
+
+<span class="tooltiptext">Copyright (c) William J. Thompson<br>
+Version 0.2 (July 2023)<br>
+<br>This tool generates headlines, names, and will eventually generate
+both stat blocks and a timeline using metrics to influence what is most
+likely to occur. It generates unique names using Markov chains.<br>
+<br>If you really REALLY want to contact me, send it here:<br>
+william dot thompsonj at gmail dot com</span></p>
 
 <form id="markov_form" name="markov_form">
 <fieldset>
@@ -54,13 +52,13 @@ util.loadJson('./json/training_data.json', 'training_data', '', util.getNameData
  type="button">Random</button>
 <select id="markov_select"></select>
 <!--- populate after page load --->
-<button onClick="util.getNameDatasets();" id="markov_button"
- type="button">Populate</button>
+<button onClick="markovNames.names_from_select();" id="markov_button"
+ type="button">&lt;- Generate Names</button>
 <div id="output"></div>
 </fieldset>
 </form>
 
-<br><br>
+<br>
 
 <form id="generation_headline_form" name="generation_headline_form" class="make_inline max30em">
 <fieldset>

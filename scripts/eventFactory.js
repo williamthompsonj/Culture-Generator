@@ -30,7 +30,7 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
       case 'generation':
         temp_result = eventFactory.incident.generation.randomValue();
         break;
-    
+
       case 'mundane':
       default:
         temp_result = eventFactory.incident.mundane.randomValue();
@@ -787,7 +787,7 @@ eventFactory.incident.random = function(context = null)
   ].randomValue();
 };
 
-/*TODO: items that might be interesting but haven't made yet:
+/* TODO: items that might be interesting but haven't made yet:
   - a devastating forest fire scorched the land
   - a horrible earthquake shook the land
   - a tidal wave smashed the coast

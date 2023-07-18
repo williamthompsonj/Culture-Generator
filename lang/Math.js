@@ -9,7 +9,7 @@ Math.range = function(min = 0, max = 1, digits = 0)
 
   if (digits < 0)
   {
-    return Number( 
+    return Number(
       min +
       (
         Math.random() * (max - min)

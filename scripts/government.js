@@ -161,7 +161,7 @@ government.ChooseStyle = function()
   return Object.keys(government.props.style.options).randomValue();
 };
 
-/* generate starting conditions */
+// generate starting conditions
 government.Init = function()
 {
   government.props.style.value = government.ChooseStyle();

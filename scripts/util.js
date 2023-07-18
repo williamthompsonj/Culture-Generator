@@ -2,19 +2,19 @@
 // utility object namespace
 let util = {};
 
-/* Get first element using query syntax, returns null if nothing found.
+/** Get first element using query syntax, returns null if nothing found.
   - "foo" first tag <foo>
   - "#foo" element with id="foo"
   - ".foo" element with class="foo"
   - [attr="foo"] element with attr="foo"
   - tag[attr="foo"] element with <tag attr="foo">
-*/
+**/
 util.getElem = function(id)
 {
   return document.querySelector(id);
 };
 
-/* Get element value */
+// Get element value
 util.getValue = function(id)
 {
   let z = util.getElem(id);
@@ -46,7 +46,7 @@ util.getValue = function(id)
   }
 };
 
-/* Get element inner HTML */
+// Get element inner HTML
 util.getHtml = function(id)
 {
   let z = util.getElem(id);
@@ -56,7 +56,7 @@ util.getHtml = function(id)
   return z.innerHTML;
 };
 
-/* Set element object */
+// Set element object
 util.setElem = function(id, val)
 {
   let z = util.getElem(id);
@@ -66,7 +66,7 @@ util.setElem = function(id, val)
   util.getElem(id) = val;
 };
 
-/* Set element value */
+// Set element value
 util.setValue = function(id, val)
 {
   let z = util.getElem(id);
@@ -87,7 +87,7 @@ util.setValue = function(id, val)
   }
 };
 
-/* Set element inner HTML */
+// Set element inner HTML
 util.setHtml = function(id, val)
 {
   let z = util.getElem(id);
@@ -97,7 +97,7 @@ util.setHtml = function(id, val)
   z.innerHTML = val;
 };
 
-/* update value in objects when onChange occurs */
+// update value in objects when onChange occurs
 util.updateElem = function(elem)
 {
   var val = elem.value.trim();
@@ -290,7 +290,7 @@ util.populateSelect = function(id, data)
   });
 };
 
-/* auto-populate form fields based on object props */
+// auto-populate form fields based on object props
 util.fillForm = function(obj)
 {
   // iterate over object props keys
@@ -306,8 +306,13 @@ util.fillForm = function(obj)
     });
 };
 
-/* load JSON data into window.dataset object */
-util.loadJson = function (uri, set_name, subset = '', callback = undefined, params = undefined)
+/** load JSON data into window.dataset object
+
+  Use rest parameters to capture values passed to the callback
+
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+**/
+util.loadJson = function (uri, set_name, subset = '', callback = undefined, ...x)
 {
   // ensure dataset exists in window
   if (!Object.hasOwn(window, 'dataset')) window.dataset = {};
@@ -325,12 +330,28 @@ util.loadJson = function (uri, set_name, subset = '', callback = undefined, para
       window.dataset[set_name] = data[subset];
     }
 
+    // more than 6 things turns into an array
     if (typeof callback === 'function')
     {
-      if (params != undefined)
-        callback(params);
-      else
-        callback();
+      switch (x.length)
+      {
+        case 0:
+          callback();
+        case 1:
+          callback(x[0]);
+        case 2:
+          callback(x[0], x[1]);
+        case 3:
+          callback(x[0], x[1], x[2]);
+        case 4:
+          callback(x[0], x[1], x[2], x[3]);
+        case 5:
+          callback(x[0], x[1], x[2], x[3], x[4]);
+        case 6:
+          callback(x[0], x[1], x[2], x[3], x[4], x[5]);
+        default:
+          callback(x);
+      }
     }
   });
 };
@@ -340,15 +361,6 @@ util.getNameDatasets = function()
   // populate the markov name select options
   util.populateSelect('#markov_select', Object.keys(window.dataset.training_data));
 
-  // get the button text
-  let button = util.getElem('#markov_button');
-
-  if (!button)
-    return;
-
-  button.innerText = '<- Generate Names';
-  button.click = markovNames.names_from_select();
-  
   // generate random names
   markovNames.more_names();
 };

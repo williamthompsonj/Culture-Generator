@@ -1,9 +1,11 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Adapted from https://donjon.bin.sh/name/markov.html
-//
-// written and released to the public domain by drow <drow@bin.sh>
-// http://creativecommons.org/publicdomain/zero/1.0/
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Adapted from https://donjon.bin.sh/name/markov.html
+
+  written and released to the public domain by drow <drow@bin.sh>
+  http://creativecommons.org/publicdomain/zero/1.0/
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+**/
 'use strict';
 let markovNames = {};
 
