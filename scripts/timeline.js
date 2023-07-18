@@ -32,6 +32,7 @@ timeline.generations = [
     'mood': 'dominant',
     'individualism': -1,
     'duration': 0,
+    'liberal': false,
   },
   {
     /**
@@ -43,6 +44,7 @@ timeline.generations = [
     'mood': 'recessive',
     'individualism': 0,
     'duration': 0,
+    'liberal': true,
   },
   {
     /**
@@ -54,6 +56,7 @@ timeline.generations = [
     'mood': 'dominant',
     'individualism': 1,
     'duration': 0,
+    'liberal': false,
   },
   {
     /**
@@ -64,5 +67,6 @@ timeline.generations = [
     'mood': 'recessive',
     'individualism': 0,
     'duration': 0,
+    'liberal': true,
   },
 ];

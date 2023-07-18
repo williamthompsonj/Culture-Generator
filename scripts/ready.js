@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () =>
   util.fillForm(population);
   util.fillForm(religion);
 
-  // generate 100 mundane headlines
-  util.setValue('#results', eventFactory.GetActivity('mundane', 100));
+  // generate headlines
+  util.setValue('#generation_results', eventFactory.GetActivity('generation', 10));
+  util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 10));
 });

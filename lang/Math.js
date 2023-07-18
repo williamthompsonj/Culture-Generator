@@ -6,11 +6,24 @@ Math.range = function(min = 0, max = 1, digits = 0)
     return Number(
       max.toFixed(digits)
     );
-  return Number(
-    Number(
+
+  if (digits < 0)
+  {
+    return Number( 
+      min +
       (
         Math.random() * (max - min)
-      ) + min
+      )
+    );
+  }
+
+  return Number(
+    Number(
+      min +
+      (
+        Math.random() * (max - min)
+      )
     ).toFixed(digits)
   );
+
 };

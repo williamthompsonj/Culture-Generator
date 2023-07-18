@@ -27,6 +27,7 @@
 <script src="scripts/government.js"></script>
 <script src="scripts/population.js"></script>
 <script src="scripts/religion.js"></script>
+<script src="scripts/timeline.js"></script>
 <script>
 // load JSON so we have data to use
 util.loadJson('./json/backgrounds.json', 'backgrounds');
@@ -99,14 +100,23 @@ util.loadJson('./json/training_data.json', 'training_data', '', util.getNameData
 
 <br><br>
 
-<form id="headline_form" name="headline_form">
+<form id="generation_headline_form" name="generation_headline_form" class="make_inline max30em">
 <fieldset>
-<legend>Random Headlines</legend>
-<button onClick="util.setValue('#results', eventFactory.GetActivity('mundane', 100));"
+<legend>Generation Headlines</legend>
+<button onClick="util.setValue('#generation_results', eventFactory.GetActivity('generation', 50));"
  type="button">Mundane Headlines</button>
+<p id="generation_results" name="generation_results">Place Holder</p>
 </fieldset>
 </form>
-<p id="results" name="results">Place Holder</p>
+
+<form id="mundane_headline_form" name="mundane_headline_form" class="make_inline max30em">
+<fieldset>
+<legend>Mundane Headlines</legend>
+<button onClick="util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 50));"
+ type="button">Mundane Headlines</button>
+<p id="mundane_results" name="mundane_results">Place Holder</p>
+</fieldset>
+</form>
 
 </body>
 <!-- Google tag (gtag.js) -->

@@ -348,4 +348,7 @@ util.getNameDatasets = function()
 
   button.innerText = '<- Generate Names';
   button.click = markovNames.names_from_select();
+  
+  // generate random names
+  markovNames.more_names();
 };
