@@ -53,6 +53,18 @@ y_train := 0
 x_guild := 0
 y_guild := 0
 
+; guild shop
+x_guild_shop := 0
+y_guild_shop := 0
+
+; guild shop supplies
+x_guild_shop_supplies := 0
+y_guild_shop_supplies := 0
+
+; guild shop pickaxes
+x_guild_shop_pickaxes := 0
+y_guild_shop_pickaxes := 0
+
 ; guild expedition button
 x_exped := 0
 y_exped := 0
@@ -98,6 +110,18 @@ if WinExist(WindowTitle)
   x_guild := Floor(wide * 0.96)
   y_guild := Floor(high * 0.43)
   
+  ; guild shop
+  x_guild_shop := Floor(wide * 0.325)
+  y_guild_shop := Floor(high * 0.237)
+  
+  ; guild shop supplies
+  x_guild_shop_supplies := Floor(wide * 0.091)
+  y_guild_shop_supplies := Floor(high * 0.722)
+  
+  ; guild shop pickaxes
+  x_guild_shop_pickaxes := Floor(wide * 0.367)
+  y_guild_shop_pickaxes := Floor(high * 0.444)
+  
   ; expedition tent in guild screen
   x_exped := Floor(wide * 0.14)
   y_exped := Floor(high * 0.35)
@@ -130,28 +154,24 @@ Counter := 0 ; keep track of how many cycles we've done
 ;----------------------------
 Loop
 {
-  if (RunScript == true)
+  if (RunScript == false)
+    break
+
+  if (MyNum < 8)
   {
-    if (MyNum < 8)
-    {
-      ; click middle of screen
-      Click, %x1%, %y1%
-      MyNum := MyNum + 1
-    }
-    else
-    {
-      ; click special upgrade button
-      Click, %x_upgrade%, %y_upgrade%
-      Send {U}
-      MyNum := 0
-    }
-    Sleep 120
-    Send {3}
+    ; click middle of screen
+    Click, %x1%, %y1%
+    MyNum := MyNum + 1
   }
   else
   {
-    break
+    ; click special upgrade button
+    Click, %x_upgrade%, %y_upgrade%
+    Send {U}
+    MyNum := 0
   }
+  Sleep 120
+  Send {3}
 
   if (Counter > Cycles)
   {
@@ -159,10 +179,7 @@ Loop
     ; do the extra stuff
     ;----------------------------
     Counter := 0
-    
-    ; hold down space so pew pew keeps going
-    Send {SPACE down}
-    
+
     ; open guardian screen and click upgrade
     Send {G}
     Sleep 500
@@ -171,18 +188,35 @@ Loop
     Click, %x_close_full%, %y_close_full%
     Sleep 500
     
-    ; open guild screen and click start/finish expedition
+    if (RunScript == false)
+      break
+
+    ; open guild screen for expedition and pickaxes
     Click, %x_guild%, %y_guild%
     Sleep 500
     Click, %x_exped%, %y_exped%
     Sleep 500
     Click, %x_exped_button%, %y_exped_button%
     Sleep 500
+	; just click off the window, position doesn't matter
     Click, %x_upgrade%, %y_upgrade%
+    Sleep 500
+	; now open the shop and get pickaxes
+    Click, %x_guild_shop%, %y_guild_shop%
+    Sleep 500
+    Click, %x_guild_shop_supplies%, %y_guild_shop_supplies%
+    Sleep 500
+    Click, %x_guild_shop_pickaxes%, %y_guild_shop_pickaxes%
+    Sleep 500
+	; close twice to get out of guild shop and guild screen
+    Click, %x_close_full%, %y_close_full%
     Sleep 500
     Click, %x_close_full%, %y_close_full%
     Sleep 500
     
+    if (RunScript == false)
+      break
+
     ; open map and click free stuff button
     Send {M}
     Sleep 500
@@ -194,9 +228,6 @@ Loop
     Sleep 500
     Click, %x_close_full%, %y_close_full%
     Sleep 500
-
-    ; let go space bar
-    Send {SPACE up}
   }
   else
   {
