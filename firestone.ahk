@@ -122,7 +122,7 @@ else
   return
 }
 RunScript := true
-Counter := 43 ; keep track of how many cycles we've done
+Counter := 0 ; keep track of how many cycles we've done
 
 ;----------------------------
 ; Main loop that runs clicker
