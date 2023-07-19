@@ -31,6 +31,7 @@ WindowTitle := "Firestone"
 RunScript := false
 MyNum := 0
 Counter := 0
+Cycles := 150
 
 ; middle of screen (path for beer dragon and meteor guy)
 x1 := 0
@@ -152,7 +153,7 @@ Loop
     break
   }
 
-  if (Counter > 45)
+  if (Counter > Cycles)
   {
     ;----------------------------
     ; do the extra stuff
