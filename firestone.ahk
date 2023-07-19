@@ -97,7 +97,7 @@ if WinExist(WindowTitle)
   ; normal close button
   x_close_full := Floor(wide * 0.958)
   y_close_full := Floor(high * 0.052)
-  
+
   ; special upgrade button
   x_upgrade := Floor(wide * 0.92)
   y_upgrade := Floor(high * 0.2)
@@ -109,31 +109,31 @@ if WinExist(WindowTitle)
   ; guild button on main screen
   x_guild := Floor(wide * 0.96)
   y_guild := Floor(high * 0.43)
-  
+
   ; guild shop
   x_guild_shop := Floor(wide * 0.325)
   y_guild_shop := Floor(high * 0.237)
-  
+
   ; guild shop supplies
   x_guild_shop_supplies := Floor(wide * 0.091)
   y_guild_shop_supplies := Floor(high * 0.722)
-  
+
   ; guild shop pickaxes
   x_guild_shop_pickaxes := Floor(wide * 0.367)
   y_guild_shop_pickaxes := Floor(high * 0.444)
-  
+
   ; expedition tent in guild screen
   x_exped := Floor(wide * 0.14)
   y_exped := Floor(high * 0.35)
-  
+
   ; expedition button complete/start
   x_exped_button := Floor(wide * 0.69)
   y_exped_button := Floor(high * 0.30)
-  
+
   ; campaign button on the map
   x_campaign := Floor(wide * 0.96)
   y_campaign := Floor(high * 0.57)
-  
+
   ; campaign button on the map
   x_campaign_claim := Floor(wide * 0.11) ;210
   y_campaign_claim := Floor(high * 0.91) ;986
@@ -187,7 +187,7 @@ Loop
     Sleep 500
     Click, %x_close_full%, %y_close_full%
     Sleep 500
-    
+
     if (RunScript == false)
       break
 
@@ -213,7 +213,7 @@ Loop
     Sleep 500
     Click, %x_close_full%, %y_close_full%
     Sleep 500
-    
+
     if (RunScript == false)
       break
 

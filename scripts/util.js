@@ -337,20 +337,28 @@ util.loadJson = function (uri, set_name, subset = '', callback = undefined, ...x
       {
         case 0:
           callback();
+          break;
         case 1:
           callback(x[0]);
+          break;
         case 2:
           callback(x[0], x[1]);
+          break;
         case 3:
           callback(x[0], x[1], x[2]);
+          break;
         case 4:
           callback(x[0], x[1], x[2], x[3]);
+          break;
         case 5:
           callback(x[0], x[1], x[2], x[3], x[4]);
+          break;
         case 6:
           callback(x[0], x[1], x[2], x[3], x[4], x[5]);
+          break;
         default:
           callback(x);
+          break;
       }
     }
   });

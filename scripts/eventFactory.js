@@ -745,9 +745,20 @@ eventFactory.food.vegetable = [
   'zucchini',
 ];
 
-eventFactory.incident.natural = [
+eventFactory.incident.random = function(context = null)
+{
+  // check if executing as anonymous function out of context
+  if (this !== undefined)
+  {
+    context = this;
+  }
 
-];
+  return context[
+    [
+      'mundane'
+    ].randomValue()
+  ].randomValue();
+};
 
 eventFactory.incident.generation = [
   // adapted from other websites & improved for use here
@@ -771,21 +782,6 @@ eventFactory.incident.generation = [
   "a {lost|stolen|famous} {artifact|religious text} of the faith was {discovered|recovered|destroyed|hidden away}.",
   "{active spying|treacherous sabotage|a new star cluster|a forgotten culture} was discovered",
 ];
-
-eventFactory.incident.random = function(context = null)
-{
-  // check if executing as anonymous function out of context
-  if (this !== undefined)
-  {
-    context = this;
-  }
-
-  return context[
-    [
-      'mundane'
-    ].randomValue()
-  ].randomValue();
-};
 
 /* TODO: items that might be interesting but haven't made yet:
   - a devastating forest fire scorched the land
@@ -836,6 +832,10 @@ eventFactory.incident.mundane = [
   "the peasants revolted and {installed a new ruler|were violently suppressed|violently murdered the nobles}.",
   "the fields {yielded a bumper crop|withered and died}.",
   "{taxes|pirate attacks|bandit raids|violence against cabbage merchants} increased.",
+];
+
+eventFactory.incident.natural = [
+
 ];
 
 eventFactory.item.random = function(context = null)
