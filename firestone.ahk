@@ -183,11 +183,11 @@ Loop
 
     ; open guardian screen and click upgrade
     Send {G}
-    Sleep 500
+    Sleep 200
     Click, %x_train%, %y_train%
-    Sleep 500
+    Sleep 200
     Click, %x_close_full%, %y_close_full%
-    Sleep 500
+    Sleep 200
 
     if (RunScript == false)
       break
