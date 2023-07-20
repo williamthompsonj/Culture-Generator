@@ -21,8 +21,7 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
   for (let i = 0; qty != factoryResult.size; i++)
   {
     // ensure we never infinite loop
-    if (i > 2*qty)
-      break;
+    if (i > 2*qty) break;
 
     var temp_result;
     switch (level)
@@ -64,7 +63,7 @@ eventFactory.ResolveActivity = function(data)
   let data_arr = data.split('{');
 
   // process tokens
-  for (var i = 1; i != data_arr.length; i++)
+  for (let i = 1; i != data_arr.length; i++)
   {
     // check for ending piece
     if (data_arr[i].indexOf('}') == -1)

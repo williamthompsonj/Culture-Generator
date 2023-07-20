@@ -18,31 +18,30 @@ util.getElem = function(id)
 util.getValue = function(id)
 {
   let z = util.getElem(id);
-  if (z == null)
-  return '';
+  if (z == null) return '';
 
   switch (z.tagName.toUpperCase())
   {
     // form element value
     case 'TEXTAREA':
     case 'INPUT':
-    return z.value;
-    break;
+      return z.value;
+      break;
 
     case 'SELECT':
-    if (z.selectedIndex == -1)
-    {
-      // if nothing selected, default to first option
-      z.selectedIndex = 0;
-      z.value = z.options[0].value;
-    }
-    return z.value;
-    break;
+      if (z.selectedIndex == -1)
+      {
+        // if nothing selected, default to first option
+        z.selectedIndex = 0;
+        z.value = z.options[0].value;
+      }
+      return z.value;
+      break;
 
     // html tag contents
     default:
-    return z.innerHTML;
-    break;
+      return z.innerHTML;
+      break;
   }
 };
 
@@ -50,9 +49,7 @@ util.getValue = function(id)
 util.getHtml = function(id)
 {
   let z = util.getElem(id);
-  if (z == null)
-  return '';
-
+  if (z == null) return '';
   return z.innerHTML;
 };
 
@@ -60,9 +57,7 @@ util.getHtml = function(id)
 util.setElem = function(id, val)
 {
   let z = util.getElem(id);
-  if (z == null)
-  return;
-
+  if (z == null) return;
   util.getElem(id) = val;
 };
 
@@ -70,20 +65,19 @@ util.setElem = function(id, val)
 util.setValue = function(id, val)
 {
   let z = util.getElem(id);
-  if (z == null)
-  return;
+  if (z == null) return;
 
   switch (z.tagName.toUpperCase())
   {
     case 'TEXTAREA':
     case 'INPUT':
     case 'SELECT':
-    z.value = val;
-    break;
+      z.value = val;
+      break;
 
     default:
-    z.innerHTML = val;
-    break;
+      z.innerHTML = val;
+      break;
   }
 };
 
@@ -91,9 +85,7 @@ util.setValue = function(id, val)
 util.setHtml = function(id, val)
 {
   let z = util.getElem(id);
-  if (z == null)
-  return;
-
+  if (z == null) return;
   z.innerHTML = val;
 };
 
@@ -103,13 +95,13 @@ util.updateElem = function(elem)
   var val = elem.value.trim();
 
   if (val.toLowerCase() == 'true') // boolean true
-  val = true;
+    val = true;
   else if (val.toLowerCase() == 'false') // boolean false
-  val = false;
+    val = false;
   else if (isNaN(val)) // original string value
-  val = elem.value;
+    val = elem.value;
   else
-  val = Number(val); // number
+    val = Number(val); // number
 
   let arr = elem.id.split('_');
   var index = elem.id.substring(arr[0].length+1);
@@ -117,16 +109,16 @@ util.updateElem = function(elem)
   switch (arr[0])
   {
     case "gov":
-    government.props[index].value = val;
-    break;
+      government.props[index].value = val;
+      break;
 
     case "pop":
-    population.props[index].value = val;
-    break;
+      population.props[index].value = val;
+      break;
 
     case "rel":
-    religion.props[index].value = val;
-    break;
+      religion.props[index].value = val;
+      break;
   }
 };
 
@@ -137,7 +129,8 @@ util.populateTable = function(obj)
   if (my_table == null) return;
 
   // iterate over object props keys
-  Object.keys(obj.props).forEach(elem => {
+  Object.keys(obj.props).forEach(elem =>
+  {
     // shorthand for html tag properties
     let h = obj.props[elem].html_tag;
     let p = obj.props[elem];
@@ -259,8 +252,7 @@ util.populateTable = function(obj)
 
     // put it all together
     tr_tag.appendChild(td1);
-    if (td1 != td2)
-      tr_tag.appendChild(td2);
+    if (td1 != td2) tr_tag.appendChild(td2);
 
     // add row to table
     my_table.appendChild(tr_tag);
@@ -270,9 +262,7 @@ util.populateTable = function(obj)
 util.populateSelect = function(id, data)
 {
   let elem = util.getElem(id);
-
-  if (!elem)
-    return;
+  if (!elem) return;
 
   // cycle through array
   data.forEach(index =>
@@ -299,10 +289,8 @@ util.fillForm = function(obj)
       let str = "#" + obj.prefix + '_'  + elem;
       let val = obj.props[elem].value;
 
-      if (isNaN(val))
-        util.setValue(str, String(val));
-      else
-        util.setValue(str, Number(val));
+      if (isNaN(val)) util.setValue(str, String(val));
+      else util.setValue(str, Number(val));
     });
 };
 
@@ -337,20 +325,35 @@ util.loadJson = function (uri, set_name, subset = '', callback = undefined, ...x
       {
         case 0:
           callback();
+          break;
+          
         case 1:
           callback(x[0]);
+          break;
+          
         case 2:
           callback(x[0], x[1]);
+          break;
+          
         case 3:
           callback(x[0], x[1], x[2]);
+          break;
+          
         case 4:
           callback(x[0], x[1], x[2], x[3]);
+          break;
+          
         case 5:
           callback(x[0], x[1], x[2], x[3], x[4]);
+          break;
+          
         case 6:
           callback(x[0], x[1], x[2], x[3], x[4], x[5]);
+          break;
+
         default:
           callback(x);
+          break;
       }
     }
   });
