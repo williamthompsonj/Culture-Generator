@@ -34,7 +34,7 @@ markovNames.more_names = function(qty = 40, data_name = '')
   }
 
   var names = markovNames.name_list(data_name, qty);
-    
+
   // check if we need to sort these things first
   if (util.getValue('#markov_sort'))
     names.sort();
@@ -47,7 +47,7 @@ markovNames.more_names = function(qty = 40, data_name = '')
     + '<br><br>'
     + names
   );
-  
+
 };
 
 markovNames.name_list = function(data_name, qty)
@@ -113,6 +113,7 @@ markovNames.markov_chain = function(data_name)
 markovNames.construct_chain = function(names)
 {
   let chain = {};
+  let consonants = 'bcdfghjklmnpqrstvwxz';
 
   for (let c = 0; c < names.length; c++)
   {
@@ -144,35 +145,27 @@ markovNames.construct_chain = function(names)
         // chunks with more than 1 character
         if (e.length > 1)
         {
-          for (let i = 0; i < e.length-1; i++)
-          {
-            chain = markovNames.incr_chain(chain, e[i], e[i+1]);
-          }
+          chain = markovNames.incr_chain(chain, e[0], e[1]);
+          chain = markovNames.incr_chain(chain, e[1], h);
 
-          chain = markovNames.incr_chain(chain, e[e.length-1], h);
+          if (h.length > 1 && consonants.indexOf(h[0]) == -1)
+          {
+            chain = markovNames.incr_chain(chain, e[0], e[1]+h[0]);
+          }
         }
-        
+
         if (h.length > 1)
         {
-          chain = markovNames.incr_chain(chain, e[e.length-1], h[0]);
+          chain = markovNames.incr_chain(chain, e[1], h[0]);
         }
 
         // move to next chunk
         e = h
       }
-
-      if (e.length > 1)
-      {
-        for (let i = 0; i < e.length-1; i++)
-        {
-          chain = markovNames.incr_chain(chain, e[i], e[i+1]);
-        }
-      }
     }
   }
 
   return markovNames.scale_chain(chain);
-  //return chain;
 };
 
 // break word at vowels or 2 characters
@@ -274,9 +267,6 @@ markovNames.markov_name = function(cache)
   for (let d = 0; d < pieces; d++)
   {
     let name_len = markovNames.select_link(cache, "name_len");
-    if (name_len > 2)
-      name_len--; // reduce total length due to consonant pairs
-
     var letters = markovNames.select_link(cache, "initial");
     let word = letters;
 

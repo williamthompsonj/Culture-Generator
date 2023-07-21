@@ -382,12 +382,12 @@ util.markovSort = function()
 {
   let elem = util.getValue('#markov_sort');
   if (!elem) return;
-  
+
   let raw = util.getValue("#markov_output").split("<br>");
   let data = raw[raw.length-1].split(", ");
   data.sort();
   raw[raw.length-1] = data.join(", ");
   raw = raw.join("<br>");
-  
+
   util.setValue("#markov_output", raw);
 };
