@@ -16,13 +16,16 @@ markovNames.names_from_select = function(qty = 100)
   markovNames.more_names(qty, util.getValue('#markov_select'));
 };
 
-markovNames.more_names = function(qty = 100, data_name = '')
+markovNames.more_names = function(qty = 20, data_name = '')
 {
   if (qty < 1)
     return;
 
   if (util.getElem('#markov_select').options.length < 1)
+  {
     util.getNameDatasets();
+    return;
+  }
 
   if (data_name == '')
   {
@@ -30,10 +33,8 @@ markovNames.more_names = function(qty = 100, data_name = '')
     util.setValue('#markov_select', data_name);
   }
 
-  var names = Array
-    .from(
-      markovNames.name_list(data_name, qty)
-    )
+  var names = markovNames
+    .name_list(data_name, qty)
     .join(", ")
     .toTitleCase();
 
@@ -69,7 +70,9 @@ markovNames.name_list = function(data_name, qty)
         str
     ));
   }
-  return names;
+
+  // return an array so it's easy to use
+  return Array.from(names);
 };
 
 markovNames.generate_name = function(data_name)
@@ -109,101 +112,132 @@ markovNames.construct_chain = function(names)
 
   for (let c = 0; c < names.length; c++)
   {
-    // split name into parts if it has white space
-    let parts = names[c].split(/\s+/);
-    chain = markovNames.incr_chain(chain, "parts", parts.length);
+    // split name into pieces if it has white space
+    let pieces = names[c].split(/\s+/);
+    chain = markovNames.incr_chain(chain, "parts", pieces.length);
 
-    for (let f = 0; f < parts.length; f++)
+    for (let f = 0; f < pieces.length; f++)
     {
-      var word = parts[f];
+      var word = pieces[f];
+
+      // capture word length
+      chain = markovNames.incr_chain(chain, "name_len", word.length);
+
+      // determine single and double starting letters
       var chunks = markovNames.word_split(word);
       var e = chunks.shift();
 
-      // capture word length and starting chunks
-      chain = markovNames.incr_chain(chain, "name_len", word.length);
       chain = markovNames.incr_chain(chain, "initial", e);
+
+      if (e.length > 1)
+        chain = markovNames.incr_chain(chain, "initial", e[0]);
 
       while (chunks.length)
       {
         let h = chunks.shift();
         chain = markovNames.incr_chain(chain, e, h);
+
+        // chunks with more than 1 character
+        if (e.length > 1)
+        {
+          for (let i = 0; i < e.length-1; i++)
+          {
+            chain = markovNames.incr_chain(chain, e[i], e[i+1]);
+          }
+
+          chain = markovNames.incr_chain(chain, e[e.length-1], h);
+
+          if (h.length > 1)
+          {
+            chain = markovNames.incr_chain(chain, e[e.length-1], h[0]);
+          }
+        }
+
+        // move to next chunk
         e = h
+      }
+
+      if (e.length > 1)
+      {
+        for (let i = 0; i < e.length-1; i++)
+        {
+          chain = markovNames.incr_chain(chain, e[i], e[i+1]);
+        }
       }
     }
   }
 
   return markovNames.scale_chain(chain);
+  //return chain;
 };
 
-// break apart word at vowels or 2 characters
+// break word at vowels or 2 characters
 markovNames.word_split = function(word)
 {
-  // normalize, make lowercase, normalize white space
+  // normalize, lowercase, reduce white space, trim
   word = word
     .normalize()
     .toLowerCase()
-    .trim()
-    .replace(/\s\s+/g, ' ');
+    .replace(/\s+/g, ' ')
+    .trim();
 
-  // make copy of word
-  let safe = String(word);
-
-  // isolate everything that's not normal alphabet except vowels
-  let c = safe.replace(/[b-df-hj-np-tv-xz]+/g, '');
-  for (let i = 0; i < c.length; i++)
-  {
-    safe = safe.replaceAll(c.charAt(i), ' '+c.charAt(i)+' ');
-  }
-
-  // normalize white space and split
-  safe = safe
-    .trim()
-    .replace(/\s\s+/g, ' ')
-    .split(' ');
+  // extract everything not a consonant
+  let single = Array.from(
+    new Set(
+      Array.from(
+        word.replace(/[b-df-hj-np-tv-xz]+/g, '')
+      )
+    )
+  );
 
   var result = [];
 
-  // take 1 or 2 consonants at a time
-  for (let i = 0; i < safe.length; i++)
+  while (word.length > 0)
   {
-    safe[i] = safe[i].trim();
-    while (safe[i].length > 0)
+    // check if letter is not a consonant
+    if (single.indexOf(word[0]) != -1)
     {
-      let len = 1;
-
-      if (safe[i].length > 1)
-        len = 2;
-
-      let str = word.substring(0, len);
-      result.push(str);
-
-      safe[i] = safe[i].substring(len);
-      word = word.substring(len);
+      result.push(word[0]);
+      word = word.substring(1);
+      continue;
     }
-  }
-  return result;
-};
 
-markovNames.incr_chain = function(chain, part, len)
-{
-  // check if chain part exists
-  if (chain[part])
-  {
-    // check how many times
-    if (chain[part][len])
+    // check second letter
+    if (single.indexOf(word[1]) != -1)
     {
-      chain[part][len]++;
+      result.push(word[0]);
+      word = word.substring(1);
     }
     else
     {
-      chain[part][len] = 1;
+      result.push(word.substring(0, 2));
+      word = word.substring(2);
+    }
+  }
+
+  return result;
+};
+
+markovNames.incr_chain = function(chain, piece, len)
+{
+  // check if chain piece exists
+  if (chain[piece])
+  {
+    // check how many times
+    if (chain[piece][len])
+    {
+      chain[piece][len]++;
+    }
+    else
+    {
+      chain[piece][len] = 1;
     }
   }
   else
   {
     // chain doesn't exist, make it
-    chain[part] = {};
-    chain[part][len] = 1;
+    chain[piece] = {};
+    chain[piece][len] = 1;
   }
   return chain;
 };
@@ -230,23 +264,26 @@ markovNames.scale_chain = function(chain)
 
 markovNames.markov_name = function(cache)
 {
-  let parts = markovNames.select_link(cache, "parts");
+  let pieces = markovNames.select_link(cache, "parts");
   let c = [];
 
-  for (let d = 0; d < parts; d++)
+  for (let d = 0; d < pieces; d++)
   {
     let name_len = markovNames.select_link(cache, "name_len");
-    var chunk = markovNames.select_link(cache, "initial");
-    let word = chunk;
+    if (name_len > 2)
+      name_len--; // reduce total length due to consonant pairs
+
+    var letters = markovNames.select_link(cache, "initial");
+    let word = letters;
 
     while (word.length < name_len)
     {
-      chunk = markovNames.select_link(cache, chunk);
+      letters = markovNames.select_link(cache, letters);
 
-      if (!chunk)
+      if (!letters)
         break;
 
-      word += chunk;
+      word += letters;
     }
 
     c.push(word);
@@ -257,25 +294,26 @@ markovNames.markov_name = function(cache)
   if (c.length > 1)
     return c;
 
+  // too short, try again
   return markovNames.markov_name(cache);
 };
 
-markovNames.select_link = function(cache, part)
+markovNames.select_link = function(cache, piece)
 {
-  var c = cache.table_len[part];
+  var c = cache.table_len[piece];
 
   if (!c)
     return false;
 
   c = Math.floor(Math.random() * c);
 
-  let d = Object.keys(cache[part]);
+  let d = Object.keys(cache[piece]);
   let e = 0;
 
   for (let g = 0; g < d.length; g++)
   {
     let f = d[g];
-    e += cache[part][f];
+    e += cache[piece][f];
 
     if (e > c)
     return f;
