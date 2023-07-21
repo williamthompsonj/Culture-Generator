@@ -16,7 +16,7 @@ markovNames.names_from_select = function(qty = 100)
   markovNames.more_names(qty, util.getValue('#markov_select'));
 };
 
-markovNames.more_names = function(qty = 20, data_name = '')
+markovNames.more_names = function(qty = 40, data_name = '')
 {
   if (qty < 1)
     return;
@@ -33,17 +33,21 @@ markovNames.more_names = function(qty = 20, data_name = '')
     util.setValue('#markov_select', data_name);
   }
 
-  var names = markovNames
-    .name_list(data_name, qty)
-    .join(", ")
-    .toTitleCase();
+  var names = markovNames.name_list(data_name, qty);
+    
+  // check if we need to sort these things first
+  if (util.getValue('#markov_sort'))
+    names.sort();
 
-  util.setValue("#output",
+  names = names.join(", ").toTitleCase();
+
+  util.setValue("#markov_output",
     'Source: '
     + data_name.replaceAll('_', ' ').toTitleCase()
     + '<br><br>'
     + names
   );
+  
 };
 
 markovNames.name_list = function(data_name, qty)
@@ -146,11 +150,11 @@ markovNames.construct_chain = function(names)
           }
 
           chain = markovNames.incr_chain(chain, e[e.length-1], h);
-
-          if (h.length > 1)
-          {
-            chain = markovNames.incr_chain(chain, e[e.length-1], h[0]);
-          }
+        }
+        
+        if (h.length > 1)
+        {
+          chain = markovNames.incr_chain(chain, e[e.length-1], h[0]);
         }
 
         // move to next chunk

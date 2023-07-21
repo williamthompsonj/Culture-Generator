@@ -54,7 +54,11 @@ william dot thompsonj at gmail dot com</span></p>
 <!--- populate after page load --->
 <button onClick="markovNames.names_from_select();" id="markov_button"
  type="button">&lt;- Generate Names</button>
-<div id="output"></div>
+<label for="">
+<input type="checkbox" onChange="util.markovSort();"
+ id="markov_sort" name="markov_sort">
+Sort Names</label>
+<div id="markov_output"></div>
 </fieldset>
 </form>
 
