@@ -1,0 +1,54 @@
+/* TODO: items that might be interesting but haven't made yet:
+  - a devastating
+  - a tidal wave smashed the coast
+  - a terrible famine swept the land
+  - terrible monsters walked the land
+  - an old religion died out
+  - a new natural resource was discovered
+  - ancient knowledge was rediscovered
+*/
+
+World  Events
+=============
+
+Astral
+------
+celestial conjunction
+comet passing within view during the daytime
+invasion from another plane/dimension
+meteor strike that's actually a powerful being
+meteor destroys important city causing power shift
+a solar storm disrupts the weave (magic goes wonky)
+an ancient prophecy is fulfilled (celestial)
+
+Religious
+---------
+a god is born/made/dies
+the angel and demon war spills onto the prime material plane
+an artifact is used to end a great conflict
+an artifact is created for a profound purpose
+the broken body of a dead forgotten god is used to do evil
+an undead blight sweeps the land, changing everything
+an ancient prophecy is fulfilled (religious)
+
+Natural
+-------
+an earth quake tears the earth open revealing something new
+a powerful hurricane wipes out a major settlement/city
+
+Significant Events
+==================
+
+Astral
+------
+meteor strikes important site causing mass destruction/casualties
+
+Religious
+---------
+someone tries to ascent to godhood but fails/dies/is rejected
+
+Natural
+-------
+a rock slide destroys an important trading post/village
+forest fire scorched the land destroying crops and causing famine
+crop whither for unknown reason causing famine

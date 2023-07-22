@@ -17,13 +17,13 @@ let eventFactory = {
 
 eventFactory.GetActivity = function(level = 'mundane', qty = 1)
 {
-  var factoryResult = new Set();
+  let factoryResult = new Set();
   for (let i = 0; qty != factoryResult.size; i++)
   {
     // ensure we never infinite loop
     if (i > 2*qty) break;
 
-    var temp_result;
+    let temp_result;
     switch (level)
     {
       case 'generation':
@@ -93,20 +93,21 @@ eventFactory.ResolveArticles = function(data)
 {
   // split everywhere we need to determine if it's A or AN
   let arr = data.split('[a/an]');
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
 
-  // cycle through all the pieces to except the last one
-  for (var i = 0; i != arr.length-1; i++)
+  // cycle through the pieces, skip first one
+  for (var i = 1; i < arr.length; i++)
   {
-    arr[i+1] = arr[i+1].trimStart();
-    let vowel = arr[i+1].substring(0, 1).toLowerCase();
+    arr[i] = arr[i].trimStart();
+    let letter = arr[i].substring(0, 1).toLowerCase();
 
-    if (['a', 'e', 'i', 'o', 'u'].indexOf(vowel) == -1)
+    if (vowels.indexOf(letter) == -1)
     {
-      arr[i+1] = 'a ' + arr[i+1];
+      arr[i] = 'a ' + arr[i];
     }
     else
     {
-      arr[i+1] = 'an ' + arr[i+1];
+      arr[i] = 'an ' + arr[i];
     }
   }
 
@@ -786,16 +787,6 @@ eventFactory.incident.random = function(context = null)
   ].randomValue();
 };
 
-/* TODO: items that might be interesting but haven't made yet:
-  - a devastating forest fire scorched the land
-  - a horrible earthquake shook the land
-  - a tidal wave smashed the coast
-  - a terrible famine swept the land
-  - terrible monsters walked the land
-  - an old religion died out
-  - a new natural resource was discovered
-  - ancient knowledge was rediscovered
-*/
 eventFactory.incident.mundane = [
   '{characterization.random||relevance.random} {occupation.mundane|race.mundane} saves {baby|elderly|} {animal.cute|race.mundane} from [a/an] {disaster.mundane}.',
   '{characterization.random||relevance.random} {occupation.mundane|race.mundane} dies in {activity.mundane} accident.',
