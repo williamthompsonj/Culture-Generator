@@ -152,11 +152,15 @@ markovNames.construct_chain = function(names)
           {
             chain = markovNames.incr_chain(chain, e[0], e[1]+h[0]);
           }
-        }
 
-        if (h.length > 1)
+          if (h.length > 1)
+          {
+            chain = markovNames.incr_chain(chain, e[1], h[0]);
+          }
+        }
+        else if (h.length > 1)
         {
-          chain = markovNames.incr_chain(chain, e[1], h[0]);
+          chain = markovNames.incr_chain(chain, e, h[0]);
         }
 
         // move to next chunk
