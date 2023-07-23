@@ -36,21 +36,24 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
         break;
     }
 
-    // normalize white space
-    temp_result = eventFactory.ResolveActivity(temp_result.replace(/\s\s+/, ' '));
+    // step 1: normalize white space
+    temp_result = temp_result.trim().replace(/\s+/g, ' ');
 
-    // final step: resolve articles [a/an]
+    // step 2: resolve variable actions
+    temp_result = eventFactory.ResolveActivity(temp_result);
+
+    // step 3: resolve articles [a/an]
     temp_result = eventFactory.ResolveArticles(temp_result);
 
-    // normalize white
-    temp_result = temp_result.trim().replace(/\s\s+/g, ' ');
+    // ensure white space is normalized
+    temp_result = temp_result.trim().replace(/\s+/g, ' ');
 
     // Capitalize first word in sentence.
     let sentence = temp_result.split(' ');
     sentence[0] = sentence[0].toTitleCase();
     temp_result = sentence.join(' ');
 
-    //save results
+    // save results (unique entries only because it's a Set)
     factoryResult.add(temp_result);
   }
 
@@ -65,25 +68,28 @@ eventFactory.ResolveActivity = function(data)
   // process tokens
   for (let i = 1; i != data_arr.length; i++)
   {
+    let ending = data_arr[i].indexOf('}');
+
     // check for ending piece
-    if (data_arr[i].indexOf('}') == -1)
+    if (ending == -1)
     {
       // no ending piece, move on
       continue;
     }
 
     // extract token from string
-    let token = data_arr[i].substring(0, data_arr[i].indexOf('}'));
+    let token = data_arr[i].substring(0, ending);
 
     // replace token with a value
-    data_arr[i] = eventFactory.ResolveToken(token) + data_arr[i].substring(token.length+1).replace('}', '');
+    data_arr[i] = eventFactory.ResolveToken(token)
+      + data_arr[i].substring(ending+1);
   }
 
   // put string back together
   data = data_arr.join('');
 
   // check if we need to resolve more tokens
-  if (data.indexOf('{') != -1)
+  if (data.indexOf('{') != -1 && data.indexOf('}') != -1)
     data = eventFactory.ResolveActivity(data);
 
   return data;
@@ -123,45 +129,36 @@ eventFactory.ResolveToken = function(token)
     token = token.split('|').randomValue();
   }
 
+  // ensure white space isn't present on either end of string
+  token = token.trim();
+
   // check for empty token
   if (token.length == 0) return '';
 
-  // check for literal value in quotes
-  let str_check = token.substring(0,1);
-  if (str_check == '"')
+  // value in quotes or no period present
+  if (token[0] == '"' || token[0] == "'" || token.indexOf('.') == -1)
   {
-    // strip leading and trailing double quote
-    // "text." => text.
-    return token.replace(/^"/g, '').replace(/"$/g, '');
+    return token;
   }
-  else if (str_check == "'")
-  {
-    // strip leading and trailing single quote
-    // 'text.' => text.
-    return token.replace(/^'/g, '').replace(/'$/g, '');
-  }
-  else if (str_check == '#')
+
+  // begins with # means number range
+  if (token[0] == '#')
   {
     // random number range in this format:
     // #0-123
     let arr = token.substring(1).split('-');
     return Math.range(Number(arr[0]), Number(arr[1]));
   }
-  else if (token.indexOf('.') == -1)
-  {
-    // this is not a reference, it is a literal string
-    return token;
-  }
 
   // get token pieces
   let parts = token.split('.');
 
   // start with eventFactory object
-  var this_obj = this;
-  var last_obj; // last context for this_obj
+  let this_obj = this;
+  let last_obj; // last context for this_obj
 
   // cycle through each piece of token
-  for (var i = 0; i != parts.length; i++)
+  for (let i = 0; i != parts.length; i++)
   {
     // look for property in object
     if (this_obj.hasOwnProperty(parts[i]))
@@ -751,7 +748,7 @@ eventFactory.incident.natural = [
 
 eventFactory.incident.generation = [
   // adapted from other websites & improved for use here
-  "[a/an] {characterization.positive} {hero|noble|member of the leader's family|clergy member|leader} died suddenly.",
+  "[a/an] {characterization.positive} {'hero'|noble|member of the leader's family|clergy member|leader} died suddenly.",
   "a new species of {monster|plant|animal|insect} was discovered that is {harmful|helpful|beneficial|devastating} to the people.",
   "a {noble|religious} order was {disbanded|scattered} and fell into disgrace.",
   "a {peace|settlement|trade} treaty was {signed|broken} by a neighboring city-state.",
@@ -808,7 +805,7 @@ eventFactory.incident.mundane = [
   '{food.random} farmer has cart destroyed during high speed chase after local {occupation.mundane} does shenanigans.',
 
   // adapted from other websites & improved for use here
-  "[a/an] {characterization.positive} {hero|noble|member of the leader's family|clergy member|leader} died suddenly.",
+  "[a/an] {characterization.positive} {'hero'|noble|member of the leader's family|clergy member|leader} died suddenly.",
   "[a/an] {characterization.random|relevance.random} {occupation.mundane} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}.",
   "[a/an] {characterization.random|relevance.random} {occupation.mundane} was {assassinated|struck down in battle}.",
   "[a/an] {relevance.greater} article of faith was {lost|stolen|destroyed|hidden away}.",

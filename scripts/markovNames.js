@@ -156,6 +156,7 @@ markovNames.construct_chain = function(names)
           if (h.length > 1)
           {
             chain = markovNames.incr_chain(chain, e[1], h[0]);
+            console.log(word);
           }
         }
         else if (h.length > 1)
