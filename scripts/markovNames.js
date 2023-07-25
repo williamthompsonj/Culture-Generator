@@ -79,12 +79,10 @@ markovNames.generate_name = function(data_name)
 {
   let cache = markovNames.markov_chain(data_name);
 
-  if (cache)
-  {
-    return markovNames.markov_name(cache);
-  }
-
-  return "";
+  if (!cache)
+    return "";
+  
+  return markovNames.markov_name(cache);
 };
 
 markovNames.markov_chain = function(data_name)
@@ -164,7 +162,16 @@ markovNames.construct_chain = function(names)
       }
     }
   }
+  
+  // any words with a single letter
+  if (chain.name_len.hasOwnProperty('1'))
+    delete chain.name_len['1'];
 
+  // ensure there is real data to return
+  if (chain.name_len.length == 0)
+    return false;
+
+  // return the chain cache
   return markovNames.scale_chain(chain);
 };
 
