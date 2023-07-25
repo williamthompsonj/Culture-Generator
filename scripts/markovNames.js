@@ -68,11 +68,7 @@ markovNames.name_list = function(data_name, qty)
 
     str = markovNames.generate_name(data_name);
 
-    if (str)
-    names.add(
-      markovNames.formatName(
-        str
-    ));
+    if (str) names.add(str);
   }
 
   // return an array so it's easy to use
@@ -156,7 +152,6 @@ markovNames.construct_chain = function(names)
           if (h.length > 1)
           {
             chain = markovNames.incr_chain(chain, e[1], h[0]);
-            console.log(word);
           }
         }
         else if (h.length > 1)
@@ -266,10 +261,10 @@ markovNames.scale_chain = function(chain)
 
 markovNames.markov_name = function(cache)
 {
-  let pieces = markovNames.select_link(cache, "parts");
+  let word_qty = markovNames.select_link(cache, "parts");
   let c = [];
 
-  for (let d = 0; d < pieces; d++)
+  for (let d = 0; d < word_qty; d++)
   {
     let name_len = markovNames.select_link(cache, "name_len");
     var letters = markovNames.select_link(cache, "initial");
@@ -283,7 +278,14 @@ markovNames.markov_name = function(cache)
         break;
 
       word += letters;
+
+      // reduce 3+ same letter to only 2
+      word = markovNames.formatName(word);
     }
+
+    // chop off extra letters
+    if (word.length > name_len)
+      word = word.substring(0, name_len);
 
     c.push(word);
   }
@@ -320,17 +322,19 @@ markovNames.select_link = function(cache, piece)
   return false;
 };
 
-// don't allow more than 2 of each letter in a row
+// reduce 3+ of same consecutive letter to 2
 markovNames.formatName = function(name)
 {
-  let str = name.charAt(0);
-  for (let i = 1; i < name.length; i++)
+  let result = name[0];
+  let last = result;
+
+  for (let i = 1; i < (name.length-1); i++)
   {
-    let check = str.charAt(str.length-1);
-    if (check != name.charAt(i) || check != name.charAt(i+1))
+    if (last != name[i] || last != name[i+1])
     {
-        str = str + name[i];
+        last = name[i];
+        result = result + last;
     }
   }
-  return str;
+  return result + name[name.length-1];
 };

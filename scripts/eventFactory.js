@@ -26,8 +26,16 @@ eventFactory.GetActivity = function(level = 'mundane', qty = 1)
     let temp_result;
     switch (level)
     {
-      case 'generation':
-        temp_result = eventFactory.incident.generation.randomValue();
+      case 'major':
+        temp_result = eventFactory.incident.major.randomValue();
+        break;
+
+      case 'moderate':
+        temp_result = eventFactory.incident.moderate.randomValue();
+        break;
+
+      case 'minor':
+        temp_result = eventFactory.incident.minor.randomValue();
         break;
 
       case 'mundane':
@@ -746,7 +754,13 @@ eventFactory.incident.natural = [
 
 ];
 
-eventFactory.incident.generation = [
+eventFactory.incident.major = [
+];
+
+eventFactory.incident.minor = [
+];
+
+eventFactory.incident.moderate = [
   // adapted from other websites & improved for use here
   "[a/an] {characterization.positive} {'hero'|noble|member of the leader's family|clergy member|leader} died suddenly.",
   "a new species of {monster|plant|animal|insect} was discovered that is {harmful|helpful|beneficial|devastating} to the people.",
