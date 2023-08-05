@@ -143,19 +143,21 @@ eventFactory.ResolveToken = function(token)
   // check for empty token
   if (token.length == 0) return '';
 
-  // value in quotes or no period present
-  if (token[0] == '"' || token[0] == "'" || token.indexOf('.') == -1)
-  {
-    return token;
-  }
-
   // begins with # means number range
   if (token[0] == '#')
   {
     // random number range in this format:
     // #0-123
     let arr = token.substring(1).split('-');
-    return Math.range(Number(arr[0]), Number(arr[1]));
+    let leftover = arr[1].replace(/^[0-9]+/g, '');
+    arr[1] = arr[1].substring(0, arr[1].length-leftover.length);
+    return Math.range(Number(arr[0]), Number(arr[1]))+leftover;
+  }
+
+  // value in quotes or no period present
+  if (token[0] == '"' || token[0] == "'" || token.indexOf('.') == -1)
+  {
+    return token;
   }
 
   // get token pieces
