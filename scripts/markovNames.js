@@ -125,6 +125,12 @@ markovNames.construct_chain = function(names)
       // determine single and double starting letters
       var chunks = markovNames.word_split(word);
       var e = chunks.shift();
+      
+      if (word.length < 4)
+      {
+        chain = markovNames.incr_chain(chain, "initial", word);
+        chain = markovNames.incr_chain(chain, word, "");
+      }
 
       chain = markovNames.incr_chain(chain, "initial", e);
 
@@ -164,8 +170,8 @@ markovNames.construct_chain = function(names)
   }
   
   // any words with a single letter
-  if (chain.name_len.hasOwnProperty('1'))
-    delete chain.name_len['1'];
+  //if (chain.name_len.hasOwnProperty('1'))
+  //  delete chain.name_len['1'];
 
   // ensure there is real data to return
   if (chain.name_len.length == 0)
