@@ -43,9 +43,9 @@
   vertical-align: top;
 }
 
-.max30em, .max30em *
+.headlines, .headlines *
 {
-  max-width: 30em;
+  max-width: 27em;
 }
 
 .whatthis
