@@ -765,9 +765,9 @@ eventFactory.incident.minor = [
 eventFactory.incident.moderate = [
   // adapted from other websites & improved for use here
   "[a/an] {characterization.positive} {'hero'|noble|member of the leader's family|clergy member|leader} died suddenly.",
-  "a new species of {monster|plant|animal|insect} was discovered that is {harmful|helpful|beneficial|devastating} to the people.",
-  "a {noble|religious} order was {disbanded|scattered} and fell into disgrace.",
-  "a {peace|settlement|trade} treaty was {signed|broken} by a neighboring city-state.",
+  "[a/an] new species of {monster|plant|animal|insect} was discovered that is {harmful|helpful|beneficial|devastating} to the people.",
+  "[a/an] {noble|religious} order was {disbanded|scattered} and fell into disgrace.",
+  "[a/an] {peace|settlement|trade} treaty was {signed|broken} by a neighboring city-state.",
   "a series of {reformative|more restrictive|less restrictive} laws were enacted.",
   "an ancient {city|shrine|temple|civilization} was {re|}discovered.",
   "[a/an] {assassination|avalanche|great violation of temple law|mine cave-in|rebellion of the nobles|regional peasant uprising|terrible flood|successful overthrow of the ruling government} occurred.",
@@ -779,9 +779,9 @@ eventFactory.incident.moderate = [
   "there was an attack by a group of {allied state|enemy state|internally} sponsored raiders.",
   "there was an advance in {defensive military|offensive military|engineering|food production|medical|naval} technology.",
   "there was an invasion {for punitive reasons|for the expansion of borders|to increase the national treasury|to regain lost territory}.",
-  "a {relevance.greater} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}.",
+  "[a/an] {relevance.greater} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}.",
   "there was an {assassination attempt|incursion} on a {relevance.greater} {npc.generic} by {the military|foreign interests|a secret society|a cult}.",
-  "a {lost|stolen|famous} {artifact|religious text} of the faith was {discovered|recovered|destroyed|hidden away}.",
+  "[a/an] {lost|stolen|famous} {artifact|religious text} of the faith was {discovered|recovered|destroyed|hidden away}.",
   "{active spying|treacherous sabotage|a new star cluster|a forgotten culture} was discovered",
 ];
 
@@ -834,7 +834,7 @@ eventFactory.incident.mundane = [
   "there was an attack by a group of {highly organized|poorly organized|peasant|foreign|outcast} raiders.",
   "violent crime {increased|decreased} {everywhere|in the cities|in the country|near the capitol|on cabbage merchants}.",
   "there was an {assassination attempt|incursion} on a {relevance.lesser|relevance.average} {npc.generic} by {the military|foreign interests|a secret society|a cult}.",
-  "a {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}.",
+  "[a/an] {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}.",
   "the {animal.cute}s were fruitful and multiplied.",
   "the peasants revolted and {installed a new ruler|were violently suppressed|violently murdered the nobles}.",
   "the fields {yielded a bumper crop|withered and died}.",
