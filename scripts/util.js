@@ -63,14 +63,6 @@ util.getHtml = function(id)
   return z.innerHTML;
 };
 
-// Set element object
-util.setElem = function(id, val)
-{
-  let z = util.getElem(id);
-  if (z == null) return;
-  util.getElem(id) = val;
-};
-
 // Set element value
 util.setValue = function(id, val)
 {
