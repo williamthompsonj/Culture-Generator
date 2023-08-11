@@ -18,7 +18,7 @@ util.getElem = function(id)
 util.getValue = function(id)
 {
   let z = util.getElem(id);
-  if (z == null) return '';
+  if (!z) return '';
 
   switch (z.tagName.toUpperCase())
   {
@@ -59,7 +59,7 @@ util.getValue = function(id)
 util.getHtml = function(id)
 {
   let z = util.getElem(id);
-  if (z == null) return '';
+  if (!z) return '';
   return z.innerHTML;
 };
 
@@ -67,7 +67,7 @@ util.getHtml = function(id)
 util.setValue = function(id, val)
 {
   let z = util.getElem(id);
-  if (z == null) return;
+  if (!z) return;
 
   switch (z.tagName.toUpperCase())
   {
@@ -87,7 +87,7 @@ util.setValue = function(id, val)
 util.setHtml = function(id, val)
 {
   let z = util.getElem(id);
-  if (z == null) return;
+  if (!z) return;
   z.innerHTML = val;
 };
 
