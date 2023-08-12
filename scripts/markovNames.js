@@ -276,9 +276,11 @@ markovNames.markov_name = function(cache)
 {
   let word_qty = markovNames.select_link(cache, "parts");
   let c = [];
+  let counter = 0;
 
-  for (let d = 0; d < word_qty; d++)
+  while (c.length < word_qty)
   {
+    counter++;
     let name_len = markovNames.select_link(cache, "name_len");
     var letters = markovNames.select_link(cache, "initial");
     let word = letters;
@@ -300,7 +302,13 @@ markovNames.markov_name = function(cache)
     if (word.length > name_len)
       word = word.substring(0, name_len);
 
-    c.push(word);
+    // prevent duplicate words with same name like Mac Mac Mac Mac...
+    if (c.indexOf(word) == -1)
+      c.push(word);
+      
+    // prevent forever loop if small dataset
+    if (counter > 10000)
+      break;
   }
   c = String(c.join(" "));
 
