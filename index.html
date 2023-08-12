@@ -39,7 +39,7 @@ util.loadJson('./json/training_data.json', 'training_data', '', util.getNameData
 <span class="whatthis">What's all this? &#x1F42D; &#x1F5B0;</span>
 
 <span class="tooltiptext">Copyright (c) William J. Thompson<br>
-Version 0.2.1 (August 2023)<br>
+Version 0.2.2 (August 2023)<br>
 <br>This tool generates headlines, names, and will eventually generate
 both stat blocks and a timeline using metrics to influence what is most
 likely to occur. It generates unique names using Markov chains.<br>
@@ -71,6 +71,15 @@ Sort Names</label>
 <button onClick="util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 50));"
  type="button">Moderate Headlines</button>
 <p id="moderate_results" name="moderate_results">Place Holder</p>
+</fieldset>
+</form>
+
+<form id="minor_headline_form" name="minor_headline_form" class="make_inline headlines">
+<fieldset>
+<legend>Minor Headlines</legend>
+<button onClick="util.setValue('#minor_results', eventFactory.GetActivity('minor', 50));"
+ type="button">Minor Headlines</button>
+<p id="minor_results" name="minor_results">Place Holder</p>
 </fieldset>
 </form>
 

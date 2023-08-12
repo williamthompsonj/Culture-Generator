@@ -261,52 +261,56 @@ eventFactory.activity.mundane = [
 ];
 
 eventFactory.activity.unsavory = [
-  'aggressively petting animals',
-  'arguing too much',
-  'being a dreadful bore',
-  'being childish',
-  'being contemptuous',
-  'being corrupt',
-  'being cowardly',
-  'being creepy',
-  'being dangerous',
-  'being devilish',
-  'being disgusting',
-  'being impish',
-  'being indecent',
-  'being judgmental',
-  'being lazy',
-  'being malicious',
-  'being manic',
-  'being manipulative',
-  'being naughty',
-  'being obnoxious',
-  'being offensive',
-  'being passive aggressive',
-  'being racist',
-  'being rowdy',
-  'being scandalous',
-  'being spiteful',
-  'being unprofessional',
-  'being violent',
-  'being weird',
-  'bullying',
-  'cheating',
-  'embezzlement',
-  'fornicating with the wrong kind of people',
-  'fraud',
-  'gossiping',
-  'inappropriate horseplay',
+  "adultery",
+  "masturbating",
+  "bestiality",
+  "aggressively petting animals",
+  "arguing too much",
+  "being a dreadful bore",
+  "being childish",
+  "being contemptuous",
+  "being corrupt",
+  "being cowardly",
+  "being creepy",
+  "being dangerous",
+  "being devilish",
+  "being disgusting",
+  "being impish",
+  "being indecent",
+  "being judgmental",
+  "being lazy",
+  "being malicious",
+  "being manic",
+  "being manipulative",
+  "being naughty",
+  "being obnoxious",
+  "being offensive",
+  "being passive aggressive",
+  "being racist",
+  "being rowdy",
+  "being scandalous",
+  "being spiteful",
+  "being unprofessional",
+  "being violent",
+  "being weird",
+  "bullying",
+  "cheating",
+  "embezzlement",
+  "fornicating with the wrong kind of people",
+  "fornicating",
+  "fraud",
+  "gossiping",
+  "inappropriate horseplay",
   "intentionally mispronouncing people's names",
-  'lying',
-  'micromanaging',
-  'money laundering',
-  'murder',
-  'pan handling',
-  'saying nasty things',
-  'shenanigans',
-  'theft',
-  'yelling loudly while drunk',
+  "lying",
+  "micromanaging",
+  "money laundering",
+  "murder",
+  "pan handling",
+  "saying nasty things",
+  "shenanigans",
+  "theft",
+  "yelling loudly while drunk",
 ];
 
 eventFactory.animal.random = function(context = null)
@@ -752,6 +756,21 @@ eventFactory.food.vegetable = [
   'zucchini',
 ];
 
+eventFactory.incident.random = function(context = null)
+{
+  // check if executing as anonymous function out of context
+  if (this !== undefined)
+  {
+    context = this;
+  }
+
+  return context[
+    [
+      'mundane'
+    ].randomValue()
+  ].randomValue();
+};
+
 eventFactory.incident.natural = [
 
 ];
@@ -760,6 +779,8 @@ eventFactory.incident.major = [
 ];
 
 eventFactory.incident.minor = [
+  "{characterization.positive} {occupation.mundane} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {'hero'|occupation.mundane|noble|townsfolk}.",
+
 ];
 
 eventFactory.incident.moderate = [
@@ -785,60 +806,45 @@ eventFactory.incident.moderate = [
   "{active spying|treacherous sabotage|a new star cluster|a forgotten culture} was discovered",
 ];
 
-eventFactory.incident.random = function(context = null)
-{
-  // check if executing as anonymous function out of context
-  if (this !== undefined)
-  {
-    context = this;
-  }
-
-  return context[
-    [
-      'mundane'
-    ].randomValue()
-  ].randomValue();
-};
-
 eventFactory.incident.mundane = [
-  '{characterization.random||relevance.random} {occupation.mundane|race.mundane} saves {baby|elderly|} {animal.cute|race.mundane} from [a/an] {disaster.mundane}.',
-  '{characterization.random||relevance.random} {occupation.mundane|race.mundane} dies in {activity.mundane} accident.',
-  '{characterization.random||relevance.random} {occupation.mundane|race.mundane} swarmed by {animal.insect} during {disaster.mundane}.',
-  '{characterization.random||relevance.random} {occupation.mundane|race.mundane} swarmed by {animal.insect} in freak natural accident.',
-  '{characterization.random} {occupation.mundane|race.mundane} falls down abandoned well while preparing for {activity.mundane} event.',
-  '{relevance.random} {occupation.mundane|race.mundane} discovers wild {food.berry|food.fruit|food.melon|food.vegetable} orchard.',
-  '{relevance.random} {occupation.mundane|race.mundane} discovers den of {animal.cute}s.',
-  '{relevance.random} {occupation.mundane|race.mundane} drunkenly fell on {relevance.random} {occupation.mundane|race.mundane} during dance.',
-  '{relevance.random} {occupation.mundane|race.mundane} sings off-key during drunken performance.',
-  '{relevance.random} {occupation.mundane|race.mundane} discovers unholy large nest of {animal.insect}.',
-  '{relevance.random} {occupation.mundane|race.mundane} has pants spontaneously catch fire after telling unconvincing story.',
-  '{relevance.random} {occupation.mundane|race.mundane} stumbles drunk into home of {local|} {race.mundane}, hijinks ensue.',
-  '{relevance.random} {occupation.mundane|race.mundane} marries foreign {occupation.mundane|race.mundane}, towns people {flabbergasted|outraged|relieved|disappointed}.',
-  '{relevance.random} {item.tool|item.music} producer accused of {activity.unsavory} after [a/an] {activity.mundane} incident.',
-  '{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and only child.',
-  '{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and {#2-9} children.',
-  '{activity.mundane} incident kills {occupation.mundane|race.mundane} with no living relatives.',
-  '{food.random} farmer has cart destroyed during high speed chase after local {occupation.mundane} does shenanigans.',
-
-  // adapted from other websites & improved for use here
   "[a/an] {characterization.positive} {'hero'|noble|member of the leader's family|clergy member|leader} died suddenly.",
   "[a/an] {characterization.random|relevance.random} {occupation.mundane} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}.",
   "[a/an] {characterization.random|relevance.random} {occupation.mundane} was {assassinated|struck down in battle}.",
   "[a/an] {relevance.greater} article of faith was {lost|stolen|destroyed|hidden away}.",
+  "[a/an] {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}.",
+  "{activity.mundane} incident kills {occupation.mundane|race.mundane} with no living relatives.",
+  "{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and {#2-9} children.",
+  "{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and only child.",
+  "{animal.cute}s were fruitful and multiplied.",
+  "{characterization.random||relevance.random} {occupation.mundane|race.mundane} dies in {activity.mundane} accident.",
+  "{characterization.random||relevance.random} {occupation.mundane|race.mundane} saves {baby|elderly|} {animal.cute|race.mundane} from [a/an] {disaster.mundane}.",
+  "{characterization.random||relevance.random} {occupation.mundane|race.mundane} swarmed by {animal.insect} during {disaster.mundane}.",
+  "{characterization.random||relevance.random} {occupation.mundane|race.mundane} swarmed by {animal.insect} in freak natural accident.",
+  "{characterization.random} {occupation.mundane|race.mundane} falls down abandoned well while preparing for {activity.mundane} event.",
+  "{food.random} farmer has cart destroyed during high speed chase after local {occupation.mundane} does shenanigans.",
+  "{relevance.random} {item.tool|item.music} producer accused of {activity.unsavory} after [a/an] {activity.mundane} incident.",
+  "{relevance.random} {occupation.mundane|race.mundane} discovers den of {animal.cute}s.",
+  "{relevance.random} {occupation.mundane|race.mundane} discovers unholy large nest of {animal.insect}.",
+  "{relevance.random} {occupation.mundane|race.mundane} discovers wild {food.berry|food.fruit|food.melon|food.vegetable} orchard.",
+  "{relevance.random} {occupation.mundane|race.mundane} drunkenly fell on {relevance.random} {occupation.mundane|race.mundane} during dance.",
+  "{relevance.random} {occupation.mundane|race.mundane} flees local area after being accused of {activity.unsavory}.",
+  "{relevance.random} {occupation.mundane|race.mundane} has pants spontaneously catch fire after telling unconvincing story.",
+  "{relevance.random} {occupation.mundane|race.mundane} marries foreign {occupation.mundane|race.mundane}, towns people {flabbergasted|outraged|relieved|disappointed}.",
+  "{relevance.random} {occupation.mundane|race.mundane} sings off-key during drunken performance.",
+  "{relevance.random} {occupation.mundane|race.mundane} stumbles drunk into home of {local|} {race.mundane}, hijinks ensue.",
+  "{taxes|pirate attacks|bandit raids|violence against cabbage merchants} {increased|decreased}.",
+  "{occupation.mundane|race.mundane} and {occupation.mundane|race.mundane} {friend|lover|companion|arch nemesis} {run away together|begin fighting|begin arguing} when caught in the act of {activity.unsavory}.",
   "an illness decimated the {animal.cute}s.",
   "fighting between {evil|neutral|good} temples occurred.",
   "fighting between evil and {neutral|good} temples occurred.",
-  "fighting between neutral and {evil|good} temples occurred.",
   "fighting between good and {evil|neutral} temples occurred.",
+  "fighting between neutral and {evil|good} temples occurred.",
+  "the fields {yielded a bumper crop|withered and died}.",
+  "the peasants revolted and {installed a new ruler|were violently suppressed|violently murdered the nobles}.",
+  "there was an {assassination attempt|incursion} on a {relevance.lesser|relevance.average} {npc.generic} by {the military|foreign interests|a secret society|a cult}.",
   "there was an assassination attempt on [a/an] {relevance.random} {npc.generic} by [a/an] {rival guild|lesser noble|personal enemy|religious order|state enemy|organizational enemy}.",
   "there was an attack by a group of {highly organized|poorly organized|peasant|foreign|outcast} raiders.",
   "violent crime {increased|decreased} {everywhere|in the cities|in the country|near the capitol|on cabbage merchants}.",
-  "there was an {assassination attempt|incursion} on a {relevance.lesser|relevance.average} {npc.generic} by {the military|foreign interests|a secret society|a cult}.",
-  "[a/an] {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}.",
-  "the {animal.cute}s were fruitful and multiplied.",
-  "the peasants revolted and {installed a new ruler|were violently suppressed|violently murdered the nobles}.",
-  "the fields {yielded a bumper crop|withered and died}.",
-  "{taxes|pirate attacks|bandit raids|violence against cabbage merchants} increased.",
 ];
 
 eventFactory.item.random = function(context = null)

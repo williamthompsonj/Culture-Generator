@@ -81,7 +81,7 @@ markovNames.generate_name = function(data_name)
 
   if (!cache)
     return "";
-  
+
   return markovNames.markov_name(cache);
 };
 
@@ -125,7 +125,7 @@ markovNames.construct_chain = function(names)
       // determine single and double starting letters
       var chunks = markovNames.word_split(word);
       var e = chunks.shift();
-      
+
       if (word.length < 4)
       {
         chain = markovNames.incr_chain(chain, "initial", word);
@@ -168,7 +168,7 @@ markovNames.construct_chain = function(names)
       }
     }
   }
-  
+
   // any words with a single letter
   //if (chain.name_len.hasOwnProperty('1'))
   //  delete chain.name_len['1'];
@@ -305,7 +305,7 @@ markovNames.markov_name = function(cache)
     // prevent duplicate words with same name like Mac Mac Mac Mac...
     if (c.indexOf(word) == -1)
       c.push(word);
-      
+
     // prevent forever loop if small dataset
     if (counter > 10000)
       break;

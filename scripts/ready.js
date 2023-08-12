@@ -17,5 +17,6 @@ document.addEventListener("DOMContentLoaded", () =>
 
   // generate headlines
   util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 10));
+  util.setValue('#minor_results', eventFactory.GetActivity('minor', 10));
   util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 10));
 });
