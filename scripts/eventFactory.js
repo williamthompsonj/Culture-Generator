@@ -13,6 +13,7 @@ let eventFactory = {
   incident_people: {},
   incident_political: {},
   incident_religious: {},
+  incident_supernatural: {},
   item: {},
   npc: {},
   occupation: {},
@@ -97,11 +98,7 @@ eventFactory.ResolveActivity = function(data)
     let ending = data_arr[i].indexOf("}");
 
     // check for ending piece
-    if (ending == -1)
-    {
-      // no ending piece, move on
-      continue;
-    }
+    if (ending == -1) continue;
 
     // extract token from string
     let token = data_arr[i].substring(0, ending);
@@ -134,13 +131,9 @@ eventFactory.ResolveArticles = function(data)
     let letter = arr[i].substring(0, 1).toLowerCase();
 
     if (vowels.indexOf(letter) == -1)
-    {
       arr[i] = "a " + arr[i];
-    }
     else
-    {
       arr[i] = "an " + arr[i];
-    }
   }
 
   return arr.join("");
@@ -201,7 +194,7 @@ eventFactory.ResolveToken = function(token)
 
       return this_obj.toString();
     }
-    
+
     // look for property in object
     if (this_obj.hasOwnProperty(parts[i]))
     {
@@ -620,6 +613,146 @@ eventFactory.disaster.mundane = [
   "shipwreck",
 ];
 
+eventFactory.disaster.illness = [
+  "alien retrograde infectious amnesia",
+  "amoria phlebitis",
+  "angel toxicosis",
+  "aphasia",
+  "asmodeus virus",
+  "Atlantis Complex",
+  "atma virus",
+  "bazi plague",
+  "bendii syndrome",
+  "black plague",
+  "black trump virus",
+  "blacklight virus",
+  "blight disease",
+  "bloodfire virus",
+  "bloody flux disease",
+  "bonerplasia",
+  "bowden's malady",
+  "brainpox",
+  "canthan plague",
+  "carnosaur virus",
+  "chimeran virus",
+  "chronic angelus crystallus inofficium",
+  "chrono-displasia",
+  "circusitis",
+  "collin's syndrome",
+  "communicable psychosis",
+  "cooties",
+  "cordilla virus",
+  "corprus disease",
+  "corrupted blood",
+  "creeping derangea",
+  "croatoan virus",
+  "cutie pox",
+  "cuvier syndrome",
+  "c-virus",
+  "dancing disease",
+  "dar-kosis virus",
+  "deep space disorder",
+  "demon pox",
+  "dermatemeculitis",
+  "descolada virus",
+  "doll syndrome",
+  "drafa plague",
+  "dragon pox",
+  "dreaded lurgi",
+  "dryditch fever",
+  "flood parasite",
+  "forced evolutionary virus",
+  "foul-drought",
+  "gagne virus",
+  "genophage plague",
+  "geodermic granititis",
+  "geostigma disease",
+  "ghancroid disease",
+  "gray death",
+  "great plague",
+  "green flu",
+  "greyscale disease",
+  "groat's disease",
+  "g-virus",
+  "harlequin disease",
+  "hemorrhagic fever",
+  "herod's flu",
+  "hinamizawa syndrome",
+  "hyper-evolutionary virus",
+  "incuritis virus",
+  "inferno virus",
+  "jungle worms",
+  "kellis-amberlee virus",
+  "kepral's syndrome",
+  "krippin virus",
+  "krytos virus",
+  "kuru disease",
+  "lackadaisy-cathro disease",
+  "lazar's disease",
+  "legacy virus",
+  "life-eater virus",
+  "macgregor's syndrome",
+  "mad cow disease",
+  "mad snail disease",
+  "mad zombie disease",
+  "malignalitaloptereosis",
+  "maverick virus",
+  "mono orangosis",
+  "motaba virus",
+  "mutagenic std",
+  "neurodermatitis",
+  "neurological degeneration syndrome",
+  "pale mare disease",
+  "pentapox",
+  "petrifold regression",
+  "phazon madness",
+  "plague of insomnia",
+  "porphyric hemophilia",
+  "pox of lechuck",
+  "pretendicitis",
+  "progenitor virus",
+  "proxyglossariasis",
+  "random pavarotti disease",
+  "rat plague",
+  "reaper virus",
+  "red death",
+  "rosalia virus",
+  "rust lung",
+  "salt plague",
+  "scarlet plague",
+  "shiva disease",
+  "sigma virus",
+  "solanum virus",
+  "space dementia",
+  "space mumps",
+  "space rabies",
+  "spattergroit disease",
+  "spectrox toxaemia",
+  "spontaneous dental hydroplosion",
+  "stone sickness",
+  "super diarrhea",
+  "superflu",
+  "super-smallpox",
+  "the phage",
+  "tiberium poisoning",
+  "tree-rush virus",
+  "t-virus",
+  "twin fever",
+  "vampiris bacterium",
+  "van horton's syndrome",
+  "venus particle",
+  "vitiligo",
+  "wasting disease",
+  "white blindness",
+  "white disease",
+  "white plague",
+  "white sickness",
+  "wildcard coccus",
+  "wildfire virus",
+  "xenovirus",
+  "yellow death",
+];
+
 eventFactory.food.berry = [
   "acai berry",
   "barberry",
@@ -966,7 +1099,7 @@ eventFactory.occupation.mundane = [
   "gardener",
   "glassblower",
   "goldsmith",
-  "grocer ",
+  "grocer",
   "herbalist",
   "hired-hand",
   "jeweler",
@@ -1093,6 +1226,7 @@ eventFactory.incident.major = [
   "people: {incident_people.major}",
   "political: {incident_political.major}",
   "religious: {incident_religious.major}",
+  "supernatural: {incident_supernatural.major}",
 ];
 
 eventFactory.incident.minor = [
@@ -1144,34 +1278,6 @@ eventFactory.incident.mundane = [
   meteor or comet impact
 */
 
-eventFactory.incident_natural.major = [
-  "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down",
-  "an illness decimated the {animal.cute}s",
-  "heavy tremors from quake destroy buildings, cause landslides, and uproot trees. {Locals|Townsfolk|Politicians|Religious leaders} proclaim end-times are near",
-  "the fields {yielded a bumper crop|withered and died}",
-];
-
-eventFactory.incident_natural.minor = [
-  "{boy|girl|child} {found|missing, presumed} {alive|dead|missing|injured} after {flash flood|sink hole appears}",
-  "{landslide} destroys roads and kills several locals following a heavy rain storm",
-  "{roads ruined|buildings collapse|orphanage destroyed} after {landslide|heavy downpour}, {local|} {trade unions|poor people|guild workers} suffer",
-  "caving trip ends in tragedy after heavy rain floods local caves",
-];
-
-eventFactory.incident_natural.moderate = [
-  "[a/an] {mine cave-in|avalanche|terrible flood|} occurred",
-  "a new star cluster was discovered",
-  "heavy storm ravages {local|} population causing a town and the surrounding area to fall into ruin",
-  "meteor makes landfall in middle of town causing {panic|fire|tremors}, townsfolk {run in fear|run for the hills|proclaim end-times are near|blame the major}",
-  "there was [a/an] {epidemic|disease|blight} with an infection rate of {#1-70}% and a mortality rate of {#30-39}%",
-  "there was [a/an] {epidemic|disease|blight} with an infection rate of {#71-80}% and a mortality rate of {#1-10}%",
-];
-
-eventFactory.incident_natural.mundane = [
-  "seasonal storm {rains|snows|hails} on {circus|carnival|traveling|} parade, locals {disappointed|have fun anyway|go home|huddle in tents|wander off}",
-  "thunder storm {scares|frightens|freaks out} {local|} {animal.cute}s causing them to to flee in {fear|terror}",
-];
-
 eventFactory.incident_creature.major = [
   "horde of {animal.aggressive}s last seen destroying nearby village, local township's mayor issues call to arms",
   "invasive species of {animal.insect} disrupting farms throughout the land",
@@ -1196,8 +1302,38 @@ eventFactory.incident_creature.mundane = [
   "{relevance.random} {occupation.mundane|race.mundane} discovers unholy large nest of {animal.insect}",
 ];
 
+eventFactory.incident_natural.major = [
+  "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down",
+  "an illness decimated the {animal.cute}s",
+  "heavy tremors from quake destroy buildings, cause landslides, and uproot trees. {Locals|Townsfolk|Politicians|Religious leaders} proclaim end-times are near",
+  "meteor destroys capitol city; ash blocks out the sun causing early winter out of season",
+];
+
+eventFactory.incident_natural.minor = [
+  "[a/an] {mine cave-in|avalanche|terrible flood|} occurred",
+  "{boy|girl|child} {found|missing, presumed} {alive|dead|missing|injured} after {flash flood|sink hole appears}",
+  "{landslide} destroys roads and kills several locals following a heavy rain storm",
+  "{roads ruined|buildings collapse|orphanage destroyed} after {landslide|heavy downpour}, {local|} {trade unions|poor people|guild workers} suffer",
+  "caving trip ends in tragedy after heavy rain floods local caves",
+];
+
+eventFactory.incident_natural.moderate = [
+  "a new star cluster was discovered",
+  "heavy storm ravages {local|} population causing a town and the surrounding area to fall into ruin",
+  "meteor makes landfall in middle of town causing {panic|fire|tremors}, townsfolk {run in fear|run for the hills|proclaim end-times are near|blame the major}",
+  "there was [a/an] {epidemic|disease|blight} with an infection rate of {#1-70}% and a mortality rate of {#30-39}%",
+  "there was [a/an] {epidemic|disease|blight} with an infection rate of {#71-80}% and a mortality rate of {#1-10}%",
+  "the fields {yielded a bumper crop|withered and died}",
+];
+
+eventFactory.incident_natural.mundane = [
+  "seasonal storm {rains|snows|hails} on {circus|carnival|traveling|} parade, locals {disappointed|have fun anyway|go home|huddle in tents|wander off}",
+  "thunder storm {scares|frightens|freaks out} {local|} {animal.cute}s causing them to to flee in {fear|terror}",
+  "{relevance.lesser|relevance.average} {occupation.mundane|race.mundane} visits local healer, diagnosed with possible case of {disaster.illness}",
+];
+
 eventFactory.incident_people.major = [
-  "violent crime {increased|decreased} {everywhere|in the cities|in the country|near the capitol|on cabbage merchants}",
+  "violent crime {substantially|} increased {everywhere|in the cities|in the country|near the capitol|on the high seas}",
 ];
 
 eventFactory.incident_people.minor = [
@@ -1214,6 +1350,7 @@ eventFactory.incident_people.moderate = [
   "a powerful of {evil|neutrality|good} organization made their presence known",
   "an ancient {city|shrine|temple|civilization} was {re|}discovered",
   "there was an advance in {defensive military|offensive military|engineering|food production|medical|naval} technology",
+  "violent crime {substantially|} decreased {everywhere|in the cities|in the country|near the capitol|on the high seas}",
 ];
 
 eventFactory.incident_people.mundane = [
@@ -1239,11 +1376,10 @@ eventFactory.incident_people.mundane = [
 ];
 
 eventFactory.incident_political.major = [
+  "[a/an] {assassination|great violation of temple law|rebellion of the nobles|regional peasant uprising|successful overthrow of the ruling government} occurred",
   "{taxes|pirate attacks|bandit raids} {increased|decreased}",
   "the peasants revolted and {installed a new ruler|were violently suppressed|violently murdered the nobles}",
-  "there was an {assassination attempt|incursion} on a {relevance.greater} {npc.generic} by {the military|foreign interests|a secret society|a cult}",
-  "there was an assassination attempt on [a/an] {relevance.greater} {npc.generic} by [a/an] {rival guild|lesser noble|personal enemy|religious order|state enemy|organizational enemy}",
-  "there was an attack by a group of {highly organized|poorly organized|peasant|foreign|outcast} raiders",
+  "there was an {assassination attempt|incursion} on a {relevance.greater} noble house by {the military|foreign interests|a secret society|a cult}",
 ];
 
 eventFactory.incident_political.minor = [
@@ -1251,14 +1387,15 @@ eventFactory.incident_political.minor = [
 ];
 
 eventFactory.incident_political.moderate = [
-  "[a/an] {assassination|great violation of temple law|rebellion of the nobles|regional peasant uprising|successful overthrow of the ruling government} occurred",
   "[a/an] {peace|settlement|trade} treaty was {signed|broken} by a neighboring city-state",
   "[a/an] {relevance.greater} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}",
   "{active spying|treacherous sabotage} by rival political leader was discovered",
   "a military campaign was launched {for monetary gain|for punitive reasons|to expand borders|to regain lost territory|to explore an unknown wasteland}",
   "a series of {reformative|more restrictive|less restrictive} laws were enacted",
   "there was an {assassination attempt|incursion} on a {relevance.greater} {npc.generic} by {the military|foreign interests|a secret society|a cult}",
+  "there was an assassination attempt on [a/an] {relevance.greater} {npc.generic} by [a/an] {rival guild|lesser noble|personal enemy|religious order|state enemy|organizational enemy}",
   "there was an attack by a group of {allied state|enemy state|internally} sponsored raiders",
+  "there was an attack by a group of {highly organized|poorly organized|peasant|foreign|outcast} raiders",
   "there was an invasion {for punitive reasons|for the expansion of borders|to increase the national treasury|to regain lost territory}",
 ];
 
@@ -1278,8 +1415,9 @@ eventFactory.incident_religious.minor = [
 ];
 
 eventFactory.incident_religious.moderate = [
-  "[a/an] {lost|stolen|famous} {artifact|religious text} of the faith was {discovered|recovered|destroyed|hidden away}",
+  "[a/an] {lost|stolen|famous} {artifact|text} of the faith was {discovered|recovered|destroyed|hidden away}",
   "[a/an] {noble|religious} order was {disbanded|scattered} and fell into disgrace",
+  "[a/an] {noble|religious} order was reinvented based on a new-world culture",
 ];
 
 eventFactory.incident_religious.mundane = [
@@ -1287,5 +1425,19 @@ eventFactory.incident_religious.mundane = [
   "{belittling|name calling|public mockery} between evil and {good|neutral} temples occurred",
   "{belittling|name calling|public mockery} between good and {evil|neutral} temples occurred",
   "{belittling|name calling|public mockery} between neutral and {evil|good} temples occurred",
+  "priest claims to be punished by the gods with illness, local healer diagnoses possible case of {disaster.illness}",
 ];
 
+eventFactory.incident_supernatural.major = [
+  "passing meteor induces variants of lycanthropy within the populous, mass chaos ensues at first full moon",
+  "mass outbreak of {disaster.illness} after unseasonal meteor shower",
+];
+
+eventFactory.incident_supernatural.minor = [
+];
+
+eventFactory.incident_supernatural.moderate = [
+];
+
+eventFactory.incident_supernatural.mundane = [
+];
