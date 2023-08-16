@@ -1457,6 +1457,7 @@ eventFactory.incident.mundane = [
   "political: {incident_political.mundane}",
   "religious: {incident_religious.mundane}",
   "Joke: {silly.joke}",
+  "supernatural: {incident_supernatural.mundane}",
 ];
 
 /*
@@ -1562,13 +1563,13 @@ eventFactory.incident_people.moderate = [
 
 eventFactory.incident_people.mundane = [
   "[a/an] {characterization.positive} {'hero'|minor noble|member of the leader's family|clergy member|local leader} died suddenly",
-  "[a/an] {relevance.lesser|relevance.average} {'hero'|noble|clergy member|local leader} {activity.fart} after over-indulging in [a/an] {food.random} eating contest",
+  "[a/an] {relevance.lesser|relevance.average} {'hero'|noble|clergy member|local leader} {activity.fart} after over-indulging in eating {food.random}",
   "[a/an] {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}",
   "{activity.mundane} incident kills {occupation.mundane|race.mundane} with no living relatives",
   "{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and {#2-9} children",
   "{activity.mundane} incident kills {occupation.mundane|race.mundane}, spouse, and only child",
   "{characterization.random||relevance.random} {occupation.mundane|race.mundane} dies in {activity.mundane} accident",
-  "{characterization.random||relevance.random} {occupation.mundane|race.mundane} loudly {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, {characterization.random||relevance.random} {occupation.mundane|race.mundane} {terrified|frightened|bemused|annoyed|confused|unimpressed}",
+  "{characterization.random||relevance.random} {occupation.mundane|race.mundane} {loudly|quietly|silently|vigorously|harshly} {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, nearby {characterization.random||relevance.random} {occupation.mundane|race.mundane} {terrified|frightened|bemused|annoyed|confused|unimpressed}",
   "{characterization.random||relevance.random} {occupation.mundane|race.mundane} saves {baby|elderly|} {race.mundane} from [a/an] {disaster.mundane}",
   "{characterization.random} {occupation.mundane|race.mundane} falls down abandoned well while preparing for {activity.mundane} event",
   "{food.random} farmer has cart destroyed during high speed chase after local {occupation.mundane} does shenanigans",
@@ -1649,4 +1650,5 @@ eventFactory.incident_supernatural.moderate = [
 ];
 
 eventFactory.incident_supernatural.mundane = [
+  "{strange lights|little green men|bigfoot|el chupacabra} observed {late at night|in the evening|in the mountains|in a forest|in the desert|far far away} by {local|} {occupation.mundane|race.mundane}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
 ];
