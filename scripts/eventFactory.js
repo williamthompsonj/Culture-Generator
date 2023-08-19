@@ -52,10 +52,12 @@ eventFactory.GetActivity = function(level = "", qty = 1)
     sentence[0] = sentence[0].toTitleCase();
     temp_result = sentence.join(" ") + ".";
 
-    // replace known grammar issues
+    // known grammar issues that are easy to fix
     temp_result = temp_result.replace("wolfs", "wolves");
-    temp_result = temp_result.replace("?.", "?");
+    temp_result = temp_result.replace("'.", ".'");
     temp_result = temp_result.replace('".', '."');
+    temp_result = temp_result.replace("?.", "?");
+    temp_result = temp_result.replace("!.", "!");
 
     // save results (unique entries only because it's a Set)
     if (temp_result.length > 1)
