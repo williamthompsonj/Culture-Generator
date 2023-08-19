@@ -85,6 +85,20 @@
   "walking",
   "windsurfing"
 ],
+"political": [
+  "cloak-and-dagger activities",
+  "conducting mafia business",
+  "counterfeiting ring",
+  "espionage",
+  "illegal animal fighting",
+  "illegal gambling ring",
+  "illegal slave trading",
+  "illicit trafficking",
+  "foreign infiltration",
+  "racketeering",
+  "selling military secrets",
+  "spycraft"
+],
 "sexual": [
   "adultery",
   "bestiality",
@@ -829,7 +843,7 @@
 ]
 },
 "race": {
-"mundane": [
+"common": [
   "dragonborn",
   "dwarf",
   "elf",
@@ -839,6 +853,54 @@
   "half-orc",
   "human",
   "tiefling"
+],
+"uncommon":[
+  "aarakocra",
+  "aasimar",
+  "air genasi",
+  "astral elf",
+  "auto gnome",
+  "bugbear",
+  "centaur",
+  "changeling",
+  "deep gnome",
+  "duergar",
+  "earth genasi",
+  "eladrin",
+  "fairy",
+  "firbolg",
+  "fire genasi",
+  "genasi",
+  "giff",
+  "gith",
+  "goblin",
+  "goliath",
+  "hadozee",
+  "harengon",
+  "hobgoblin",
+  "kalashtar",
+  "kender",
+  "kenku",
+  "kobold",
+  "leonin",
+  "lineage",
+  "lizardfolk",
+  "loxodon",
+  "minotaur",
+  "orc",
+  "plasmoid",
+  "satyr",
+  "shadar-kai",
+  "shifter",
+  "simic hybrid",
+  "tabaxi",
+  "thri-kreen",
+  "tortle",
+  "triton",
+  "vedalken",
+  "warforged",
+  "water genasi",
+  "yuan-ti pureblood"
 ]
 },
 "npc": {
@@ -846,9 +908,11 @@
   "artisan",
   "craftsman",
   "expert",
+  "'hero'",
   "mage",
-  "nobleman",
+  "noble",
   "politician",
+  "townsfolk",
   "warrior",
   "witch"
 ],
@@ -1377,7 +1441,8 @@
   "natural: {incident_natural.moderate}",
   "people: {incident_people.moderate}",
   "political: {incident_political.moderate}",
-  "religious: {incident_religious.moderate}"
+  "religious: {incident_religious.moderate}",
+  "supernatural: {incident_supernatural.moderate}"
 ],
 "mundane": [
   "creature: {incident_creature.mundane}",
@@ -1401,15 +1466,15 @@
   "hoard of {murderous|demon|violent} {animal.insects} descends upon unsuspecting {food.random} farmer, origin of creatures unknown"
 ],
 "moderate": [
-  "a new {monster|sentient plant|animal|insect} species was discovered that is {harmful|helpful|beneficial|devastating} to the people"
+  "{monster|sentient plant|animal|insect} species discovered that is {harmful|helpful|beneficial|devastating} to the people"
 ],
 "mundane": [
   "{animal.cute}s were fruitful and multiplied",
-  "{characterization.random||relevance.random} {npc.job|race.mundane} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
-  "{characterization.random||relevance.random} {npc.job|race.mundane} swarmed by {animal.insects} during {disaster.mundane}",
-  "{characterization.random||relevance.random} {npc.job|race.mundane} swarmed by {animal.insects} in freak natural accident",
-  "{relevance.random} {npc.job|race.mundane} discovers den of {animal.cute}s",
-  "{relevance.random} {npc.job|race.mundane} discovers unholy large nest of {animal.insects}"
+  "{characterization.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
+  "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} during {disaster.mundane}",
+  "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} in freak natural accident",
+  "{relevance.random} {npc.job|race.common} discovers den of {animal.cute}s",
+  "{relevance.random} {npc.job|race.common} discovers unholy large nest of {animal.insects}"
 ]
 },
 "incident_natural": {
@@ -1438,10 +1503,10 @@
 "mundane": [
   "seasonal storm {rains|snows|hails} on {circus|carnival|traveling|parade}, locals {disappointed|have fun anyway|go home|huddle in tents|wander off}",
   "thunder storm {scares|frightens|freaks out} {local|} {animal.cute}s causing them to to flee in {fear|terror}",
-  "{relevance.lesser|relevance.average} {npc.job|race.mundane} visits local healer, diagnosed with possible case of {disaster.illness}",
+  "{relevance.lesser|relevance.average} {npc.job|race.common} visits local healer, diagnosed with possible case of {disaster.illness}",
   "{sudden|unexplained|} cave-in {on the road|below the church|in a field|} prompts {locals|authorities} to {explore|investigate|flee in fear}",
-  "{local|} {npc.job|race.mundane} proclaims it's hotter than {silly.hotter_than}",
-  "{local|} {npc.job|race.mundane} proclaims it's colder than {silly.colder_than}"
+  "{local|} {npc.job|race.common} proclaims it's hotter than {silly.hotter_than}",
+  "{local|} {npc.job|race.common} proclaims it's colder than {silly.colder_than}"
 ]
 },
 "incident_people": {
@@ -1449,13 +1514,14 @@
   "violent crime {substantially|} increased {everywhere|in the cities|in the country|near the capitol|on the high seas}"
 ],
 "minor": [
-  "{characterization.positive} {npc.job|noble|townsfolk} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {'hero'|npc.job|noble|townsfolk}",
+  "{characterization.positive} {npc.job|noble|townsfolk} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {npc.job|npc.generic}",
   "[a/an] {characterization.random|relevance.random} {npc.job} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}",
   "[a/an] {characterization.random|relevance.random} {npc.job} was {assassinated|struck down in battle}",
   "violence against {food.random|item.random} merchants {increased|decreased}"
 ],
 "moderate": [
-  "[a/an] {characterization.positive} {'hero'|noble|member of the leader's family|clergy member|leader} died suddenly",
+  "{characterization.positive} {npc.political} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {npc.job|npc.generic}",
+  "[a/an] {characterization.positive} {npc.generic|member of the leader's family|clergy member|leader} died suddenly",
   "[a/an] {new religion|academy of higher learning|walled town|castle} was founded",
   "a forgotten culture was rediscovered",
   "a powerful of {evil|neutrality|good} organization made their presence known",
@@ -1464,26 +1530,26 @@
   "violent crime {substantially|} decreased {everywhere|in the cities|in the country|near the capitol|on the high seas}"
 ],
 "mundane": [
-  "[a/an] {characterization.positive} {'hero'|minor noble|member of the leader's family|clergy member|local leader} died suddenly",
-  "[a/an] {relevance.lesser|relevance.average} {'hero'|noble|clergy member|local leader} {activity.fart} after over-indulging in eating {food.random}",
+  "[a/an] {characterization.positive} {npc.generic|member of the leader's family|clergy member|local leader} died suddenly",
+  "[a/an] {relevance.lesser|relevance.average} {npc.generic|clergy member|local leader} {activity.fart} after over-indulging in eating {food.random}",
   "[a/an] {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}",
-  "{activity.mundane} incident kills {npc.job|race.mundane} with no living relatives",
-  "{activity.mundane} incident kills {npc.job|race.mundane}, spouse, and {#2-9} children",
-  "{activity.mundane} incident kills {npc.job|race.mundane}, spouse, and only child",
-  "{characterization.random||relevance.random} {npc.job|race.mundane} dies in {activity.mundane} accident",
-  "{characterization.random||relevance.random} {npc.job|race.mundane} {loudly|quietly|silently|vigorously|harshly} {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, nearby {characterization.random||relevance.random} {npc.job|race.mundane} {terrified|frightened|bemused|annoyed|confused|unimpressed}",
-  "{characterization.random||relevance.random} {npc.job|race.mundane} saves {baby|elderly|} {race.mundane} from [a/an] {disaster.mundane}",
-  "{characterization.random} {npc.job|race.mundane} falls down abandoned well while preparing for {activity.mundane} event",
+  "{activity.mundane} incident kills {npc.job|race.common} with no living relatives",
+  "{activity.mundane} incident kills {npc.job|race.common}, spouse, and {#2-9} children",
+  "{activity.mundane} incident kills {npc.job|race.common}, spouse, and only child",
+  "{characterization.random||relevance.random} {npc.job|race.common} dies in {activity.mundane} accident",
+  "{characterization.random||relevance.random} {npc.job|race.common} {loudly|quietly|silently|vigorously|harshly} {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, nearby {characterization.random||relevance.random} {npc.job|race.common} {terrified|frightened|bemused|annoyed|confused|unimpressed}",
+  "{characterization.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {race.common} from [a/an] {disaster.mundane}",
+  "{characterization.random} {npc.job|race.common} falls down abandoned well while preparing for {activity.mundane} event",
   "{food.random} farmer has cart destroyed during high speed chase after local {npc.job} does shenanigans",
-  "{npc.job|race.mundane} and {npc.job|race.mundane} {friend|lover|companion|arch nemesis|} {run away together|begin fighting|begin arguing} when caught in the act of {activity.unsavory}",
+  "{npc.job|race.common} and {npc.job|race.common} {friend|lover|companion|arch nemesis|} {run away together|begin fighting|begin arguing} when caught in the act of {activity.unsavory}",
   "{relevance.random} {item.tool|item.music_instrument} producer accused of {activity.unsavory} after [a/an] {activity.mundane} incident",
-  "{relevance.random} {npc.job|race.mundane} discovers wild {food.berry|food.fruit|food.melon|food.vegetable} orchard",
-  "{relevance.random} {npc.job|race.mundane} drunkenly fell on {relevance.random} {npc.job|race.mundane} during dance",
-  "{relevance.random} {npc.job|race.mundane} flees local area after being accused of {activity.unsavory}",
-  "{relevance.random} {npc.job|race.mundane} has pants spontaneously catch fire after telling unconvincing story",
-  "{relevance.random} {npc.job|race.mundane} marries foreign {npc.job|race.mundane}, towns people {flabbergasted|outraged|relieved|disappointed}",
-  "{relevance.random} {npc.job|race.mundane} sings off-key during drunken performance",
-  "{relevance.random} {npc.job|race.mundane} stumbles drunk into home of {local|} {race.mundane}, hijinks ensue"
+  "{relevance.random} {npc.job|race.common} discovers wild {food.berry|food.fruit|food.melon|food.vegetable} orchard",
+  "{relevance.random} {npc.job|race.common} drunkenly fell on {relevance.random} {npc.job|race.common} during dance",
+  "{relevance.random} {npc.job|race.common} flees local area after being accused of {activity.unsavory}",
+  "{relevance.random} {npc.job|race.common} has pants spontaneously catch fire after telling unconvincing story",
+  "{relevance.random} {npc.job|race.common} marries foreign {npc.job|race.common}, towns people {flabbergasted|outraged|relieved|disappointed}",
+  "{relevance.random} {npc.job|race.common} sings off-key during drunken performance",
+  "{relevance.random} {npc.job|race.common} stumbles drunk into home of {local|} {race.common}, hijinks ensue"
 ]
 },
 "incident_political": {
@@ -1494,23 +1560,30 @@
   "there was an {assassination attempt|incursion} on a {relevance.greater} noble house by {the military|foreign interests|a secret society|a cult}"
 ],
 "minor": [
-  "{npc.political} found guilty of {embezzling money|fraud|tax evasion|telling a white lie}, townsfolk {outraged|flabbergasted|outraged|relieved|disappointed}"
+  "{npc.political} accused of {gay|polyamorous|bisexual|unethical|underage|} love triangle {publicly resigns|speaks out against accusations|refuses comment|flees town|disappears|found dead|}",
+  "{npc.political} comes out as {lesbian|gay|bisexual|transexual|queer|pansexual|polyamorous|transvestite}, locals {un|}{impressed|surprised|interested|welcoming|moved}",
+  "{npc.political} found guilty of {embezzling money|fraud|tax evasion|telling a white lie}, townsfolk {outraged|flabbergasted|outraged|relieved|disappointed}",
+  "fierce rivalry between {npc.political}s causes people to become polarized",
+  "{race.common} reporter {missing|presumed dead|found dead} after {harlequin|heralding|incriminating} story surfaces implicating {relevance.greater} {npc.generic} and {npc.political} in {activity.political}",
+  "{race.common} reporter {missing|presumed dead|found dead} after {harlequin|heralding|incriminating} story surfaces implicating {npc.political} in {activity.political}"
 ],
 "moderate": [
   "[a/an] {peace|settlement|trade} treaty was {signed|broken} by a neighboring city-state",
   "[a/an] {relevance.greater} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}",
   "{active spying|treacherous sabotage} by rival {npc.political} was discovered",
+  "{npc.political} arrested on charges of conspiracy; revealed to be doppelganger after body found {in dungeon|in forest|in milk crates|scattered around town|half eaten}",
+  "{npc.political} escapes captivity after being {arrested|detained|held} for {activity.political}, {experts|witnesses|victims} fear {reprisal|retaliation|revenge}",
   "a military campaign was launched {for monetary gain|for punitive reasons|to expand borders|to regain lost territory|to explore an unknown wasteland}",
   "a series of {reformative|more restrictive|less restrictive} laws were enacted",
+  "prominent {npc.political} found dead in {brothel|tavern|mafia safe house|bath house} after evidence revealed they were {activity.unsavory}",
   "there was an {assassination attempt|incursion} on [a/an] {relevance.greater} {npc.generic|npc.political} by {the military|foreign interests|a secret society|a cult}",
   "there was an assassination attempt on [a/an] {relevance.greater} {npc.generic|npc.political} by [a/an] {rival guild|lesser noble|personal enemy|religious order|state enemy|organizational enemy}",
   "there was an attack by a group of {allied state|enemy state|internally} sponsored raiders",
   "there was an attack by a group of {highly organized|poorly organized|peasant|foreign|outcast} raiders",
-  "there was an invasion {for punitive reasons|for the expansion of borders|to increase the national treasury|to regain lost territory}",
-  "{npc.political} arrested on charges of conspiracy; revealed to be doppelganger after body found {in dungeon|in forest|in milk crates|scattered around town|half eaten}"
+  "there was an invasion {for punitive reasons|for the expansion of borders|to increase the national treasury|to regain lost territory}"
 ],
 "mundane": [
-  "{npc.political} declares all {male|female} {race.mundane} babies to be cute, celebration this evening"
+  "{npc.political} declares all {male|female} {race.common} babies to be cute, celebration this evening"
 ]
 },
 "incident_religious": {
@@ -1529,25 +1602,28 @@
   "[a/an] {noble|religious} order was reinvented based on a new-world culture"
 ],
 "mundane": [
+  "{local|ill-advised|} prophet proclaims {the sky is falling|there is a method to the madness|drunkard told a cockamamie story}",
   "public {belittling|name calling|mockery|disagreement} between {evil|good|neutral} temples occurred",
   "public {belittling|name calling|mockery|disagreement} between evil and {good|neutral} temples occurred",
   "public {belittling|name calling|mockery|disagreement} between good and {evil|neutral} temples occurred",
   "public {belittling|name calling|mockery|disagreement} between neutral and {evil|good} temples occurred",
-  "priest claims to be punished by the gods with illness, local healer diagnoses possible case of {disaster.illness}",
-  "{local|ill-advised|} prophet proclaims {the sky is falling|there is a method to the madness|drunkard told a cockamamie story}"
+  "priest claims to be punished by the gods with illness, local healer diagnoses possible case of {disaster.illness}"
 ]
 },
 "incident_supernatural": {
 "major": [
-  "passing meteor induces variants of lycanthropy within the populous, mass chaos ensues at first full moon",
-  "mass outbreak of {disaster.illness} after unseasonal meteor shower"
+  "mass outbreak of {disaster.illness} after unseasonal meteor shower",
+  "passing meteor induces variants of lycanthropy within the populous, mass chaos ensues at first full moon"
 ],
 "minor": [
   "{unusual|unexplained} {lights|sounds|smells|tremors} emanating from {abandoned house|cellar|alley} reported by {local|} {npc.generic}, {constable|sheriff|local authority} {files report|uninterested|suspicious}"
 ],
-"moderate": [],
+"moderate": [
+  "{multiple|several|numerous} {deaths|disappearances|dismembered bodies|mutilated corpses} linked to {abandoned|broken down|vacant} {house|building} {at the edge|on the outskirts|in the middle} of town causes {alarm|outrage|disgust} and calls for {investigation|justice|revenge}"
+],
 "mundane": [
-  "{strange lights|little green men|bigfoot|el chupacabra} observed {late at night|in the evening|in the mountains|in a forest|in the desert|far far away} by {local|} {npc.job|race.mundane}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}"
+  "{strange lights|little green men|bigfoot|el chupacabra} observed {late at night|in the evening|in the mountains|in a forest|in the desert|far far away} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
+  "{entertainer|performer|comedian|actor} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work"
 ]
 }
 }
