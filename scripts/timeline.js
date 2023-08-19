@@ -3,7 +3,7 @@
 let timeline = {};
 
 /**
-  Generations based roughly on the Strauss–Howe generational theory
+  Generations based roughly on the Strauss-Howe generational theory
   https://en.wikipedia.org/wiki/Strauss%E2%80%93Howe_generational_theory
 
   Consideration given to social cycle theory

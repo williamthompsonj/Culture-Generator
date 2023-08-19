@@ -1,6 +1,6 @@
 "use strict";
 // Returns String With Title Case
-String.prototype.toTitleCase = function(chars = "—-'—")
+String.prototype.toTitleCase = function(chars = "'-")
 {
   // lowercase and normalize white space
   let c = this.normalize().replace(/\s+/g, ' ').trim().toLowerCase().split(' ');

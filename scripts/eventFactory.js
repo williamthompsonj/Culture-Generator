@@ -6,6 +6,7 @@ let eventFactory = {
   behavior: {},
   characterization: {},
   disaster: {},
+  expression: {},
   food: {},
   incident: {},
   incident_creature: {},
@@ -75,6 +76,8 @@ eventFactory.GetActivity = function(level = "", qty = 1)
 
     // replace known grammar issues
     temp_result = temp_result.replace("wolfs", "wolves");
+    temp_result = temp_result.replace("?.", "?");
+    temp_result = temp_result.replace('".', '."');
 
     // save results (unique entries only because it's a Set)
     if (temp_result.length > 1)
@@ -754,6 +757,167 @@ eventFactory.disaster.illness = [
   "yellow death",
 ];
 
+eventFactory.expression.colder_than = [
+  "a $2 Hooker waiting on her next customer",
+  "a baby momma's heart on the way to get child support",
+  "a banker's smile",
+  "a beaver's tits outside",
+  "a blend of dry ice and acetone",
+  "a brass monkey's balls",
+  "a break up text outside",
+  "a cast iron toilet on the shady side of an iceberg",
+  "a copy editor's soul out there",
+  "a county jail",
+  "a day-old dumpling",
+  "a freezer",
+  "a Himalayan monkey's butt",
+  "a hug from Aunt Francesca",
+  "a kangaroo eating an ice cream sandwich in an igloo",
+  "a Michael Jackson moonwalk",
+  "a mother-in-law's kiss out there",
+  "a needle in a Baffert horse",
+  "a nitrous tank out there today",
+  "a nun's thigh",
+  "a nutsack in an ice bath outside",
+  "a penguin's ankle socks",
+  "a pimp's heart outside",
+  "a polar bear's ice hole",
+  "a polar bear's toe nails",
+  "a quantum computer's I/O jack",
+  "a recruiter's heart out there",
+  "a snowman's fart outside",
+  "a stepmother's kiss",
+  "a tax-collector's heart",
+  "a teachers union member's heart out there",
+  "a Tibetan tin toilet top",
+  "a two peckered billy goat",
+  "a Viking's dick",
+  "a water bottle with peppermint gum",
+  "a whore's goodbye",
+  "a witch's anatomy out there",
+  "a witch's tit in a brass bra on the shady side of the iceberg",
+  "an Alaskan well-digger's ass in February",
+  "Antarctica",
+  "broccoli in the back of the freezer right now",
+  "cat shit here today",
+  "chipotle's cheese out here",
+  "elf nuts outside",
+  "father's heart when he left for cigarettes and never came back",
+  "Ice Station Zebra",
+  "Jötunheimr out here",
+  "Melania outside",
+  "moonlight on a tombstone",
+  "Mr. Freeze's fallopian tubes",
+  "Mrs. Claus coochie out here",
+  "my ex-wife's heart",
+  "my love life outside",
+  "planet Akillian",
+  "Rickon Stark's corpse out here",
+  "Santa's nutsack",
+  "skinny dipping in a snow storm",
+  "Thatcher's heart out there",
+  "the belt buckle of Kim Jong-un",
+  "the frost on a champagne glass",
+  "the heart of a landlord",
+  "the hinges of hell",
+  "the jockstrap of Chris Cringle",
+  "the morgue out there",
+  "the North and South Pole here",
+  "the Silver Surfer's anus",
+  "the underside of a penguin's ballsack",
+  "walking out of the shower with no towel",
+  "when SpongeBob left his fridge open",
+  "yeti titties today",
+  "your girlfriend Sandra when you call her Julie",
+];
+
+eventFactory.expression.hotter_than = [
+  "40 dammits",
+  "40 hells",
+  "a $2 pistol",
+  "a billy goat with a blow torch",
+  "a blister",
+  "a blister bug in a pepper patch",
+  "a Bunsen Burner set to full power",
+  "a cat in heat",
+  "a cat on a tin roof",
+  "a cow giving evaporated milk",
+  "a depot stove",
+  "a fire hydrant chasing a dog",
+  "a firecracker lit at both ends",
+  "a funeral procession pulling into Dairy Queen",
+  "a fur coat in Marfa (that's in Texas)",
+  "a George Foreman Grill",
+  "a ginger mill in Hades",
+  "a half-bred fox in a forest fire",
+  "a hen laying eggs",
+  "a hen laying hard-boiled eggs",
+  "a hickory-smoked sausage",
+  "a honeymoon hotel",
+  "a hoot'n poot",
+  "a Hot Pocket microwaved for six minutes",
+  "a house on fire",
+  "a jalapeño's armpit",
+  "a June bride in a feather bed",
+  "a mess of collards on the back burner of a $4 stove",
+  "a pair of sweat pants full of barbecue",
+  "a pepper sprout",
+  "a Peruvian puff pepper",
+  "a preacher's knee",
+  "a six shooter",
+  "a snake's butt in a wagon rut",
+  "a spanked baby's bottom",
+  "a steel playground at recess",
+  "a stepmother's kiss",
+  "a Times Square Rolex",
+  "a tin-foil sweater",
+  "a volcano in an oven on self-clean mode",
+  "an egg on the hood of a Camaro",
+  "blue blazes",
+  "blue gin",
+  "butter on a stack of wheat cakes",
+  "Charizard's flamethrower",
+  "doughnut grease at a fat man convention",
+  "Dutch love 58 49 barrels of hell 59 hell's waiting room",
+  "fish grease",
+  "five hogs in a Ford Escort",
+  "four sides of hell",
+  "Georgia asphalt",
+  "H-E double hockey sticks",
+  "hell and half of Georgia",
+  "hell's back kitchen",
+  "hell's pepper patch",
+  "high noon in Death Valley",
+  "July",
+  "kimchi",
+  "lava",
+  "my coffee",
+  "noon on the Fourth of July",
+  "pearls in a pawn shop",
+  "Satan's house cat",
+  "Satan's mixtape",
+  "Satan's toenails",
+  "seven hells",
+  "six shades of hell",
+  "sriracha",
+  "the bottom of my laptop",
+  "the business end of a pistol",
+  "the center of a calzone",
+  "the devil's backside",
+  "the devil's underwear",
+  "the dickens",
+  "the hinges on the Gates of Hades",
+  "the middle kettle of hell",
+  "the surface of the sun",
+  "two dogs wrestling in the attic",
+  "two goats in a pepper patch",
+  "two rats kissing in a wool sock",
+  "two ticks on a hound dog",
+  "two trees fighting over a dog",
+  "whoopee in woolens",
+  "wildfire",
+];
+
 eventFactory.food.berry = [
   "acai berry",
   "barberry",
@@ -1252,7 +1416,7 @@ eventFactory.silly.joke = [
   "Just burned 2,000 calories. That's the last time I leave brownies in the oven while I nap",
   "Always borrow money from a pessimist. They'll never expect it back",
   "Build a man a fire and he'll be warm for a day. Set a man on fire and he'll be warm for the rest of his life",
-  "I don't suffer from insanity—I enjoy every minute of it",
+  "I don't suffer from insanity-I enjoy every minute of it",
   "The last thing I want to do is hurt you; but it's still on the list",
   "The problem isn't that obesity runs in your family. It's that no one runs in your family",
   "Today a man knocked on my door and asked for a small donation toward the local swimming pool. I gave him a glass of water",
@@ -1320,7 +1484,7 @@ eventFactory.silly.joke = [
   "Will glass coffins be a success? Remains to be seen",
   "Did you hear about the guy whose whole left side got amputated? He's all right now",
   "The man who survived both mustard gas and pepper spray is a seasoned veteran now",
-  "Have you heard about the new restaurant called 'Karma?' There's no menu—you get what you deserve",
+  "Have you heard about the new restaurant called 'Karma?' There's no menu-you get what you deserve",
   "I'm so glad we have brown cows, otherwise there wouldn't be any chocolate milk",
   "9 out of 10 voices in my head tell me I'm crazy. The tenth is just humming",
   "After Tuesday, even the calendar says WTF",
@@ -1357,7 +1521,7 @@ eventFactory.silly.joke = [
   "Barbie is so popular and yet, kids still buy friends for her",
   "If you lend someone money and never see them again, it was probably worth every penny",
   "Refusing to go to the gym is one of the best forms of resistance training",
-  "I don't suffer from insanity—I enjoy every minute of it",
+  "I don't suffer from insanity-I enjoy every minute of it",
   "Always remember that you're unique...just like everyone else is",
   "Running in place will get you nowhere fast",
   "I'm reading a book about anti-gravity. It's impossible to put down",
@@ -1461,28 +1625,35 @@ eventFactory.incident.mundane = [
 ];
 
 /*
-  Tornadoes and Severe Storms
-  Hurricanes and Tropical Storms
-  Winter storm
-  tropical cyclone
-  blizzard
-  Floods
-  Wildfires
-  heat wave
-  Earthquakes
-  famine
-  Drought
-  volcanic eruption
-  lava flows
-  explosions
-  toxic gas cloud
-  ash falls
-  pyroclastic flows
-  landslide
-  avalanches
-  Tsunamis
-  above normal sea level
-  meteor or comet impact
+  cliched plot devices and twists
+Woke up and it was all a dream
+Identical twins twist
+Time travel
+Investigate this noise (in my nightie)
+Villain comes back to life (or never died)
+Lovers who can never touch (Girlfriend in a coma)
+Hero comes back to life
+Main character is a writer
+Amnesia
+Special needs = special abilities
+Teenager develops superpowers
+Built over an Indian graveyard
+This isn't fiction - I found these letters / papers / videotapes and decided to publish them
+Secret societies
+bad things happen to character who is too stupid to really understand it
+Broken heels / useless female disease
+Retired rambo returns
+Love Blooms From Cruelty / Stockholm syndrome
+Five Second Blackbelt / instant mastery / Best in the world at something they never did before
+'Cool' Transformation / dramatic amazing reveal
+Map that must be explored
+Collect All The Pieces / Pokemon Compulsion
+Everyone is young
+Reactor is about to blow / ten seconds to save the world
+Bad Boys are Sexy
+Take him/her back, even if he/she was abusive
+No civilians die in superhero situations
+Hard work = dreams come true
 */
 
 eventFactory.incident_creature.major = [
@@ -1510,11 +1681,68 @@ eventFactory.incident_creature.mundane = [
   "{relevance.random} {occupation.mundane|race.mundane} discovers unholy large nest of {animal.insect}",
 ];
 
+/*
+9 category of natural disasters:
+  earthquake
+  flood
+  hurricane
+  tornado
+  tsunami
+  landslide
+  wildfire
+  volcanic eruption
+  extreme temperature
+
+Specific events:
+  agriculture disease
+  ash plume
+  avalanche
+  blizzard
+  cave-in (subsidence)
+  cold snap
+  comet sighting
+  cyclone
+  derecho event
+  disease (pandemic)
+  drought (water shortage)
+  earthquake
+  explosion
+  famine
+  fire
+  flood
+  hail storm
+  heat wave
+  hurricane
+  ice storm (winter storm)
+  impact event (meteor)
+  insect invasion
+  killer fog
+  landslide (debris flow)
+  lava flow
+  mudslide
+  limnic eruption
+  pyroclastic flow
+  radiological event
+  sea level rising
+  severe storm
+  sinkhole
+  solar storm
+  thunder storm (lightning storm)
+  tornado
+  tornado outbreak
+  toxic gas
+  tropical cyclone
+  tropical storms
+  tsunami
+  volcanic eruption
+  wildfire
+*/
+
 eventFactory.incident_natural.major = [
   "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down",
-  "an illness decimated the {animal.cute}s",
   "heavy tremors from quake destroy buildings, cause landslides, and uproot trees. {Locals|Townsfolk|Politicians|Religious leaders} proclaim end-times are near",
   "meteor destroys capitol city; ash blocks out the sun causing early winter out of season",
+  "drought causes crop failure and livestock deaths across the land, mass migrations begin",
 ];
 
 eventFactory.incident_natural.minor = [
@@ -1526,7 +1754,8 @@ eventFactory.incident_natural.minor = [
 ];
 
 eventFactory.incident_natural.moderate = [
-  "a new star cluster was discovered",
+  "an illness decimated the {animal.cute}s",
+  "a new star cluster was discovered where nothing previously existed",
   "heavy storm ravages {local|} population causing a town and the surrounding area to fall into ruin",
   "meteor makes landfall in middle of town causing {panic|fire|tremors}, townsfolk {run in fear|run for the hills|proclaim end-times are near|blame the major}",
   "there was [a/an] {epidemic|disease|blight} with an infection rate of {#1-70}% and a mortality rate of {#30-39}%",
@@ -1535,9 +1764,12 @@ eventFactory.incident_natural.moderate = [
 ];
 
 eventFactory.incident_natural.mundane = [
-  "seasonal storm {rains|snows|hails} on {circus|carnival|traveling|} parade, locals {disappointed|have fun anyway|go home|huddle in tents|wander off}",
+  "seasonal storm {rains|snows|hails} on {circus|carnival|traveling|parade}, locals {disappointed|have fun anyway|go home|huddle in tents|wander off}",
   "thunder storm {scares|frightens|freaks out} {local|} {animal.cute}s causing them to to flee in {fear|terror}",
   "{relevance.lesser|relevance.average} {occupation.mundane|race.mundane} visits local healer, diagnosed with possible case of {disaster.illness}",
+  "{sudden|unexplained|} cave-in {on the road|below the church|in a field|} prompts {locals|authorities} to {explore|investigate|flee in fear}",
+  "{local|} {occupation.mundane|race.mundane} proclaims it's hotter than {expression.hotter_than}",
+  "{local|} {occupation.mundane|race.mundane} proclaims it's colder than {expression.colder_than}",
 ];
 
 eventFactory.incident_people.major = [
@@ -1606,6 +1838,7 @@ eventFactory.incident_political.moderate = [
   "there was an attack by a group of {allied state|enemy state|internally} sponsored raiders",
   "there was an attack by a group of {highly organized|poorly organized|peasant|foreign|outcast} raiders",
   "there was an invasion {for punitive reasons|for the expansion of borders|to increase the national treasury|to regain lost territory}",
+  "mayor arrested on charges of conspiracy; revealed to be doppelganger after body found {in dungeon|in forest|in milk crates|scattered around town|half eaten}",
 ];
 
 eventFactory.incident_political.mundane = [
