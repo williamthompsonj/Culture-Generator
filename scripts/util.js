@@ -302,7 +302,7 @@ util.fillForm = function(obj)
 
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 **/
-util.loadJson = function (uri, set_name, subset = '', callback = undefined, ...x)
+util.loadJson = function (uri, set_name, callback = undefined, ...x)
 {
   // ensure dataset exists in window
   if (!Object.hasOwn(window, 'dataset')) window.dataset = {};
@@ -311,14 +311,7 @@ util.loadJson = function (uri, set_name, subset = '', callback = undefined, ...x
   .then(response => response.json())
   .then(data =>
   {
-    if (subset == '')
-    {
-      window.dataset[set_name] = data;
-    }
-    else
-    {
-      window.dataset[set_name] = data[subset];
-    }
+    window.dataset[set_name] = data;
 
     // more than 6 things turns into an array
     if (typeof callback === 'function')
@@ -361,15 +354,6 @@ util.loadJson = function (uri, set_name, subset = '', callback = undefined, ...x
   });
 };
 
-util.getNameDatasets = function()
-{
-  // populate the markov name select options
-  util.populateSelect('#markov_select', Object.keys(window.dataset.training_data));
-
-  // generate random names
-  markovNames.more_names();
-};
-
 util.markovSort = function()
 {
   let elem = util.getValue('#markov_sort');
@@ -382,4 +366,22 @@ util.markovSort = function()
   raw = raw.join("<br>");
 
   util.setValue("#markov_output", raw);
+};
+
+util.initNames = function()
+{
+  // populate the markov name select options
+  util.populateSelect('#markov_select', Object.keys(window.dataset.markov_names));
+
+  // generate random names
+  markovNames.more_names();
+};
+
+util.initEvents = function()
+{
+  // generate headlines
+  util.setValue('#major_results', eventFactory.GetActivity('major', 10));
+  util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 10));
+  util.setValue('#minor_results', eventFactory.GetActivity('minor', 10));
+  util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 10));
 };

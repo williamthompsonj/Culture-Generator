@@ -2,7 +2,7 @@
 Generate culture, history, events, and basic stat blocks for individuals important for a culture
 
 Copyright (c) William J. Thompson 2023.
-Version 0.2.2 (August 2023)
+Version 0.2.3 (August 2023)
 
 This tool currently generates mundane headlines, names, and will eventually
 generate both stat blocks and a timeline using metrics to influence what is

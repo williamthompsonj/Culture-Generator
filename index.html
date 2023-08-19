@@ -28,7 +28,8 @@ util.loadJson('./json/races.json', 'races');
 util.loadJson('./json/skills.json', 'skills');
 util.loadJson('./json/spells.json', 'spells');
 */
-util.loadJson('./json/training_data.json', 'training_data', '', util.getNameDatasets);
+util.loadJson('./json/events.json', 'events', util.initEvents);
+util.loadJson('./json/markov_names.json', 'markov_names', util.initNames);
 </script>
 <script src="scripts/ready.js"></script>
 </head>
@@ -55,7 +56,7 @@ william dot thompsonj at gmail dot com</span></p>
 <!--- populate after page load --->
 <button onClick="markovNames.names_from_select();" id="markov_button"
  type="button">&lt;- Generate Names</button>
-<label for="">
+<label for="markov_sort">
 <input type="checkbox" onChange="util.markovSort();"
  id="markov_sort" name="markov_sort">
 Sort Names</label>

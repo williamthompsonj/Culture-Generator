@@ -29,7 +29,7 @@ markovNames.more_names = function(qty = 40, data_name = '')
 
   if (data_name == '')
   {
-    data_name = Object.keys(window.dataset['training_data']).randomValue();
+    data_name = Object.keys(window.dataset['markov_names']).randomValue();
     util.setValue('#markov_select', data_name);
   }
 
@@ -91,7 +91,7 @@ markovNames.markov_chain = function(data_name)
   if (cache)
     return cache;
 
-  let names = window.dataset['training_data'][data_name];
+  let names = window.dataset['markov_names'][data_name];
   cache = markovNames.construct_chain(names);
 
   // check we have a name_set and cache

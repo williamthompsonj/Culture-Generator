@@ -14,10 +14,4 @@ document.addEventListener("DOMContentLoaded", () =>
   util.fillForm(government);
   util.fillForm(population);
   util.fillForm(religion);
-
-  // generate headlines
-  util.setValue('#major_results', eventFactory.GetActivity('major', 10));
-  util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 10));
-  util.setValue('#minor_results', eventFactory.GetActivity('minor', 10));
-  util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 10));
 });

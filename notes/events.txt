@@ -1,4 +1,4 @@
-/* TODO: items that might be interesting but haven't made yet:
+TODO: items that might be interesting but haven't made yet:
   - a devastating
   - a tidal wave smashed the coast
   - a terrible famine swept the land
@@ -6,7 +6,6 @@
   - an old religion died out
   - a new natural resource was discovered
   - ancient knowledge was rediscovered
-*/
 
 World  Events
 =============
@@ -52,3 +51,90 @@ Natural
 a rock slide destroys an important trading post/village
 forest fire scorched the land destroying crops and causing famine
 crop whither for unknown reason causing famine
+
+  cliched plot devices and twists
+Woke up and it was all a dream
+Identical twins twist
+Time travel
+Investigate this noise (in my nightie)
+Villain comes back to life (or never died)
+Lovers who can never touch (Girlfriend in a coma)
+Hero comes back to life
+Main character is a writer
+Amnesia
+Special needs = special abilities
+Teenager develops superpowers
+Built over an Indian graveyard
+This isn't fiction - I found these letters / papers / videotapes and decided to publish them
+Secret societies
+bad things happen to character who is too stupid to really understand it
+Broken heels / useless female disease
+Retired rambo returns
+Love Blooms From Cruelty / Stockholm syndrome
+Five Second Blackbelt / instant mastery / Best in the world at something they never did before
+'Cool' Transformation / dramatic amazing reveal
+Map that must be explored
+Collect All The Pieces / Pokemon Compulsion
+Everyone is young
+Reactor is about to blow / ten seconds to save the world
+Bad Boys are Sexy
+Take him/her back, even if he/she was abusive
+No civilians die in superhero situations
+Hard work = dreams come true
+*/
+
+/*
+9 category of natural disasters:
+  earthquake
+  flood
+  hurricane
+  tornado
+  tsunami
+  landslide
+  wildfire
+  volcanic eruption
+  extreme temperature
+
+Specific events:
+  agriculture disease
+  ash plume
+  avalanche
+  blizzard
+  cave-in (subsidence)
+  cold snap
+  comet sighting
+  cyclone
+  derecho event
+  disease (pandemic)
+  drought (water shortage)
+  earthquake
+  explosion
+  famine
+  fire
+  flood
+  hail storm
+  heat wave
+  hurricane
+  ice storm (winter storm)
+  impact event (meteor)
+  insect invasion
+  killer fog
+  landslide (debris flow)
+  lava flow
+  mudslide
+  limnic eruption
+  pyroclastic flow
+  radiological event
+  sea level rising
+  severe storm
+  sinkhole
+  solar storm
+  thunder storm (lightning storm)
+  tornado
+  tornado outbreak
+  toxic gas
+  tropical cyclone
+  tropical storms
+  tsunami
+  volcanic eruption
+  wildfire
