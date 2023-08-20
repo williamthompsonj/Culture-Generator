@@ -10,7 +10,9 @@ eventFactory.GetActivity = function(level = "", qty = 1)
 
   if (level == "")
   {
-    level = ["mundane", "minor", "moderate", "major"].randomValue();
+    level = Object.keys(
+      window.dataset['events'].incident
+    ).randomValue();
   }
 
   for (let i = 0; qty != factoryResult.size; i++)
@@ -158,9 +160,10 @@ eventFactory.ResolveToken = function(token)
   // get token pieces
   let parts = token.split(".");
 
-  // start with events object
-  let local_ref = window.dataset['events'];
-  let last_ref; // last context for local_ref
+  // start with events dataset
+  let local_ref = this;
+  let here_ref = window.dataset['events'];
+  let last_ref = null; // last context for here_ref
 
   // cycle through each piece of token
   for (let i = 0; i != parts.length; i++)
@@ -169,46 +172,97 @@ eventFactory.ResolveToken = function(token)
     if (parts[i] == "random")
     {
       // resolve object to member
-      if (local_ref != null && typeof local_ref == "object")
-        local_ref = local_ref[Object.keys(local_ref).randomValue()];
+      if (typeof here_ref == "object")
+        here_ref = here_ref[Object.keys(here_ref).randomValue()];
 
       // resolve array to value
-      if (Array.isArray(local_ref))
-        local_ref = local_ref.randomValue();
+      if (Array.isArray(here_ref))
+        here_ref = here_ref.randomValue();
 
-      return local_ref.toString();
+      return here_ref.toString();
     }
 
-    // look for property in object
+    // look for property in local object
     if (local_ref.hasOwnProperty(parts[i]))
     {
-      // retain last context to pass later
+      // save last reference
       last_ref = local_ref;
 
       // move to next object in reference string
-      local_ref = local_ref[parts[i]];
+      here_ref = local_ref[parts[i]];
+
+      // don't check dataset if found locally
+      continue;
     }
-    else
+
+    // look for property in dataset
+    if (here_ref.hasOwnProperty(parts[i]))
     {
-      // could not resolve token, return string
-      return token;
+      // retain last context to pass later
+      last_ref = here_ref;
+
+      // move to next object in reference string
+      here_ref = here_ref[parts[i]];
+
+      // don't keep checking forever
+      continue;
     }
+
+    break;
   }
 
   // we have resolved the token to a specific thing
-  if (typeof local_ref == "function")
+  if (typeof here_ref == "function")
   {
     // it's a function, pass correct context
-    return local_ref(last_ref);
+    return here_ref(last_ref);
   }
-  else if (Array.isArray(local_ref))
+  else if (Array.isArray(here_ref))
   {
     // it's an array, get random value
-    return local_ref.randomValue();
+    return here_ref.randomValue();
   }
-  else if (local_ref != null && typeof local_ref == "object")
+  else if (last_ref != null)
   {
     // it's an object, get the string version of it
-    return local_ref.toString();
+    return here_ref.toString();
   }
+
+  // doesn't resolve, return original token
+  return token;
 };
+
+eventFactory.markovNames = function(data_name)
+{
+  // check for any random name
+  if (data_name == 'any')
+    return markovNames.name_list(1, '');
+
+  // check if it data_name exists
+  if (Object.hasOwn(window.dataset['markov_names'], data_name))
+    return markovNames.name_list(1, data_name);
+
+  // prepare for fuzzy matching
+  let result = [];
+
+  // check if partial name, select randomly from matches
+  Object.keys(window.dataset['markov_names']).forEach(elem => {
+    if (elem.indexOf(data_name) != -1)
+      result.push(elem);
+  });
+
+  if (result.length > 0)
+    markovNames.name_list(1, result.randomValue());
+
+  // give up, return random
+  return markovNames.name_list(1, '');
+};
+
+eventFactory.until = function(conditionFunction)
+{
+  const poll = resolve => {
+    if (conditionFunction()) resolve();
+    else setTimeout(_ => poll(resolve), 400);
+  }
+  return new Promise(poll);
+}

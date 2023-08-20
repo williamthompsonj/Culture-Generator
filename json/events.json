@@ -912,6 +912,7 @@
   "mage",
   "noble",
   "politician",
+  "priest",
   "townsfolk",
   "warrior",
   "witch"
@@ -980,16 +981,42 @@
   "woodcarver"
 ],
 "political": [
+  "ambassador",
   "censor",
   "consular",
+  "delegate",
+  "deputy",
+  "diplomat",
+  "emissary",
+  "envoy",
   "governor",
+  "herald",
   "judge",
   "law maker",
   "magistrate",
   "mayor",
+  "minister",
   "praetor",
   "sheriff",
+  "surrogate",
   "tribune"
+],
+"religious": [
+  "abbot",
+  "apostol",
+  "archdeacon",
+  "bishop",
+  "camerlengo",
+  "cardinal",
+  "deacon",
+  "dean",
+  "diocese",
+  "father",
+  "legate",
+  "nuncio",
+  "prelate",
+  "priest",
+  "provost"
 ]
 },
 "relevance": {
@@ -1079,8 +1106,8 @@
   "After Tuesday, even the calendar says WTF",
   "Alcohol and Calculus don't mix. It's never a good idea to drink and derive",
   "Always borrow money from a pessimist. They'll never expect it back",
-  "Always remember that you're unique...just like everyone else is",
-  "An apple a day keeps the doctor away...if you throw it hard enough!",
+  "Always remember that you're unique... just like everyone else",
+  "An apple a day keeps the doctor away... if you throw it hard enough!",
   "Answers are what we have to solve other people's problems",
   "Are people born with photographic memories, or does it take time to develop?",
   "Atheism is a non-prophet organization",
@@ -1469,23 +1496,25 @@
   "{monster|sentient plant|animal|insect} species discovered that is {harmful|helpful|beneficial|devastating} to the people"
 ],
 "mundane": [
-  "{animal.cute}s were fruitful and multiplied",
+  "{animal.cute}s were busy making lots of babies and multiplied",
   "{characterization.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
   "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} during {disaster.mundane}",
   "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} in freak natural accident",
+  "{characterization.random||relevance.random} animal trainer attacked by dozens of {animal.cute}s without warning",
   "{relevance.random} {npc.job|race.common} discovers den of {animal.cute}s",
   "{relevance.random} {npc.job|race.common} discovers unholy large nest of {animal.insects}"
 ]
 },
 "incident_natural": {
 "major": [
+  "[a/an] {ash plume|impact event|pyroclastic flow|volcanic eruption|powerful earthquake} destroyed the {city|capitol|trade center} of {markovNames.brythonic_deities}",
   "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down",
   "heavy tremors from quake destroy buildings, cause landslides, and uproot trees. {Locals|Townsfolk|Politicians|Religious leaders} proclaim end-times are near",
   "meteor destroys capitol city; ash blocks out the sun causing early winter out of season",
   "drought causes crop failure and livestock deaths across the land, mass migrations begin"
 ],
 "minor": [
-  "[a/an] {mine cave-in|avalanche|terrible flood|} occurred",
+  "[a/an] {mine cave-in|avalanche|flash flood|landslide|wildfire|cold-snap|insect migration} occurred {outside town|in the woods|in the high desert|in the valley|in the hills|in the plains|near the swamp}",
   "{boy|girl|child} {found|missing, presumed} {alive|dead|missing|injured} after {flash flood|sink hole appears}",
   "{landslide} destroys roads and kills several locals following a heavy rain storm",
   "{roads ruined|buildings collapse|orphanage destroyed} after {landslide|heavy downpour}, {local|} {trade unions|poor people|guild workers} suffer",
@@ -1599,7 +1628,8 @@
 "moderate": [
   "[a/an] {lost|stolen|famous} {artifact|text} of the faith was {discovered|recovered|destroyed|hidden away}",
   "[a/an] {noble|religious} order was {disbanded|scattered} and fell into disgrace",
-  "[a/an] {noble|religious} order was reinvented based on a new-world culture"
+  "[a/an] {noble|religious} order was reinvented based on a new-world culture",
+  "a pilgrimage from the old city of {markovNames.any} to the holy site of {markovNames.any} began"
 ],
 "mundane": [
   "{local|ill-advised|} prophet proclaims {the sky is falling|there is a method to the madness|drunkard told a cockamamie story}",
@@ -1623,7 +1653,8 @@
 ],
 "mundane": [
   "{strange lights|little green men|bigfoot|el chupacabra} observed {late at night|in the evening|in the mountains|in a forest|in the desert|far far away} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
-  "{entertainer|performer|comedian|actor} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work"
+  "{entertainer|performer|comedian|actor} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
+  "an emissary from the fey council of {markovNames.irish_forenames} was spotted frolicking in the flowers"
 ]
 }
 }

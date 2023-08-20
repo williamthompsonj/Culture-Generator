@@ -8,30 +8,15 @@
 <script src="lang/Array.prototype.js"></script>
 <script src="lang/Math.js"></script>
 <script src="lang/String.prototype.js"></script>
-<script src="scripts/eventFactory.js"></script>
 <script src="scripts/util.js"></script>
+<script src="scripts/eventFactory.js"></script>
 <script src="scripts/markovNames.js"></script>
 <script src="scripts/npcFactory.js"></script>
 <script src="scripts/government.js"></script>
 <script src="scripts/population.js"></script>
 <script src="scripts/religion.js"></script>
 <script src="scripts/timeline.js"></script>
-<script>
-// load JSON so we have data to use
-/*
-util.loadJson('./json/backgrounds.json', 'backgrounds');
-util.loadJson('./json/feats.json', 'feats');
-util.loadJson('./json/item_groups.json', 'item_groups');
-util.loadJson('./json/items.json', 'items');
-util.loadJson('./json/languages.json', 'languages');
-util.loadJson('./json/races.json', 'races');
-util.loadJson('./json/skills.json', 'skills');
-util.loadJson('./json/spells.json', 'spells');
-*/
-util.loadJson('./json/events.json', 'events', util.initEvents);
-util.loadJson('./json/markov_names.json', 'markov_names', util.initNames);
-</script>
-<script src="scripts/ready.js"></script>
+<script src="scripts/ready.js" defer></script>
 </head>
 <body>
 

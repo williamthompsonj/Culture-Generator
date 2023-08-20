@@ -23,17 +23,17 @@ markovNames.more_names = function(qty = 40, data_name = '')
 
   if (util.getElem('#markov_select').options.length < 1)
   {
-    util.getNameDatasets();
+    util.initNames();
     return;
   }
 
-  if (data_name == '')
+  if (data_name == '' || !window.dataset['markov_names'].hasOwnProperty(data_name))
   {
     data_name = Object.keys(window.dataset['markov_names']).randomValue();
     util.setValue('#markov_select', data_name);
   }
 
-  var names = markovNames.name_list(data_name, qty);
+  var names = markovNames.name_list(qty, data_name);
 
   // check if we need to sort these things first
   if (util.getValue('#markov_sort'))
@@ -50,8 +50,13 @@ markovNames.more_names = function(qty = 40, data_name = '')
 
 };
 
-markovNames.name_list = function(data_name, qty)
+markovNames.name_list = function(qty, data_name)
 {
+  if (data_name == '' || !window.dataset['markov_names'].hasOwnProperty(data_name))
+  {
+    data_name = Object.keys(window.dataset['markov_names']).randomValue();
+  }
+
   // save names as a unique set
   let names = new Set();
   let counter = 0;

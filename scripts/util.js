@@ -304,54 +304,65 @@ util.fillForm = function(obj)
 **/
 util.loadJson = function (uri, set_name, callback = undefined, ...x)
 {
+  /*
+  util.loadJson = async function (...)
+  const response = await fetch(uri);
+  const data = await response.json();
+  window.dataset[set_name] = data;
+  */
+
   // ensure dataset exists in window
   if (!Object.hasOwn(window, 'dataset')) window.dataset = {};
 
-  fetch(uri)
-  .then(response => response.json())
-  .then(data =>
+  // this is not async on purpose
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", uri, false);
+  xmlhttp.overrideMimeType("application/json");
+  xmlhttp.send();
+
+  if (xmlhttp.status == 200 && xmlhttp.readyState == 4)
+    window.dataset[set_name] = JSON.parse(xmlhttp.responseText);
+  else
+    return; // prevent callback if data doesn't load
+
+  // more than 6 things turns into an array
+  if (typeof callback === 'function')
   {
-    window.dataset[set_name] = data;
-
-    // more than 6 things turns into an array
-    if (typeof callback === 'function')
+    switch (x.length)
     {
-      switch (x.length)
-      {
-        case 0:
-          callback();
-          break;
+      case 0:
+        callback();
+        break;
 
-        case 1:
-          callback(x[0]);
-          break;
+      case 1:
+        callback(x[0]);
+        break;
 
-        case 2:
-          callback(x[0], x[1]);
-          break;
+      case 2:
+        callback(x[0], x[1]);
+        break;
 
-        case 3:
-          callback(x[0], x[1], x[2]);
-          break;
+      case 3:
+        callback(x[0], x[1], x[2]);
+        break;
 
-        case 4:
-          callback(x[0], x[1], x[2], x[3]);
-          break;
+      case 4:
+        callback(x[0], x[1], x[2], x[3]);
+        break;
 
-        case 5:
-          callback(x[0], x[1], x[2], x[3], x[4]);
-          break;
+      case 5:
+        callback(x[0], x[1], x[2], x[3], x[4]);
+        break;
 
-        case 6:
-          callback(x[0], x[1], x[2], x[3], x[4], x[5]);
-          break;
+      case 6:
+        callback(x[0], x[1], x[2], x[3], x[4], x[5]);
+        break;
 
-        default:
-          callback(x);
-          break;
-      }
+      default:
+        callback(x);
+        break;
     }
-  });
+  }
 };
 
 util.markovSort = function()
@@ -380,8 +391,8 @@ util.initNames = function()
 util.initEvents = function()
 {
   // generate headlines
-  util.setValue('#major_results', eventFactory.GetActivity('major', 10));
-  util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 10));
-  util.setValue('#minor_results', eventFactory.GetActivity('minor', 10));
-  util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 10));
+  util.setValue('#major_results', eventFactory.GetActivity('major', 15));
+  util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 15));
+  util.setValue('#minor_results', eventFactory.GetActivity('minor', 15));
+  util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 15));
 };
