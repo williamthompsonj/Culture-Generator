@@ -236,7 +236,7 @@ eventFactory.markovNames = function(data_name)
 {
   // check for any random name
   if (data_name == 'any')
-    return markovNames.name_list(1, '');
+    return markovNames.name_list(1);
 
   // check if it data_name exists
   if (Object.hasOwn(window.dataset['markov_names'], data_name))

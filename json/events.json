@@ -1556,7 +1556,8 @@
   "a powerful of {evil|neutrality|good} organization made their presence known",
   "an ancient {city|shrine|temple|civilization} was {re|}discovered",
   "there was an advance in {defensive military|offensive military|engineering|food production|medical|naval} technology",
-  "violent crime {substantially|} decreased {everywhere|in the cities|in the country|near the capitol|on the high seas}"
+  "violent crime {substantially|} decreased {everywhere|in the country|on the high seas}",
+  "violent crime {substantially|} decreased {in the city|in the country|near the capitol|on the high seas} of {markovNames.forename}"
 ],
 "mundane": [
   "[a/an] {characterization.positive} {npc.generic|member of the leader's family|clergy member|local leader} died suddenly",

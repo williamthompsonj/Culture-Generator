@@ -39,7 +39,7 @@ markovNames.more_names = function(qty = 40, data_name = '')
   if (util.getValue('#markov_sort'))
     names.sort();
 
-  names = names.join(", ").toTitleCase();
+  names = names.join(", ");
 
   util.setValue("#markov_output",
     'Source: '
@@ -50,7 +50,7 @@ markovNames.more_names = function(qty = 40, data_name = '')
 
 };
 
-markovNames.name_list = function(qty, data_name)
+markovNames.name_list = function(qty, data_name = '')
 {
   if (data_name == '' || !window.dataset['markov_names'].hasOwnProperty(data_name))
   {
@@ -71,7 +71,7 @@ markovNames.name_list = function(qty, data_name)
 
     counter++;
 
-    str = markovNames.generate_name(data_name);
+    str = markovNames.generate_name(data_name).toTitleCase();
 
     if (str) names.add(str);
   }
