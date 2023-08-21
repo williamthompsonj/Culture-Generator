@@ -1689,7 +1689,7 @@
   "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}angel of {character.divine}, falls from the heavens in fiery glory; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate",
   "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}{devil|demon} of {character.divine}, cast out from the depth of {hell|hades}; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate",
   "{markov_names.deities|markov_names.angels|markov_names.demons} rose to godhood and a new religion was founded",
-  "{his|her} holiness, {npc.religious} {markov_names.deities|markov_names.angels|markov_names.demons}, dies while ascending to godhood; {markov_names.deities} nation scrambles to defend against atropal"
+  "{his|her} holiness, {npc.religious} {markov_names.deities|markov_names.angels|markov_names.demons}, dies while ascending to godhood; {markov_names.deities} nation {scrambles|calls for aid|desperately appeals to allies|entreats neighboring nations|pleads for aid} to defend against atropal"
 ],
 "minor": [
   "{arguing|fighting|an incident} between {evil|neutral|good} temples occurred",
