@@ -1,4456 +1,4456 @@
 [
-{
-  "name": "Aarakocra",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "fly": true
-  },
-  "traitTags": [
-    "Natural Weapon"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": [
-          "gust of wind"
-        ]
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Aasimar",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 180
-  },
-  "darkvision": 60,
-  "resist": [
-    "necrotic",
-    "radiant"
-  ],
-  "additionalSpells": [
-    {
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "light#c"
-        ]
-      }
-    }
-  ],
-  "_versions": [
-    {
-      "name": "Aasimar; Necrotic Shroud",
-      "source": "MPMM",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Celestial Revelation",
-          "items": {
-            "name": "Celestial Revelation (Necrotic Shroud)",
-            "type": "entries",
-            "entries": [
-              "When you reach 3rd level, you can use a bonus action to transform yourself. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation, you can't use it again until you finish a long rest.",
-              "Your eyes briefly become pools of darkness, and ghostly, flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you that can see you must succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become {@condition frightened} of you until the end of your next turn. Until the transformation ends, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus."
-            ]
-          }
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": [
+            "gust of wind"
+          ]
         }
       }
+    ],
+    "lineage": "VRGR",
+    "name": "Aarakocra",
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": {
+      "fly": true,
+      "walk": 30
     },
-    {
-      "name": "Aasimar; Radiant Consumption",
-      "source": "MPMM",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Celestial Revelation",
-          "items": {
-            "name": "Celestial Revelation (Radiant Consumption)",
-            "type": "entries",
-            "entries": [
-              "When you reach 3rd level, you can use a bonus action to transform yourself. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation, you can't use it again until you finish a long rest.",
-              "Searing light temporarily radiates from your eyes and mouth. For the duration, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes radiant damage equal to your proficiency bonus. Until the transformation ends, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus."
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "Aasimar; Radiant Soul",
-      "source": "MPMM",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Celestial Revelation",
-          "items": {
-            "name": "Celestial Revelation (Radiant Soul)",
-            "type": "entries",
-            "entries": [
-              "When you reach 3rd level, you can use a bonus action to transform yourself. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation, you can't use it again until you finish a long rest.",
-              "Two luminous, spectral wings sprout from your back temporarily. Until the transformation ends, you have a flying speed equal to your walking speed, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus."
-            ]
-          }
-        }
-      }
-    }
-  ]
-},
-{
-  "name": "Autognome",
-  "source": "AAG",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "construct"
-  ],
-  "size": [
-    "S"
-  ],
-  "speed": 30,
-  "traitTags": [
-    "Improved Resting",
-    "Natural Armor"
-  ],
-  "toolProficiencies": [
-    {
-      "any": 2
-    }
-  ],
-  "resist": [
-    "poison"
-  ],
-  "conditionImmune": [
-    "disease"
-  ]
-},
-{
-  "name": "Bugbear",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "goblinoid"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "traitTags": [
-    "Powerful Build"
-  ],
-  "skillProficiencies": [
-    {
-      "stealth": true
-    }
-  ]
-},
-{
-  "name": "Bullywug",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 20,
-    "swim": 40
+    "traitTags": [
+      "Natural Weapon"
+    ]
   },
-  "ability": [
-    {
-      "int": -2,
-      "cha": -2
-    }
-  ],
-  "traitTags": [
-    "Amphibious",
-    "NPC Race"
-  ],
-  "languageProficiencies": [
-    {
-      "other": true
-    }
-  ]
-},
-{
-  "name": "Centaur",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "fey"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 40,
-  "traitTags": [
-    "Natural Weapon",
-    "Powerful Build"
-  ],
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "animal handling",
-          "medicine",
-          "nature",
-          "survival"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Changeling",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "fey"
-  ],
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "deception",
-          "insight",
-          "intimidation",
-          "performance",
-          "persuasion"
-        ],
-        "count": 2
-      }
-    }
-  ]
-},
-{
-  "name": "Custom Lineage",
-  "source": "TCE",
-  "lineage": true,
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "con",
-          "int",
-          "wis",
-          "cha"
-        ],
-        "amount": 2
-      }
-    }
-  ],
-  "darkvision": 60,
-  "feats": [
-    {
-      "any": 1
-    }
-  ],
-  "skillProficiencies": [
-    {
-      "any": 1
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "anyStandard": 1
-    }
-  ],
-  "_versions": [
-    {
-      "name": "Custom Lineage; Darkvision",
-      "source": "TCE",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Variable Trait",
-          "items": {
-            "name": "Variable Trait; Darkvision",
-            "type": "entries",
-            "entries": [
-              "You gain {@sense darkvision} with a range of 60 feet."
-            ]
-          }
-        }
-      },
-      "skillProficiencies": null
-    },
-    {
-      "name": "Custom Lineage; Skill Proficiency",
-      "source": "TCE",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Variable Trait",
-          "items": {
-            "name": "Variable Trait; Skill Proficiency",
-            "type": "entries",
-            "entries": [
-              "You gain proficiency in one skill of your choice."
-            ]
-          }
-        }
-      },
-      "darkvision": null
-    }
-  ]
-},
-{
-  "name": "Dhampir",
-  "source": "VRGR",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": {
-    "walk": 35,
-    "climb": true
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Natural Weapon"
-  ]
-},
-{
-  "name": "Dragonborn",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "str": 2,
-      "cha": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 66,
-    "heightMod": "2d8",
-    "baseWeight": 175,
-    "weightMod": "2d6"
-  },
-  "age": {
-    "mature": 15,
-    "max": 80
-  },
-  "traitTags": [
-    "Uncommon Race"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "draconic": true
-    }
-  ],
-  "resist": [
-    {
-      "choose": {
-        "from": [
-          "acid",
-          "cold",
-          "fire",
-          "lightning",
-          "poison"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Dragonborn",
-  "subrace": "Chromatic",
-  "source": "FTD",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "resist": [
-    {
-      "choose": {
-        "from": [
-          "acid",
-          "lightning",
-          "poison",
-          "fire",
-          "cold"
-        ]
-      }
-    }
-  ],
-  "_versions": [
-    {
-      "_template": {
-        "name": "Dragonborn (Chromatic; {{color}})",
-        "source": "FTD",
+  {
+    "_versions": [
+      {
         "_mod": {
-          "entries": [
-            {
-              "mode": "removeArr",
-              "names": "Chromatic Ancestry"
+          "entries": {
+            "items": {
+              "entries": [
+                "When you reach 3rd level, you can use a bonus action to transform yourself. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation, you can't use it again until you finish a long rest.",
+                "Your eyes briefly become pools of darkness, and ghostly, flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you that can see you must succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become {@condition frightened} of you until the end of your next turn. Until the transformation ends, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus."
+              ],
+              "name": "Celestial Revelation (Necrotic Shroud)",
+              "type": "entries"
             },
-            {
-              "mode": "replaceArr",
-              "replace": "Breath Weapon",
-              "items": {
-                "type": "entries",
-                "name": "Breath Weapon",
-                "entries": [
-                  "When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 30-foot line that is 5 feet wide. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} {{damageType}} damage. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
-                  "You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-                ]
-              }
-            },
-            {
-              "mode": "replaceArr",
-              "replace": "Draconic Resistance",
-              "items": {
-                "type": "entries",
-                "name": "Draconic Resistance",
-                "entries": [
-                  "You have resistance to {{damageType}} damage."
-                ]
-              }
-            }
-          ]
-        }
+            "mode": "replaceArr",
+            "replace": "Celestial Revelation"
+          }
+        },
+        "name": "Aasimar; Necrotic Shroud",
+        "source": "MPMM"
       },
-      "_implementations": [
-        {
-          "_variables": {
-            "color": "Black",
-            "damageType": "acid"
-          }
-        },
-        {
-          "_variables": {
-            "color": "Blue",
-            "damageType": "lightning"
-          }
-        },
-        {
-          "_variables": {
-            "color": "Green",
-            "damageType": "poison"
-          }
-        },
-        {
-          "_variables": {
-            "color": "Red",
-            "damageType": "fire"
-          }
-        },
-        {
-          "_variables": {
-            "color": "White",
-            "damageType": "cold"
-          }
-        }
-      ]
-    }
-  ]
-},
-{
-  "name": "Dragonborn",
-  "subrace": "Gem",
-  "source": "FTD",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "resist": [
-    {
-      "choose": {
-        "from": [
-          "force",
-          "radiant",
-          "psychic",
-          "thunder",
-          "necrotic"
-        ]
-      }
-    }
-  ],
-  "_versions": [
-    {
-      "_template": {
-        "name": "Dragonborn (Gem; {{color}})",
-        "source": "FTD",
+      {
         "_mod": {
-          "entries": [
-            {
-              "mode": "removeArr",
-              "names": "Gem Ancestry"
+          "entries": {
+            "items": {
+              "entries": [
+                "Searing light temporarily radiates from your eyes and mouth. For the duration, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes radiant damage equal to your proficiency bonus. Until the transformation ends, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.",
+                "When you reach 3rd level, you can use a bonus action to transform yourself. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation, you can't use it again until you finish a long rest."
+              ],
+              "name": "Celestial Revelation (Radiant Consumption)",
+              "type": "entries"
             },
-            {
-              "mode": "replaceArr",
-              "replace": "Breath Weapon",
-              "items": {
-                "type": "entries",
-                "name": "Breath Weapon",
-                "entries": [
-                  "When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 15-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} {{damageType}} damage. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
-                  "You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-                ]
-              }
+            "mode": "replaceArr",
+            "replace": "Celestial Revelation"
+          }
+        },
+        "name": "Aasimar; Radiant Consumption",
+        "source": "MPMM"
+      },
+      {
+        "_mod": {
+          "entries": {
+            "items": {
+              "entries": [
+                "Two luminous, spectral wings sprout from your back temporarily. Until the transformation ends, you have a flying speed equal to your walking speed, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.",
+                "When you reach 3rd level, you can use a bonus action to transform yourself. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation, you can't use it again until you finish a long rest."
+              ],
+              "name": "Celestial Revelation (Radiant Soul)",
+              "type": "entries"
             },
-            {
-              "mode": "replaceArr",
-              "replace": "Draconic Resistance",
-              "items": {
-                "type": "entries",
-                "name": "Draconic Resistance",
-                "entries": [
-                  "You have resistance to {{damageType}} damage."
-                ]
-              }
-            }
+            "mode": "replaceArr",
+            "replace": "Celestial Revelation"
+          }
+        },
+        "name": "Aasimar; Radiant Soul",
+        "source": "MPMM"
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "known": {
+          "1": [
+            "light#c"
           ]
         }
+      }
+    ],
+    "age": {
+      "max": 180
+    },
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Aasimar",
+    "resist": [
+      "necrotic",
+      "radiant"
+    ],
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 30
+  },
+  {
+    "conditionImmune": [
+      "disease"
+    ],
+    "creatureTypes": [
+      "construct"
+    ],
+    "lineage": "VRGR",
+    "name": "Autognome",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "S"
+    ],
+    "source": "AAG",
+    "speed": 30,
+    "toolProficiencies": [
+      {
+        "any": 2
+      }
+    ],
+    "traitTags": [
+      "Improved Resting",
+      "Natural Armor"
+    ]
+  },
+  {
+    "creatureTypeTags": [
+      "goblinoid"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Bugbear",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "stealth": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "traitTags": [
+      "Powerful Build"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": -2,
+        "int": -2
+      }
+    ],
+    "languageProficiencies": [
+      {
+        "other": true
+      }
+    ],
+    "name": "Bullywug",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": {
+      "swim": 40,
+      "walk": 20
+    },
+    "traitTags": [
+      "Amphibious",
+      "NPC Race"
+    ]
+  },
+  {
+    "creatureTypes": [
+      "fey"
+    ],
+    "lineage": "VRGR",
+    "name": "Centaur",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "animal handling",
+            "medicine",
+            "nature",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "source": "MPMM",
+    "speed": 40,
+    "traitTags": [
+      "Natural Weapon",
+      "Powerful Build"
+    ]
+  },
+  {
+    "creatureTypes": [
+      "fey"
+    ],
+    "lineage": "VRGR",
+    "name": "Changeling",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "count": 2,
+          "from": [
+            "deception",
+            "insight",
+            "intimidation",
+            "performance",
+            "persuasion"
+          ]
+        }
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30
+  },
+  {
+    "_versions": [
+      {
+        "_mod": {
+          "entries": {
+            "items": {
+              "entries": [
+                "You gain {@sense darkvision} with a range of 60 feet."
+              ],
+              "name": "Variable Trait; Darkvision",
+              "type": "entries"
+            },
+            "mode": "replaceArr",
+            "replace": "Variable Trait"
+          }
+        },
+        "name": "Custom Lineage; Darkvision",
+        "skillProficiencies": null,
+        "source": "TCE"
       },
-      "_implementations": [
-        {
-          "_variables": {
-            "color": "Amethyst",
-            "damageType": "force"
-          },
-          "resist": [
-            "force"
-          ]
+      {
+        "_mod": {
+          "entries": {
+            "items": {
+              "entries": [
+                "You gain proficiency in one skill of your choice."
+              ],
+              "name": "Variable Trait; Skill Proficiency",
+              "type": "entries"
+            },
+            "mode": "replaceArr",
+            "replace": "Variable Trait"
+          }
         },
-        {
-          "_variables": {
-            "color": "Crystal",
-            "damageType": "radiant"
-          },
-          "resist": [
-            "radiant"
+        "darkvision": null,
+        "name": "Custom Lineage; Skill Proficiency",
+        "source": "TCE"
+      }
+    ],
+    "ability": [
+      {
+        "choose": {
+          "amount": 2,
+          "from": [
+            "cha",
+            "con",
+            "dex",
+            "int",
+            "str",
+            "wis"
           ]
-        },
-        {
-          "_variables": {
-            "color": "Emerald",
-            "damageType": "psychic"
-          },
-          "resist": [
-            "psychic"
+        }
+      }
+    ],
+    "darkvision": 60,
+    "feats": [
+      {
+        "any": 1
+      }
+    ],
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true
+      }
+    ],
+    "lineage": true,
+    "name": "Custom Lineage",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "any": 1
+      }
+    ],
+    "source": "TCE",
+    "speed": 30
+  },
+  {
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Dhampir",
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "VRGR",
+    "speed": {
+      "climb": true,
+      "walk": 35
+    },
+    "traitTags": [
+      "Natural Weapon"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": 1,
+        "str": 2
+      }
+    ],
+    "age": {
+      "mature": 15,
+      "max": 80
+    },
+    "heightAndWeight": {
+      "baseHeight": 66,
+      "baseWeight": 175,
+      "heightMod": "2d8",
+      "weightMod": "2d6"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "draconic": true
+      }
+    ],
+    "name": "Dragonborn",
+    "resist": [
+      {
+        "choose": {
+          "from": [
+            "acid",
+            "cold",
+            "fire",
+            "lightning",
+            "poison"
           ]
-        },
-        {
-          "_variables": {
-            "color": "Sapphire",
-            "damageType": "thunder"
+        }
+      }
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "traitTags": [
+      "Uncommon Race"
+    ]
+  },
+  {
+    "_versions": [
+      {
+        "_implementations": [
+          {
+            "_variables": {
+              "color": "Black",
+              "damageType": "acid"
+            }
           },
-          "resist": [
+          {
+            "_variables": {
+              "color": "Blue",
+              "damageType": "lightning"
+            }
+          },
+          {
+            "_variables": {
+              "color": "Green",
+              "damageType": "poison"
+            }
+          },
+          {
+            "_variables": {
+              "color": "Red",
+              "damageType": "fire"
+            }
+          },
+          {
+            "_variables": {
+              "color": "White",
+              "damageType": "cold"
+            }
+          }
+        ],
+        "_template": {
+          "_mod": {
+            "entries": [
+              {
+                "mode": "removeArr",
+                "names": "Chromatic Ancestry"
+              },
+              {
+                "items": {
+                  "entries": [
+                    "When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 30-foot line that is 5 feet wide. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} {{damageType}} damage. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
+                    "You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                  ],
+                  "name": "Breath Weapon",
+                  "type": "entries"
+                },
+                "mode": "replaceArr",
+                "replace": "Breath Weapon"
+              },
+              {
+                "items": {
+                  "entries": [
+                    "You have resistance to {{damageType}} damage."
+                  ],
+                  "name": "Draconic Resistance",
+                  "type": "entries"
+                },
+                "mode": "replaceArr",
+                "replace": "Draconic Resistance"
+              }
+            ]
+          },
+          "name": "Dragonborn (Chromatic; {{color}})",
+          "source": "FTD"
+        }
+      }
+    ],
+    "lineage": "VRGR",
+    "name": "Dragonborn",
+    "resist": [
+      {
+        "choose": {
+          "from": [
+            "acid",
+            "cold",
+            "fire",
+            "lightning",
+            "poison"
+          ]
+        }
+      }
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "FTD",
+    "speed": 30,
+    "subrace": "Chromatic"
+  },
+  {
+    "_versions": [
+      {
+        "_implementations": [
+          {
+            "_variables": {
+              "color": "Amethyst",
+              "damageType": "force"
+            },
+            "resist": [
+              "force"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Crystal",
+              "damageType": "radiant"
+            },
+            "resist": [
+              "radiant"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Emerald",
+              "damageType": "psychic"
+            },
+            "resist": [
+              "psychic"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Sapphire",
+              "damageType": "thunder"
+            },
+            "resist": [
+              "thunder"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Topaz",
+              "damageType": "necrotic"
+            },
+            "resist": [
+              "necrotic"
+            ]
+          }
+        ],
+        "_template": {
+          "_mod": {
+            "entries": [
+              {
+                "mode": "removeArr",
+                "names": "Gem Ancestry"
+              },
+              {
+                "items": {
+                  "entries": [
+                    "When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 15-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} {{damageType}} damage. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
+                    "You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                  ],
+                  "name": "Breath Weapon",
+                  "type": "entries"
+                },
+                "mode": "replaceArr",
+                "replace": "Breath Weapon"
+              },
+              {
+                "items": {
+                  "entries": [
+                    "You have resistance to {{damageType}} damage."
+                  ],
+                  "name": "Draconic Resistance",
+                  "type": "entries"
+                },
+                "mode": "replaceArr",
+                "replace": "Draconic Resistance"
+              }
+            ]
+          },
+          "name": "Dragonborn (Gem; {{color}})",
+          "source": "FTD"
+        }
+      }
+    ],
+    "lineage": "VRGR",
+    "name": "Dragonborn",
+    "resist": [
+      {
+        "choose": {
+          "from": [
+            "force",
+            "necrotic",
+            "psychic",
+            "radiant",
             "thunder"
           ]
-        },
-        {
-          "_variables": {
-            "color": "Topaz",
-            "damageType": "necrotic"
-          },
-          "resist": [
-            "necrotic"
-          ]
         }
-      ]
-    }
-  ]
-},
-{
-  "name": "Dragonborn",
-  "subrace": "Metallic",
-  "source": "FTD",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "resist": [
-    {
-      "choose": {
-        "from": [
-          "fire",
-          "lightning",
-          "acid",
-          "cold"
-        ]
       }
-    }
-  ],
-  "_versions": [
-    {
-      "_template": {
-        "name": "Dragonborn (Metallic; {{color}})",
-        "source": "FTD",
-        "_mod": {
-          "entries": [
-            {
-              "mode": "removeArr",
-              "names": "Metallic Ancestry"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "FTD",
+    "speed": 30,
+    "subrace": "Gem"
+  },
+  {
+    "_versions": [
+      {
+        "_implementations": [
+          {
+            "_variables": {
+              "color": "Brass",
+              "damageType": "fire"
             },
-            {
-              "mode": "replaceArr",
-              "replace": "Breath Weapon",
-              "items": {
-                "type": "entries",
-                "name": "Breath Weapon",
-                "entries": [
-                  "When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 15-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} {{damageType}} damage. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
-                  "You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-                ]
-              }
+            "resist": [
+              "fire"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Bronze",
+              "damageType": "lightning"
             },
-            {
-              "mode": "replaceArr",
-              "replace": "Draconic Resistance",
-              "items": {
-                "type": "entries",
-                "name": "Draconic Resistance",
-                "entries": [
-                  "You have resistance to {{damageType}} damage."
-                ]
+            "resist": [
+              "lightning"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Copper",
+              "damageType": "acid"
+            },
+            "resist": [
+              "acid"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Gold",
+              "damageType": "fire"
+            },
+            "resist": [
+              "fire"
+            ]
+          },
+          {
+            "_variables": {
+              "color": "Silver",
+              "damageType": "cold"
+            },
+            "resist": [
+              "cold"
+            ]
+          }
+        ],
+        "_template": {
+          "_mod": {
+            "entries": [
+              {
+                "mode": "removeArr",
+                "names": "Metallic Ancestry"
+              },
+              {
+                "items": {
+                  "entries": [
+                    "When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 15-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} {{damageType}} damage. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
+                    "You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                  ],
+                  "name": "Breath Weapon",
+                  "type": "entries"
+                },
+                "mode": "replaceArr",
+                "replace": "Breath Weapon"
+              },
+              {
+                "items": {
+                  "entries": [
+                    "You have resistance to {{damageType}} damage."
+                  ],
+                  "name": "Draconic Resistance",
+                  "type": "entries"
+                },
+                "mode": "replaceArr",
+                "replace": "Draconic Resistance"
               }
-            }
-          ]
+            ]
+          },
+          "name": "Dragonborn (Metallic; {{color}})",
+          "source": "FTD"
         }
-      },
-      "_implementations": [
-        {
-          "_variables": {
-            "color": "Brass",
-            "damageType": "fire"
-          },
-          "resist": [
-            "fire"
-          ]
-        },
-        {
-          "_variables": {
-            "color": "Bronze",
-            "damageType": "lightning"
-          },
-          "resist": [
+      }
+    ],
+    "lineage": "VRGR",
+    "name": "Dragonborn",
+    "resist": [
+      {
+        "choose": {
+          "from": [
+            "acid",
+            "cold",
+            "fire",
             "lightning"
           ]
-        },
-        {
-          "_variables": {
-            "color": "Copper",
-            "damageType": "acid"
-          },
-          "resist": [
-            "acid"
-          ]
-        },
-        {
-          "_variables": {
-            "color": "Gold",
-            "damageType": "fire"
-          },
-          "resist": [
-            "fire"
-          ]
-        },
-        {
-          "_variables": {
-            "color": "Silver",
-            "damageType": "cold"
-          },
-          "resist": [
-            "cold"
-          ]
         }
-      ]
-    }
-  ]
-},
-{
-  "name": "Dwarf",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "con": 2
-    }
-  ],
-  "age": {
-    "mature": 20,
-    "max": 350
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Tool Proficiency"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "dwarvish": true
-    }
-  ],
-  "weaponProficiencies": [
-    {
-      "battleaxe|phb": true,
-      "handaxe|phb": true,
-      "light hammer|phb": true,
-      "warhammer|phb": true
-    }
-  ],
-  "resist": [
-    "poison"
-  ]
-},
-{
-  "name": "Dwarf",
-  "subrace": "Duergar",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "dwarf"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 350
-  },
-  "darkvision": 120,
-  "resist": [
-    "poison"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "enlarge/reduce"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "invisibility"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
       }
-    }
-  ]
-},
-{
-  "name": "Dwarf",
-  "subrace": "Hill",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "con": 2,
-      "wis": 1
-    }
-  ],
-  "age": {
-    "mature": 20,
-    "max": 350
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "FTD",
+    "speed": 30,
+    "subrace": "Metallic"
   },
-  "heightAndWeight": {
-    "baseHeight": 44,
-    "heightMod": "2d4",
-    "baseWeight": 115,
-    "weightMod": "2d6"
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Tool Proficiency"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "dwarvish": true
-    }
-  ],
-  "weaponProficiencies": [
-    {
-      "battleaxe|phb": true,
-      "handaxe|phb": true,
-      "light hammer|phb": true,
-      "warhammer|phb": true
-    }
-  ],
-  "resist": [
-    "poison"
-  ]
-},
-{
-  "name": "Dwarf",
-  "subrace": "Mark of Warding",
-  "source": "ERLW",
-  "size": [
-    "M"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "con": 2,
-      "int": 1
-    }
-  ],
-  "age": {
-    "mature": 20,
-    "max": 350
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice",
-    "Tool Bonus Dice"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "dwarvish": true
-    }
-  ],
-  "weaponProficiencies": [
-    {
-      "battleaxe|phb": true,
-      "handaxe|phb": true,
-      "light hammer|phb": true,
-      "warhammer|phb": true
-    }
-  ],
-  "resist": [
-    "poison"
-  ],
-  "additionalSpells": [
-    {
-      "expanded": {
-        "s1": [
-          "alarm",
-          "armor of agathys"
-        ],
-        "s2": [
-          "arcane lock",
-          "knock"
-        ],
-        "s3": [
-          "glyph of warding",
-          "magic circle"
-        ],
-        "s4": [
-          "leomund's secret chest",
-          "mordenkainen's faithful hound"
-        ],
-        "s5": [
-          "antilife shell"
-        ]
-      },
-      "ability": "int",
-      "known": {
-        "1": [
-          "alarm",
-          "mage armor"
-        ]
+  {
+    "ability": [
+      {
+        "con": 2
       }
-    }
-  ]
-},
-{
-  "name": "Dwarf",
-  "subrace": "Mountain",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "con": 2,
-      "str": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 48,
-    "heightMod": "2d4",
-    "baseWeight": 130,
-    "weightMod": "2d6"
-  },
-  "age": {
-    "mature": 20,
-    "max": 350
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Tool Proficiency"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "dwarvish": true
-    }
-  ],
-  "armorProficiencies": [
-    {
-      "light": true,
-      "medium": true
-    }
-  ],
-  "weaponProficiencies": [
-    {
-      "battleaxe|phb": true,
-      "handaxe|phb": true,
-      "light hammer|phb": true,
-      "warhammer|phb": true
-    }
-  ],
-  "resist": [
-    "poison"
-  ]
-},
-{
-  "name": "Elf",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "dex": 2
-    }
-  ],
-  "age": {
-    "mature": 100,
-    "max": 750
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true
-    }
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Astral",
-  "source": "AAG",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "elf"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 750
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "known": {
-        "1": [
-          "dancing lights#c"
-        ]
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 350
     },
-    {
-      "known": {
-        "1": [
-          "light#c"
-        ]
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
+    "darkvision": 60,
+    "languageProficiencies": [
+      {
+        "common": true,
+        "dwarvish": true
       }
+    ],
+    "name": "Dwarf",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "traitTags": [
+      "Tool Proficiency"
+    ],
+    "weaponProficiencies": [
+      {
+        "battleaxe|phb": true,
+        "handaxe|phb": true,
+        "light hammer|phb": true,
+        "warhammer|phb": true
+      }
+    ]
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "enlarge/reduce"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "invisibility"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "age": {
+      "max": 350
     },
-    {
-      "known": {
-        "1": [
-          "sacred flame#c"
-        ]
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
+    "creatureTypeTags": [
+      "dwarf"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 120,
+    "lineage": "VRGR",
+    "name": "Dwarf",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Duergar"
+  },
+  {
+    "ability": [
+      {
+        "con": 2,
+        "wis": 1
       }
-    }
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Drow",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "cha": 1,
-      "dex": 2
-    }
-  ],
-  "age": {
-    "mature": 100,
-    "max": 750
+    ],
+    "age": {
+      "mature": 20,
+      "max": 350
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 44,
+      "baseWeight": 115,
+      "heightMod": "2d4",
+      "weightMod": "2d6"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "dwarvish": true
+      }
+    ],
+    "name": "Dwarf",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "subrace": "Hill",
+    "traitTags": [
+      "Tool Proficiency"
+    ],
+    "weaponProficiencies": [
+      {
+        "battleaxe|phb": true,
+        "handaxe|phb": true,
+        "light hammer|phb": true,
+        "warhammer|phb": true
+      }
+    ]
   },
-  "heightAndWeight": {
-    "baseHeight": 53,
-    "heightMod": "2d6",
-    "baseWeight": 75,
-    "weightMod": "1d6"
+  {
+    "ability": [
+      {
+        "con": 2,
+        "int": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "int",
+        "expanded": {
+          "s1": [
+            "alarm",
+            "armor of agathys"
+          ],
+          "s2": [
+            "arcane lock",
+            "knock"
+          ],
+          "s3": [
+            "glyph of warding",
+            "magic circle"
+          ],
+          "s4": [
+            "leomund's secret chest",
+            "mordenkainen's faithful hound"
+          ],
+          "s5": [
+            "antilife shell"
+          ]
+        },
+        "known": {
+          "1": [
+            "alarm",
+            "mage armor"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 350
+    },
+    "darkvision": 60,
+    "languageProficiencies": [
+      {
+        "common": true,
+        "dwarvish": true
+      }
+    ],
+    "name": "Dwarf",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "ERLW",
+    "speed": 25,
+    "subrace": "Mark of Warding",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice",
+      "Tool Bonus Dice"
+    ],
+    "weaponProficiencies": [
+      {
+        "battleaxe|phb": true,
+        "handaxe|phb": true,
+        "light hammer|phb": true,
+        "warhammer|phb": true
+      }
+    ]
   },
-  "darkvision": 120,
-  "traitTags": [
-    "Sunlight Sensitivity"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "weaponProficiencies": [
-    {
-      "rapier|phb": true,
-      "shortsword|phb": true,
-      "hand crossbow|phb": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "faerie fire"
-            ]
+  {
+    "ability": [
+      {
+        "con": 2,
+        "str": 2
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 350
+    },
+    "armorProficiencies": [
+      {
+        "light": true,
+        "medium": true
+      }
+    ],
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 48,
+      "baseWeight": 130,
+      "heightMod": "2d4",
+      "weightMod": "2d6"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "dwarvish": true
+      }
+    ],
+    "name": "Dwarf",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "subrace": "Mountain",
+    "traitTags": [
+      "Tool Proficiency"
+    ],
+    "weaponProficiencies": [
+      {
+        "battleaxe|phb": true,
+        "handaxe|phb": true,
+        "light hammer|phb": true,
+        "warhammer|phb": true
+      }
+    ]
+  },
+  {
+    "ability": [
+      {
+        "dex": 2
+      }
+    ],
+    "age": {
+      "mature": 100,
+      "max": 750
+    },
+    "darkvision": 60,
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "traitTags": [
+      "Improved Resting"
+    ]
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "known": {
+          "1": [
+            "dancing lights#c"
+          ]
+        }
+      },
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "known": {
+          "1": [
+            "light#c"
+          ]
+        }
+      },
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "known": {
+          "1": [
+            "sacred flame#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "max": 750
+    },
+    "creatureTypeTags": [
+      "elf"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "AAG",
+    "speed": 30,
+    "subrace": "Astral",
+    "traitTags": [
+      "Improved Resting"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": 1,
+        "dex": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "cha",
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "faerie fire"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "darkness"
+              ]
+            }
           }
         },
-        "5": {
-          "daily": {
-            "1": [
-              "darkness"
+        "known": {
+          "1": [
+            "dancing lights#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 100,
+      "max": 750
+    },
+    "darkvision": 120,
+    "heightAndWeight": {
+      "baseHeight": 53,
+      "baseWeight": 75,
+      "heightMod": "2d6",
+      "weightMod": "1d6"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "subrace": "Drow",
+    "traitTags": [
+      "Sunlight Sensitivity"
+    ],
+    "weaponProficiencies": [
+      {
+        "hand crossbow|phb": true,
+        "rapier|phb": true,
+        "shortsword|phb": true
+      }
+    ]
+  },
+  {
+    "age": {
+      "max": 750
+    },
+    "creatureTypeTags": [
+      "elf"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Eladrin",
+    "traitTags": [
+      "Improved Resting",
+      "Tool Proficiency",
+      "Weapon Proficiency"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "dex": 2,
+        "int": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "int",
+        "known": {
+          "1": {
+            "_": [
+              {
+                "choose": "level=0|class=Wizard"
+              }
             ]
           }
         }
-      },
-      "ability": "cha",
-      "known": {
-        "1": [
-          "dancing lights#c"
-        ]
       }
-    }
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Eladrin",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "elf"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 750
+    ],
+    "age": {
+      "mature": 100,
+      "max": 750
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 54,
+      "baseWeight": 90,
+      "heightMod": "2d10",
+      "weightMod": "1d4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "subrace": "High",
+    "traitTags": [
+      "Improved Resting"
+    ],
+    "weaponProficiencies": [
+      {
+        "longbow|phb": true,
+        "longsword|phb": true,
+        "shortbow|phb": true,
+        "shortsword|phb": true
+      }
+    ]
   },
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting",
-    "Tool Proficiency",
-    "Weapon Proficiency"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "High",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "dex": 2,
-      "int": 1
-    }
-  ],
-  "age": {
-    "mature": 100,
-    "max": 750
+  {
+    "ability": [
+      {
+        "cha": 1,
+        "dex": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "cha",
+        "expanded": {
+          "s1": [
+            "disguise self",
+            "silent image"
+          ],
+          "s2": [
+            "darkness",
+            "pass without trace"
+          ],
+          "s3": [
+            "clairvoyance",
+            "major image"
+          ],
+          "s4": [
+            "greater invisibility",
+            "hallucinatory terrain"
+          ],
+          "s5": [
+            "mislead"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "invisibility"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "minor illusion#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 100,
+      "max": 750
+    },
+    "darkvision": 60,
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "subrace": "Mark of Shadow",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice"
+    ]
   },
-  "heightAndWeight": {
-    "baseHeight": 54,
-    "heightMod": "2d10",
-    "baseWeight": 90,
-    "weightMod": "1d4"
+  {
+    "ability": [
+      {
+        "dex": 2,
+        "wis": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "wis",
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "sleep"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "invisibility"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "light#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 100,
+      "max": 750
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 54,
+      "baseWeight": 90,
+      "heightMod": "2d10",
+      "weightMod": "1d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "subrace": "Pallid",
+    "traitTags": [
+      "Improved Resting"
+    ]
   },
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
+  {
+    "age": {
+      "max": 750
+    },
+    "creatureTypeTags": [
+      "elf"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Elf",
+    "resist": [
+      "cold"
+    ],
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": {
+      "swim": true,
+      "walk": 30
+    },
+    "subrace": "Sea",
+    "traitTags": [
+      "Amphibious",
+      "Improved Resting",
+      "Tool Proficiency",
+      "Weapon Proficiency"
+    ]
+  },
+  {
+    "age": {
+      "max": 750
+    },
+    "creatureTypeTags": [
+      "elf"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Elf",
+    "resist": [
+      "necrotic"
+    ],
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Shadar-Kai",
+    "traitTags": [
+      "Improved Resting",
+      "Tool Proficiency",
+      "Weapon Proficiency"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "dex": 2,
+        "wis": 1
+      }
+    ],
+    "age": {
+      "mature": 100,
+      "max": 750
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 54,
+      "baseWeight": 100,
+      "heightMod": "2d10",
+      "weightMod": "1d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "PHB",
+    "speed": 35,
+    "subrace": "Wood",
+    "traitTags": [
+      "Improved Resting"
+    ],
+    "weaponProficiencies": [
+      {
+        "longbow|phb": true,
+        "longsword|phb": true,
+        "shortbow|phb": true,
+        "shortsword|phb": true
+      }
+    ]
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "faerie fire"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "enlarge/reduce"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "druidcraft#c"
+          ]
+        }
+      }
+    ],
+    "creatureTypes": [
+      "fey"
+    ],
+    "lineage": "VRGR",
+    "name": "Fairy",
+    "size": [
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": {
+      "fly": true,
+      "walk": 30
     }
-  ],
-  "weaponProficiencies": [
-    {
-      "longsword|phb": true,
-      "shortsword|phb": true,
-      "shortbow|phb": true,
-      "longbow|phb": true
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "1": [
+            "detect magic",
+            "disguise self"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "max": 500
+    },
+    "lineage": "VRGR",
+    "name": "Firbolg",
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "traitTags": [
+      "Powerful Build"
+    ]
+  },
+  {
+    "age": {
+      "max": 120
+    },
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Genasi",
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 30
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "feather fall"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "levitate"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "shocking grasp#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "max": 120
+    },
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Genasi",
+    "resist": [
+      "lightning"
+    ],
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 35,
+    "subrace": "Air"
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "5": [
+            "pass without trace"
+          ]
+        },
+        "known": {
+          "1": [
+            "blade ward#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "max": 120
+    },
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Genasi",
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Earth"
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "burning hands"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "flame blade"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "produce flame#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "max": 120
+    },
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Genasi",
+    "resist": [
+      "fire"
+    ],
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Fire"
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "create or destroy water"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "water walk"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "acid splash#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "max": 120
+    },
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Genasi",
+    "resist": [
+      "acid"
+    ],
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": {
+      "swim": true,
+      "walk": 30
+    },
+    "subrace": "Water",
+    "traitTags": [
+      "Amphibious"
+    ]
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Giff",
+    "size": [
+      "M"
+    ],
+    "source": "AAG",
+    "speed": {
+      "swim": true,
+      "walk": 30
+    },
+    "traitTags": [
+      "Powerful Build"
+    ],
+    "weaponProficiencies": [
+      {
+        "firearms": true
+      }
+    ]
+  },
+  {
+    "ability": [
+      {
+        "int": 1
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 100
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "other": true
+      }
+    ],
+    "name": "Gith",
+    "size": [
+      "M"
+    ],
+    "source": "MTF",
+    "speed": 30
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "jump"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "misty step"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "mage hand#c"
+          ]
+        }
+      }
+    ],
+    "lineage": "VRGR",
+    "name": "Gith",
+    "resist": [
+      "psychic"
+    ],
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "any": 1
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Githyanki",
+    "toolProficiencies": [
+      {
+        "any": 1
+      }
+    ],
+    "traitTags": [
+      "Weapon Proficiency"
+    ]
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "shield"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "detect thoughts"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "mage hand#c"
+          ]
+        }
+      }
+    ],
+    "lineage": "VRGR",
+    "name": "Gith",
+    "resist": [
+      "psychic"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Githzerai"
+  },
+  {
+    "ability": [
+      {
+        "int": -2,
+        "str": 2
+      }
+    ],
+    "darkvision": 60,
+    "name": "Gnoll",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": 30,
+    "traitTags": [
+      "NPC Race",
+      "Natural Weapon"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "int": 2
+      }
+    ],
+    "age": {
+      "mature": 40,
+      "max": 500
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 35,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "gnomish": true
+      }
+    ],
+    "name": "Gnome",
+    "size": [
+      "S"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "traitTags": [
+      "Uncommon Race"
+    ]
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "disguise self"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "nondetection"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "age": {
+      "max": 500
+    },
+    "creatureTypeTags": [
+      "gnome"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 120,
+    "lineage": "VRGR",
+    "name": "Gnome",
+    "size": [
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Deep",
+    "traitTags": [
+      "Magic Resistance"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "dex": 1,
+        "int": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "int",
+        "known": {
+          "1": [
+            "minor illusion#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 40,
+      "max": 500
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 35,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "gnomish": true
+      }
+    ],
+    "name": "Gnome",
+    "size": [
+      "S"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "subrace": "Forest",
+    "traitTags": [
+      "Uncommon Race"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": 1,
+        "int": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "int",
+        "expanded": {
+          "s1": [
+            "comprehend languages",
+            "illusory script"
+          ],
+          "s2": [
+            "animal messenger",
+            "silence"
+          ],
+          "s3": [
+            "sending",
+            "tongues"
+          ],
+          "s4": [
+            "arcane eye",
+            "confusion"
+          ],
+          "s5": [
+            "dream"
+          ]
+        },
+        "innate": {
+          "1": {
+            "rest": {
+              "1": [
+                "comprehend languages"
+              ]
+            }
+          },
+          "3": {
+            "daily": {
+              "1": [
+                "magic mouth"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "message#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 40,
+      "max": 500
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 35,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "gnomish": true
+      }
+    ],
+    "name": "Gnome",
+    "size": [
+      "S"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "subrace": "Mark of Scribing",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice",
+      "Tool Bonus Dice",
+      "Uncommon Race"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 1,
+        "int": 2
+      }
+    ],
+    "age": {
+      "mature": 40,
+      "max": 500
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 35,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "gnomish": true
+      }
+    ],
+    "name": "Gnome",
+    "size": [
+      "S"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "subrace": "Rock",
+    "traitTags": [
+      "Tool Proficiency",
+      "Uncommon Race"
+    ]
+  },
+  {
+    "creatureTypeTags": [
+      "goblinoid"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Goblin",
+    "size": [
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 30
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Goliath",
+    "resist": [
+      "cold"
+    ],
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "athletics": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "traitTags": [
+      "Powerful Build"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": -2,
+        "str": 2
+      }
+    ],
+    "blindsight": 30,
+    "languageProficiencies": [
+      {
+        "undercommon": true
+      }
+    ],
+    "name": "Grimlock",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": 30,
+    "traitTags": [
+      "NPC Race"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 1,
+        "dex": 2
+      }
+    ],
+    "age": {
+      "mature": 1,
+      "max": 50
+    },
+    "conditionImmune": [
+      "poisoned"
+    ],
+    "immune": [
+      "poison"
+    ],
+    "languageProficiencies": [
+      {
+        "other": true
+      }
+    ],
+    "name": "Grung",
+    "size": [
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "OGA",
+    "speed": {
+      "climb": 25,
+      "walk": 25
+    },
+    "traitTags": [
+      "Amphibious"
+    ]
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Hadozee",
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "AAG",
+    "speed": {
+      "climb": true,
+      "walk": 30
     }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true,
-      "anyStandard": 1
-    }
-  ],
-  "additionalSpells": [
-    {
-      "ability": "int",
-      "known": {
-        "1": {
+  },
+  {
+    "ability": [
+      {
+        "cha": 2,
+        "choose": {
+          "count": 2,
+          "from": [
+            "con",
+            "dex",
+            "int",
+            "str",
+            "wis"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 180
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 57,
+      "baseWeight": 110,
+      "heightMod": "2d8",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Half-Elf",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "any": 2
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "traitTags": [
+      "Uncommon Race"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "choose": {
+          "count": 1,
+          "from": [
+            "cha",
+            "con",
+            "dex",
+            "int",
+            "str"
+          ]
+        },
+        "wis": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "int",
+        "expanded": {
+          "s1": [
+            "detect evil and good",
+            "detect poison and disease"
+          ],
+          "s2": [
+            "detect thoughts",
+            "find traps"
+          ],
+          "s3": [
+            "clairvoyance",
+            "nondetection"
+          ],
+          "s4": [
+            "arcane eye",
+            "divination"
+          ],
+          "s5": [
+            "legend lore"
+          ]
+        },
+        "innate": {
+          "1": [
+            "detect magic",
+            "detect poison and disease"
+          ],
+          "3": {
+            "daily": {
+              "1": [
+                "see invisibility"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 180
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 57,
+      "baseWeight": 110,
+      "heightMod": "2d8",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Half-Elf",
+    "size": [
+      "M"
+    ],
+    "source": "ERLW",
+    "speed": 30,
+    "subrace": "Mark of Detection",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": 2,
+        "dex": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "cha",
+        "expanded": {
+          "s1": [
+            "feather fall",
+            "fog cloud"
+          ],
+          "s2": [
+            "gust of wind",
+            "levitate"
+          ],
+          "s3": [
+            "sleet storm",
+            "wind wall"
+          ],
+          "s4": [
+            "conjure minor elementals",
+            "control water"
+          ],
+          "s5": [
+            "conjure elemental"
+          ]
+        },
+        "known": {
+          "1": [
+            "gust|xge#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 180
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 57,
+      "baseWeight": 110,
+      "heightMod": "2d8",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true,
+        "elvish": true
+      }
+    ],
+    "name": "Half-Elf",
+    "resist": [
+      "lightning"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "ERLW",
+    "speed": 30,
+    "subrace": "Mark of Storm",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice",
+      "Tool Bonus Dice"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 1,
+        "str": 2
+      }
+    ],
+    "age": {
+      "mature": 14,
+      "max": 75
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 58,
+      "baseWeight": 140,
+      "heightMod": "2d10",
+      "weightMod": "2d6"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "orc": true
+      }
+    ],
+    "name": "Half-Orc",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "intimidation": true
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "traitTags": [
+      "Uncommon Race"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 1,
+        "str": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "wis",
+        "expanded": {
+          "s1": [
+            "faerie fire",
+            "longstrider"
+          ],
+          "s2": [
+            "locate animals or plants",
+            "locate object"
+          ],
+          "s3": [
+            "clairvoyance",
+            "speak with plants"
+          ],
+          "s4": [
+            "divination",
+            "locate creature"
+          ],
+          "s5": [
+            "commune with nature"
+          ]
+        },
+        "innate": {
+          "1": [
+            "hunter's mark"
+          ],
+          "3": {
+            "daily": {
+              "1": [
+                "locate object"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "age": {
+      "mature": 14,
+      "max": 75
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 58,
+      "baseWeight": 140,
+      "heightMod": "2d10",
+      "weightMod": "2d6"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "goblin": true
+      }
+    ],
+    "name": "Half-Orc",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "intimidation": true
+      }
+    ],
+    "source": "ERLW",
+    "speed": 30,
+    "subrace": "Mark of Finding",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice",
+      "Uncommon Race"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "dex": 2
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 250
+    },
+    "heightAndWeight": {
+      "baseHeight": 31,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "halfling": true
+      }
+    ],
+    "name": "Halfling",
+    "size": [
+      "S"
+    ],
+    "source": "PHB",
+    "speed": 25
+  },
+  {
+    "ability": [
+      {
+        "dex": 2,
+        "wis": 1
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 250
+    },
+    "heightAndWeight": {
+      "baseHeight": 31,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "halfling": true
+      }
+    ],
+    "name": "Halfling",
+    "size": [
+      "S"
+    ],
+    "source": "SCAG",
+    "speed": 25,
+    "subrace": "Ghostwise",
+    "telepathy": 30
+  },
+  {
+    "ability": [
+      {
+        "dex": 2,
+        "wis": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "wis",
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "entangle"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "spike growth"
+              ]
+            }
+          }
+        },
+        "known": {
+          "1": [
+            "druidcraft#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 250
+    },
+    "heightAndWeight": {
+      "baseHeight": 31,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "halfling": true
+      }
+    ],
+    "name": "Halfling",
+    "size": [
+      "S"
+    ],
+    "source": "EGW",
+    "speed": 25,
+    "subrace": "Lotusden"
+  },
+  {
+    "ability": [
+      {
+        "cha": 1,
+        "dex": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "cha",
+        "expanded": {
+          "s1": [
+            "goodberry",
+            "sleep"
+          ],
+          "s2": [
+            "aid",
+            "calm emotions"
+          ],
+          "s3": [
+            "create food and water",
+            "leomund's tiny hut"
+          ],
+          "s4": [
+            "aura of purity",
+            "mordenkainen's private sanctum"
+          ],
+          "s5": [
+            "hallow"
+          ]
+        },
+        "known": {
+          "1": [
+            "prestidigitation#c",
+            "purify food and drink",
+            "unseen servant"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 250
+    },
+    "heightAndWeight": {
+      "baseHeight": 31,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "halfling": true
+      }
+    ],
+    "name": "Halfling",
+    "size": [
+      "S"
+    ],
+    "source": "ERLW",
+    "speed": 25,
+    "subrace": "Mark of Hospitality",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice",
+      "Tool Bonus Dice"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 1,
+        "dex": 2
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 250
+    },
+    "heightAndWeight": {
+      "baseHeight": 31,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "halfling": true
+      }
+    ],
+    "name": "Halfling",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "S"
+    ],
+    "source": "PHB",
+    "speed": 25,
+    "subrace": "Stout"
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Harengon",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "known": {
+          "1": [
+            "disguise self",
+            "hex"
+          ]
+        }
+      }
+    ],
+    "creatureTypes": [
+      "fey"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Hexblood",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "any": 2
+      }
+    ],
+    "source": "VRGR",
+    "speed": 30
+  },
+  {
+    "creatureTypeTags": [
+      "goblinoid"
+    ],
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Hobgoblin",
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": 30
+  },
+  {
+    "ability": [
+      {
+        "cha": 1,
+        "con": 1,
+        "dex": 1,
+        "int": 1,
+        "str": 1,
+        "wis": 1
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 100
+    },
+    "heightAndWeight": {
+      "baseHeight": 56,
+      "baseWeight": 110,
+      "heightMod": "2d10",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true
+      }
+    ],
+    "name": "Human",
+    "size": [
+      "M"
+    ],
+    "source": "PHB",
+    "speed": 30
+  },
+  {
+    "ability": [
+      {
+        "con": 1,
+        "wis": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "wis",
+        "expanded": {
+          "s1": [
+            "faerie fire",
+            "longstrider"
+          ],
+          "s2": [
+            "locate animals or plants",
+            "locate object"
+          ],
+          "s3": [
+            "clairvoyance",
+            "speak with plants"
+          ],
+          "s4": [
+            "divination",
+            "locate creature"
+          ],
+          "s5": [
+            "commune with nature"
+          ]
+        },
+        "innate": {
+          "1": [
+            "hunter's mark"
+          ],
+          "3": {
+            "daily": {
+              "1": [
+                "locate object"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "darkvision": 60,
+    "languageProficiencies": [
+      {
+        "common": true,
+        "goblin": true
+      }
+    ],
+    "name": "Human",
+    "source": "ERLW",
+    "subrace": "Mark of Finding",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "choose": {
+          "count": 1,
+          "from": [
+            "cha",
+            "con",
+            "dex",
+            "int",
+            "str"
+          ]
+        },
+        "wis": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "wis",
+        "expanded": {
+          "s1": [
+            "animal friendship",
+            "speak with animals"
+          ],
+          "s2": [
+            "beast sense",
+            "calm emotions"
+          ],
+          "s3": [
+            "beacon of hope",
+            "conjure animals"
+          ],
+          "s4": [
+            "aura of life",
+            "dominate beast"
+          ],
+          "s5": [
+            "awaken"
+          ]
+        },
+        "known": {
+          "1": {
+            "rest": {
+              "1": [
+                "animal friendship",
+                "speak with animals"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "name": "Human",
+    "source": "ERLW",
+    "subrace": "Mark of Handling",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "choose": {
+          "count": 1,
+          "from": [
+            "cha",
+            "con",
+            "dex",
+            "str",
+            "wis"
+          ]
+        },
+        "int": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "int",
+        "expanded": {
+          "s1": [
+            "identify",
+            "tenser's floating disk"
+          ],
+          "s2": [
+            "continual flame",
+            "magic weapon"
+          ],
+          "s3": [
+            "conjure barrage",
+            "elemental weapon"
+          ],
+          "s4": [
+            "fabricate",
+            "stone shape"
+          ],
+          "s5": [
+            "creation"
+          ]
+        },
+        "known": {
+          "1": [
+            "magic weapon",
+            "mending#c"
+          ]
+        }
+      }
+    ],
+    "name": "Human",
+    "source": "ERLW",
+    "subrace": "Mark of Making",
+    "toolProficiencies": [
+      {
+        "anyArtisans": 1
+      }
+    ],
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice",
+      "Tool Bonus Dice"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "choose": {
+          "count": 1,
+          "from": [
+            "cha",
+            "con",
+            "int",
+            "str",
+            "wis"
+          ]
+        },
+        "dex": 2
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "dex",
+        "expanded": {
+          "s1": [
+            "expeditious retreat",
+            "jump"
+          ],
+          "s2": [
+            "misty step",
+            "pass without trace"
+          ],
+          "s3": [
+            "blink",
+            "phantom steed"
+          ],
+          "s4": [
+            "dimension door",
+            "freedom of movement"
+          ],
+          "s5": [
+            "teleportation circle"
+          ]
+        },
+        "known": {
+          "1": [
+            "misty step"
+          ]
+        }
+      }
+    ],
+    "name": "Human",
+    "source": "ERLW",
+    "speed": 35,
+    "subrace": "Mark of Passage",
+    "traitTags": [
+      "Dragonmark"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 2,
+        "wis": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "wis",
+        "expanded": {
+          "s1": [
+            "compelled duel",
+            "shield of faith"
+          ],
+          "s2": [
+            "warding bond",
+            "zone of truth"
+          ],
+          "s3": [
+            "counterspell",
+            "protection from energy"
+          ],
+          "s4": [
+            "death ward",
+            "guardian of faith"
+          ],
+          "s5": [
+            "bigby's hand"
+          ]
+        },
+        "known": {
+          "1": [
+            "shield"
+          ]
+        }
+      }
+    ],
+    "name": "Human",
+    "source": "ERLW",
+    "subrace": "Mark of Sentinel",
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "choose": {
+          "count": 2,
+          "from": [
+            "con",
+            "dex",
+            "int",
+            "str",
+            "wis"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 100
+    },
+    "feats": [
+      {
+        "any": 1
+      }
+    ],
+    "heightAndWeight": {
+      "baseHeight": 56,
+      "baseWeight": 110,
+      "heightMod": "2d10",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true
+      }
+    ],
+    "name": "Human",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "any": 1
+      }
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "subrace": "Variant"
+  },
+  {
+    "ability": [
+      {
+        "cha": 1,
+        "wis": 2
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 100
+    },
+    "heightAndWeight": {
+      "baseHeight": 64,
+      "baseWeight": 110,
+      "heightMod": "2d6",
+      "weightMod": "1d6"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true,
+        "other": true
+      }
+    ],
+    "name": "Kalashtar",
+    "resist": [
+      "psychic"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "ERLW",
+    "speed": 30,
+    "telepathy": 10
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Kender",
+    "size": [
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "insight",
+            "investigation",
+            "sleight of hand",
+            "stealth",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "source": "DSotDQ",
+    "speed": 30
+  },
+  {
+    "age": {
+      "mature": 12,
+      "max": 60
+    },
+    "lineage": "VRGR",
+    "name": "Kenku",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "any": 2
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30
+  },
+  {
+    "_versions": [
+      {
+        "_mod": {
+          "entries": {
+            "items": {
+              "entries": [
+                "You have proficiency in one of the following skills of your choice: {@skill Arcana}, {@skill Investigation}, {@skill Medicine}, {@skill Sleight of Hand}, or {@skill Survival}."
+              ],
+              "name": "Kobold Legacy (Craftiness)",
+              "type": "entries"
+            },
+            "mode": "replaceArr",
+            "replace": "Kobold Legacy"
+          }
+        },
+        "additionalSpells": null,
+        "name": "Kobold; Craftiness",
+        "source": "MPMM"
+      },
+      {
+        "_mod": {
+          "entries": {
+            "items": {
+              "entries": [
+                "You have advantage on saving throws to avoid or end the {@condition frightened} condition on yourself."
+              ],
+              "name": "Kobold Legacy (Defiance)",
+              "type": "entries"
+            },
+            "mode": "replaceArr",
+            "replace": "Kobold Legacy"
+          }
+        },
+        "additionalSpells": null,
+        "name": "Kobold; Defiance",
+        "skillProficiencies": null,
+        "source": "MPMM"
+      },
+      {
+        "_mod": {
+          "entries": {
+            "items": {
+              "entries": [
+                "You know one {@filter cantrip of your choice from the sorcerer spell list|spells|level=0|class=Sorcerer}. Intelligence, Wisdom, or Charisma is your spellcasting ability for that cantrip (choose when you select this race)."
+              ],
+              "name": "Kobold Legacy (Draconic Sorcery)",
+              "type": "entries"
+            },
+            "mode": "replaceArr",
+            "replace": "Kobold Legacy"
+          }
+        },
+        "name": "Kobold; Draconic Sorcery",
+        "skillProficiencies": null,
+        "source": "MPMM"
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "known": {
           "_": [
             {
-              "choose": "level=0|class=Wizard"
+              "choose": "level=0|class=Sorcerer",
+              "count": 1
             }
           ]
         }
       }
-    }
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Mark of Shadow",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "cha": 1,
-      "dex": 2
-    }
-  ],
-  "age": {
-    "mature": 100,
-    "max": 750
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Kobold",
+    "size": [
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "arcana",
+            "investigation",
+            "medicine",
+            "sleight of hand",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30
   },
-  "darkvision": 60,
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "invisibility"
-            ]
+  {
+    "darkvision": 120,
+    "languageProficiencies": [
+      {
+        "undercommon": true
+      }
+    ],
+    "name": "Kuo-Toa",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": {
+      "swim": 30,
+      "walk": 30
+    },
+    "traitTags": [
+      "Amphibious",
+      "NPC Race",
+      "Sunlight Sensitivity"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 2,
+        "str": 1
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 100
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 66,
+      "baseWeight": 180,
+      "heightMod": "2d10",
+      "weightMod": "2d6"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "other": true
+      }
+    ],
+    "name": "Leonin",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "athletics",
+            "intimidation",
+            "perception",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "source": "MOT",
+    "speed": 35,
+    "traitTags": [
+      "Natural Weapon"
+    ]
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Lizardfolk",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "count": 2,
+          "from": [
+            "animal handling",
+            "medicine",
+            "nature",
+            "perception",
+            "stealth",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "source": "MPMM",
+    "speed": {
+      "swim": true,
+      "walk": 30
+    },
+    "traitTags": [
+      "Natural Armor",
+      "Natural Weapon"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "dex": 1,
+        "str": 2
+      }
+    ],
+    "age": {
+      "mature": 10,
+      "max": 80
+    },
+    "languageProficiencies": [
+      {
+        "aquan": true,
+        "common": true
+      }
+    ],
+    "name": "Locathah",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "athletics": true,
+        "perception": true
+      }
+    ],
+    "source": "LR",
+    "speed": {
+      "swim": 30,
+      "walk": 30
+    },
+    "traitTags": [
+      "Amphibious",
+      "Natural Armor"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "con": 2,
+        "wis": 1
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 450
+    },
+    "heightAndWeight": {
+      "baseHeight": 79,
+      "baseWeight": 295,
+      "heightMod": "2d10",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "other": true
+      }
+    ],
+    "name": "Loxodon",
+    "size": [
+      "M"
+    ],
+    "source": "GGR",
+    "speed": 30,
+    "traitTags": [
+      "Natural Armor",
+      "Powerful Build"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "dex": 2,
+        "wis": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "wis",
+        "expanded": {
+          "s1": [
+            "cure wounds",
+            "healing word"
+          ],
+          "s2": [
+            "lesser restoration",
+            "prayer of healing"
+          ],
+          "s3": [
+            "aura of vitality",
+            "mass healing word"
+          ],
+          "s4": [
+            "aura of life",
+            "aura of purity"
+          ],
+          "s5": [
+            "greater restoration"
+          ]
+        },
+        "innate": {
+          "1": [
+            "cure wounds"
+          ],
+          "3": {
+            "daily": {
+              "1": [
+                "lesser restoration"
+              ]
+            }
           }
         }
-      },
-      "expanded": {
-        "s1": [
-          "disguise self",
-          "silent image"
-        ],
-        "s2": [
-          "darkness",
-          "pass without trace"
-        ],
-        "s3": [
-          "clairvoyance",
-          "major image"
-        ],
-        "s4": [
-          "greater invisibility",
-          "hallucinatory terrain"
-        ],
-        "s5": [
-          "mislead"
-        ]
-      },
-      "ability": "cha",
-      "known": {
-        "1": [
-          "minor illusion#c"
-        ]
       }
-    }
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Pallid",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "dex": 2,
-      "wis": 1
-    }
-  ],
-  "age": {
-    "mature": 100,
-    "max": 750
+    ],
+    "age": {
+      "mature": 20,
+      "max": 250
+    },
+    "heightAndWeight": {
+      "baseHeight": 31,
+      "baseWeight": 35,
+      "heightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "halfling": true
+      }
+    ],
+    "name": "Mark of Healing",
+    "size": [
+      "S"
+    ],
+    "source": "ERLW",
+    "speed": 25,
+    "traitTags": [
+      "Dragonmark",
+      "Skill Bonus Dice",
+      "Tool Bonus Dice"
+    ]
   },
-  "heightAndWeight": {
-    "baseHeight": 54,
-    "heightMod": "2d10",
-    "baseWeight": 90,
-    "weightMod": "1d4"
+  {
+    "languageProficiencies": [
+      {
+        "aquan": true,
+        "common": true
+      }
+    ],
+    "name": "Merfolk",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": {
+      "swim": 40,
+      "walk": 10
+    },
+    "traitTags": [
+      "Amphibious",
+      "NPC Race"
+    ]
   },
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
+  {
+    "lineage": "VRGR",
+    "name": "Minotaur",
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "traitTags": [
+      "Natural Weapon"
+    ]
+  },
+  {
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Orc",
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "traitTags": [
+      "Powerful Build"
+    ]
+  },
+  {
+    "darkvision": 120,
+    "lineage": "VRGR",
+    "name": "Owlin",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "stealth": true
+      }
+    ],
+    "source": "SCC",
+    "speed": {
+      "fly": true,
+      "walk": 30
     }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "sleep"
-            ]
+  },
+  {
+    "creatureTypes": [
+      "ooze"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Plasmoid",
+    "resist": [
+      "acid",
+      "poison"
+    ],
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "AAG",
+    "speed": 30
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Reborn",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "VRGR",
+    "speed": 30,
+    "traitTags": [
+      "Improved Resting"
+    ]
+  },
+  {
+    "creatureTypes": [
+      "fey"
+    ],
+    "lineage": "VRGR",
+    "name": "Satyr",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "performance": true,
+        "persuasion": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 35,
+    "toolProficiencies": [
+      {
+        "musical instrument": true
+      }
+    ],
+    "traitTags": [
+      "Magic Resistance",
+      "Natural Weapon"
+    ]
+  },
+  {
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Shifter",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "athletics": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Beasthide"
+  },
+  {
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Shifter",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "intimidation": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Longtooth"
+  },
+  {
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Shifter",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "acrobatics": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Swiftstride"
+  },
+  {
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Shifter",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "survival": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "subrace": "Wildhunt"
+  },
+  {
+    "ability": [
+      {
+        "choose": {
+          "count": 1,
+          "from": [
+            "cha",
+            "dex",
+            "int",
+            "str",
+            "wis"
+          ]
+        },
+        "con": 2
+      }
+    ],
+    "darkvision": 60,
+    "languageProficiencies": [
+      {
+        "choose": {
+          "count": 1,
+          "from": [
+            "elvish",
+            "other"
+          ]
+        },
+        "common": true
+      }
+    ],
+    "name": "Simic Hybrid",
+    "size": [
+      "M"
+    ],
+    "source": "GGR",
+    "speed": {
+      "walk": 30
+    },
+    "traitTags": [
+      "Amphibious",
+      "Natural Armor",
+      "Natural Weapon"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": -4,
+        "dex": 2,
+        "int": -4
+      }
+    ],
+    "conditionImmune": [
+      "exhaustion",
+      "poisoned"
+    ],
+    "darkvision": 60,
+    "immune": [
+      "poison"
+    ],
+    "name": "Skeleton",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": 30,
+    "traitTags": [
+      "Improved Resting",
+      "NPC Race"
+    ],
+    "vulnerable": [
+      "bludgeoning"
+    ]
+  },
+  {
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Tabaxi",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "perception": true,
+        "stealth": true
+      }
+    ],
+    "source": "MPMM",
+    "speed": {
+      "climb": true,
+      "walk": 30
+    },
+    "traitTags": [
+      "Natural Weapon"
+    ]
+  },
+  {
+    "creatureTypes": [
+      "monstrosity"
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Thri-kreen",
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "AAG",
+    "speed": 30,
+    "telepathy": 120,
+    "traitTags": [
+      "Improved Resting",
+      "Natural Armor"
+    ]
+  },
+  {
+    "ability": [
+      {
+        "cha": 2,
+        "int": 1
+      }
+    ],
+    "additionalSpells": [
+      {
+        "ability": "cha",
+        "innate": {
+          "3": {
+            "daily": {
+              "1": [
+                "hellish rebuke#2"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "darkness"
+              ]
+            }
           }
         },
-        "5": {
-          "daily": {
-            "1": [
-              "invisibility"
-            ]
+        "known": {
+          "1": [
+            "thaumaturgy#c"
+          ]
+        }
+      }
+    ],
+    "age": {
+      "mature": 20,
+      "max": 100
+    },
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 57,
+      "baseWeight": 110,
+      "heightMod": "2d8",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "common": true,
+        "infernal": true
+      }
+    ],
+    "name": "Tiefling",
+    "resist": [
+      "fire"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "PHB",
+    "speed": 30,
+    "traitTags": [
+      "Uncommon Race"
+    ]
+  },
+  {
+    "lineage": "VRGR",
+    "name": "Tortle",
+    "size": [
+      "M",
+      "S"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "animal handling",
+            "medicine",
+            "nature",
+            "perception",
+            "stealth",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "traitTags": [
+      "Natural Armor",
+      "Natural Weapon"
+    ]
+  },
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "1": {
+            "daily": {
+              "1": [
+                "fog cloud"
+              ]
+            }
+          },
+          "3": {
+            "daily": {
+              "1": [
+                "gust of wind"
+              ]
+            }
+          },
+          "5": {
+            "daily": {
+              "1": [
+                "water walk"
+              ]
+            }
           }
         }
-      },
-      "ability": "wis",
-      "known": {
-        "1": [
-          "light#c"
-        ]
       }
-    }
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Sea",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "elf"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "swim": true
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Triton",
+    "resist": [
+      "cold"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "MPMM",
+    "speed": {
+      "swim": true,
+      "walk": 30
+    },
+    "traitTags": [
+      "Amphibious"
+    ]
   },
-  "age": {
-    "max": 750
+  {
+    "ability": [
+      {
+        "cha": -4,
+        "con": 2,
+        "int": -4,
+        "str": 2
+      }
+    ],
+    "darkvision": 60,
+    "languageProficiencies": [
+      {
+        "other": true
+      }
+    ],
+    "name": "Troglodyte",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": 30,
+    "traitTags": [
+      "NPC Race",
+      "Natural Armor",
+      "Sunlight Sensitivity"
+    ]
   },
-  "darkvision": 60,
-  "traitTags": [
-    "Amphibious",
-    "Improved Resting",
-    "Tool Proficiency",
-    "Weapon Proficiency"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "resist": [
-    "cold"
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Shadar-Kai",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "elf"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 750
+  {
+    "ability": [
+      {
+        "int": 2,
+        "wis": 1
+      }
+    ],
+    "age": {
+      "mature": 40,
+      "max": 500
+    },
+    "heightAndWeight": {
+      "baseHeight": 64,
+      "baseWeight": 110,
+      "heightMod": "2d10",
+      "weightMod": "2d4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true,
+        "other": true
+      }
+    ],
+    "name": "Vedalken",
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "choose": {
+          "from": [
+            "arcana",
+            "history",
+            "investigation",
+            "medicine",
+            "performance",
+            "sleight of hand"
+          ]
+        }
+      }
+    ],
+    "source": "GGR",
+    "speed": 30,
+    "toolProficiencies": [
+      {
+        "any": 1
+      }
+    ],
+    "traitTags": [
+      "Skill Bonus Dice",
+      "Tool Bonus Dice"
+    ]
   },
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting",
-    "Tool Proficiency",
-    "Weapon Proficiency"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "resist": [
-    "necrotic"
-  ]
-},
-{
-  "name": "Elf",
-  "subrace": "Wood",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 35,
-  "ability": [
-    {
-      "dex": 2,
-      "wis": 1
-    }
-  ],
-  "age": {
-    "mature": 100,
-    "max": 750
+  {
+    "ability": [
+      {
+        "cha": 2,
+        "con": 1
+      }
+    ],
+    "age": {
+      "mature": 24,
+      "max": 200
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true,
+        "goblin": true
+      }
+    ],
+    "name": "Verdan",
+    "size": [
+      "V"
+    ],
+    "skillProficiencies": [
+      {
+        "persuasion": true
+      }
+    ],
+    "source": "AI",
+    "speed": 30,
+    "telepathy": 30
   },
-  "heightAndWeight": {
-    "baseHeight": 54,
-    "heightMod": "2d10",
-    "baseWeight": 100,
-    "weightMod": "1d4"
+  {
+    "ability": [
+      {
+        "choose": {
+          "count": 1,
+          "from": [
+            "cha",
+            "dex",
+            "int",
+            "str",
+            "wis"
+          ]
+        },
+        "con": 2
+      }
+    ],
+    "age": {
+      "mature": 2,
+      "max": 30
+    },
+    "conditionImmune": [
+      "disease"
+    ],
+    "heightAndWeight": {
+      "baseHeight": 70,
+      "baseWeight": 270,
+      "heightMod": "2d6",
+      "weightMod": "4"
+    },
+    "languageProficiencies": [
+      {
+        "anyStandard": 1,
+        "common": true
+      }
+    ],
+    "name": "Warforged",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M"
+    ],
+    "skillProficiencies": [
+      {
+        "any": 1
+      }
+    ],
+    "source": "ERLW",
+    "speed": 30,
+    "toolProficiencies": [
+      {
+        "any": 1
+      }
+    ],
+    "traitTags": [
+      "Improved Resting",
+      "Natural Armor"
+    ]
   },
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting"
-  ],
-  "weaponProficiencies": [
-    {
-      "longsword|phb": true,
-      "shortsword|phb": true,
-      "shortbow|phb": true,
-      "longbow|phb": true
-    }
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true
-    }
-  ]
-},
-{
-  "name": "Fairy",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "fey"
-  ],
-  "size": [
-    "S"
-  ],
-  "speed": {
-    "walk": 30,
-    "fly": true
-  },
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "faerie fire"
-            ]
+  {
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "cha",
+            "int",
+            "wis"
+          ]
+        },
+        "innate": {
+          "1": [
+            "animal friendship"
+          ],
+          "3": {
+            "daily": {
+              "1": [
+                "suggestion"
+              ]
+            }
           }
         },
-        "5": {
-          "daily": {
-            "1": [
-              "enlarge/reduce"
-            ]
-          }
+        "known": {
+          "1": [
+            "poison spray#c"
+          ]
         }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "druidcraft#c"
-        ]
       }
-    }
-  ]
-},
-{
-  "name": "Firbolg",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 500
+    ],
+    "darkvision": 60,
+    "lineage": "VRGR",
+    "name": "Yuan-Ti",
+    "resist": [
+      "poison"
+    ],
+    "size": [
+      "M",
+      "S"
+    ],
+    "source": "MPMM",
+    "speed": 30,
+    "traitTags": [
+      "Magic Resistance"
+    ]
   },
-  "traitTags": [
-    "Powerful Build"
-  ],
-  "additionalSpells": [
-    {
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "innate": {
-        "1": [
-          "detect magic",
-          "disguise self"
-        ]
+  {
+    "ability": [
+      {
+        "cha": 2,
+        "int": 1
       }
-    }
-  ]
-},
-{
-  "name": "Genasi",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 120
-  },
-  "darkvision": 60
-},
-{
-  "name": "Genasi",
-  "subrace": "Air",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 35,
-  "age": {
-    "max": 120
-  },
-  "resist": [
-    "lightning"
-  ],
-  "darkvision": 60,
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "feather fall"
-            ]
+    ],
+    "additionalSpells": [
+      {
+        "ability": "cha",
+        "innate": {
+          "1": [
+            "animal friendship"
+          ],
+          "3": {
+            "daily": {
+              "1": [
+                "suggestion"
+              ]
+            }
           }
         },
-        "5": {
-          "daily": {
-            "1": [
-              "levitate"
-            ]
-          }
+        "known": {
+          "1": [
+            "poison spray#c"
+          ]
         }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "shocking grasp#c"
-        ]
       }
-    }
-  ]
-},
-{
-  "name": "Genasi",
-  "subrace": "Earth",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 120
-  },
-  "darkvision": 60,
-  "additionalSpells": [
-    {
-      "innate": {
-        "5": [
-          "pass without trace"
-        ]
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "blade ward#c"
-        ]
+    ],
+    "age": {
+      "mature": 20,
+      "max": 100
+    },
+    "conditionImmune": [
+      "poisoned"
+    ],
+    "darkvision": 60,
+    "heightAndWeight": {
+      "baseHeight": 56,
+      "baseWeight": 110,
+      "heightMod": "2d10",
+      "weightMod": "2d4"
+    },
+    "immune": [
+      "poison"
+    ],
+    "languageProficiencies": [
+      {
+        "abyssal": true,
+        "common": true,
+        "draconic": true
       }
-    }
-  ]
-},
-{
-  "name": "Genasi",
-  "subrace": "Fire",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 120
+    ],
+    "name": "Yuan-ti Pureblood",
+    "reprintedAs": [
+      "Yuan-Ti|MPMM"
+    ],
+    "size": [
+      "M"
+    ],
+    "source": "VGM",
+    "speed": 30,
+    "traitTags": [
+      "Magic Resistance",
+      "Monstrous Race"
+    ]
   },
-  "darkvision": 60,
-  "resist": [
-    "fire"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "burning hands"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "flame blade"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "produce flame#c"
-        ]
+  {
+    "ability": [
+      {
+        "cha": -4,
+        "con": 2,
+        "int": -6,
+        "str": 1,
+        "wis": -4
       }
-    }
-  ]
-},
-{
-  "name": "Genasi",
-  "subrace": "Water",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "swim": true
-  },
-  "age": {
-    "max": 120
-  },
-  "darkvision": 60,
-  "resist": [
-    "acid"
-  ],
-  "traitTags": [
-    "Amphibious"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "create or destroy water"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "water walk"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "acid splash#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Giff",
-  "source": "AAG",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "swim": true
-  },
-  "traitTags": [
-    "Powerful Build"
-  ],
-  "weaponProficiencies": [
-    {
-      "firearms": true
-    }
-  ]
-},
-{
-  "name": "Gith",
-  "source": "MTF",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "int": 1
-    }
-  ],
-  "age": {
-    "mature": 20,
-    "max": 100
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "other": true
-    }
-  ]
-},
-{
-  "name": "Gith",
-  "subrace": "Githyanki",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "traitTags": [
-    "Weapon Proficiency"
-  ],
-  "skillProficiencies": [
-    {
-      "any": 1
-    }
-  ],
-  "toolProficiencies": [
-    {
-      "any": 1
-    }
-  ],
-  "resist": [
-    "psychic"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "jump"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "misty step"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "mage hand#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Gith",
-  "subrace": "Githzerai",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "resist": [
-    "psychic"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "shield"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "detect thoughts"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "mage hand#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Gnoll",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "str": 2,
-      "int": -2
-    }
-  ],
-  "darkvision": 60,
-  "traitTags": [
-    "Natural Weapon",
-    "NPC Race"
-  ]
-},
-{
-  "name": "Gnome",
-  "source": "PHB",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "int": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 35,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 40,
-    "max": 500
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "gnomish": true
-    }
-  ]
-},
-{
-  "name": "Gnome",
-  "subrace": "Deep",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "gnome"
-  ],
-  "size": [
-    "S"
-  ],
-  "speed": 30,
-  "age": {
-    "max": 500
-  },
-  "darkvision": 120,
-  "traitTags": [
-    "Magic Resistance"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "disguise self"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "nondetection"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Gnome",
-  "subrace": "Forest",
-  "source": "PHB",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "dex": 1,
-      "int": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 35,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 40,
-    "max": 500
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "gnomish": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "ability": "int",
-      "known": {
-        "1": [
-          "minor illusion#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Gnome",
-  "subrace": "Mark of Scribing",
-  "source": "PHB",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "cha": 1,
-      "int": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 35,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 40,
-    "max": 500
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race",
-    "Dragonmark",
-    "Skill Bonus Dice",
-    "Tool Bonus Dice"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "gnomish": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": {
-          "rest": {
-            "1": [
-              "comprehend languages"
-            ]
-          }
-        },
-        "3": {
-          "daily": {
-            "1": [
-              "magic mouth"
-            ]
-          }
-        }
-      },
-      "expanded": {
-        "s1": [
-          "comprehend languages",
-          "illusory script"
-        ],
-        "s2": [
-          "animal messenger",
-          "silence"
-        ],
-        "s3": [
-          "sending",
-          "tongues"
-        ],
-        "s4": [
-          "arcane eye",
-          "confusion"
-        ],
-        "s5": [
-          "dream"
-        ]
-      },
-      "ability": "int",
-      "known": {
-        "1": [
-          "message#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Gnome",
-  "subrace": "Rock",
-  "source": "PHB",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "con": 1,
-      "int": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 35,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 40,
-    "max": 500
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race",
-    "Tool Proficiency"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "gnomish": true
-    }
-  ]
-},
-{
-  "name": "Goblin",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "goblinoid"
-  ],
-  "size": [
-    "S"
-  ],
-  "speed": 30,
-  "darkvision": 60
-},
-{
-  "name": "Goliath",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "traitTags": [
-    "Powerful Build"
-  ],
-  "skillProficiencies": [
-    {
-      "athletics": true
-    }
-  ],
-  "resist": [
-    "cold"
-  ]
-},
-{
-  "name": "Grimlock",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "str": 2,
-      "cha": -2
-    }
-  ],
-  "blindsight": 30,
-  "traitTags": [
-    "NPC Race"
-  ],
-  "languageProficiencies": [
-    {
-      "undercommon": true
-    }
-  ]
-},
-{
-  "name": "Grung",
-  "source": "OGA",
-  "size": [
-    "S"
-  ],
-  "speed": {
-    "walk": 25,
-    "climb": 25
-  },
-  "ability": [
-    {
-      "dex": 2,
-      "con": 1
-    }
-  ],
-  "age": {
-    "mature": 1,
-    "max": 50
-  },
-  "traitTags": [
-    "Amphibious"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "other": true
-    }
-  ],
-  "immune": [
-    "poison"
-  ],
-  "conditionImmune": [
-    "poisoned"
-  ]
-},
-{
-  "name": "Hadozee",
-  "source": "AAG",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "climb": true
+    ],
+    "conditionImmune": [
+      "poisoned"
+    ],
+    "darkvision": 60,
+    "immune": [
+      "poison"
+    ],
+    "name": "Zombie",
+    "size": [
+      "M"
+    ],
+    "source": "DMG",
+    "speed": 30,
+    "traitTags": [
+      "Improved Resting",
+      "NPC Race"
+    ]
   }
-},
-{
-  "name": "Half-Elf",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "cha": 2,
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "con",
-          "int",
-          "wis"
-        ],
-        "count": 2
-      }
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 57,
-    "heightMod": "2d8",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 180
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race"
-  ],
-  "skillProficiencies": [
-    {
-      "any": 2
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true,
-      "anyStandard": 1
-    }
-  ]
-},
-{
-  "name": "Half-Elf",
-  "subrace": "Mark of Detection",
-  "source": "ERLW",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "wis": 2,
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "con",
-          "int",
-          "cha"
-        ],
-        "count": 1
-      }
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 57,
-    "heightMod": "2d8",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 180
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true,
-      "anyStandard": 1
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": [
-          "detect magic",
-          "detect poison and disease"
-        ],
-        "3": {
-          "daily": {
-            "1": [
-              "see invisibility"
-            ]
-          }
-        }
-      },
-      "expanded": {
-        "s1": [
-          "detect evil and good",
-          "detect poison and disease"
-        ],
-        "s2": [
-          "detect thoughts",
-          "find traps"
-        ],
-        "s3": [
-          "clairvoyance",
-          "nondetection"
-        ],
-        "s4": [
-          "arcane eye",
-          "divination"
-        ],
-        "s5": [
-          "legend lore"
-        ]
-      },
-      "ability": "int"
-    }
-  ]
-},
-{
-  "name": "Half-Elf",
-  "subrace": "Mark of Storm",
-  "source": "ERLW",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "cha": 2,
-      "dex": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 57,
-    "heightMod": "2d8",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 180
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice",
-    "Tool Bonus Dice"
-  ],
-  "resist": [
-    "lightning"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "elvish": true,
-      "anyStandard": 1
-    }
-  ],
-  "additionalSpells": [
-    {
-      "expanded": {
-        "s1": [
-          "feather fall",
-          "fog cloud"
-        ],
-        "s2": [
-          "gust of wind",
-          "levitate"
-        ],
-        "s3": [
-          "sleet storm",
-          "wind wall"
-        ],
-        "s4": [
-          "conjure minor elementals",
-          "control water"
-        ],
-        "s5": [
-          "conjure elemental"
-        ]
-      },
-      "ability": "cha",
-      "known": {
-        "1": [
-          "gust|xge#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Half-Orc",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "str": 2,
-      "con": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 58,
-    "heightMod": "2d10",
-    "baseWeight": 140,
-    "weightMod": "2d6"
-  },
-  "age": {
-    "mature": 14,
-    "max": 75
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race"
-  ],
-  "skillProficiencies": [
-    {
-      "intimidation": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "orc": true
-    }
-  ]
-},
-{
-  "name": "Half-Orc",
-  "subrace": "Mark of Finding",
-  "source": "ERLW",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "str": 2,
-      "con": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 58,
-    "heightMod": "2d10",
-    "baseWeight": 140,
-    "weightMod": "2d6"
-  },
-  "age": {
-    "mature": 14,
-    "max": 75
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race",
-    "Dragonmark",
-    "Skill Bonus Dice"
-  ],
-  "skillProficiencies": [
-    {
-      "intimidation": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "goblin": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": [
-          "hunter's mark"
-        ],
-        "3": {
-          "daily": {
-            "1": [
-              "locate object"
-            ]
-          }
-        }
-      },
-      "expanded": {
-        "s1": [
-          "faerie fire",
-          "longstrider"
-        ],
-        "s2": [
-          "locate animals or plants",
-          "locate object"
-        ],
-        "s3": [
-          "clairvoyance",
-          "speak with plants"
-        ],
-        "s4": [
-          "divination",
-          "locate creature"
-        ],
-        "s5": [
-          "commune with nature"
-        ]
-      },
-      "ability": "wis"
-    }
-  ]
-},
-{
-  "name": "Halfling",
-  "source": "PHB",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "dex": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 31,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 20,
-    "max": 250
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "halfling": true
-    }
-  ]
-},
-{
-  "name": "Halfling",
-  "subrace": "Ghostwise",
-  "source": "SCAG",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "dex": 2,
-      "wis": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 31,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 20,
-    "max": 250
-  },
-  "telepathy": 30,
-  "languageProficiencies": [
-    {
-      "common": true,
-      "halfling": true
-    }
-  ]
-},
-{
-  "name": "Halfling",
-  "subrace": "Lotusden",
-  "source": "EGW",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "dex": 2,
-      "wis": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 31,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 20,
-    "max": 250
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "halfling": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "entangle"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "spike growth"
-            ]
-          }
-        }
-      },
-      "ability": "wis",
-      "known": {
-        "1": [
-          "druidcraft#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Halfling",
-  "subrace": "Mark of Hospitality",
-  "source": "ERLW",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "cha": 1,
-      "dex": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 31,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 20,
-    "max": 250
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "halfling": true
-    }
-  ],
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice",
-    "Tool Bonus Dice"
-  ],
-  "additionalSpells": [
-    {
-      "expanded": {
-        "s1": [
-          "goodberry",
-          "sleep"
-        ],
-        "s2": [
-          "aid",
-          "calm emotions"
-        ],
-        "s3": [
-          "create food and water",
-          "leomund's tiny hut"
-        ],
-        "s4": [
-          "aura of purity",
-          "mordenkainen's private sanctum"
-        ],
-        "s5": [
-          "hallow"
-        ]
-      },
-      "ability": "cha",
-      "known": {
-        "1": [
-          "prestidigitation#c",
-          "purify food and drink",
-          "unseen servant"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Halfling",
-  "subrace": "Stout",
-  "source": "PHB",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "con": 1,
-      "dex": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 31,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 20,
-    "max": 250
-  },
-  "resist": [
-    "poison"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "halfling": true
-    }
-  ]
-},
-{
-  "name": "Harengon",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "skillProficiencies": [
-    {
-      "perception": true
-    }
-  ]
-},
-{
-  "name": "Hexblood",
-  "source": "VRGR",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "fey"
-  ],
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "skillProficiencies": [
-    {
-      "any": 2
-    }
-  ],
-  "additionalSpells": [
-    {
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "disguise self",
-          "hex"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Hobgoblin",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "humanoid"
-  ],
-  "creatureTypeTags": [
-    "goblinoid"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60
-},
-{
-  "name": "Human",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "heightAndWeight": {
-    "baseHeight": 56,
-    "heightMod": "2d10",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 100
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "anyStandard": 1
-    }
-  ],
-  "ability": [
-    {
-      "str": 1,
-      "dex": 1,
-      "con": 1,
-      "int": 1,
-      "wis": 1,
-      "cha": 1
-    }
-  ]
-},
-{
-  "name": "Human",
-  "subrace": "Mark of Finding",
-  "source": "ERLW",
-  "ability": [
-    {
-      "con": 1,
-      "wis": 2
-    }
-  ],
-  "darkvision": 60,
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "goblin": true
-    }
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": [
-          "hunter's mark"
-        ],
-        "3": {
-          "daily": {
-            "1": [
-              "locate object"
-            ]
-          }
-        }
-      },
-      "expanded": {
-        "s1": [
-          "faerie fire",
-          "longstrider"
-        ],
-        "s2": [
-          "locate animals or plants",
-          "locate object"
-        ],
-        "s3": [
-          "clairvoyance",
-          "speak with plants"
-        ],
-        "s4": [
-          "divination",
-          "locate creature"
-        ],
-        "s5": [
-          "commune with nature"
-        ]
-      },
-      "ability": "wis"
-    }
-  ]
-},
-{
-  "name": "Human",
-  "subrace": "Mark of Handling",
-  "source": "ERLW",
-  "ability": [
-    {
-      "wis": 2,
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "con",
-          "int",
-          "cha"
-        ],
-        "count": 1
-      }
-    }
-  ],
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice"
-  ],
-  "additionalSpells": [
-    {
-      "expanded": {
-        "s1": [
-          "animal friendship",
-          "speak with animals"
-        ],
-        "s2": [
-          "beast sense",
-          "calm emotions"
-        ],
-        "s3": [
-          "beacon of hope",
-          "conjure animals"
-        ],
-        "s4": [
-          "aura of life",
-          "dominate beast"
-        ],
-        "s5": [
-          "awaken"
-        ]
-      },
-      "ability": "wis",
-      "known": {
-        "1": {
-          "rest": {
-            "1": [
-              "animal friendship",
-              "speak with animals"
-            ]
-          }
-        }
-      }
-    }
-  ]
-},
-{
-  "name": "Human",
-  "subrace": "Mark of Making",
-  "source": "ERLW",
-  "ability": [
-    {
-      "int": 2,
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "con",
-          "wis",
-          "cha"
-        ],
-        "count": 1
-      }
-    }
-  ],
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice",
-    "Tool Bonus Dice"
-  ],
-  "toolProficiencies": [
-    {
-      "anyArtisans": 1
-    }
-  ],
-  "additionalSpells": [
-    {
-      "expanded": {
-        "s1": [
-          "identify",
-          "tenser's floating disk"
-        ],
-        "s2": [
-          "continual flame",
-          "magic weapon"
-        ],
-        "s3": [
-          "conjure barrage",
-          "elemental weapon"
-        ],
-        "s4": [
-          "fabricate",
-          "stone shape"
-        ],
-        "s5": [
-          "creation"
-        ]
-      },
-      "ability": "int",
-      "known": {
-        "1": [
-          "mending#c",
-          "magic weapon"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Human",
-  "subrace": "Mark of Passage",
-  "source": "ERLW",
-  "speed": 35,
-  "ability": [
-    {
-      "dex": 2,
-      "choose": {
-        "from": [
-          "str",
-          "con",
-          "int",
-          "wis",
-          "cha"
-        ],
-        "count": 1
-      }
-    }
-  ],
-  "traitTags": [
-    "Dragonmark"
-  ],
-  "additionalSpells": [
-    {
-      "expanded": {
-        "s1": [
-          "expeditious retreat",
-          "jump"
-        ],
-        "s2": [
-          "misty step",
-          "pass without trace"
-        ],
-        "s3": [
-          "blink",
-          "phantom steed"
-        ],
-        "s4": [
-          "dimension door",
-          "freedom of movement"
-        ],
-        "s5": [
-          "teleportation circle"
-        ]
-      },
-      "ability": "dex",
-      "known": {
-        "1": [
-          "misty step"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Human",
-  "subrace": "Mark of Sentinel",
-  "source": "ERLW",
-  "ability": [
-    {
-      "con": 2,
-      "wis": 1
-    }
-  ],
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice"
-  ],
-  "additionalSpells": [
-    {
-      "expanded": {
-        "s1": [
-          "compelled duel",
-          "shield of faith"
-        ],
-        "s2": [
-          "warding bond",
-          "zone of truth"
-        ],
-        "s3": [
-          "counterspell",
-          "protection from energy"
-        ],
-        "s4": [
-          "death ward",
-          "guardian of faith"
-        ],
-        "s5": [
-          "bigby's hand"
-        ]
-      },
-      "ability": "wis",
-      "known": {
-        "1": [
-          "shield"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Human",
-  "subrace": "Variant",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "heightAndWeight": {
-    "baseHeight": 56,
-    "heightMod": "2d10",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 100
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "anyStandard": 1
-    }
-  ],
-  "feats": [
-    {
-      "any": 1
-    }
-  ],
-  "skillProficiencies": [
-    {
-      "any": 1
-    }
-  ],
-  "ability": [
-    {
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "con",
-          "int",
-          "wis"
-        ],
-        "count": 2
-      }
-    }
-  ]
-},
-{
-  "name": "Kalashtar",
-  "source": "ERLW",
-  "size": [
-    "M"
-  ],
-  "telepathy": 10,
-  "speed": 30,
-  "ability": [
-    {
-      "wis": 2,
-      "cha": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 64,
-    "heightMod": "2d6",
-    "baseWeight": 110,
-    "weightMod": "1d6"
-  },
-  "age": {
-    "mature": 20,
-    "max": 100
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "other": true,
-      "anyStandard": 1
-    }
-  ],
-  "resist": [
-    "psychic"
-  ]
-},
-{
-  "name": "Kender",
-  "source": "DSotDQ",
-  "lineage": "VRGR",
-  "size": [
-    "S"
-  ],
-  "speed": 30,
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "insight",
-          "investigation",
-          "sleight of hand",
-          "stealth",
-          "survival"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Kenku",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "age": {
-    "mature": 12,
-    "max": 60
-  },
-  "skillProficiencies": [
-    {
-      "any": 2
-    }
-  ]
-},
-{
-  "name": "Kobold",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "arcana",
-          "investigation",
-          "medicine",
-          "sleight of hand",
-          "survival"
-        ]
-      }
-    }
-  ],
-  "additionalSpells": [
-    {
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "_": [
-          {
-            "choose": "level=0|class=Sorcerer",
-            "count": 1
-          }
-        ]
-      }
-    }
-  ],
-  "_versions": [
-    {
-      "name": "Kobold; Craftiness",
-      "source": "MPMM",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Kobold Legacy",
-          "items": {
-            "name": "Kobold Legacy (Craftiness)",
-            "type": "entries",
-            "entries": [
-              "You have proficiency in one of the following skills of your choice: {@skill Arcana}, {@skill Investigation}, {@skill Medicine}, {@skill Sleight of Hand}, or {@skill Survival}."
-            ]
-          }
-        }
-      },
-      "additionalSpells": null
-    },
-    {
-      "name": "Kobold; Defiance",
-      "source": "MPMM",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Kobold Legacy",
-          "items": {
-            "name": "Kobold Legacy (Defiance)",
-            "type": "entries",
-            "entries": [
-              "You have advantage on saving throws to avoid or end the {@condition frightened} condition on yourself."
-            ]
-          }
-        }
-      },
-      "skillProficiencies": null,
-      "additionalSpells": null
-    },
-    {
-      "name": "Kobold; Draconic Sorcery",
-      "source": "MPMM",
-      "_mod": {
-        "entries": {
-          "mode": "replaceArr",
-          "replace": "Kobold Legacy",
-          "items": {
-            "name": "Kobold Legacy (Draconic Sorcery)",
-            "type": "entries",
-            "entries": [
-              "You know one {@filter cantrip of your choice from the sorcerer spell list|spells|level=0|class=Sorcerer}. Intelligence, Wisdom, or Charisma is your spellcasting ability for that cantrip (choose when you select this race)."
-            ]
-          }
-        }
-      },
-      "skillProficiencies": null
-    }
-  ]
-},
-{
-  "name": "Kuo-Toa",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "swim": 30
-  },
-  "darkvision": 120,
-  "traitTags": [
-    "Amphibious",
-    "NPC Race",
-    "Sunlight Sensitivity"
-  ],
-  "languageProficiencies": [
-    {
-      "undercommon": true
-    }
-  ]
-},
-{
-  "name": "Leonin",
-  "source": "MOT",
-  "size": [
-    "M"
-  ],
-  "speed": 35,
-  "ability": [
-    {
-      "str": 1,
-      "con": 2
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 66,
-    "heightMod": "2d10",
-    "baseWeight": 180,
-    "weightMod": "2d6"
-  },
-  "age": {
-    "mature": 20,
-    "max": 100
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Natural Weapon"
-  ],
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "athletics",
-          "intimidation",
-          "perception",
-          "survival"
-        ]
-      }
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "other": true
-    }
-  ]
-},
-{
-  "name": "Lizardfolk",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "swim": true
-  },
-  "traitTags": [
-    "Natural Armor",
-    "Natural Weapon"
-  ],
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "animal handling",
-          "medicine",
-          "nature",
-          "perception",
-          "stealth",
-          "survival"
-        ],
-        "count": 2
-      }
-    }
-  ]
-},
-{
-  "name": "Locathah",
-  "source": "LR",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "swim": 30
-  },
-  "ability": [
-    {
-      "str": 2,
-      "dex": 1
-    }
-  ],
-  "age": {
-    "mature": 10,
-    "max": 80
-  },
-  "traitTags": [
-    "Amphibious",
-    "Natural Armor"
-  ],
-  "skillProficiencies": [
-    {
-      "athletics": true,
-      "perception": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "aquan": true,
-      "common": true
-    }
-  ]
-},
-{
-  "name": "Loxodon",
-  "source": "GGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "con": 2,
-      "wis": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 79,
-    "heightMod": "2d10",
-    "baseWeight": 295,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 450
-  },
-  "traitTags": [
-    "Natural Armor",
-    "Powerful Build"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "other": true
-    }
-  ]
-},
-{
-  "name": "Mark of Healing",
-  "source": "ERLW",
-  "size": [
-    "S"
-  ],
-  "speed": 25,
-  "ability": [
-    {
-      "dex": 2,
-      "wis": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 31,
-    "heightMod": "2d4",
-    "baseWeight": 35
-  },
-  "age": {
-    "mature": 20,
-    "max": 250
-  },
-  "languageProficiencies": [
-    {
-      "common": true,
-      "halfling": true
-    }
-  ],
-  "traitTags": [
-    "Dragonmark",
-    "Skill Bonus Dice",
-    "Tool Bonus Dice"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": [
-          "cure wounds"
-        ],
-        "3": {
-          "daily": {
-            "1": [
-              "lesser restoration"
-            ]
-          }
-        }
-      },
-      "expanded": {
-        "s1": [
-          "cure wounds",
-          "healing word"
-        ],
-        "s2": [
-          "lesser restoration",
-          "prayer of healing"
-        ],
-        "s3": [
-          "aura of vitality",
-          "mass healing word"
-        ],
-        "s4": [
-          "aura of purity",
-          "aura of life"
-        ],
-        "s5": [
-          "greater restoration"
-        ]
-      },
-      "ability": "wis"
-    }
-  ]
-},
-{
-  "name": "Merfolk",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 10,
-    "swim": 40
-  },
-  "traitTags": [
-    "Amphibious",
-    "NPC Race"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "aquan": true
-    }
-  ]
-},
-{
-  "name": "Minotaur",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "traitTags": [
-    "Natural Weapon"
-  ]
-},
-{
-  "name": "Orc",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "traitTags": [
-    "Powerful Build"
-  ]
-},
-{
-  "name": "Owlin",
-  "source": "SCC",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "fly": true
-  },
-  "darkvision": 120,
-  "skillProficiencies": [
-    {
-      "stealth": true
-    }
-  ]
-},
-{
-  "name": "Plasmoid",
-  "source": "AAG",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "ooze"
-  ],
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "resist": [
-    "acid",
-    "poison"
-  ]
-},
-{
-  "name": "Reborn",
-  "source": "VRGR",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "traitTags": [
-    "Improved Resting"
-  ],
-  "resist": [
-    "poison"
-  ]
-},
-{
-  "name": "Satyr",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "fey"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 35,
-  "traitTags": [
-    "Magic Resistance",
-    "Natural Weapon"
-  ],
-  "skillProficiencies": [
-    {
-      "performance": true,
-      "persuasion": true
-    }
-  ],
-  "toolProficiencies": [
-    {
-      "musical instrument": true
-    }
-  ]
-},
-{
-  "name": "Shifter",
-  "subrace": "Beasthide",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "skillProficiencies": [
-    {
-      "athletics": true
-    }
-  ]
-},
-{
-  "name": "Shifter",
-  "subrace": "Longtooth",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "skillProficiencies": [
-    {
-      "intimidation": true
-    }
-  ]
-},
-{
-  "name": "Shifter",
-  "subrace": "Swiftstride",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "skillProficiencies": [
-    {
-      "acrobatics": true
-    }
-  ]
-},
-{
-  "name": "Shifter",
-  "subrace": "Wildhunt",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "skillProficiencies": [
-    {
-      "survival": true
-    }
-  ]
-},
-{
-  "name": "Simic Hybrid",
-  "source": "GGR",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30
-  },
-  "ability": [
-    {
-      "con": 2,
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "int",
-          "wis",
-          "cha"
-        ],
-        "count": 1
-      }
-    }
-  ],
-  "darkvision": 60,
-  "traitTags": [
-    "Amphibious",
-    "Natural Armor",
-    "Natural Weapon"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "choose": {
-        "from": [
-          "elvish",
-          "other"
-        ],
-        "count": 1
-      }
-    }
-  ]
-},
-{
-  "name": "Skeleton",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "dex": 2,
-      "int": -4,
-      "cha": -4
-    }
-  ],
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting",
-    "NPC Race"
-  ],
-  "immune": [
-    "poison"
-  ],
-  "vulnerable": [
-    "bludgeoning"
-  ],
-  "conditionImmune": [
-    "exhaustion",
-    "poisoned"
-  ]
-},
-{
-  "name": "Tabaxi",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "climb": true
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Natural Weapon"
-  ],
-  "skillProficiencies": [
-    {
-      "perception": true,
-      "stealth": true
-    }
-  ]
-},
-{
-  "name": "Thri-kreen",
-  "source": "AAG",
-  "lineage": "VRGR",
-  "creatureTypes": [
-    "monstrosity"
-  ],
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "telepathy": 120,
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting",
-    "Natural Armor"
-  ]
-},
-{
-  "name": "Tiefling",
-  "source": "PHB",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "cha": 2,
-      "int": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 57,
-    "heightMod": "2d8",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 100
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Uncommon Race"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "infernal": true
-    }
-  ],
-  "resist": [
-    "fire"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "3": {
-          "daily": {
-            "1": [
-              "hellish rebuke#2"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "darkness"
-            ]
-          }
-        }
-      },
-      "ability": "cha",
-      "known": {
-        "1": [
-          "thaumaturgy#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Tortle",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "traitTags": [
-    "Natural Armor",
-    "Natural Weapon"
-  ],
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "animal handling",
-          "medicine",
-          "nature",
-          "perception",
-          "stealth",
-          "survival"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Triton",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "M"
-  ],
-  "speed": {
-    "walk": 30,
-    "swim": true
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Amphibious"
-  ],
-  "resist": [
-    "cold"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": {
-          "daily": {
-            "1": [
-              "fog cloud"
-            ]
-          }
-        },
-        "3": {
-          "daily": {
-            "1": [
-              "gust of wind"
-            ]
-          }
-        },
-        "5": {
-          "daily": {
-            "1": [
-              "water walk"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Troglodyte",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "str": 2,
-      "con": 2,
-      "int": -4,
-      "cha": -4
-    }
-  ],
-  "darkvision": 60,
-  "traitTags": [
-    "Natural Armor",
-    "NPC Race",
-    "Sunlight Sensitivity"
-  ],
-  "languageProficiencies": [
-    {
-      "other": true
-    }
-  ]
-},
-{
-  "name": "Vedalken",
-  "source": "GGR",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "int": 2,
-      "wis": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 64,
-    "heightMod": "2d10",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 40,
-    "max": 500
-  },
-  "traitTags": [
-    "Skill Bonus Dice",
-    "Tool Bonus Dice"
-  ],
-  "skillProficiencies": [
-    {
-      "choose": {
-        "from": [
-          "arcana",
-          "history",
-          "investigation",
-          "medicine",
-          "performance",
-          "sleight of hand"
-        ]
-      }
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "other": true,
-      "anyStandard": 1
-    }
-  ],
-  "toolProficiencies": [
-    {
-      "any": 1
-    }
-  ]
-},
-{
-  "name": "Verdan",
-  "source": "AI",
-  "size": [
-    "V"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "con": 1,
-      "cha": 2
-    }
-  ],
-  "age": {
-    "mature": 24,
-    "max": 200
-  },
-  "telepathy": 30,
-  "skillProficiencies": [
-    {
-      "persuasion": true
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "goblin": true,
-      "anyStandard": 1
-    }
-  ]
-},
-{
-  "name": "Warforged",
-  "source": "ERLW",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "con": 2,
-      "choose": {
-        "from": [
-          "str",
-          "dex",
-          "int",
-          "wis",
-          "cha"
-        ],
-        "count": 1
-      }
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 70,
-    "heightMod": "2d6",
-    "baseWeight": 270,
-    "weightMod": "4"
-  },
-  "age": {
-    "mature": 2,
-    "max": 30
-  },
-  "traitTags": [
-    "Improved Resting",
-    "Natural Armor"
-  ],
-  "skillProficiencies": [
-    {
-      "any": 1
-    }
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "anyStandard": 1
-    }
-  ],
-  "toolProficiencies": [
-    {
-      "any": 1
-    }
-  ],
-  "resist": [
-    "poison"
-  ],
-  "conditionImmune": [
-    "disease"
-  ]
-},
-{
-  "name": "Yuan-Ti",
-  "source": "MPMM",
-  "lineage": "VRGR",
-  "size": [
-    "S",
-    "M"
-  ],
-  "speed": 30,
-  "darkvision": 60,
-  "traitTags": [
-    "Magic Resistance"
-  ],
-  "resist": [
-    "poison"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": [
-          "animal friendship"
-        ],
-        "3": {
-          "daily": {
-            "1": [
-              "suggestion"
-            ]
-          }
-        }
-      },
-      "ability": {
-        "choose": [
-          "int",
-          "wis",
-          "cha"
-        ]
-      },
-      "known": {
-        "1": [
-          "poison spray#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Yuan-ti Pureblood",
-  "source": "VGM",
-  "reprintedAs": [
-    "Yuan-Ti|MPMM"
-  ],
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "cha": 2,
-      "int": 1
-    }
-  ],
-  "heightAndWeight": {
-    "baseHeight": 56,
-    "heightMod": "2d10",
-    "baseWeight": 110,
-    "weightMod": "2d4"
-  },
-  "age": {
-    "mature": 20,
-    "max": 100
-  },
-  "darkvision": 60,
-  "traitTags": [
-    "Magic Resistance",
-    "Monstrous Race"
-  ],
-  "languageProficiencies": [
-    {
-      "common": true,
-      "abyssal": true,
-      "draconic": true
-    }
-  ],
-  "immune": [
-    "poison"
-  ],
-  "conditionImmune": [
-    "poisoned"
-  ],
-  "additionalSpells": [
-    {
-      "innate": {
-        "1": [
-          "animal friendship"
-        ],
-        "3": {
-          "daily": {
-            "1": [
-              "suggestion"
-            ]
-          }
-        }
-      },
-      "ability": "cha",
-      "known": {
-        "1": [
-          "poison spray#c"
-        ]
-      }
-    }
-  ]
-},
-{
-  "name": "Zombie",
-  "source": "DMG",
-  "size": [
-    "M"
-  ],
-  "speed": 30,
-  "ability": [
-    {
-      "str": 1,
-      "con": 2,
-      "int": -6,
-      "wis": -4,
-      "cha": -4
-    }
-  ],
-  "darkvision": 60,
-  "traitTags": [
-    "Improved Resting",
-    "NPC Race"
-  ],
-  "immune": [
-    "poison"
-  ],
-  "conditionImmune": [
-    "poisoned"
-  ]
-}
 ]
