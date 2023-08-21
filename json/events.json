@@ -446,6 +446,16 @@
   "treasured",
   "venerated",
   "well-liked"
+],
+"weird": [
+  "eerie",
+  "odd",
+  "preternatural",
+  "strange",
+  "supernatural",
+  "unearthly",
+  "unnatural",
+  "weird"
 ]
 },
 "disaster": {
@@ -675,7 +685,6 @@
   "golden langkawi melon",
   "hami melon",
   "honeydew melon",
-  "juan canary melon",
   "korean melon",
   "montreal melon",
   "muskmelon",
@@ -984,6 +993,33 @@
   "townsfolk",
   "warrior",
   "witch"
+],
+"law": [
+  "bailiff",
+  "captain",
+  "constable",
+  "detective",
+  "gendarme",
+  "inspector",
+  "investigator",
+  "jailor",
+  "lawman",
+  "lieutenant",
+  "marshal",
+  "officer",
+  "operative",
+  "patrolman",
+  "peace officer",
+  "policeman",
+  "policewoman",
+  "private detective",
+  "private eye",
+  "private investigator",
+  "sergeant",
+  "shamus",
+  "sheriff",
+  "sleuth",
+  "trooper"
 ],
 "job": [
   "alchemist",
@@ -1720,7 +1756,7 @@
   "passing meteor induces variants of lycanthropy within the populous, mass chaos ensues at first full moon"
 ],
 "minor": [
-  "{unusual|unexplained} {lights|sounds|smells|tremors} emanating from {abandoned house|cellar|alley} reported by {local|} {npc.generic}, {constable|sheriff|local authority} {files report|uninterested|suspicious}",
+  "{unusual|unexplained} {lights|sounds|smells|tremors} emanating from {abandoned house|cellar|alley} reported by {local|} {npc.generic}, {npc.law|local authority} {files report|uninterested|suspicious}",
   "local halfling named {markov_names.hobbit} sets out to destroy enchanted {item.mundane} in the fires of {markov_names.deities}, stops for second breakfast along the way",
   "{werewolf|vampire|bewitched|supernatural} 'hunter' named {markov_names.werewolf} revealed to be werewolf; {caught in peculiar love triangle|takes trip to Paris|takes trip to London|howls at the moon loudly}",
   "butcher of {markov_names.cities} revealed to be {werewolf|vampire|bewitched nobleman|voodoo witch}, locals demand {burning at the stake|waterboarding|crucifixion|bloodletting}",
@@ -1730,10 +1766,10 @@
   "{multiple|several|numerous} {deaths|disappearances|dismembered bodies|mutilated corpses} linked to {abandoned|broken down|vacant} {house|building} {at the edge|on the outskirts|in the middle} of {markov_names.cities}, causes {alarm|outrage|disgust} and calls for {investigation|justice|revenge}"
 ],
 "mundane": [
-  "{strange lights|little green men|bigfoot|el chupacabra} observed {late at night|in the evening|in the mountains|in a forest|in the desert|far far away} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
-  "{entertainer|performer|comedian|actor} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
-  "an emissary from the fey council of {markov_names.irish_forenames|markov_names.hobbit|markov_names.deities} was spotted frolicking in the flowers",
-  "{weird smells|odd sounds|strange illusions} reported following death of {local|} {warlock|witch doctor|priest}, {townsfolk|locals|} suspect {haunting|ghost|possession|curse}"
+  "{actor|actress|artist|comedian|entertainer|performer|thespian} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
+  "{bigfoot|el chupacabra|little green men|strange lights} observed {far far away|in the desert|in the evening|in a forest|in the mountains|late at night} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
+  "{character.weird} {illusions|sensations|sounds|smells|vibrations} reported following death of {local|} {warlock|witch doctor|priest}, {townsfolk|locals|officials} suspect {haunting|ghost|possession|curse}",
+  "an emissary from the fey council of {markov_names.irish_forenames|markov_names.hobbit|markov_names.deities} was spotted frolicking in the flowers"
 ]
 }
 }
