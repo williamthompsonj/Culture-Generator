@@ -108,7 +108,7 @@ eventFactory.ResolveArticles = function(data)
 {
   // split everywhere we need to determine if it's A or AN
   let arr = data.split("[a/an]");
-  let vowels = ["a", "e", "i", "o", "u"];
+  let vowels = "aeiouáàȧâäăāãåấầẫảạæðéèêëěēềíìİîïīóòôöōõőồøơộœúùûüūũư";
 
   // cycle through the pieces, skip first one
   for (var i = 1; i < arr.length; i++)
@@ -215,7 +215,7 @@ eventFactory.ResolveToken = function(token)
   if (typeof here_ref == "function")
   {
     // it's a function, pass correct context
-    return here_ref(last_ref);
+    return here_ref(token);
   }
   else if (Array.isArray(here_ref))
   {
@@ -232,11 +232,31 @@ eventFactory.ResolveToken = function(token)
   return token;
 };
 
-eventFactory.markovNames = function(data_name)
+eventFactory.markov_names = function(data_name)
 {
-  // check for any random name
-  if (data_name == 'any')
-    return markovNames.name_list(1);
+  data_name = data_name.split(".");
+
+  // check for special names
+  switch (data_name[1])
+  {
+    case "any":
+      return markovNames.name_list(1);
+      break;
+
+    case "hobbit":
+    case "lotr":
+      data_name = "tolkienesque_forenames";
+      break;
+
+    case "raw":
+      if (Object.hasOwn(window.dataset['markov_names'], data_name[2]))
+        return window.dataset['markov_names'][data_name[2]].randomValue();
+      break;
+
+    default:
+      data_name = data_name[1];
+      break;
+  }
 
   // check if it data_name exists
   if (Object.hasOwn(window.dataset['markov_names'], data_name))
@@ -255,14 +275,5 @@ eventFactory.markovNames = function(data_name)
     markovNames.name_list(1, result.randomValue());
 
   // give up, return random
-  return markovNames.name_list(1, '');
+  return markovNames.name_list(1);
 };
-
-eventFactory.until = function(conditionFunction)
-{
-  const poll = resolve => {
-    if (conditionFunction()) resolve();
-    else setTimeout(_ => poll(resolve), 400);
-  }
-  return new Promise(poll);
-}
