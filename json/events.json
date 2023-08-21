@@ -274,7 +274,75 @@
   "wasps"
 ]
 },
-"characterization": {
+"character": {
+"divine": [
+  "beauty",
+  "compassion",
+  "concealed forms",
+  "conquest",
+  "constellations",
+  "corruption",
+  "courage",
+  "darkness",
+  "death",
+  "deceit",
+  "deliverance",
+  "destruction",
+  "devotion",
+  "disaster",
+  "discontent",
+  "faith",
+  "faith of the dead",
+  "fire",
+  "grace",
+  "hate",
+  "hellfire",
+  "hope",
+  "judgement",
+  "justice",
+  "knowledge",
+  "lies",
+  "light",
+  "love",
+  "malevolence",
+  "malice",
+  "merciful love",
+  "mercy",
+  "miracles",
+  "nature",
+  "penance",
+  "pride",
+  "prophecy",
+  "protection",
+  "punishment",
+  "radiance",
+  "rebellion",
+  "relief",
+  "repentance",
+  "retaliation",
+  "retribution",
+  "scribes",
+  "secrets",
+  "serenity",
+  "solitude",
+  "sorcery",
+  "soul ushering",
+  "storms",
+  "strength",
+  "the abyss",
+  "the heavens",
+  "the material world",
+  "the treasure of life",
+  "the wicked dead",
+  "transformation",
+  "truth",
+  "understanding",
+  "vigilance",
+  "virtue",
+  "war",
+  "wealth",
+  "wisdom"
+],
 "negative": [
   "abandoned",
   "abhorred",
@@ -1497,17 +1565,17 @@
 ],
 "mundane": [
   "{animal.cute}s got busy making babies and multiplied",
-  "{characterization.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
-  "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} during {disaster.mundane}",
-  "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} in freak natural accident",
-  "{characterization.random||relevance.random} animal trainer attacked by dozens of {animal.cute}s without warning",
+  "{character.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
+  "{character.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} during {disaster.mundane}",
+  "{character.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} in freak natural accident",
+  "{character.random||relevance.random} animal trainer attacked by dozens of {animal.cute}s without warning",
   "{relevance.random} {npc.job|race.common} discovers den of {animal.cute}s",
   "{relevance.random} {npc.job|race.common} discovers unholy large nest of {animal.insects}"
 ]
 },
 "incident_natural": {
 "major": [
-  "[a/an] {ash plume|impact event|pyroclastic flow|volcanic eruption|powerful earthquake} destroyed the {city|capitol|trade center} of {markov_names.deities}",
+  "[a/an] {ash plume|meteor impact|powerful earthquake|pyroclastic flow|volcanic eruption} destroys {city|capitol|trade center} of {markov_names.deities}",
   "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down",
   "heavy tremors from quake destroy buildings, cause landslides, and uproot trees. {Locals|Townsfolk|Politicians|Religious leaders} proclaim end-times are near",
   "meteor destroys capitol city; ash blocks out the sun causing early winter out of season",
@@ -1517,7 +1585,7 @@
   "[a/an] {mine cave-in|avalanche|flash flood|landslide|wildfire|cold-snap|insect migration} occurred {outside town|in the woods|in the high desert|in the valley|in the hills|in the plains|near the swamp}",
   "{boy|girl|child} {found|missing, presumed} {alive|dead|missing|injured} after {flash flood|sink hole appears}",
   "{landslide} destroys roads and kills several locals following a heavy rain storm",
-  "{roads ruined|buildings collapse|orphanage destroyed} after {landslide|heavy downpour}, {local|} {trade unions|poor people|guild workers} suffer",
+  "{roads ruined|buildings collapse|orphanage destroyed} after {landslide|heavy downpour}, {local|} {trade unions|poor people|guild workers|orphanage} suffer",
   "caving trip ends in tragedy after heavy rain floods local caves"
 ],
 "moderate": [
@@ -1543,14 +1611,14 @@
   "violent crime {substantially|} increased {everywhere|in the cities|in the country|near the capitol|on the high seas}"
 ],
 "minor": [
-  "{characterization.positive} {npc.job|noble|townsfolk} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {npc.job|npc.generic}",
-  "[a/an] {characterization.random|relevance.random} {npc.job} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}",
-  "[a/an] {characterization.random|relevance.random} {npc.job} was {assassinated|struck down in battle}",
+  "{character.positive} {npc.job|noble|townsfolk} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {npc.job|npc.generic}",
+  "[a/an] {character.random|relevance.random} {npc.job} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}",
+  "[a/an] {character.random|relevance.random} {npc.job} was {assassinated|struck down in battle}",
   "violence against {food.random|item.random} merchants {increased|decreased}"
 ],
 "moderate": [
-  "{characterization.positive} {npc.political} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {npc.job|npc.generic}",
-  "[a/an] {characterization.positive} {npc.generic|member of the leader's family|clergy member|leader} died suddenly",
+  "{character.positive} {npc.political} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {npc.job|npc.generic}",
+  "[a/an] {character.positive} {npc.generic|member of the leader's family|clergy member|leader} died suddenly",
   "[a/an] {academy of higher learning|walled town|castle} was founded",
   "a forgotten culture was rediscovered",
   "a powerful of {evil|neutrality|good} organization made their presence known",
@@ -1560,16 +1628,16 @@
   "violent crime {substantially|} decreased {in the city|in the country|near the capitol|on the high seas} of {markov_names.forename|markov_names.surname}"
 ],
 "mundane": [
-  "[a/an] {characterization.positive} {npc.generic|member of the leader's family|clergy member|local leader} died suddenly",
+  "[a/an] {character.positive} {npc.generic|member of the leader's family|clergy member|local leader} died suddenly",
   "[a/an] {relevance.lesser|relevance.average} {npc.generic|clergy member|local leader} {activity.fart} after over-indulging in eating {food.random}",
   "[a/an] {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}",
   "{activity.mundane} incident kills {npc.job|race.common} with no living relatives",
   "{activity.mundane} incident kills {npc.job|race.common}, spouse, and {#2-9} children",
   "{activity.mundane} incident kills {npc.job|race.common}, spouse, and only child",
-  "{characterization.random||relevance.random} {npc.job|race.common} dies in {activity.mundane} accident",
-  "{characterization.random||relevance.random} {npc.job|race.common} {loudly|quietly|silently|vigorously|harshly} {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, nearby {characterization.random||relevance.random} {npc.job|race.common} {terrified|frightened|bemused|annoyed|confused|unimpressed}",
-  "{characterization.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {race.common} from [a/an] {disaster.mundane}",
-  "{characterization.random} {npc.job|race.common} falls down abandoned well while preparing for {activity.mundane} event",
+  "{character.random||relevance.random} {npc.job|race.common} dies in {activity.mundane} accident",
+  "{character.random||relevance.random} {npc.job|race.common} {loudly|quietly|silently|vigorously|harshly} {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, nearby {character.random||relevance.random} {npc.job|race.common} {terrified|frightened|bemused|annoyed|confused|unimpressed}",
+  "{character.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {race.common} from [a/an] {disaster.mundane}",
+  "{character.random} {npc.job|race.common} falls down abandoned well while preparing for {activity.mundane} event",
   "{food.random} farmer has cart destroyed during high speed chase after local {npc.job} does shenanigans",
   "{npc.job|race.common} and {npc.job|race.common} {friend|lover|companion|arch nemesis|} {run away together|begin fighting|begin arguing} when caught in the act of {activity.unsavory}",
   "{relevance.random} {item.tool|item.music_instrument} producer accused of {activity.unsavory} after [a/an] {activity.mundane} incident",
@@ -1618,6 +1686,8 @@
 },
 "incident_religious": {
 "major": [
+  "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}angel of {character.divine}, falls from the heavens in fiery glory; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate",
+  "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}{devil|demon} of {character.divine}, cast out from the depth of {hell|hades}; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate",
   "{markov_names.deities|markov_names.angels|markov_names.demons} rose to godhood and a new religion was founded",
   "{his|her} holiness, {npc.religious} {markov_names.deities|markov_names.angels|markov_names.demons}, dies while ascending to godhood; {markov_names.deities} nation scrambles to defend against atropal"
 ],
@@ -1646,13 +1716,15 @@
 "incident_supernatural": {
 "major": [
   "mass outbreak of {disaster.illness} after unseasonal meteor shower",
+  "meteor falls in {desert|mountain|waste|swamp|marshe}s to the {north|south|east|west}, prophecy foretells a dark figure will {destroy|take over|corrupt} the {faithful|nobility|common folk} and bring about [a/an] {apocalypse|second coming|great plague}",
   "passing meteor induces variants of lycanthropy within the populous, mass chaos ensues at first full moon"
 ],
 "minor": [
   "{unusual|unexplained} {lights|sounds|smells|tremors} emanating from {abandoned house|cellar|alley} reported by {local|} {npc.generic}, {constable|sheriff|local authority} {files report|uninterested|suspicious}",
   "local halfling named {markov_names.hobbit} sets out to destroy enchanted {item.mundane} in the fires of {markov_names.deities}, stops for second breakfast along the way",
   "{werewolf|vampire|bewitched|supernatural} 'hunter' named {markov_names.werewolf} revealed to be werewolf; {caught in peculiar love triangle|takes trip to Paris|takes trip to London|howls at the moon loudly}",
-  "butcher of {markov_names.cities} revealed to be {werewolf|vampire|bewitched nobleman|voodoo witch}, locals demand {burning at the stake|waterboarding|crucifixion|bloodletting}"
+  "butcher of {markov_names.cities} revealed to be {werewolf|vampire|bewitched nobleman|voodoo witch}, locals demand {burning at the stake|waterboarding|crucifixion|bloodletting}",
+  "{several|many|numerous|dozens} reported missing after strange lights sighted {at night|in the evening|} in {swamp|marsh|mountains|desert} to the {north|south|east|west}"
 ],
 "moderate": [
   "{multiple|several|numerous} {deaths|disappearances|dismembered bodies|mutilated corpses} linked to {abandoned|broken down|vacant} {house|building} {at the edge|on the outskirts|in the middle} of {markov_names.cities}, causes {alarm|outrage|disgust} and calls for {investigation|justice|revenge}"
@@ -1660,7 +1732,8 @@
 "mundane": [
   "{strange lights|little green men|bigfoot|el chupacabra} observed {late at night|in the evening|in the mountains|in a forest|in the desert|far far away} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
   "{entertainer|performer|comedian|actor} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
-  "an emissary from the fey council of {markov_names.irish_forenames|markov_names.hobbit|markov_names.deities} was spotted frolicking in the flowers"
+  "an emissary from the fey council of {markov_names.irish_forenames|markov_names.hobbit|markov_names.deities} was spotted frolicking in the flowers",
+  "{weird smells|odd sounds|strange illusions} reported following death of {local|} {warlock|witch doctor|priest}, {townsfolk|locals|} suspect {haunting|ghost|possession|curse}"
 ]
 }
 }
