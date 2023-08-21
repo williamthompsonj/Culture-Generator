@@ -1496,7 +1496,7 @@
   "{monster|sentient plant|animal|insect} species discovered that is {harmful|helpful|beneficial|devastating} to the people"
 ],
 "mundane": [
-  "{animal.cute}s were busy making lots of babies and multiplied",
+  "{animal.cute}s got busy making babies and multiplied",
   "{characterization.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
   "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} during {disaster.mundane}",
   "{characterization.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} in freak natural accident",
