@@ -1,6 +1,6 @@
 "use strict";
 // define conditions of the population
-let population = {prefix: 'pop'};
+let population = {prefix: "pop"};
 
 // initialize the religion form
 population.Init = function()
@@ -21,106 +21,106 @@ population.Init = function()
 population.props = {
   poverty: {
     value: 0,
-    title: 'Poverty',
-    description: 'How much of the population is below the poverty line',
+    title: "Poverty",
+    description: "How much of the population is below the poverty line",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   inequality: {
     value: 0,
-    title: 'Inequality',
-    description: 'How big is the difference between poverty and average',
+    title: "Inequality",
+    description: "How big is the difference between poverty and average",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   corruption: {
     value: 0,
-    title: 'Corruption',
-    description: 'How tolerant people are toward unlawful or unconventional things',
+    title: "Corruption",
+    description: "How tolerant people are toward unlawful or unconventional things",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   prejudice: {
     value: 0,
-    title: 'Prejudice',
-    description: 'How likely people are to show bias or racism',
+    title: "Prejudice",
+    description: "How likely people are to show bias or racism",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   dissent: {
     value: 0,
-    title: 'Dissent',
-    description: 'How likely people are to protest or oppose things',
+    title: "Dissent",
+    description: "How likely people are to protest or oppose things",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   religion: {
     value: 0,
-    title: 'Religion',
-    description: 'How much of the population is religious',
+    title: "Religion",
+    description: "How much of the population is religious",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   free_choice: {
     value: 0,
-    title: 'Free Choice',
-    description: 'How much control people have over life choices: occupation, love interest, life style, etc.',
+    title: "Free Choice",
+    description: "How much control people have over life choices: occupation, love interest, life style, etc.",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   free_time: {
     value: 0,
-    title: 'Free Time',
-    description: 'How much time do average people have to do things they want outside of work and sleep',
+    title: "Free Time",
+    description: "How much time do average people have to do things they want outside of work and sleep",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
 };

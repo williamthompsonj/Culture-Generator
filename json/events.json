@@ -1,5 +1,36 @@
 {
   "activity": {
+    "dead": [
+      "beaten and broken",
+      "beheaded",
+      "burned to a crisp in manure",
+      "burned {alive|and blacked}",
+      "castrated and naked",
+      "crushed by {cabbage|rock|item.mundane}s",
+      "dismembered",
+      "drained of blood",
+      "drowned in a vat of milk",
+      "eviscerated",
+      "flayed",
+      "frozen",
+      "fully dehydrated",
+      "hanged",
+      "mauled by {animal.wild}s",
+      "missing bodily organs",
+      "mummified",
+      "mutilated",
+      "partially buried",
+      "pecked to death",
+      "quartered",
+      "reduced to ash",
+      "riddled with {snake bite|ice pick hole|tiny cut|stab wound}s",
+      "suffocated",
+      "tarred and feathered",
+      "torn to pieces",
+      "tortured to death",
+      "turned to stone",
+      "{naked|} inside a sealed barrel"
+    ],
     "fart": [
       "answered the call of a wild burrito",
       "beeped their chocolate horn",
@@ -83,7 +114,7 @@
       "trail running",
       "walking",
       "windsurfing",
-      "{item.mundane} collecting"
+      "{item.any} collecting"
     ],
     "political": [
       "cloak-and-dagger activities",
@@ -198,7 +229,6 @@
       "giant wolf spider",
       "grick",
       "hag",
-      "hag",
       "harpy",
       "hostile dryad",
       "hyena",
@@ -212,11 +242,6 @@
       "poisonous snake",
       "rust monster",
       "stirge",
-      "swarm of bats",
-      "swarm of insects",
-      "swarm of poisonous snakes",
-      "swarm of rats",
-      "swarm of ravens",
       "tiger",
       "treant",
       "troll",
@@ -272,10 +297,29 @@
       "scorpions",
       "wasp mantidflies",
       "wasps"
+    ],
+    "wild": [
+      "alligator",
+      "anaconda",
+      "bear",
+      "bird",
+      "chimpanzee",
+      "crocodile",
+      "domestic dog",
+      "hyaena",
+      "komodo dragon",
+      "large catfish",
+      "lion",
+      "pig",
+      "piranha",
+      "rat",
+      "shark",
+      "stray dog",
+      "wolf"
     ]
   },
   "character": {
-    "divine": [
+    "angelic": [
       "beauty",
       "compassion",
       "concealed forms",
@@ -342,6 +386,34 @@
       "war",
       "wealth",
       "wisdom"
+    ],
+    "any": [
+      "{character.negative}",
+      "{character.neutral}",
+      "{character.positive}",
+      "{character.vile}",
+      "{character.weird}"
+    ],
+    "armor": [
+      "acid resistance",
+      "animation",
+      "arrow deflection",
+      "bashing",
+      "blinding",
+      "cold resistance",
+      "electricity resistance",
+      "etherealness",
+      "fire resistance",
+      "fortification",
+      "ghost touch",
+      "glamoured touch",
+      "invulnerability",
+      "reflecting",
+      "shadow",
+      "slickness",
+      "sonic resistance",
+      "undead controlling",
+      "wild shape"
     ],
     "negative": [
       "abandoned",
@@ -447,6 +519,55 @@
       "venerated",
       "well-liked"
     ],
+    "vile": [
+      "bloody",
+      "chaotic",
+      "demonic",
+      "destroyer",
+      "ghastly",
+      "indomitable",
+      "infernal",
+      "shady",
+      "terrible",
+      "unspeakable"
+    ],
+    "weapon": [
+      "bane",
+      "blood",
+      "brilliant energy",
+      "dancing",
+      "defender",
+      "defending",
+      "disruption",
+      "distance",
+      "dwarven",
+      "eldritch",
+      "elven",
+      "flaming",
+      "flaming burst",
+      "frost",
+      "ghost touch",
+      "holy",
+      "icy burst",
+      "keen",
+      "luck",
+      "merciful",
+      "oath",
+      "returning",
+      "seeking",
+      "shock",
+      "shocking burst",
+      "silver",
+      "speed",
+      "spell storing",
+      "throwing",
+      "thundering",
+      "unholy",
+      "vicious",
+      "vorpal",
+      "vorpal",
+      "wounding"
+    ],
     "weird": [
       "eerie",
       "odd",
@@ -456,6 +577,14 @@
       "unearthly",
       "unnatural",
       "weird"
+    ]
+  },
+  "condition": {
+    "dead": [
+      "{half|mostly|partially|somewhat|} decayed by natural processes",
+      "{half|mostly|partially|somewhat|} dissolved by acid",
+      "{half|mostly|partially|somewhat|} eaten by {animal.wild}s",
+      "{half|mostly|partially|somewhat|} infested by {animal.insects}"
     ]
   },
   "disaster": {
@@ -552,9 +681,7 @@
       "pentapox",
       "petrifold regression",
       "phazon madness",
-      "plague of insomnia",
       "porphyric hemophilia",
-      "pox of lechuck",
       "pretendicitis",
       "progenitor virus",
       "proxyglossariasis",
@@ -596,7 +723,10 @@
       "wildcard coccus",
       "wildfire virus",
       "xenovirus",
-      "yellow death"
+      "yellow death",
+      "{markov_names.periodic_elements|markov_names.pokemon_modern} {amnesia|bacterium|complex|disease|fever|flu|madness|malady|plague|sickness|syndrome}",
+      "{markov_names.periodic_elements|markov_names.pokemon_modern}{-|' '}{displasia|virus|pox}",
+      "{multivariate|irregular|occasional|frequent} {absent mindedness|blindness|deafness|immaturity|incompetence|incontinence|infertility|insecurity|insomnia}"
     ],
     "mundane": [
       "avalanche",
@@ -835,6 +965,16 @@
       "zucchini"
     ]
   },
+  "group": {
+    "monster_mundane": [
+      "bizarre monsters",
+      "{brigand|cultist|pirate|monster.mundane}s of {markov_names.cities}",
+      "{brigand|cultist|pirate|monster.mundane}s of {place.any}"
+    ],
+    "mundane": [
+      "a {company|group} of {pilgrims|explorers}"
+    ]
+  },
   "incident": {
     "major": [
       "creature: {incident_creature.major}",
@@ -849,6 +989,7 @@
       "natural: {incident_natural.minor}",
       "people: {incident_people.minor}",
       "political: {incident_political.minor}",
+      "quest: {quest.minor}",
       "religious: {incident_religious.minor}",
       "supernatural: {incident_supernatural.minor}"
     ],
@@ -873,25 +1014,25 @@
   "incident_creature": {
     "major": [
       "horde of {animal.aggressive}s last seen destroying nearby village, {local|township's} {npc.political} issues call to arms",
-      "invasive species of {animal.insects} disrupting farms throughout the land",
-      "{animal.aggressive}s seen falling from the sky after powerful storm"
+      "invasive species of {animal.insects} disrupting {farm|ranche|orchard|}s throughout the land of {markov_names.cities}",
+      "{animal.aggressive}s seen falling from the sky near {place.small} after a {powerful|raging|violent|} storm"
     ],
     "minor": [
       "coven of hags moves into local {swamp|forest|cave|abandoned temple}",
-      "hoard of {murderous|demon|violent} {animal.cute}s descends upon unsuspecting {food.random} farmer, origin of creatures unknown",
-      "hoard of {murderous|demon|violent} {animal.insects} descends upon unsuspecting {food.random} farmer, origin of creatures unknown"
+      "hoard of {murderous|demon|violent} {animal.cute}s descends upon unsuspecting {food.any} farmer, origin of creatures unknown",
+      "hoard of {murderous|demon|violent} {animal.insects} descends upon unsuspecting {food.any} farmer, origin of creatures unknown"
     ],
     "moderate": [
       "{monster|sentient plant|animal|insect} species discovered that is {harmful|helpful|beneficial|devastating} to the people"
     ],
     "mundane": [
-      "{animal.cute}s got busy making babies and multiplied",
-      "{character.random||relevance.random} animal trainer attacked by dozens of {animal.cute}s without warning",
-      "{character.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
-      "{character.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} during {disaster.mundane}",
-      "{character.random||relevance.random} {npc.job|race.common} swarmed by {animal.insects} in freak natural accident",
-      "{relevance.random} {npc.job|race.common} discovers den of {animal.cute}s",
-      "{relevance.random} {npc.job|race.common} discovers unholy large nest of {animal.insects}"
+      "{animal.cute}s got busy making babies and multi-multi-multiplied",
+      "{character.any||relevance.any} animal trainer attacked by dozens of {animal.cute}s without warning",
+      "{title.mundane} discovers den of {animal.cute}s",
+      "{title.mundane} discovers unholy large nest of {animal.insects}",
+      "{title.mundane} saves {baby|elderly|} {animal.cute}s from [a/an] {disaster.mundane}",
+      "{title.mundane} swarmed by {animal.insects} after freak accident",
+      "{title.mundane} swarmed by {animal.insects} during {disaster.mundane}"
     ]
   },
   "incident_natural": {
@@ -899,7 +1040,7 @@
       "[a/an] {ash plume|meteor impact|powerful earthquake|pyroclastic flow|volcanic eruption} destroys {city|capitol|trade center} of {markov_names.deities}",
       "drought causes crop failure and livestock deaths across the land, mass migrations begin",
       "heavy tremors from quake destroy buildings, cause landslides, and uproot trees. {Locals|Townsfolk|Politicians|Religious leaders} proclaim end-times are near",
-      "meteor destroys capitol city; ash blocks out the sun causing early winter out of season",
+      "meteor destroys capitol city of {markov_names.deities}; ash blocks out the sun causing early winter out of season",
       "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down"
     ],
     "minor": [
@@ -910,39 +1051,40 @@
       "{roads ruined|buildings collapse|orphanage destroyed} after {landslide|heavy downpour}, {local|} {trade unions|poor people|guild workers|orphanage} suffer"
     ],
     "moderate": [
-      "a new star cluster was discovered where nothing previously existed",
-      "an outbreak of {disaster.illness|markov_names.raw.diseases} decimated the {animal.cute}s",
+      "[a/an] {disaster.illness} epidemic with {#50-70}% infection rate and {#01-10}% mortality rate",
+      "a new star cluster appeared in the night's sky",
+      "an outbreak of {disaster.illness} with {#01-30}% infection rate and {#20-30}% mortality rate",
       "heavy storm ravages {local|} population causing a town and the surrounding area to fall into ruin",
       "meteor makes landfall in middle of town causing {panic|fire|tremors}, townsfolk {run in fear|run for the hills|proclaim end-times are near|blame the major}",
       "the fields {yielded a bumper crop|withered and died}",
-      "there was [a/an] {disaster.illness} epidemic with an infection rate of {#1-30}% and a mortality rate of {#20-30}%",
-      "there was [a/an] {disaster.illness} epidemic with an infection rate of {#50-70}% and a mortality rate of {#1-10}%"
+      "{disaster.illness|markov_names.raw.diseases} decimated the {animal.cute}s"
     ],
     "mundane": [
       "seasonal storm {rains|snows|hails} on {circus|carnival|traveling|parade}, locals {disappointed|have fun anyway|go home|huddle in tents|wander off}",
       "thunder storm {scares|frightens|freaks out} {local|} {animal.cute}s causing them to to flee in {fear|terror}",
-      "{local|} {npc.job|race.common} proclaims it's colder than {silly.colder_than}",
-      "{local|} {npc.job|race.common} proclaims it's hotter than {silly.hotter_than}",
-      "{relevance.lesser|relevance.average} {npc.job|race.common} visits local healer, diagnosed with possible case of {disaster.illness}",
-      "{sudden|unexplained|} cave-in {on the road|below the church|in a field|} prompts {locals|authorities} to {explore|investigate|flee in fear}"
+      "{sudden|unexplained|} cave-in {on the road|below the church|in a field|} prompts {locals|authorities} to {explore|investigate|flee in fear}",
+      "{title.mundane} proclaims it's colder than {silly.colder_than}",
+      "{title.mundane} proclaims it's hotter than {silly.hotter_than}",
+      "{title.mundane} visits local healer, diagnosed with possible case of {disaster.illness}"
     ]
   },
   "incident_people": {
     "major": [
-      "violent crime {substantially|} increased {everywhere|in the cities|in the country|near the capitol|on the high seas}"
+      "[!]{npc.leader} {markov_names.deities} commits {unforgivable|violent|aggressive} breach of peach accord; nations poised at brink of war!",
+      "violent crime  {substantially|} increased {everywhere|in [token=markov_names.cities], the city of [token=character.angelic]|in the country of [token=markov_names.cities]|near the capitol of [token=markov_names.cities]|on the [token=markov_names.angelic] Sea|in [token=markov_names.demonic] Bay}, {trade routes disrupted|diplomatic relations strained} to the brink of {collapse|disaster|desperation|invasion|uncertainty|war}. [!]{npc.leader} {markov_names.names} plans to {assassinate|kidnap|ransom} the {daughter|son|brother|sister|wife|husband}s of [!]{npc.leader} {markov_names.names} in retaliation"
     ],
     "minor": [
-      "[a/an] {character.random|relevance.random} {npc.job} died {by mishap|from old age|from sickness}, leaving behind an unusual {item.random}",
-      "[a/an] {character.random|relevance.random} {npc.job} was {assassinated|struck down in battle}",
-      "violence against {food.random|item.random} merchants {increased|decreased}",
-      "{character.positive} {npc.job|noble|townsfolk} found {drained of blood|torn to pieces|brutally mutilated} {on the road to town|in an alley|hanging from a tree|under the stairs|behind a pile of firewood|} by local {npc.job|npc.generic}"
+      "violence by {title.monster_mundane|group.monster_mundane} against {food|musical instrument|general goods|specialist} merchants {increased|decreased|remained steady} at {place.any}",
+      "{title.mundane} died {by mishap|from old age|from sickness}, leaving behind a previously unknown {[token=character.weapon] weapon|shield of [token=character.armor]|armor of [token=character.armor]|[token=character.weird] [token=item.mundane]}",
+      "{title.mundane} {assassinated|robbed|taken hostage} by {title.monster_mundane} while visiting {place.any}",
+      "{title.mundane} {finds|discovers} body of {character.positive} {npc.job|noble|townsfolk} {activity.dead} {on the road to town|in an alley|under the stairs|behind a stack of firewood|} {condition.dead|}, authorities have [var:s=s]{no|three|two|one[var:s=]} {possible|known} suspect[var:s]",
+      "{title.mundane} {finds|discovers} unidentified body of {race.any} {activity.dead} {on the road|in an alley|under the stairs|behind a stack of firewood|} {condition.dead|}, authorities have [var:s=s]{no|three|two|one[var:s=]} {possible|known} suspect[var:s]"
     ],
     "moderate": [
       "[a/an] {academy of higher learning|walled town|castle} was founded",
+      "[a/an] {ancient|forgotten} {city|shrine|temple|civilization|culture} was {re|}discovered",
       "[a/an] {character.positive} {npc.generic|member of the leader's family|clergy member|leader} died suddenly",
-      "a forgotten culture was rediscovered",
-      "a powerful of {evil|neutrality|good} organization made their presence known",
-      "an ancient {city|shrine|temple|civilization} was {re|}discovered",
+      "a powerful {evil|neutrality|good} organization made their presence known",
       "there was an advance in {defensive military|offensive military|engineering|food production|medical|naval} technology",
       "violent crime {substantially|} decreased {everywhere|in the country|on the high seas}",
       "violent crime {substantially|} decreased {in the city|in the country|near the capitol|on the high seas} of {markov_names.forename|markov_names.surname}",
@@ -951,24 +1093,24 @@
     "mundane": [
       "[a/an] {character.positive} {npc.generic|member of the leader's family|clergy member|local leader} died suddenly",
       "[a/an] {relevance.lesser|relevance.average} noble house {was destroyed|rose to prominence|gained favor|was excommunicated}",
-      "[a/an] {relevance.lesser|relevance.average} {npc.generic|clergy member|local leader} {activity.fart} after over-indulging in eating {food.random}",
+      "[a/an] {relevance.lesser|relevance.average} {npc.generic|clergy member|local leader} {activity.fart} after over-indulging in eating {food.any}",
       "{activity.mundane} incident kills {npc.job|race.common} with no living relatives",
       "{activity.mundane} incident kills {npc.job|race.common}, spouse, and only child",
       "{activity.mundane} incident kills {npc.job|race.common}, spouse, and {#2-9} children",
-      "{character.random||relevance.random} {npc.job|race.common} dies in {activity.mundane} accident",
-      "{character.random||relevance.random} {npc.job|race.common} saves {baby|elderly|} {race.common} from [a/an] {disaster.mundane}",
-      "{character.random||relevance.random} {npc.job|race.common} {loudly|quietly|silently|vigorously|harshly} {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, nearby {character.random||relevance.random} {npc.job|race.common} {terrified|frightened|bemused|annoyed|confused|unimpressed}",
-      "{character.random} {npc.job|race.common} falls down abandoned well while preparing for {activity.mundane} event",
-      "{food.random} farmer has cart destroyed during high speed chase after local {npc.job} does shenanigans",
+      "{character.any} {npc.job|race.common} falls down abandoned well while preparing for {activity.mundane} event",
+      "{food.any} farmer has cart destroyed during high speed chase after local {npc.job} does shenanigans",
       "{npc.job|race.common} and {npc.job|race.common} {friend|lover|companion|arch nemesis|} {run away together|begin fighting|begin arguing} when caught in the act of {activity.unsavory}",
-      "{relevance.random} {item.tool|item.music_instrument} producer accused of {activity.unsavory} after [a/an] {activity.mundane} incident",
-      "{relevance.random} {npc.job|race.common} discovers wild {food.berry|food.fruit|food.melon|food.vegetable} orchard",
-      "{relevance.random} {npc.job|race.common} drunkenly fell on {relevance.random} {npc.job|race.common} during dance",
-      "{relevance.random} {npc.job|race.common} flees local area after being accused of {activity.unsavory}",
-      "{relevance.random} {npc.job|race.common} has pants spontaneously catch fire after telling unconvincing story",
-      "{relevance.random} {npc.job|race.common} marries foreign {npc.job|race.common}, towns people {flabbergasted|outraged|relieved|disappointed}",
-      "{relevance.random} {npc.job|race.common} sings off-key during drunken performance",
-      "{relevance.random} {npc.job|race.common} stumbles drunk into home of {local|} {race.common}, hijinks ensue"
+      "{relevance.any} {item.tool|item.music_instrument} producer accused of {activity.unsavory} after [a/an] {activity.mundane} incident",
+      "{relevance.any} {npc.job|race.common} discovers wild {food.berry|food.fruit|food.melon|food.vegetable} orchard",
+      "{relevance.any} {npc.job|race.common} drunkenly fell on {relevance.any} {npc.job|race.common} during dance",
+      "{relevance.any} {npc.job|race.common} flees local area after being accused of {activity.unsavory}",
+      "{relevance.any} {npc.job|race.common} has pants spontaneously catch fire after telling unconvincing story",
+      "{relevance.any} {npc.job|race.common} marries foreign {npc.job|race.common}, towns people {flabbergasted|outraged|relieved|disappointed}",
+      "{relevance.any} {npc.job|race.common} sings off-key during drunken performance",
+      "{relevance.any} {npc.job|race.common} stumbles drunk into home of {local|} {race.common}, hijinks ensue",
+      "{title.mundane} dies in {activity.mundane} accident",
+      "{title.mundane} saves {baby|elderly|} {race.common} from [a/an] {disaster.mundane}",
+      "{title.mundane} {loudly|quietly|silently|vigorously|harshly} {activity.fart} {at the market|during church|late at night|while eating dinner|early in the morning}, {title.mundane} {terrified|frightened|bemused|annoyed|confused|unimpressed}"
     ]
   },
   "incident_political": {
@@ -979,7 +1121,7 @@
       "{taxes|pirate attacks|bandit raids} {increased|decreased}"
     ],
     "minor": [
-      "fierce rivalry between {npc.political}s, {townsfolk|locals|officials} polarized",
+      "fierce {controversy|disagreement|dispute|rivalry|opposition} between {npc.political}s, {townsfolk|locals|officials} polarized",
       "{npc.political} accused of {gay|polyamorous|bisexual|unethical|underage|} love triangle {publicly resigns|speaks out against accusations|refuses comment|flees town|disappears|found dead|}",
       "{npc.political} comes out as {lesbian|gay|bisexual|transexual|queer|pansexual|polyamorous|transvestite}, locals {un|}{impressed|surprised|interested|welcoming}",
       "{npc.political} found guilty of {embezzling money|fraud|tax evasion|telling a white lie}, townsfolk {outraged|flabbergasted|outraged|relieved|disappointed}",
@@ -1002,15 +1144,15 @@
       "{npc.political} escapes captivity after being {arrested|detained|held} for {activity.political}, {experts|witnesses|victims} fear {reprisal|retaliation|revenge}"
     ],
     "mundane": [
-      "{npc.political} declares all {male|female} {race.common} babies to be cute, celebration this evening"
+      "{npc.political} declares all {male|female} {race.common} babies to be cute, {celebration|festivities} this evening"
     ]
   },
   "incident_religious": {
     "major": [
-      "{his|her} holiness, {npc.religious} {markov_names.deities|markov_names.angels|markov_names.demons}, dies while ascending to godhood; {markov_names.deities} nation {scrambles|calls for aid|desperately appeals to allies|entreats neighboring nations|pleads for aid} to defend against atropal",
-      "{markov_names.deities|markov_names.angels|markov_names.demons} rose to godhood and a new religion was founded",
-      "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}angel of {character.divine}, falls from the heavens in fiery glory; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate",
-      "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}{devil|demon} of {character.divine}, cast out from the depth of {hell|hades}; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate"
+      "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}angel of {character.angelic}, falls from the heavens in fiery glory; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate",
+      "{markov_names.deities|markov_names.angels|markov_names.demons}, {arch|}{devil|demon} of {character.angelic}, cast out from the depth of {hell|hades}; {markov_names.deities|markov_names.angels|markov_names.demons} nation calls for team to investigate",
+      "{title.religious} ascended to {demi|}godhood and a new religion was founded",
+      "{title.religious} dies while divinely ascending; {township|city|province|nation} of {markov_names.deities} {scrambles|calls for aid|desperately appeals to allies|entreats neighboring nations|pleads for aid} to defend against atropal"
     ],
     "minor": [
       "{arguing|fighting|an incident} between evil and {neutral|good} temples occurred",
@@ -1026,12 +1168,12 @@
       "a pilgrimage from the old city of {markov_names.cities} to the holy site of {markov_names.deities} began"
     ],
     "mundane": [
-      "priest claims to be punished by the gods with illness, local healer diagnoses possible case of {disaster.illness}",
       "public {belittling|name calling|mockery|disagreement} between evil and {good|neutral} temples occurred",
       "public {belittling|name calling|mockery|disagreement} between good and {evil|neutral} temples occurred",
       "public {belittling|name calling|mockery|disagreement} between neutral and {evil|good} temples occurred",
       "public {belittling|name calling|mockery|disagreement} between {evil|good|neutral} temples occurred",
-      "{local|ill-advised|} prophet proclaims {the sky is falling|there is a method to the madness|drunkard told a cockamamie story}"
+      "{local|ill-advised|} prophet proclaims {the sky is falling|there is a method to the madness|drunkard told a cockamamie story}",
+      "{title.religious}, claims punishment by the gods, {local|} healer diagnoses possible case of {disaster.illness}"
     ]
   },
   "incident_supernatural": {
@@ -1042,16 +1184,18 @@
     ],
     "minor": [
       "butcher of {markov_names.cities} revealed to be {werewolf|vampire|bewitched nobleman|voodoo witch}, locals demand {burning at the stake|waterboarding|crucifixion|bloodletting}",
-      "local halfling named {markov_names.hobbit} sets out to destroy enchanted {item.mundane} in the fires of {markov_names.deities}, stops for second breakfast along the way",
+      "local halfling named {markov_names.tolkien} sets out to destroy enchanted {item.mundane} in the fires of {markov_names.deities}, stops for second breakfast along the way",
       "{several|many|numerous|dozens} reported missing after strange lights sighted {at night|in the evening|} in {swamp|marsh|mountains|desert} to the {north|south|east|west}",
       "{unusual|unexplained} {lights|sounds|smells|tremors} emanating from {abandoned house|cellar|alley} reported by {local|} {npc.generic}, {npc.law|local authority} {files report|uninterested|suspicious}",
       "{werewolf|vampire|bewitched|supernatural} 'hunter' named {markov_names.werewolf} revealed to be werewolf; {caught in peculiar love triangle|takes trip to Paris|takes trip to London|howls at the moon loudly}"
     ],
     "moderate": [
+      "dragon named {markov_names.dragon} {antagonizes|berates|attacks} {riverside|remote|mountainous|secluded} village of {markov_names.cities}; {locals|townsfolk|authorities} {call for aid|sound the alarm|unable to contain threat}",
       "{multiple|several|numerous} {deaths|disappearances|dismembered bodies|mutilated corpses} linked to {abandoned|broken down|vacant} {house|building} {at the edge|on the outskirts|in the middle} of {markov_names.cities}, causes {alarm|outrage|disgust} and calls for {investigation|justice|revenge}"
     ],
     "mundane": [
-      "an emissary from the fey council of {markov_names.irish_forenames|markov_names.hobbit|markov_names.deities} was spotted frolicking in the flowers",
+      "Highgate residents report gray figure with long coat and glowing eyes; officials concerned for vampire, others fear insectoid demon",
+      "an emissary from the fey council of {markov_names.irish_forenames|markov_names.tolkien|markov_names.deities} was spotted frolicking in the flowers",
       "{actor|actress|artist|comedian|entertainer|performer|thespian} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
       "{bigfoot|el chupacabra|little green men|strange lights} observed {far far away|in the desert|in the evening|in a forest|in the mountains|late at night} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
       "{character.weird} {illusions|sensations|sounds|smells|vibrations} reported following death of {local|} {warlock|witch doctor|priest}, {townsfolk|locals|officials} suspect {haunting|ghost|possession|curse}"
@@ -1060,7 +1204,6 @@
   "item": {
     "mundane": [
       "{item.music_instrument}",
-      "{item.supplies}",
       "{item.tool}"
     ],
     "music_instrument": [
@@ -1133,12 +1276,56 @@
       "knife",
       "needle and thread",
       "pickaxe",
-      "plier",
       "rope",
       "ruler",
       "saw",
       "shovel",
       "tinderbox"
+    ]
+  },
+  "monster": {
+    "major": [
+      "astral dreadnought",
+      "kraken",
+      "tarrasque",
+      "titan"
+    ],
+    "minor": [],
+    "moderate": [
+      "dragon",
+      "hydra",
+      "lich",
+      "vampire"
+    ],
+    "mundane": [
+      "baboon",
+      "badger",
+      "blink dog",
+      "boar",
+      "crab",
+      "crow",
+      "fox",
+      "goat",
+      "goblin",
+      "grimlock",
+      "hyena",
+      "jackal",
+      "kobold",
+      "lizard",
+      "miniature giant space hamster",
+      "mongrel",
+      "ogre",
+      "orc",
+      "pig",
+      "rat",
+      "raven",
+      "scorpion",
+      "shrieker",
+      "spider",
+      "troglodyte",
+      "vulture",
+      "weasel",
+      "xvart"
     ]
   },
   "npc": {
@@ -1245,6 +1432,13 @@
       "sleuth",
       "trooper"
     ],
+    "leader": [
+      "chieftain",
+      "count",
+      "emperor",
+      "king",
+      "lord"
+    ],
     "political": [
       "ambassador",
       "censor",
@@ -1283,6 +1477,98 @@
       "priest",
       "provost"
     ]
+  },
+  "place": {
+    "any": [
+      "{place.medium}",
+      "{place.small}"
+    ],
+    "medium": [
+      "the {markov_names.tolkien} {place.region}",
+      "{markov_names.tolkien}'s {place.region}"
+    ],
+    "natural_feature": [
+      "canyon",
+      "cave",
+      "cavern",
+      "cove",
+      "crag",
+      "crossing",
+      "fells",
+      "hill",
+      "marsh",
+      "meadow",
+      "mountain",
+      "river",
+      "{silverwood|} forest"
+    ],
+    "region": [
+      "barrens",
+      "desert",
+      "glades",
+      "hills",
+      "jungle",
+      "moor",
+      "mountains",
+      "plains",
+      "sea"
+    ],
+    "small": [
+      "the ruins of {markov_names.tolkien}'s {title.structure}",
+      "the ruins of {title.structure}",
+      "the {place.natural_feature|title.structure}",
+      "{markov_names.tolkien}'s {place.natural_feature}",
+      "{markov_names.tolkien}'s {title.structure}"
+    ],
+    "structure": [
+      "castle",
+      "citadel",
+      "hold",
+      "megalith",
+      "pillars",
+      "stronghold",
+      "tower"
+    ]
+  },
+  "quest": {
+    "complication": [
+      "[pronoun] information is completely wrong",
+      "the party cannot use {arcane magic|divination magic|magic items|weapons} in their quest",
+      "the party encounters an old ally now working against them",
+      "the party must complete the quest {amidst a natural disaster|amidst a terrible plague|within 3 days|without killing anyone|without leaving any trace of their involvement}",
+      "the party soon finds itself facing a moral quandary",
+      "the quest is a trap"
+    ],
+    "major": [],
+    "minor": [
+      "[a/an] {title.generic} requests a group of adventurers to clear [pronoun] name against charges of {forgery|heresy|treason}",
+      "[a/an] {title.generic} requests a group of adventurers to discover the fate of {group.mundane} lost in {place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to discover who is murdering [pronoun] peers, and why",
+      "[a/an] {title.generic} requests a group of adventurers to escort {title.mundane|item} safely to the {elven|dwarven|} {city|town|village} of {markov_names.tolkien}",
+      "[a/an] {title.generic} requests a group of adventurers to explore {place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to expose a corrupt aristocrat who serves [a/an] {title.mundane|monster.mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to find and explore the ancient ruins of {place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to hunt down and {capture|kill|slay} the {brutal|cunning|legendary|remorseless} {murderer|rogue|thief|killer} {markov_names.forenames|markov_names.surname}",
+      "[a/an] {title.generic} requests a group of adventurers to hunt down and {capture|kill|slay} {title.mundane|monster.mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to investigate a magical portal which has been discovered in the {place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to investigate a star which fell into the {place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to investigate an evil curse which has befallen the {elven|dwarven|} {city|town|village} of {markov_names.tolkien}",
+      "[a/an] {title.generic} requests a group of adventurers to investigate {group.mundane} {in|which wander} the {place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to investigate {title.item_generic} in the {place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to protect {him|her|[pronoun] prized cabbages|[pronoun] precious} from the assassins of {markov_names.forename|markov_names.surname|place.any}",
+      "[a/an] {title.generic} requests a group of adventurers to recover [a/an] {item.mundane} from the {group.mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to recover and destroy an evil artifact from the {place.any|title.monster_mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to recover and destroy an evil artifact from {markov_names.forename|markov_names.surname|title.mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to recover the {item.mundane} from the {group.mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to rescue the lady {markov_names.tolkien} from the {group.mundane|title.monster_mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to rescue the {elven|dwarven|} {city|town|village} of {markov_names.tolkien} from {title.monster_mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to rescue the {elven|dwarven|} {city|town|village} of {markov_names.tolkien} from {title.monster_mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to steal [a/an] {item.mundane} from a rival",
+      "[a/an] {title.generic} requests a group of adventurers to thwart the monstrous plan of {title.mundane|title.monster_mundane}",
+      "[a/an] {title.generic} requests a group of adventurers to {capture|kill|slay} the {title.monster_mundane} and retrieve {a vial of its blood|its eyes|its hide}"
+    ],
+    "moderate": [],
+    "mundane": []
   },
   "race": {
     "common": [
@@ -1405,6 +1691,80 @@
       "unimportant",
       "unnecessary",
       "worthless"
+    ]
+  },
+  "senses": {
+    "color": [
+      "black",
+      "blue",
+      "brass",
+      "brown",
+      "copper",
+      "coral",
+      "crimson",
+      "gold",
+      "gray",
+      "green",
+      "orange",
+      "purple",
+      "red",
+      "silver",
+      "violet",
+      "white"
+    ],
+    "emotion": [
+      "afraid",
+      "angry",
+      "annoyed",
+      "anxious",
+      "calm",
+      "cheerful",
+      "confident",
+      "confused",
+      "curious",
+      "embarrassed",
+      "energetic",
+      "excited",
+      "frustrated",
+      "gloomy",
+      "grumpy",
+      "happy",
+      "loved",
+      "mad",
+      "sad",
+      "sick",
+      "silly"
+    ],
+    "pattern": [
+      "blended",
+      "checkered",
+      "chevron",
+      "flame stitched",
+      "herringbone",
+      "paisley",
+      "plaid",
+      "polka dot",
+      "quatrefoil",
+      "stitched",
+      "streaked"
+    ],
+    "texture": [
+      "bristly",
+      "bumpy",
+      "coarse",
+      "fluffy",
+      "fuzzy",
+      "hard",
+      "prickly",
+      "rough",
+      "silky",
+      "slippery",
+      "smooth",
+      "soft",
+      "squishy",
+      "sticky",
+      "velvety",
+      "wrinkly"
     ]
   },
   "silly": {
@@ -1572,57 +1932,8 @@
       "6:30 is the best time on a clock, hands down",
       "6:30 is the best time on a clock, hands down",
       "9 out of 10 voices in my head tell me I'm crazy. The tenth is just humming",
-      "A Freudian slip is when you mean one thing and mean your mother",
-      "A Mexican magician tells the audience he will disappear on the count of three. He says, 'Uno, dos...' and poof! He disappeared without a tres",
-      "A bag of money can represent not only wealth, but also massive inflation",
-      "A balanced diet simply means having cupcakes in each hand",
-      "A best friend is someone who clears your search history immediately after you die",
-      "A blind man walked into a bar... and a table... and a chair..",
-      "A book fell on my head the other day. I only have my shelf to blame though",
-      "A cookie a day keeps your sadness away, but an entire jar of cookies a day brings it back",
-      "A dung beetle walks into a bar and asks, 'Is this stool taken?'",
-      "A ghost walked into a bar and ordered a shot of vodka. The bartender said, 'Sorry, we don't serve spirits here'",
-      "A pessimist is someone who has spent too much time listening to optimists",
-      "A psychiatrist is someone who will charge you money for answers that you can get for free from your wife or friends",
-      "A recent study has found that women who carry a little extra weight live longer than the men who mention it",
-      "A successful man is one who earns more than his wife can spend. A successful woman is one who knows where to look for such a man",
-      "A termite walks into the bar and asks, 'Is the bar tender here?'",
-      "A told my girlfriend she drew her eyebrows too high. She seemed surprised",
       "Adam & Eve were the first ones to ignore the Apple terms and conditions",
-      "After Tuesday, even the calendar says WTF",
-      "Alcohol and Calculus don't mix. It's never a good idea to drink and derive",
-      "Always borrow money from a pessimist. They'll never expect it back",
-      "Always remember that you're unique... just like everyone else",
-      "An apple a day keeps the doctor away... if you throw it hard enough!",
-      "Answers are what we have to solve other people's problems",
-      "Are people born with photographic memories, or does it take time to develop?",
-      "Atheism is a non-prophet organization",
       "Barbie is so popular and yet, kids still buy friends for her",
-      "Before you criticize someone, walk a mile in their shoes. That way, when you do criticize them, you're a mile away and you have their shoes",
-      "Blunt pencils are really pointless",
-      "Build a man a fire and he'll be warm for a day. Set a man on fire and he'll be warm for the rest of his life",
-      "Can cars stop at a bus stop?",
-      "Communist jokes aren't funny unless everyone gets them",
-      "Communist jokes aren't funny unless everyone gets them",
-      "Despite the high cost of living, it remains popular",
-      "Did you hear about the guy whose whole left side got amputated? He's all right now",
-      "Doctor, there's a patient on line one that says he's invisible. 'Well, tell him I can't see him right now'",
-      "Dogs can't see inside your body, but CAT scan",
-      "Don't drink and drive. You might spill your beer",
-      "Don't worry if plan A fails. There are 25 more letters in the alphabet!",
-      "Don't you hate it when someone answers their own questions? I do",
-      "Don't you hate it when someone answers their own questions? I do",
-      "Earth is like the insane asylum for the universe",
-      "Every woman should marry an archeologist, because the older she gets, the more he'll love her",
-      "Except for a parking meter, change is inevitable",
-      "Fighting for peace is like screwing for virginity",
-      "Four fonts walk into a bar. The bartender says, 'Hey! We don't want your type in here!'",
-      "Geology rocks, but geography's where it's at",
-      "Have you heard about the new restaurant called 'Karma?' There's no menu-you get what you deserve",
-      "Here I am! What are your other two wishes?",
-      "Hi, I am (your name), but you can call me tomorrow!",
-      "How can you scoot along if you don't have a scooter?",
-      "How do you make holy water? You boil the hell out of it",
       "I always take life with a grain of salt. And a slice of lemon. And a shot of tequila",
       "I am a great housekeeper. Every time I leave a man, I keep his house",
       "I am going to get my toe nail-pierced this Friday",
@@ -1674,102 +1985,178 @@
       "I'm so glad we have brown cows, otherwise there wouldn't be any chocolate milk",
       "I've always thought air was free. That is, I did until I went out and bought a $3 bag of crisps",
       "I've had bad luck with both my wives. The first one abandoned me, but the second did not",
-      "If I tried to look as attractive as all of the celebrities I like, I'd end up looking about as ugly as I am",
-      "If a market is well stocked, is it called the stock market?",
-      "If a parsley farmer gets sued, can they garnish his wages?",
-      "If a picture is worth a thousand words, what is a mural worth?",
-      "If attacked by a mob of clowns, go for the juggler",
-      "If hamburger meat makes a meatloaf, then laziness will make me-a-loaf",
-      "If history repeats itself, I'm getting a pet dinosaur",
-      "If we were on a plane about to crash and only had one parachute, I promise I'd give an amazing speech at your funeral",
-      "If you are on a diet, the first three letters of that word are probably feeling pretty accurate right now",
-      "If you don't pay your exorcist, do you get repossessed?",
-      "If you lend someone money and never see them again, it was probably worth every penny",
-      "If you really want to look young and thin then you should hang out around fat old people",
-      "If you think no one cares whether you're alive or dead, just skip a handful of credit card payments",
-      "If your friends don't make fun of you, they're not really your friends",
-      "Is a heart attack the same as an attack of the heart?",
-      "Is cardboard more board than card or more card than board?",
-      "Is there a connection between candy corn and corn nuts?",
-      "Isn't it strange that cigarettes are sold in gas stations, since smoking is prohibited there?",
-      "It takes a lot of balls to golf the way I do",
-      "It was an emotional wedding. Even the cake was in tiers",
-      "It was as easy as a walk in the park... Jurassic Park",
-      "It's difficult to do nothing because you never know when you're done",
-      "It's funny how the cost of living is going up but the chance of living is going down",
-      "Just burned 2,000 calories. That's the last time I leave brownies in the oven while I nap",
-      "Just got fired from my job as a set designer. I left without making a scene",
-      "Just take my advice because I'm not going to use it",
       "LOL has gone from meaning 'laugh out loud' to 'I have nothing else to say'",
-      "Last night my girlfriend was complaining that I never listen to her... or something like that",
-      "Light travels faster than sound, which is why some people appear bright before you hear them speak",
-      "Marriage has no guarantees. If that's exactly what you are looking for, go live with a car battery",
-      "Maybe if we start telling people their brain is an app, they'll want to use it",
-      "Most people are shocked when they find out how bad I am as an electrician",
-      "My father has schizophrenia, but he's good people",
-      "My friend was explaining electricity to me, but I was like, 'Watt?'",
-      "My friend's bakery burned down last night. Now his business is toast",
-      "My tallest finger loves giving people standing ovations",
-      "My teachers told me I'd never amount to much because I procrastinate so much. I told them, 'Just you wait!'",
-      "My therapist says I have a preoccupation for revenge. We'll see about that",
-      "My wife just found out I replaced our bed with a trampoline. She hit the ceiling!",
-      "My wife told me to stop impersonating a flamingo. I had to put my foot down",
-      "Never trust atoms; they make up everything",
-      "One of the cows didn't produce milk today. It was an udder failure",
-      "Organized people are those who are just too lazy to find their things",
-      "People who take care of chickens are literally chicken tenders",
-      "People who use selfie sticks really need to have a good, long look at themselves",
-      "Please excuse my naivety. I was born at a very early age",
-      "Pollen is what happens when flowers can't keep it in their plants",
-      "Refusing to go to the gym is a form of resistance training",
-      "Refusing to go to the gym is one of the best forms of resistance training",
-      "Running in place will get you nowhere fast",
       "Russian dolls are so full of themselves",
-      "Sometimes I wake up grumpy. Other times, I let my wife sleep",
-      "Sure, alcohol doesn't solve any problems. But then again, neither does milk",
-      "The easiest time to add insult to injury is when you're signing someone's cast",
-      "The first time I got a universal remote control, I thought to myself, 'This changes everything'",
-      "The future, the present, and the past walk into a bar. Things got a little tense",
-      "The last thing I want to do is hurt you; but it's still on the list",
-      "The man who invented Velcro has died. RIP",
-      "The man who invented knock-knock jokes should get a no bell prize",
-      "The man who survived both mustard gas and pepper spray is a seasoned veteran now",
-      "The next time you buy a donut, complain that there's a hole in it",
-      "The only thing I get out of Algebra is when I look at X and wonder Y",
-      "The problem isn't that obesity runs in your family. It's that no one runs in your family",
-      "The problem with kleptomaniacs is that they always take things literally",
-      "The rotation of Earth really makes my day",
-      "The rotation of Earth really makes my day",
-      "The world champion tongue twister got arrested. I hear they're going to give him a tough sentence",
-      "There are three different types of people. Those who can count, and those who can't",
-      "Today a man knocked on my door and asked for a small donation toward the local swimming pool. I gave him a glass of water",
-      "Try calling Pizza Hut just to ask for Domino's phone number",
-      "Try calling someone just to tell them you can't talk right now",
-      "Try ordering a pizza 15 minutes before New Year, and when it arrives, yell, 'You're late! I ordered this a year ago!'",
-      "Try texting someone a random word and see what happens next",
-      "Two fish are in a tank. One says, 'How do you drive this thing?'",
-      "Two wifi engineers got married. The reception was fantastic",
-      "We place too much emphasis on the early bird's good luck and not enough on the early worm's bad luck",
-      "Well, to be Frank with you, I'd have to change my name",
-      "What if there were no hypothetical questions?",
-      "What is the soul good for if laughter is good for the soul?",
-      "What kind of bees give milk? Boo-bees",
-      "What's a frog's favorite type of shoes? Open toad sandals",
-      "What's the difference between ignorance and apathy? I don't know and I don't care",
-      "Whatever is eating you must be really hungry",
-      "When life gives you melons, you might be dyslexic",
-      "When someone tells you, 'Have a nice day!', stare at them and say, 'Don't tell me what to do!'",
-      "When the cannibal showed up late to the buffet, they gave him the cold shoulder",
-      "When you go to a public bathroom, put chocolate on your hands, reach under the stall and ask for toilet paper",
-      "Whiteboards are remarkable",
-      "Whiteboards really are remarkable",
-      "Whoever said you can't buy happiness didn't know where to shop!",
-      "Why is there a light bulb in the refrigerator if you're not supposed to eat at night?",
-      "Why isn't coffee served on a coffee table?",
-      "Will glass coffins be a success? Remains to be seen",
-      "You are so annoying. You are so weird. You are so crazy. You are so stupid. You are so clingy. You are…just like me",
-      "You should always knock before opening a fridge, just in case there's a salad dressing inside",
-      "You're in the wrong lane when everything is coming at you"
+      "a Freudian slip is when you mean one thing and mean your mother",
+      "a Mexican magician tells the audience he will disappear on the count of three. He says, 'Uno, dos...' and poof! He disappeared without a tres",
+      "a bag of money can represent not only wealth, but also massive inflation",
+      "a balanced diet simply means having cupcakes in each hand",
+      "a best friend is someone who clears your search history immediately after you die",
+      "a blind man walked into a bar... and a table... and a chair..",
+      "a book fell on my head the other day. I only have my shelf to blame though",
+      "a cookie a day keeps your sadness away, but an entire jar of cookies a day brings it back",
+      "a dung beetle walks into a bar and asks, 'Is this stool taken?'",
+      "a ghost walked into a bar and ordered a shot of vodka. The bartender said, 'Sorry, we don't serve spirits here'",
+      "a pessimist is someone who has spent too much time listening to optimists",
+      "a psychiatrist is someone who will charge you money for answers that you can get for free from your wife or friends",
+      "a recent study has found that women who carry a little extra weight live longer than the men who mention it",
+      "a successful man is one who earns more than his wife can spend. A successful woman is one who knows where to look for such a man",
+      "a termite walks into the bar and asks, 'Is the bar tender here?'",
+      "a told my girlfriend she drew her eyebrows too high. She seemed surprised",
+      "after Tuesday, even the calendar says WTF",
+      "alcohol and Calculus don't mix. It's never a good idea to drink and derive",
+      "always borrow money from a pessimist. They'll never expect it back",
+      "always remember that you're unique... just like everyone else",
+      "an apple a day keeps the doctor away... if you throw it hard enough!",
+      "answers are what we have to solve other people's problems",
+      "are people born with photographic memories, or does it take time to develop?",
+      "atheism is a non-prophet organization",
+      "before you criticize someone, walk a mile in their shoes. That way, when you do criticize them, you're a mile away and you have their shoes",
+      "blunt pencils are really pointless",
+      "build a man a fire and he'll be warm for a day. Set a man on fire and he'll be warm for the rest of his life",
+      "can cars stop at a bus stop?",
+      "communist jokes aren't funny unless everyone gets them",
+      "communist jokes aren't funny unless everyone gets them",
+      "despite the high cost of living, it remains popular",
+      "did you hear about the guy whose whole left side got amputated? He's all right now",
+      "doctor, there's a patient on line one that says he's invisible. 'Well, tell him I can't see him right now'",
+      "dogs can't see inside your body, but CAT scan",
+      "don't drink and drive. You might spill your beer",
+      "don't worry if plan A fails. There are 25 more letters in the alphabet!",
+      "don't you hate it when someone answers their own questions? I do",
+      "don't you hate it when someone answers their own questions? I do",
+      "earth is like the insane asylum for the universe",
+      "every woman should marry an archeologist, because the older she gets, the more he'll love her",
+      "except for a parking meter, change is inevitable",
+      "fighting for peace is like screwing for virginity",
+      "four fonts walk into a bar. The bartender says, 'Hey! We don't want your type in here!'",
+      "geology rocks, but geography's where it's at",
+      "have you heard about the new restaurant called 'Karma?' There's no menu-you get what you deserve",
+      "here I am! What are your other two wishes?",
+      "hi, I am (your name), but you can call me tomorrow!",
+      "how can you scoot along if you don't have a scooter?",
+      "how do you make holy water? You boil the hell out of it",
+      "if I tried to look as attractive as all of the celebrities I like, I'd end up looking about as ugly as I am",
+      "if a market is well stocked, is it called the stock market?",
+      "if a parsley farmer gets sued, can they garnish his wages?",
+      "if a picture is worth a thousand words, what is a mural worth?",
+      "if attacked by a mob of clowns, go for the juggler",
+      "if hamburger meat makes a meatloaf, then laziness will make me-a-loaf",
+      "if history repeats itself, I'm getting a pet dinosaur",
+      "if we were on a plane about to crash and only had one parachute, I promise I'd give an amazing speech at your funeral",
+      "if you are on a diet, the first three letters of that word are probably feeling pretty accurate right now",
+      "if you don't pay your exorcist, do you get repossessed?",
+      "if you lend someone money and never see them again, it was probably worth every penny",
+      "if you really want to look young and thin then you should hang out around fat old people",
+      "if you think no one cares whether you're alive or dead, just skip a handful of credit card payments",
+      "if your friends don't make fun of you, they're not really your friends",
+      "is a heart attack the same as an attack of the heart?",
+      "is cardboard more board than card or more card than board?",
+      "is there a connection between candy corn and corn nuts?",
+      "isn't it strange that cigarettes are sold in gas stations, since smoking is prohibited there?",
+      "it takes a lot of balls to golf the way I do",
+      "it was an emotional wedding. Even the cake was in tiers",
+      "it was as easy as a walk in the park... Jurassic Park",
+      "it's difficult to do nothing because you never know when you're done",
+      "it's funny how the cost of living is going up but the chance of living is going down",
+      "just burned 2,000 calories. That's the last time I leave brownies in the oven while I nap",
+      "just got fired from my job as a set designer. I left without making a scene",
+      "just take my advice because I'm not going to use it",
+      "last night my girlfriend was complaining that I never listen to her... or something like that",
+      "light travels faster than sound, which is why some people appear bright before you hear them speak",
+      "marriage has no guarantees. If that's exactly what you are looking for, go live with a car battery",
+      "maybe if we start telling people their brain is an app, they'll want to use it",
+      "most people are shocked when they find out how bad I am as an electrician",
+      "my father has schizophrenia, but he's good people",
+      "my friend was explaining electricity to me, but I was like, 'Watt?'",
+      "my friend's bakery burned down last night. Now his business is toast",
+      "my tallest finger loves giving people standing ovations",
+      "my teachers told me I'd never amount to much because I procrastinate so much. I told them, 'Just you wait!'",
+      "my therapist says I have a preoccupation for revenge. We'll see about that",
+      "my wife just found out I replaced our bed with a trampoline. She hit the ceiling!",
+      "my wife told me to stop impersonating a flamingo. I had to put my foot down",
+      "never trust atoms; they make up everything",
+      "one of the cows didn't produce milk today. It was an udder failure",
+      "organized people are those who are just too lazy to find their things",
+      "people who take care of chickens are literally chicken tenders",
+      "people who use selfie sticks really need to have a good, long look at themselves",
+      "please excuse my naivety. I was born at a very early age",
+      "pollen is what happens when flowers can't keep it in their plants",
+      "refusing to go to the gym is a form of resistance training",
+      "refusing to go to the gym is one of the best forms of resistance training",
+      "running in place will get you nowhere fast",
+      "sometimes I wake up grumpy. Other times, I let my wife sleep",
+      "sure, alcohol doesn't solve any problems. But then again, neither does milk",
+      "the easiest time to add insult to injury is when you're signing someone's cast",
+      "the first time I got a universal remote control, I thought to myself, 'This changes everything'",
+      "the future, the present, and the past walk into a bar. Things got a little tense",
+      "the last thing I want to do is hurt you; but it's still on the list",
+      "the man who invented Velcro has died. RIP",
+      "the man who invented knock-knock jokes should get a no bell prize",
+      "the man who survived both mustard gas and pepper spray is a seasoned veteran now",
+      "the next time you buy a donut, complain that there's a hole in it",
+      "the only thing I get out of Algebra is when I look at X and wonder Y",
+      "the problem isn't that obesity runs in your family. It's that no one runs in your family",
+      "the problem with kleptomaniacs is that they always take things literally",
+      "the rotation of Earth really makes my day",
+      "the rotation of Earth really makes my day",
+      "the world champion tongue twister got arrested. I hear they're going to give him a tough sentence",
+      "there are three different types of people. Those who can count, and those who can't",
+      "today a man knocked on my door and asked for a small donation toward the local swimming pool. I gave him a glass of water",
+      "try calling Pizza Hut just to ask for Domino's phone number",
+      "try calling someone just to tell them you can't talk right now",
+      "try ordering a pizza 15 minutes before New Year, and when it arrives, yell, 'You're late! I ordered this a year ago!'",
+      "try texting someone a random word and see what happens next",
+      "two WIFI engineers got married. The reception was fantastic",
+      "two fish are in a tank. One says, 'How do you drive this thing?'",
+      "we place too much emphasis on the early bird's good luck and not enough on the early worm's bad luck",
+      "well, to be Frank with you, I'd have to change my name",
+      "what if there were no hypothetical questions?",
+      "what is the soul good for if laughter is good for the soul?",
+      "what kind of bees give milk? Boo-bees",
+      "what's a frog's favorite type of shoes? Open toad sandals",
+      "what's the difference between ignorance and apathy? I don't know and I don't care",
+      "whatever is eating you must be really hungry",
+      "when life gives you melons, you might be dyslexic",
+      "when someone tells you, 'Have a nice day!', stare at them and say, 'Don't tell me what to do!'",
+      "when the cannibal showed up late to the buffet, they gave him the cold shoulder",
+      "when you go to a public bathroom, put chocolate on your hands, reach under the stall and ask for toilet paper",
+      "whiteboards are remarkable",
+      "whiteboards really are remarkable",
+      "whoever said you can't buy happiness didn't know where to shop!",
+      "why is there a light bulb in the refrigerator if you're not supposed to eat at night?",
+      "why isn't coffee served on a coffee table?",
+      "will glass coffins be a success? Remains to be seen",
+      "you are so annoying. You are so weird. You are so crazy. You are so stupid. You are so clingy. You are…just like me",
+      "you should always knock before opening a fridge, just in case there's a salad dressing inside",
+      "you're in the wrong lane when everything is coming at you"
+    ]
+  },
+  "title": {
+    "generic": [
+      "{ancient|angry|arrogant|charming|cryptic|cunning|frantic|guarded|haunted|shady|wary} {aristocrat|dwarf|elf|ex-adventurer|human|merchant|noble|priest|sage}"
+    ],
+    "item_generic": [
+      "a caravan of exotic goods",
+      "a powerful arcane device",
+      "a valued family heirloom",
+      "the {axe|book|Elysian Codex|gauntlet|maul|relic} of {markov_names.tolkien|title.mundane}"
+    ],
+    "monster_mundane": [
+      "{markov_names.forename|markov_names.surname} the {monster.mundane} [!]{npc.leader|}"
+    ],
+    "mundane": [
+      "{character.any|relevance.any} {npc.job}",
+      "{markov_names.forename|markov_names.surname} the {npc.job}",
+      "{relevance.lesser|relevance.average|local|} {npc.job|race.common}"
+    ],
+    "religious": [
+      "[pronoun] {holiness|blessedness|godliness|devoutness|piousness|saintliness}, {npc.religious} {markov_names.deities|markov_names.angels|markov_names.demons|markov_names.pokemon_modern}"
+    ],
+    "structure": [
+      "{ancient|archaic|twinned|} {creation|destiny|eternity|fire|hope|light|peace|power|prosperity|salt|stone|time} {place.structure}",
+      "{ancient|archaic|twinned|} {place.structure} of {creation|destiny|eternity|fire|hope|light|peace|power|prosperity|salt|stone|time}",
+      "{three|five|seven|ten|thirteen|twin|} {ancient|archaic|} pillars of {creation|destiny|eternity|fire|hope|light|peace|power|prosperity|salt|stone|time}"
     ]
   }
 }

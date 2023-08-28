@@ -27,46 +27,46 @@ timeline.generations = [
     /** nation high
       * institution strong, individualism weak, spoiled babies
     **/
-    'archetypes': 'prophet',
-    'turning': 'high',
-    'mood': 'dominant',
-    'individualism': -1,
-    'duration': 0,
-    'liberal': false,
+    "archetypes": "prophet",
+    "turning": "high",
+    "mood": "dominant",
+    "individualism": -1,
+    "duration": 0,
+    "liberal": false,
   },
   {
     /**
       * consciousness revolution, awakening
       * new value, new coming of age, lack education?
     **/
-    'archetypes': 'nomad',
-    'turning': 'awakening',
-    'mood': 'recessive',
-    'individualism': 0,
-    'duration': 0,
-    'liberal': true,
+    "archetypes": "nomad",
+    "turning": "awakening",
+    "mood": "recessive",
+    "individualism": 0,
+    "duration": 0,
+    "liberal": true,
   },
   {
     /**
       * civil unraveling
       * individualism strong, institution weak
     **/
-    'archetypes': 'hero',
-    'turning': 'unraveling',
-    'mood': 'dominant',
-    'individualism': 1,
-    'duration': 0,
-    'liberal': false,
+    "archetypes": "hero",
+    "turning": "unraveling",
+    "mood": "dominant",
+    "individualism": 1,
+    "duration": 0,
+    "liberal": false,
   },
   {
     /**
       * crisis, war, major negative event
     **/
-    'archetypes': 'artist',
-    'turning': 'crisis',
-    'mood': 'recessive',
-    'individualism': 0,
-    'duration': 0,
-    'liberal': true,
+    "archetypes": "artist",
+    "turning": "crisis",
+    "mood": "recessive",
+    "individualism": 0,
+    "duration": 0,
+    "liberal": true,
   },
 ];

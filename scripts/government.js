@@ -1,155 +1,155 @@
 "use strict";
 // define government parameters
-let government = {prefix: 'gov'};
+let government = {prefix: "gov"};
 
 // properties of object to iterate
 government.props = {
   power_concentration: {
     value: 0,
-    title: 'Power Concentration',
-    description: 'How much power individual rulers or councils have',
+    title: "Power Concentration",
+    description: "How much power individual rulers or councils have",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   wealth_concentration: {
     value: 0,
-    title: 'Wealth Concentration',
-    description: 'How much wealth the rich control of the total available resources',
+    title: "Wealth Concentration",
+    description: "How much wealth the rich control of the total available resources",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   magic_availability: {
     value: 0,
-    title: 'Magic Availability',
-    description: 'How accessible is magic',
+    title: "Magic Availability",
+    description: "How accessible is magic",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   bureaucracy: {
     value: 0,
-    title: 'Bureaucracy',
-    description: 'How complex government processes are; how efficient is decision making and action',
+    title: "Bureaucracy",
+    description: "How complex government processes are; how efficient is decision making and action",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   corruption: {
     value: 0,
-    title: 'Corruption',
-    description: 'How much officials abuse their authority for personal gain',
+    title: "Corruption",
+    description: "How much officials abuse their authority for personal gain",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   taxes: {
     value: 0,
-    title: 'Taxation',
-    description: 'How much this government collects in taxes',
+    title: "Taxation",
+    description: "How much this government collects in taxes",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   law_enforcement: {
     value: 0,
-    title: 'Law Enforcement',
-    description: 'How strict or effective internal law enforcement is within society',
+    title: "Law Enforcement",
+    description: "How strict or effective internal law enforcement is within society",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   military: {
     value: 0,
-    title: 'Military Forces',
-    description: 'How powerful or effective foreign defense is',
+    title: "Military Forces",
+    description: "How powerful or effective foreign defense is",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   diplomacy: {
     value: 0,
-    title: 'External Diplomacy',
-    description: 'Effectiveness at interacting with foreign governments/foreign relations',
+    title: "External Diplomacy",
+    description: "Effectiveness at interacting with foreign governments/foreign relations",
     html_tag: {
-      elem: 'input',
-      type: 'number',
+      elem: "input",
+      type: "number",
       min: 0,
       max: 100,
       step: 0.01,
-      text_after: '%'
+      text_after: "%"
     }
   },
   style: {
-    value: '',
-    title: 'Government Style',
-    description: 'Short name for governing style',
+    value: "",
+    title: "Government Style",
+    description: "Short name for governing style",
     options: {
-      anarchy: 'Anarchy / No Government',
-      autocracy: 'Autocracy',
-      bureaucracy: 'Bureaucracy',
-      confederacy: 'Confederacy',
-      democracy: 'Democracy',
-      dictatorship: 'Dictatorship',
-      feudalism: 'Feudalism',
-      gerontocracy: 'Gerontocracy',
-      hierarchy: 'Hierarchy',
-      kleptocracy: 'Kleptocracy',
-      magocracy: 'Magocracy',
-      matriarchy: 'Matriarchy',
-      meritocracy: 'Meritocracy',
-      militocracy: 'Militocracy',
-      monarchy: 'Monarchy',
-      oligarchy: 'Oligarchy',
-      patriarchy: 'Patriarchy',
-      plutocracy: 'Plutocracy',
-      republic: 'Republic',
-      satrapy: 'Satrapy',
-      theocracy: 'Theocracy'
+      anarchy: "Anarchy / No Government",
+      autocracy: "Autocracy",
+      bureaucracy: "Bureaucracy",
+      confederacy: "Confederacy",
+      democracy: "Democracy",
+      dictatorship: "Dictatorship",
+      feudalism: "Feudalism",
+      gerontocracy: "Gerontocracy",
+      hierarchy: "Hierarchy",
+      kleptocracy: "Kleptocracy",
+      magocracy: "Magocracy",
+      matriarchy: "Matriarchy",
+      meritocracy: "Meritocracy",
+      militocracy: "Militocracy",
+      monarchy: "Monarchy",
+      oligarchy: "Oligarchy",
+      patriarchy: "Patriarchy",
+      plutocracy: "Plutocracy",
+      republic: "Republic",
+      satrapy: "Satrapy",
+      theocracy: "Theocracy"
     },
     html_tag: {
-      elem: 'select',
+      elem: "select",
     }
   },
 };
@@ -172,14 +172,16 @@ government.rollStats = function()
 {
   // local reference so it can change if needed.
   let p = government.props;
-  if (p.style.value == '')
-    p.style.value = util.getValue('#gov_style');
+  if (p.style.value == "")
+  {
+    p.style.value = util.getValue("#gov_style");
+  }
 
   // determine base parameters around type of government
   switch (p.style.value)
   {
-    case 'autocracy': // dictator but inherited
-    case 'dictatorship': // single authority rules by force
+    case "autocracy": // dictator but inherited
+    case "dictatorship": // single authority rules by force
       p.power_concentration.value = Math.range(70, 95, 2);
       p.wealth_concentration.value = Math.range(60, 80, 2);
       p.magic_availability.value = Math.range(20, 50, 2);
@@ -191,7 +193,7 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(50, 90, 2);
       break;
 
-    case 'monarchy': // dictator moderated by law / council
+    case "monarchy": // dictator moderated by law / council
       p.power_concentration.value = Math.range(70, 90, 2);
       p.wealth_concentration.value = Math.range(50, 70, 2);
       p.magic_availability.value = Math.range(20, 60, 2);
@@ -203,9 +205,9 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(60, 80, 2);
       break;
 
-    case 'bureaucracy.value': // government group works for council
-    case 'confederacy': // independent states cooperate
-    case 'feudalism': // lords support vassal kings
+    case "bureaucracy.value": // government group works for council
+    case "confederacy": // independent states cooperate
+    case "feudalism": // lords support vassal kings
       p.power_concentration.value = Math.range(50, 70, 2);
       p.wealth_concentration.value = Math.range(40, 80, 2);
       p.magic_availability.value = Math.range(40, 80, 2);
@@ -217,9 +219,9 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(50, 70, 2);
       break;
 
-    case 'gerontocracy': // group of elders govern
-    case 'matriarchy': // elder or most important females govern
-    case 'patriarchy': // elder or most important males govern
+    case "gerontocracy": // group of elders govern
+    case "matriarchy": // elder or most important females govern
+    case "patriarchy": // elder or most important males govern
       p.power_concentration.value = Math.range(50, 90, 2);
       p.wealth_concentration.value = Math.range(50, 90, 2);
       p.magic_availability.value = Math.range(20, 80, 2);
@@ -231,8 +233,8 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(60, 80, 2);
       break;
 
-    case 'hierarchy': // structured like military.value order
-    case 'militocracy': // military.value order
+    case "hierarchy": // structured like military.value order
+    case "militocracy": // military.value order
       p.power_concentration.value = Math.range(50, 90, 2);
       p.wealth_concentration.value = Math.range(30, 60, 2);
       p.magic_availability.value = Math.range(30, 70, 2);
@@ -244,9 +246,9 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(60, 90, 2);
       break;
 
-    case 'meritocracy': // aristocracy
-    case 'oligarchy': // society of wealthy rulers
-    case 'plutocracy': // society of wealthy rulers
+    case "meritocracy": // aristocracy
+    case "oligarchy": // society of wealthy rulers
+    case "plutocracy": // society of wealthy rulers
       p.power_concentration.value = Math.range(50, 90, 2);
       p.wealth_concentration.value = Math.range(70, 90, 2);
       p.magic_availability.value = Math.range(30, 70, 2);
@@ -258,8 +260,8 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(60, 90, 2);
       break;
 
-    case 'democracy': // elected leaders represent people
-    case 'republic': // elected leaders represent people
+    case "democracy": // elected leaders represent people
+    case "republic": // elected leaders represent people
       p.power_concentration.value = Math.range(30, 50, 2);
       p.wealth_concentration.value = Math.range(30, 50, 2);
       p.magic_availability.value = Math.range(40, 80, 2);
@@ -271,7 +273,7 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(50, 70, 2);
       break;
 
-    case 'magocracy': // high magic council
+    case "magocracy": // high magic council
       p.power_concentration.value = Math.range(50, 70, 2);
       p.wealth_concentration.value = Math.range(50, 70, 2);
       p.magic_availability.value = Math.range(70, 100, 2);
@@ -283,7 +285,7 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(50, 70, 2);
       break;
 
-    case 'satrapy': // conqueror government
+    case "satrapy": // conqueror government
       p.power_concentration.value = Math.range(70, 90, 2);
       p.wealth_concentration.value = Math.range(50, 90, 2);
       p.magic_availability.value = Math.range(40, 70, 2);
@@ -295,7 +297,7 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(30, 50, 2);
       break;
 
-    case 'kleptocracy': // thief government
+    case "kleptocracy": // thief government
       p.power_concentration.value = Math.range(40, 60, 2);
       p.wealth_concentration.value = Math.range(70, 90, 2);
       p.magic_availability.value = Math.range(50, 90, 2);
@@ -307,7 +309,7 @@ government.rollStats = function()
       p.diplomacy.value = Math.range(30, 50, 2);
       break;
 
-    case 'theocracy': // run by religion
+    case "theocracy": // run by religion
       p.power_concentration.value = Math.range(50, 90, 2);
       p.wealth_concentration.value = Math.range(60, 80, 2);
       p.magic_availability.value = Math.range(40, 70, 2);

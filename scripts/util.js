@@ -18,17 +18,20 @@ util.getElem = function(id)
 util.getValue = function(id)
 {
   let z = util.getElem(id);
-  if (!z) return '';
+  if (!z)
+  {
+    return "";
+  }
 
   switch (z.tagName.toUpperCase())
   {
     // form element value
-    case 'TEXTAREA':
+    case "TEXTAREA":
       return z.value;
       break;
 
-    case 'INPUT':
-      if (z.type == 'checkbox')
+    case "INPUT":
+      if (z.type == "checkbox")
       {
         return z.checked;
       }
@@ -38,7 +41,7 @@ util.getValue = function(id)
       }
       break;
 
-    case 'SELECT':
+    case "SELECT":
       if (z.selectedIndex == -1)
       {
         // if nothing selected, default to first option
@@ -59,7 +62,10 @@ util.getValue = function(id)
 util.getHtml = function(id)
 {
   let z = util.getElem(id);
-  if (!z) return '';
+  if (!z)
+  {
+    return "";
+  }
   return z.innerHTML;
 };
 
@@ -67,13 +73,16 @@ util.getHtml = function(id)
 util.setValue = function(id, val)
 {
   let z = util.getElem(id);
-  if (!z) return;
+  if (!z)
+  {
+    return;
+  }
 
   switch (z.tagName.toUpperCase())
   {
-    case 'TEXTAREA':
-    case 'INPUT':
-    case 'SELECT':
+    case "TEXTAREA":
+    case "INPUT":
+    case "SELECT":
       z.value = val;
       break;
 
@@ -87,7 +96,10 @@ util.setValue = function(id, val)
 util.setHtml = function(id, val)
 {
   let z = util.getElem(id);
-  if (!z) return;
+  if (!z)
+  {
+    return;
+  }
   z.innerHTML = val;
 };
 
@@ -96,16 +108,28 @@ util.updateElem = function(elem)
 {
   var val = elem.value.trim();
 
-  if (val.toLowerCase() == 'true') // boolean true
+  if (val.toLowerCase() == "true")
+  {
+    // boolean true
     val = true;
-  else if (val.toLowerCase() == 'false') // boolean false
+  }
+  else if (val.toLowerCase() == "false")
+  {
+    // boolean false
     val = false;
-  else if (isNaN(val)) // original string value
+  }
+  else if (isNaN(val))
+  {
+    // original string value
     val = elem.value;
+  }
   else
-    val = Number(val); // number
+  {
+    // number
+    val = Number(val);
+  }
 
-  let arr = elem.id.split('_');
+  let arr = elem.id.split("_");
   var index = elem.id.substring(arr[0].length+1);
 
   switch (arr[0])
@@ -127,159 +151,168 @@ util.updateElem = function(elem)
 util.populateTable = function(obj)
 {
   // ensure table exists before we do anything else
-  let my_table = util.getElem('#' + obj.prefix + '_' + 'table');
-  if (my_table == null) return;
+  let my_table = util.getElem("#" + obj.prefix + "_" + "table");
+  if (my_table == null)
+  {
+    return;
+  }
 
   // iterate over object props keys
   Object.keys(obj.props).forEach(elem =>
-  {
-    // shorthand for html tag properties
-    let h = obj.props[elem].html_tag;
-    let p = obj.props[elem];
-
-    // variables to hold tags
-    var tr_tag = document.createElement('tr');
-    var td1 = document.createElement('td');
-    var td2, span_tag, label_tag, val_tag, opt_tag, text_node;
-
-    // check if there's a column span
-    if (h.hasOwnProperty('colspan') && h.colSpan != 1)
     {
-      td1.colSpan = h.colSpan;
-      td2 = td1;
-    }
-    else
-    {
-      td2 = document.createElement('td');
-    }
+      // shorthand for html tag properties
+      let h = obj.props[elem].html_tag;
+      let p = obj.props[elem];
 
-    // build from left side to right side
-    if (p.description != '' && p.title != '')
-    {
-      // build title
-      label_tag = document.createElement('label');
-      label_tag.innerText = p.title;
-      label_tag.htmlFor = obj.prefix + '_' + elem;
-      label_tag.className = 'tooltip';
+      // variables to hold tags
+      var tr_tag = document.createElement("tr");
+      var td1 = document.createElement("td");
+      var td2, span_tag, label_tag, val_tag, opt_tag, text_node;
 
-      // build tooltip description
-      span_tag = document.createElement('span');
-      span_tag.className = 'tooltiptext';
-      span_tag.innerText  = p.description;
-
-      // add to the td tag
-      label_tag.appendChild(span_tag);
-      td1.appendChild(label_tag);
-    }
-    else if (p.title != '')
-    {
-      // build title
-      label_tag = document.createElement('label');
-      label_tag.innerText = p.title;
-      label_tag.htmlFor = obj.prefix + '_' + elem;
-
-      // add to the td tag
-      td1.appendChild(label_tag);
-    }
-
-    // create an element of some type for storing a value
-    val_tag = document.createElement(h.elem);
-
-    // set onchange to utility updater
-    val_tag.onchange = (event) =>
-    {
-      util.updateElem(event.srcElement)
-    };
-
-    // set id and name attributes
-    val_tag.id = obj.prefix + '_' + elem;
-    val_tag.name = obj.prefix + '_' + elem;
-
-    if (h.elem == 'input')
-    {
-      // input tag
-      val_tag.type = h.type;
-      val_tag.min = h.min;
-      val_tag.max = h.max;
-      val_tag.step = h.step;
-    }
-    else if (h.elem == 'select')
-    {
-      // this is a select tag
-      if (Array.isArray(p.options))
+      // check if there's a column span
+      if (h.hasOwnProperty("colspan") && h.colSpan != 1)
       {
-        // options only contain values, not pairs
-        for (var index = 0; index != p.options.length; index++)
-        {
-          opt_tag = document.createElement('option');
-          opt_tag.text = p.options[index];
-          opt_tag.value = p.options[index];
+        td1.colSpan = h.colSpan;
+        td2 = td1;
+      }
+      else
+      {
+        td2 = document.createElement("td");
+      }
 
-          // append the option
-          val_tag.appendChild(opt_tag);
+      // build from left side to right side
+      if (p.description != "" && p.title != "")
+      {
+        // build title
+        label_tag = document.createElement("label");
+        label_tag.innerText = p.title;
+        label_tag.htmlFor = obj.prefix + "_" + elem;
+        label_tag.className = "tooltip";
+
+        // build tooltip description
+        span_tag = document.createElement("span");
+        span_tag.className = "tooltiptext";
+        span_tag.innerText  = p.description;
+
+        // add to the td tag
+        label_tag.appendChild(span_tag);
+        td1.appendChild(label_tag);
+      }
+      else if (p.title != "")
+      {
+        // build title
+        label_tag = document.createElement("label");
+        label_tag.innerText = p.title;
+        label_tag.htmlFor = obj.prefix + "_" + elem;
+
+        // add to the td tag
+        td1.appendChild(label_tag);
+      }
+
+      // create an element of some type for storing a value
+      val_tag = document.createElement(h.elem);
+
+      // set onchange to utility updater
+      val_tag.onchange = (event) =>
+      {
+        util.updateElem(event.srcElement)
+      };
+
+      // set id and name attributes
+      val_tag.id = obj.prefix + "_" + elem;
+      val_tag.name = obj.prefix + "_" + elem;
+
+      if (h.elem == "input")
+      {
+        // input tag
+        val_tag.type = h.type;
+        val_tag.min = h.min;
+        val_tag.max = h.max;
+        val_tag.step = h.step;
+      }
+      else if (h.elem == "select")
+      {
+        // this is a select tag
+        if (Array.isArray(p.options))
+        {
+          // options only contain values, not pairs
+          for (var index = 0; index != p.options.length; index++)
+          {
+            opt_tag = document.createElement("option");
+            opt_tag.text = p.options[index];
+            opt_tag.value = p.options[index];
+
+            // append the option
+            val_tag.appendChild(opt_tag);
+          }
+        }
+        else if (typeof p.options === "object" && p.options !== null)
+        {
+          // options are key => value pairs
+          Object.keys(p.options).forEach(index =>
+            {
+              // create the option
+              opt_tag = document.createElement("option");
+              opt_tag.text = p.options[index];
+              opt_tag.value = index;
+
+              // append the option
+              val_tag.appendChild(opt_tag);
+            });
         }
       }
-      else if (typeof p.options === 'object' && p.options !== null)
+
+      // check for text before container
+      if (h.hasOwnProperty("text_before"))
       {
-        // options are key => value pairs
-        Object.keys(p.options).forEach(index =>
-        {
-          // create the option
-          opt_tag = document.createElement('option');
-          opt_tag.text = p.options[index];
-          opt_tag.value = index;
-
-          // append the option
-          val_tag.appendChild(opt_tag);
-        });
+        text_node = document.createTextNode(h.text_before);
+        td2.appendChild(text_node);
       }
-    }
 
-    // check for text before container
-    if (h.hasOwnProperty('text_before'))
-    {
-      text_node = document.createTextNode(h.text_before);
-      td2.appendChild(text_node);
-    }
+      // append value container to table cell
+      td2.appendChild(val_tag);
 
-    // append value container to table cell
-    td2.appendChild(val_tag);
+      // check for text after container
+      if (h.hasOwnProperty("text_after"))
+      {
+        text_node = document.createTextNode(h.text_after);
+        td2.appendChild(text_node);
+      }
 
-    // check for text after container
-    if (h.hasOwnProperty('text_after'))
-    {
-      text_node = document.createTextNode(h.text_after);
-      td2.appendChild(text_node);
-    }
+      // put it all together
+      tr_tag.appendChild(td1);
+      if (td1 != td2)
+      {
+        tr_tag.appendChild(td2);
+      }
 
-    // put it all together
-    tr_tag.appendChild(td1);
-    if (td1 != td2) tr_tag.appendChild(td2);
-
-    // add row to table
-    my_table.appendChild(tr_tag);
-  });
+      // add row to table
+      my_table.appendChild(tr_tag);
+    });
 };
 
 util.populateSelect = function(id, data)
 {
   let elem = util.getElem(id);
-  if (!elem) return;
+  if (!elem)
+  {
+    return;
+  }
 
   // cycle through array
   data.forEach(index =>
-  {
-    // make pretty display names
-    let display = index.replaceAll('_', ' ').toTitleCase();
+    {
+      // make pretty display names
+      let display = index.replaceAll("_", " ").toTitleCase();
 
-    // create the option
-    let opt_tag = document.createElement('option');
-    opt_tag.text = display;
-    opt_tag.value = index;
+      // create the option
+      let opt_tag = document.createElement("option");
+      opt_tag.text = display;
+      opt_tag.value = index;
 
-    // append the option
-    elem.appendChild(opt_tag);
-  });
+      // append the option
+      elem.appendChild(opt_tag);
+    });
 };
 
 // auto-populate form fields based on object props
@@ -288,11 +321,17 @@ util.fillForm = function(obj)
   // iterate over object props keys
   Object.keys(obj.props).forEach(elem =>
     {
-      let str = "#" + obj.prefix + '_'  + elem;
+      let str = "#" + obj.prefix + "_"  + elem;
       let val = obj.props[elem].value;
 
-      if (isNaN(val)) util.setValue(str, String(val));
-      else util.setValue(str, Number(val));
+      if (isNaN(val))
+      {
+        util.setValue(str, String(val));
+      }
+      else
+      {
+        util.setValue(str, Number(val));
+      }
     });
 };
 
@@ -305,14 +344,17 @@ util.fillForm = function(obj)
 util.loadJson = function (uri, set_name, callback = undefined, ...x)
 {
   /*
-  util.loadJson = async function (...)
-  const response = await fetch(uri);
-  const data = await response.json();
-  window.dataset[set_name] = data;
+    util.loadJson = async function (...)
+    const response = await fetch(uri);
+    const data = await response.json();
+    window.dataset[set_name] = data;
   */
 
   // ensure dataset exists in window
-  if (!Object.hasOwn(window, 'dataset')) window.dataset = {};
+  if (!Object.hasOwn(window, "dataset"))
+  {
+    window.dataset = {};
+  }
 
   // this is not async on purpose
   var xmlhttp = new XMLHttpRequest();
@@ -321,12 +363,17 @@ util.loadJson = function (uri, set_name, callback = undefined, ...x)
   xmlhttp.send();
 
   if (xmlhttp.status == 200 && xmlhttp.readyState == 4)
+  {
     window.dataset[set_name] = JSON.parse(xmlhttp.responseText);
+  }
   else
-    return; // prevent callback if data doesn't load
+  {
+    // prevent callback if data doesn't load
+    return;
+  }
 
   // more than 6 things turns into an array
-  if (typeof callback === 'function')
+  if (typeof callback === "function")
   {
     switch (x.length)
     {
@@ -367,8 +414,11 @@ util.loadJson = function (uri, set_name, callback = undefined, ...x)
 
 util.markovSort = function()
 {
-  let elem = util.getValue('#markov_sort');
-  if (!elem) return;
+  let elem = util.getValue("#markov_sort");
+  if (!elem)
+  {
+    return;
+  }
 
   let raw = util.getValue("#markov_output").split("<br>");
   let data = raw[raw.length-1].split(", ");
@@ -382,7 +432,7 @@ util.markovSort = function()
 util.initNames = function()
 {
   // populate the markov name select options
-  util.populateSelect('#markov_select', Object.keys(window.dataset.markov_names));
+  util.populateSelect("#markov_select", Object.keys(window.dataset.markov_names));
 
   // generate random names
   markovNames.more_names();
@@ -391,8 +441,8 @@ util.initNames = function()
 util.initEvents = function()
 {
   // generate headlines
-  util.setValue('#major_results', eventFactory.GetActivity('major', 15));
-  util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 15));
-  util.setValue('#minor_results', eventFactory.GetActivity('minor', 15));
-  util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 15));
+  util.setValue("#major_results", eventFactory.GetActivity("major", 15));
+  util.setValue("#moderate_results", eventFactory.GetActivity("moderate", 15));
+  util.setValue("#minor_results", eventFactory.GetActivity("minor", 15));
+  util.setValue("#mundane_results", eventFactory.GetActivity("mundane", 15));
 };

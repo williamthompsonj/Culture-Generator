@@ -1,79 +1,79 @@
+"use strict";
 /**
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  Adapted from https://donjon.bin.sh/name/markov.html
+  Initially adapted (heavily changed) from https://donjon.bin.sh/name/markov.html
 
-  written and released to the public domain by drow <drow@bin.sh>
+  Original written and released to the public domain by drow <drow@bin.sh>
   http://creativecommons.org/publicdomain/zero/1.0/
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 **/
-'use strict';
 let markovNames = {};
 
 markovNames.chain_cache = {};
 
 markovNames.names_from_select = function(qty = 100)
 {
-  markovNames.more_names(qty, util.getValue('#markov_select'));
+  markovNames.more_names(qty, util.getValue("#markov_select"));
 };
 
-markovNames.more_names = function(qty = 40, data_name = '')
+markovNames.more_names = function(qty = 40, data_name = "")
 {
   if (qty < 1)
+  {
     return;
+  }
 
-  if (util.getElem('#markov_select').options.length < 1)
+  if (util.getElem("#markov_select").options.length < 1)
   {
     util.initNames();
     return;
   }
 
-  if (data_name == '' || !window.dataset['markov_names'].hasOwnProperty(data_name))
+  if (data_name == "" || !window.dataset["markov_names"].hasOwnProperty(data_name))
   {
-    data_name = Object.keys(window.dataset['markov_names']).randomValue();
-    util.setValue('#markov_select', data_name);
+    data_name = Object.keys(window.dataset["markov_names"]).randomValue();
+    util.setValue("#markov_select", data_name);
   }
 
   var names = markovNames.name_list(qty, data_name);
 
   // check if we need to sort these things first
-  if (util.getValue('#markov_sort'))
+  if (util.getValue("#markov_sort"))
+  {
     names.sort();
+  }
 
   names = names.join(", ");
-
-  util.setValue("#markov_output",
-    'Source: '
-    + data_name.replaceAll('_', ' ').toTitleCase()
-    + '<br><br>'
-    + names
-  );
-
+  util.setValue("#markov_output", "Source: "+data_name.replaceAll("_", " ").toTitleCase()+"<br><br>"+names);
 };
 
-markovNames.name_list = function(qty, data_name = '')
+markovNames.name_list = function(qty, data_name = "")
 {
-  if (data_name == '' || !window.dataset['markov_names'].hasOwnProperty(data_name))
+  if (data_name == "" || !window.dataset["markov_names"].hasOwnProperty(data_name))
   {
-    data_name = Object.keys(window.dataset['markov_names']).randomValue();
+    data_name = Object.keys(window.dataset["markov_names"]).randomValue();
   }
 
   // save names as a unique set
   let names = new Set();
   let counter = 0;
   let max = qty * 2;
-  let str = '';
+  let str = "";
 
   while (names.size < qty)
   {
     // prevent never-ending loop
     if (counter > max)
+    {
       break;
+    }
 
     counter++;
-
     str = markovNames.generate_name(data_name).toTitleCase();
-
-    if (str) names.add(str);
+    if (str)
+    {
+      names.add(str);
+    }
   }
 
   // return an array so it's easy to use
@@ -85,7 +85,9 @@ markovNames.generate_name = function(data_name)
   let cache = markovNames.markov_chain(data_name);
 
   if (!cache)
+  {
     return "";
+  }
 
   return markovNames.markov_name(cache);
 };
@@ -94,9 +96,11 @@ markovNames.markov_chain = function(data_name)
 {
   var cache = markovNames.chain_cache[data_name];
   if (cache)
+  {
     return cache;
+  }
 
-  let names = window.dataset['markov_names'][data_name];
+  let names = window.dataset["markov_names"][data_name];
   cache = markovNames.construct_chain(names);
 
   // check we have a name_set and cache
@@ -112,7 +116,7 @@ markovNames.markov_chain = function(data_name)
 markovNames.construct_chain = function(names)
 {
   let chain = {};
-  let consonants = 'bcdfghjklmnpqrstvwxz';
+  let consonants = "bcdfghjklmnpqrstvwxz";
 
   for (let c = 0; c < names.length; c++)
   {
@@ -140,7 +144,9 @@ markovNames.construct_chain = function(names)
       chain = markovNames.incr_chain(chain, "initial", e);
 
       if (e.length > 1)
+      {
         chain = markovNames.incr_chain(chain, "initial", e[0]);
+      }
 
       while (chunks.length)
       {
@@ -174,13 +180,11 @@ markovNames.construct_chain = function(names)
     }
   }
 
-  // any words with a single letter
-  //if (chain.name_len.hasOwnProperty('1'))
-  //  delete chain.name_len['1'];
-
   // ensure there is real data to return
   if (chain.name_len.length == 0)
+  {
     return false;
+  }
 
   // return the chain cache
   return markovNames.scale_chain(chain);
@@ -190,17 +194,13 @@ markovNames.construct_chain = function(names)
 markovNames.word_split = function(word)
 {
   // normalize, lowercase, reduce white space, trim
-  word = word
-    .normalize()
-    .toLowerCase()
-    .replace(/\s+/g, ' ')
-    .trim();
+  word = word.normalize().toLowerCase().replace(/\s+/g, " ").trim();
 
-  // extract everything not a consonant
+  // extract single instance of everything not a consonant
   let single = Array.from(
     new Set(
       Array.from(
-        word.replace(/[b-df-hj-np-tv-xz]+/g, '')
+        word.replace(/[b-df-hj-np-tv-xz]+/g, "")
       )
     )
   );
@@ -262,19 +262,19 @@ markovNames.scale_chain = function(chain)
   let a = {};
 
   Object.keys(chain).forEach(c =>
-  {
-    a[c] = 0;
-
-    Object.keys(chain[c]).forEach(d =>
     {
-      let e = Math.floor(Math.pow(chain[c][d], 1.3));
-      chain[c][d] = e;
-      a[c] += e
-    })
-  });
+      a[c] = 0;
 
-  chain.table_len = a;
-  return chain;
+      Object.keys(chain[c]).forEach(d =>
+        {
+          let e = Math.floor(Math.pow(chain[c][d], 1.3));
+          chain[c][d] = e;
+          a[c] += e
+        })
+    });
+
+    chain.table_len = a;
+    return chain;
 };
 
 markovNames.markov_name = function(cache)
@@ -290,36 +290,61 @@ markovNames.markov_name = function(cache)
     var letters = markovNames.select_link(cache, "initial");
     let word = letters;
 
+    // build word
     while (word.length < name_len)
     {
       letters = markovNames.select_link(cache, letters);
-
       if (!letters)
+      {
         break;
-
+      }
       word += letters;
-
-      // reduce 3+ same letter to only 2
       word = markovNames.formatName(word);
     }
 
+    // trim special characters at end
+    word = word.replace(/[\'\",\-\.\_]+$/g, "")
+
+    // build word
+    while (word.length < name_len)
+    {
+      letters = markovNames.select_link(cache, letters);
+      if (!letters)
+      {
+        break;
+      }
+      word += letters;
+      word = markovNames.formatName(word);
+    }
+
+    // trim special characters at end
+    word = word.replace(/[\'\",\-\.\_]+$/g, "")
+
     // chop off extra letters
     if (word.length > name_len)
+    {
       word = word.substring(0, name_len);
+    }
 
     // prevent duplicate words with same name like Mac Mac Mac Mac...
     if (c.indexOf(word) == -1)
+    {
       c.push(word);
+    }
 
     // prevent forever loop if small dataset
     if (counter > 10000)
+    {
       break;
+    }
   }
   c = String(c.join(" "));
 
   // ensure it's at least 2 characters
   if (c.length > 1)
+  {
     return c;
+  }
 
   // too short, try again
   return markovNames.markov_name(cache);
@@ -330,7 +355,9 @@ markovNames.select_link = function(cache, piece)
   var c = cache.table_len[piece];
 
   if (!c)
+  {
     return false;
+  }
 
   c = Math.floor(Math.random() * c);
 
@@ -343,7 +370,9 @@ markovNames.select_link = function(cache, piece)
     e += cache[piece][f];
 
     if (e > c)
-    return f;
+    {
+      return f;
+    }
   }
   return false;
 };
@@ -358,8 +387,8 @@ markovNames.formatName = function(name)
   {
     if (last != name[i] || last != name[i+1])
     {
-        last = name[i];
-        result = result + last;
+      last = name[i];
+      result = result + last;
     }
   }
   return result + name[name.length-1];
