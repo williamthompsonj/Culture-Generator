@@ -44,7 +44,7 @@ markovNames.more_names = function(qty = 40, data_name = "")
   }
 
   names = names.join(", ");
-  util.setValue("#markov_output", "Source: "+data_name.replaceAll("_", " ").toTitleCase()+"<br><br>"+names);
+  util.setValue("#markov_output", "Source: "+data_name.replaceAll("_", " ")+"<br><br>"+names);
 };
 
 markovNames.name_list = function(qty, data_name = "")
@@ -69,7 +69,7 @@ markovNames.name_list = function(qty, data_name = "")
     }
 
     counter++;
-    str = markovNames.generate_name(data_name).toTitleCase();
+    str = markovNames.generate_name(data_name);
     if (str)
     {
       names.add(str);
@@ -89,7 +89,77 @@ markovNames.generate_name = function(data_name)
     return "";
   }
 
-  return markovNames.markov_name(cache);
+  cache = markovNames.markov_name(cache).split(" ");
+  for (let i = 0; i < cache.length; i++)
+  {
+    cache[i] = cache[i].toTitleCase();
+  }
+  cache = cache.join(" ");
+
+  // fix Scottish surnames
+  if (data_name == "scottish_surname")
+  {
+    let before = cache;
+
+    cache = String(cache).split(" ");
+    let get_raw = "", mac = "", shorts = [], quotes = [];
+
+    // fix Scottish surnames; put Mac in front and mashing it all together
+    for (let i = 0; i < cache.length; i++)
+    {
+      if (cache[i] == "Mac")
+      {
+        mac = "Mac";
+      }
+      else if (cache[i].substring(0, 1) == "'")
+      {
+        quotes.push(cache[i]);
+      }
+      else if (cache[i].length < 4)
+      {
+        shorts.push(cache[i]);
+      }
+      else
+      {
+        get_raw = get_raw + " " + cache[i];
+      }
+    }
+
+    shorts = shorts.join("");
+    quotes = quotes.join(" ");
+
+    if (mac == "Mac")
+    {
+      if (quotes.length == 0 && shorts.length == 0)
+      {
+        cache = mac + get_raw;
+      }
+      else if (quotes.length != 0 && shorts.length == 0)
+      {
+        cache = mac + quotes + " " + get_raw;
+      }
+      else if (quotes.length == 0 && shorts.length != 0)
+      {
+        cache = mac + shorts + " " + get_raw;
+      }
+      else
+      {
+        cache = mac + " " + quotes + " " + shorts + " " + get_raw;
+      }
+    }
+    else
+    {
+      cache = get_raw + " " + quotes + " " + shorts;
+    }
+
+    cache = cache.replace(/'+/g, "'");
+    cache = cache.replace(/[ ]+/g, " ");
+  }
+
+  cache = cache.replace(/^[ '\-]+/g, "");
+  cache = cache[0].toUpperCase() + cache.substring(1);
+
+  return cache.replace(/ [ ]+/g, " ").trim();
 };
 
 markovNames.markov_chain = function(data_name)
