@@ -1316,11 +1316,11 @@
       "{multiple|several|numerous} {deaths|disappearances|dismembered bodies|mutilated corpses} linked to {abandoned|broken down|vacant} {house|building} {at the edge|on the outskirts|in the middle} of {markov.city}, causes {alarm|outrage|disgust} and calls for {investigation|justice|revenge}"
     ],
     "mundane": [
-      "an emissary from the fey council of {markov.irish_forename|markov.tolkien|markov.deity} was spotted frolicking in the flowers",
-      "highgate residents report gray figure with long coat and glowing eyes; officials concerned for vampire, others fear insectoid demon",
+      "highgate residents report gray figure with long coat and glowing eyes; officials concerned for [link:wikipedia=Highgate_Vampire]vampire[/a], others fear insectoid demon",
       "{actor|actress|artist|comedian|entertainer|performer|thespian} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
       "{bigfoot|el chupacabra|little green men|strange lights} observed {far far away|in the desert|in the evening|in a forest|in the mountains|late at night} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
-      "{character.weird} {illusions|sensations|sounds|smells|vibrations} reported following death of {local|} {warlock|witch doctor|priest}, {townsfolk|locals|officials} suspect {haunting|ghost|possession|curse}"
+      "{character.weird} {illusions|sensations|sounds|smells|vibrations} reported following death of {local|} {warlock|witch doctor|priest}, {townsfolk|locals|officials} suspect {haunting|ghost|possession|curse}",
+      "{markov.fantasy}, an emissary from the fey council of {markov.dog} was spotted {frolick|napp|play|sleep}ing in the {flowers|tall grass|orchards|farmlands} outside the {title.town}"
     ]
   },
   "item": {
@@ -1801,7 +1801,7 @@
     "_lv1": [
       "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.mundane|group.bad_guys} of {markov.forename|markov.surname|place.any}",
       "rescue lady {markov.fantasy} from {the [token=monster.mundane]|group.mundane|title.monster_mundane} hidden {at [token=place.small]|in [token=place.medium]}",
-      "{synonym.destroy|synonym.kill} {the token=monster.mundane]|title.monster_mundane} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
+      "{synonym.destroy|synonym.kill} {the [token=monster.mundane]|title.monster_mundane} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.mundane}",
       "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.mundane}"
     ],

@@ -2,6 +2,9 @@
 // define event factory
 let eventFactory = {local_vals:{}};
 
+  // define all the vowels we know exist in our dataset
+eventFactory.vowels = "aeiouáàȧâäăāãåấầẫảạæðéèêëěēềíìİîïīóòôöōõőồøơộœúùûüūũư";
+
 // pull event data from JSON
 eventFactory.GetActivity = function(level = "", qty = 1)
 {
@@ -116,7 +119,6 @@ eventFactory.GetActivity = function(level = "", qty = 1)
   }
 
   result = Array.from(factoryResult).join("\r\n<br>\r\n<br>");
-
   return result;
 };
 
@@ -153,9 +155,6 @@ eventFactory.ResolveCommand = function(data)
 {
   // separate string into pieces
   let data_arr = data.split("[");
-
-  // define all the vowels we know exist in our dataset
-  let vowels = "aeiouáàȧâäăāãåấầẫảạæðéèêëěēềíìİîïīóòôöōõőồøơộœúùûüūũư";
 
   // process tokens
   for (let i = 1; i < data_arr.length; i++)
@@ -204,7 +203,7 @@ eventFactory.ResolveCommand = function(data)
     }
 
     // resolve subcommand within the action
-    if (action.indexOf("(") != -1)
+    if (token != "link" && action.indexOf("(") != -1)
     {
       let result = action.substring(action.indexOf("(") + 1);
       result = "[" + result.substring(0, result.indexOf(")")) + "]";
@@ -219,7 +218,47 @@ eventFactory.ResolveCommand = function(data)
       token = "!";
     }
 
-    if (token == "token" && has_action)
+    // check if this is an ending html tag
+    if (token[0] == "/")
+    {
+      action = token.substring(1);
+      token = "/";
+    }
+
+    // begin processing token & action
+    if (token == "link")
+    {
+      if (has_ref)
+      {
+        switch (temp_ref)
+        {
+          case "wikipedia":
+          token = "<a href=\"https://en.wikipedia.org/wiki/" + action + "\" target=\"_new\">";
+          break;
+
+          case "fr_wiki":
+          token = "<a href=\"https://forgottenrealms.fandom.com/wiki/" + action + "\" target=\"_new\">";
+          break;
+
+          case "5etools":
+          token = "<a href=\"https://5etools-mirror-1.github.io/" + action + "\" target=\"_new\">";
+          break;
+
+          default:
+          token = "<a href=\"https://www.google.com/search?q=" + action + "\" target=\"_new\">";
+          break;
+        }
+      }
+      else
+      {
+        token = "<a href=\"" + action + "\" target=\"_new\">";
+      }
+    }
+    else if (token == "/")
+    {
+      token = "</"+action+">";
+    }
+    else if (token == "token" && has_action)
     {
       // resolve token from command
       token = eventFactory.ResolveToken(action);
@@ -285,7 +324,7 @@ eventFactory.ResolveCommand = function(data)
         // at end of string, discard
         token = "";
       }
-      else if (vowels.indexOf(letter) == -1)
+      else if (this.vowels.indexOf(letter) == -1)
       {
         // not followed by vowel
         token = "a";
