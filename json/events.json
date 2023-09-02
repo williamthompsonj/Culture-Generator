@@ -1799,25 +1799,45 @@
   },
   "quest": {
     "_lv1": [
+      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.mundane|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "rescue lady {markov.fantasy} from {the [token=monster.mundane]|group.mundane|title.monster_mundane} hidden {at [token=place.small]|in [token=place.medium]}",
+      "{synonym.destroy|synonym.kill} {the token=monster.mundane]|title.monster_mundane} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.mundane}",
       "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.mundane}"
     ],
     "_lv2": [
+      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.minor|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "rescue lady {markov.fantasy} from the {monster.minor} hidden {at [token=place.small]|in [token=place.medium]}",
+      "{synonym.destroy|synonym.kill} the {monster.minor} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.minor}",
-      "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.minor}"
+      "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.minor}",
+      "{synonym.reveal} who is {murder|ransom|enslav|blackmail}ing [pronoun] peers, and why. [pronoun3] suspects {the [token=group.monster_mundane]|a [token=monster.minor]} to the {north|south|east|west}"
     ],
     "_lv3": [
+      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.moderate|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "rescue lady {markov.fantasy} from the {monster.moderate} hidden {at [token=place.small]|in [token=place.medium]}",
+      "{synonym.destroy|synonym.kill} the {monster.moderate} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.moderate}",
-      "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.moderate}"
+      "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.moderate}",
+      "{synonym.reveal} who is {murder|ransom|enslav|blackmail}ing [pronoun] peers, and why. [pronoun3] suspects a {monster.moderate} to the {north|south|east|west}"
     ],
     "_lv4": [
+      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.major|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "rescue lady {markov.fantasy} from the {monster.major} hidden {at [token=place.small]|in [token=place.medium]}",
+      "{synonym.destroy|synonym.kill} the {monster.major} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.major}",
-      "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.major}"
+      "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.major}",
+      "{synonym.reveal} who is {murder|ransom|enslav|blackmail}ing [pronoun] peers, and why. [pronoun3] suspects a {monster.major} to the {north|south|east|west}"
     ],
     "any": [
       "{quest.major|quest.minor|quest.moderate|quest.mundane} "
     ],
     "bank": [
+      "[token=quest._lv(var:lv)]",
+      "[token=quest._lv(var:lv)]",
+      "[token=quest._lv(var:lv)]",
+      "[token=quest._lv(var:lv)]",
+      "[token=quest._lv(var:lv)]",
       "[token=quest._lv(var:lv)]",
       "clear [pronoun] name from {two|three|multiple|several|} charges of {attempted|} {activity.crime}",
       "discover the fate of {group.mundane} lost in {place.any}",
@@ -1828,17 +1848,13 @@
       "investigate the source of an evil {blight|curse} which befell the {title.town}",
       "investigate {group.mundane} {encamped at [token=place.small]|which wander [token=place.medium]}",
       "locate and {synonym.destroy} [a/an] {character.vile|character.weird|evil|powerful} artifact from {place.any|title.monster_mundane|the [token=character.vile] [token=title.town]}",
-      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {group.bad_guys} of {markov.forename|markov.surname|place.any}",
       "recover {item.treasure} taken by {the [token=group.monster_mundane]|group.mundane}",
-      "rescue lady {markov.fantasy} from {group.mundane|title.monster_mundane} hidden {at [token=place.small]|in [token=place.medium]}",
       "retrieve {title.item_generic} hidden {at [token=place.small]|in [token=place.medium]}",
       "safeguard the {title.town} from {title.monster_mundane}; {synonym.reveal} the plan and {bring them to justice|foil it|launch an assault|sabotage it|[token=synonym.kill] them}",
       "{accompany|escort} [a/an] {valuable|rare|royal|unique|magical|} {item.mundane} {safely|quickly|overnight} to the {title.town}",
       "{accompany|escort} {title.mundane} {safely|quickly|overnight} to the {title.town}",
       "{hunt down|synonym.reveal} and {synonym.kill|synonym.destroy} the {character.vile|character.weird|legendary|cunning} {murderer|rogue|thief|killer} {markov.forename|markov.surname} last seen at {place.any} to the {north|south|east|west}",
       "{investigate|explore} the {tunnel|catacomb|crypt|sepulcher|mausoleum|vault|tomb}s beneath {place.small} and {discover|determine|uncover} their {purpose|secret|origin}",
-      "{synonym.destroy|synonym.kill} {title.monster_mundane} and retrieve [pronoun] {blood|eyes|hide|heart|teeth|tongue}",
-      "{synonym.reveal} who is {murder|ransom|enslav|blackmail}ing [pronoun] peers, and why. [pronoun3] suspects the {group.monster_mundane} to the {north|south|east|west}",
       "{synonym.steal} {item.treasure|title.item_generic} from [pronoun] rival, {title.monster_mundane|title.religious} near {the [token=title.town]|place.any}"
     ],
     "begin": [
