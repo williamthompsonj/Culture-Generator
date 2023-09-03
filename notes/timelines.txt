@@ -1,0 +1,39 @@
+<br><br>
+
+<form id="gov_form" name="gov_form" class="make_inline">
+  <fieldset>
+<legend>Government Settings</legend>
+<table class="settings_table" id="gov_table" name="gov_table">
+<!--- populate after page load --->
+</table>
+<br />
+<button onClick="government.Init(); util.fillForm(government);"
+ type="button">Random Government</button>
+<button onClick="government.rollStats(); util.fillForm(government);"
+ type="button">Re-roll Government</button>
+</fieldset>
+</form>
+
+<form id="pop_form" name="pop_form" class="make_inline">
+<fieldset>
+<legend>Population Settings</legend>
+<table class="settings_table" id="pop_table" name="pop_table">
+<!--- populate after page load --->
+</table>
+<br />
+<button onClick="population.Init(); util.fillForm(population);"
+ type="button">Generate Population</button>
+</fieldset>
+</form>
+
+<form id="rel_form" name="rel_form" class="make_inline">
+<fieldset>
+<legend>Religion Settings</legend>
+<table class="settings_table" id="rel_table" name="rel_table">
+<!--- populate after page load --->
+</table>
+<br />
+<button onClick="religion.Init(); util.fillForm(religion);"
+ type="button">Generate Religion</button>
+</fieldset>
+</form>

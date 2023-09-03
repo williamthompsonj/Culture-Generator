@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
   window.dataset = {};
-
+/*
   // do something after finish loading
   util.populateTable(government);
   util.populateTable(population);
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () =>
   util.fillForm(government);
   util.fillForm(population);
   util.fillForm(religion);
-
+*/
   // load JSON here
   util.loadJson("./json/markov_names.json", "markov_names", util.initNames);
   util.loadJson("./json/events.json", "events", util.initEvents);
