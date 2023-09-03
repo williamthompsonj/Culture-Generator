@@ -624,6 +624,25 @@
       "venerated",
       "well-liked"
     ],
+    "structure": [
+      "blightmoor",
+      "creation",
+      "darkmoor",
+      "destiny",
+      "eternity",
+      "fire",
+      "foxwood",
+      "hope",
+      "light",
+      "peace",
+      "power",
+      "prosperity",
+      "runestone",
+      "salt",
+      "shadow",
+      "stone",
+      "time"
+    ],
     "vile": [
       "bloody",
       "brutal",
@@ -1899,7 +1918,7 @@
       "[var:lv={#1-4}][a/an] {title.generic} {synonym.requests} a group of {synonym.adventurers} to ",
       "[var:lv={#1-4}]{title.religious|title.monster_mundane} {synonym.requests} a group of {synonym.adventurers} to "
     ],
-    "complications": [
+    "complication": [
       "information is {partial|most|complete|fare}ly wrong",
       "party cannot use {arcane magic|divination magic|magic items|weapons} in their quest",
       "party encounters {markov.forename|markov.surname}, an old ally, now working against them",
@@ -2734,10 +2753,10 @@
       "[pronoun] {holiness|blessedness|godliness|devoutness|piousness|saintliness}, [!]{npc.religious} {markov.deity|markov.angel|markov.demon|markov.pokemon_modern}"
     ],
     "structure": [
-      "[!]{ancient|archaic|twinned|character.weird|} [!]{creation|destiny|eternity|fire|hope|light|peace|power|prosperity|salt|stone|time} [!]{place.structure}",
-      "[!]{ancient|archaic|twinned|character.weird|} [!]{place.structure} of [!]{creation|destiny|eternity|fire|hope|light|peace|power|prosperity|salt|stone|time}",
+      "[!]{ancient|archaic|twinned|character.weird|} [!]{character.structure} [!]{place.structure}",
+      "[!]{ancient|archaic|twinned|character.weird|} [!]{place.structure} of [!]{character.structure}",
       "[!]{ancient|archaic|twinned|character.weird|} [!]{senses.color} [!]{place.structure}",
-      "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|character.weird|} [!][var:twin] [!]pillars of [!]{creation|destiny|eternity|fire|hope|light|peace|power|prosperity|salt|stone|time}",
+      "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|character.weird|} [!][var:twin] [!]pillars of [!]{character.structure}",
       "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|character.weird|} [!][var:twin] [!]{[token=senses.color]|} [!]pillars"
     ],
     "town": [
