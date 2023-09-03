@@ -300,6 +300,7 @@
       "yeti"
     ],
     "beast": [
+      "[link:fr_wiki=Miniature_giant_space_hamster]miniature giant space hamster[/a]",
       "aartuk",
       "baboon",
       "badger",
@@ -315,7 +316,6 @@
       "jackal",
       "kobold",
       "lizard",
-      "miniature giant space hamster",
       "mongrel",
       "ogre",
       "orc",
@@ -376,6 +376,16 @@
       "scorpions",
       "wasp mantidflies",
       "wasps"
+    ],
+    "lycanthrope": [
+      "werebat",
+      "werebear",
+      "wereboar",
+      "werejaguar",
+      "wererat",
+      "wereraven",
+      "weretiger",
+      "werewolf"
     ],
     "wild": [
       "alligator",
@@ -1096,47 +1106,47 @@
   },
   "incident": {
     "major": [
-      "creature: {incident_creature.major}",
-      "natural: {incident_natural.major}",
-      "people: {incident_people.major}",
-      "political: {incident_political.major}",
-      "quest: {quest.major}",
-      "religious: {incident_religious.major}",
-      "supernatural: {incident_supernatural.major}"
+      "creature: [!]{incident_creature.major}",
+      "natural: [!]{incident_natural.major}",
+      "people: [!]{incident_people.major}",
+      "political: [!]{incident_political.major}",
+      "quest: [!]{quest.major}",
+      "religious: [!]{incident_religious.major}",
+      "supernatural: [!]{incident_supernatural.major}"
     ],
     "minor": [
-      "creature: {incident_creature.minor}",
-      "natural: {incident_natural.minor}",
-      "people: {incident_people.minor}",
-      "political: {incident_political.minor}",
-      "quest: {quest.minor}",
-      "religious: {incident_religious.minor}",
-      "supernatural: {incident_supernatural.minor}"
+      "creature: [!]{incident_creature.minor}",
+      "natural: [!]{incident_natural.minor}",
+      "people: [!]{incident_people.minor}",
+      "political: [!]{incident_political.minor}",
+      "quest: [!]{quest.minor}",
+      "religious: [!]{incident_religious.minor}",
+      "supernatural: [!]{incident_supernatural.minor}"
     ],
     "moderate": [
-      "creature: {incident_creature.moderate}",
-      "natural: {incident_natural.moderate}",
-      "people: {incident_people.moderate}",
-      "political: {incident_political.moderate}",
-      "quest: {quest.moderate}",
-      "religious: {incident_religious.moderate}",
-      "supernatural: {incident_supernatural.moderate}"
+      "creature: [!]{incident_creature.moderate}",
+      "natural: [!]{incident_natural.moderate}",
+      "people: [!]{incident_people.moderate}",
+      "political: [!]{incident_political.moderate}",
+      "quest: [!]{quest.moderate}",
+      "religious: [!]{incident_religious.moderate}",
+      "supernatural: [!]{incident_supernatural.moderate}"
     ],
     "mundane": [
-      "creature: {incident_creature.mundane}",
-      "joke: {silly.joke}",
-      "natural: {incident_natural.mundane}",
-      "people: {incident_people.mundane}",
-      "political: {incident_political.mundane}",
-      "quest: {quest.mundane}",
-      "religious: {incident_religious.mundane}",
-      "supernatural: {incident_supernatural.mundane}"
+      "creature: [!]{incident_creature.mundane}",
+      "joke: [!]{silly.joke}",
+      "natural: [!]{incident_natural.mundane}",
+      "people: [!]{incident_people.mundane}",
+      "political: [!]{incident_political.mundane}",
+      "quest: [!]{quest.mundane}",
+      "religious: [!]{incident_religious.mundane}",
+      "supernatural: [!]{incident_supernatural.mundane}"
     ]
   },
   "incident_creature": {
     "major": [
-      "horde of {animal.aggressive}s last seen destroying nearby village, {local|township's} {npc.political} issues call to arms",
-      "invasive species of {animal.insects} disrupting {farm|ranche|orchard|}s throughout the land of {markov.city}",
+      "horde of {animal.aggressive}s last seen destroying nearby village of {markov.fantasy|[link:wikipedia=Viva_La_Dirt_League#Epic_NPC_Man]honeywood[/a]}, {local|township's} {npc.political} issues call to arms",
+      "invasive species of {animal.insects} disrupting {estate|farm|farmstead|grange|orchard|plantation|ranche|vineyard}s throughout the land of {markov.city}",
       "{animal.aggressive}s seen falling from the sky near {place.small} after a {powerful|raging|violent|} storm"
     ],
     "minor": [
@@ -1192,7 +1202,7 @@
   },
   "incident_people": {
     "major": [
-      "[!]{npc.leader} {markov.deity} commits {unforgivable|violent|aggressive} breach of peach accord; nations poised at brink of war!",
+      "[!]{npc.leader} {markov.deity} commits {unforgivable|violent|aggressive} breach of {food.any} accord; nations poised at brink of war!",
       "violent crime  {substantially|} increased {everywhere|in [token=markov.city], the city of [token=character.angelic]|in the country of [token=markov.city]|near the capitol of [token=markov.city]|on the [token=markov.angelic] [!]sea|in [token=markov.demonic] [!]bay}, {trade routes disrupted|diplomatic relations strained} to the brink of {collapse|disaster|desperation|invasion|uncertainty|war}. {npc.leader} {markov.name} plans to {assassinate|kidnap|ransom} the {daughter|son|brother|sister|wife|husband}s of [!]{npc.leader} {markov.name} in retaliation"
     ],
     "minor": [
@@ -1305,22 +1315,31 @@
       "passing meteor induces variants of lycanthropy within the populous, mass chaos ensues at first full moon"
     ],
     "minor": [
+      "Pliny delivers report of haunted house. The spirit of [var:name=old man {markov.dog}][var:name] with long white beard seen at night. observers report chains rattling, howling, and strange lights. [var:name] believed to be [link:wikipedia=Ghost_story#Early_examples]buried in the courtyard[/a] in heavy chains",
       "butcher of {markov.city} revealed to be {werewolf|vampire|bewitched nobleman|voodoo witch}, locals demand {burning at the stake|waterboarding|crucifixion|bloodletting}",
+      "guard behaves strangely at {markov.fantasy} [!]{place.structure}; appears to challenge and attempts to subdue a [link:wikipedia=Anne_Boleyn#Legends]whitish female figure sliding toward him[/a] before fainting",
       "local halfling named {markov.tolkien} sets out to destroy enchanted {item.mundane} in the fires of {markov.deity}, stops for second breakfast along the way",
-      "{several|many|numerous|dozens} reported missing after strange lights sighted {at night|in the evening|} in {swamp|marsh|mountains|desert} to the {north|south|east|west}",
+      "local law office calls for investigation following {character.weird} disturbance; [link:wikipedia=Rosenheim_Poltergeist]poltergeist suspected[/a] after witnesses report paintings rotate on the walls, book shelves move by themselves, rocks sent flying, and fires are started in various places",
+      "statue of beloved leader, [var:name={markov.baseball}][var:name], comes to life and [link=https://creativehistorystories.blogspot.com/2022/11/dancing-statues-throwing-pennies-and.html]dances in the street, throws pennies, and pinches bottoms[/a] of onlookers; [var:name] seen walking the streets of {markov.fantasy} after death",
+      "{dozens|many|numerous|several} missing after strange lights sighted {at night|in the evening|} in {swamp|marsh|mountains|desert} to the {north|south|east|west}",
       "{unusual|unexplained} {lights|sounds|smells|tremors} emanating from {abandoned house|cellar|alley} reported by {local|} {npc.generic}, {npc.law|local authority} {files report|uninterested|suspicious}",
-      "{werewolf|vampire|bewitched|supernatural} 'hunter' named {markov.werewolf} revealed to be werewolf; {caught in peculiar love triangle|takes trip to [!]paris|takes trip to [!]london|howls at the moon loudly}"
+      "{werewolf|vampire|bewitched|supernatural} 'hunter' named {markov.werewolf} revealed to be {animal.lycanthrope}; {caught in peculiar love triangle|[link:wikipedia=An_American_Werewolf_in_Paris]takes trip to [!]paris[/a]|[link:wikipedia=An_American_Werewolf_in_London]takes trip to [!]london[/a]|howls at the moon loudly}"
     ],
     "moderate": [
-      "dragon named {markov.dragon} {antagonizes|berates|attacks} {riverside|remote|mountainous|secluded} village of {markov.city}; {locals|townsfolk|authorities} {call for aid|sound the alarm|unable to contain threat}",
-      "{multiple|several|numerous} {deaths|disappearances|dismembered bodies|mutilated corpses} linked to {abandoned|broken down|vacant} {house|building} {at the edge|on the outskirts|in the middle} of {markov.city}, causes {alarm|outrage|disgust} and calls for {investigation|justice|revenge}"
+      "[var:name={markov.fantasy}]ghost ship, HMS [!]{baron|baroness|duchess|duke|king|prince|princess|queen|} [var:name], spotted near {title.town} by way of {place.sea}. royal [!]navy of {markov.fantasy} in pursuit and on high alert after reports of pirate activity",
+      "dragon named {markov.dragon} {antagonizes|berates|attacks} {riverside|remote|mountainous|secluded} village of {markov.city|[link:wikipedia=Viva_La_Dirt_League#Epic_NPC_Man]honeywood[/a]}; {locals|townsfolk|authorities} {call for aid|sound the alarm|unable to contain threat}",
+      "outbreak of lycanthropy causing spike in {animal.lycanthrope} population; priests, monster hunters, and dog catchers overwhelmed. [link:wikipedia=Abraham_Van_Helsing][!]van [!]helsing[/a] calls for backup",
+      "{ghost|spectral|phantom} army reported at civil war battle site near {place.any}; {character.weird} soldiers belonging to the {markov.dog} army seen digging trenches, building armaments, and preparing for battle",
+      "{multiple|several|numerous} {deaths|disappearances|dismembered bodies|mutilated corpses} linked to {abandoned|broken down|vacant} {house|building} {at the edge|on the outskirts|in the middle} of {markov.city} cause {alarm|outrage|disgust} and calls for {investigation|justice|revenge}",
+      "{title.mundane} leaves town and wanders for {3|4|7|8|9|12|13|17|18|40} days and nights, complains shadow people repeating a prophecy"
     ],
     "mundane": [
       "highgate residents report gray figure with long coat and glowing eyes; officials concerned for [link:wikipedia=Highgate_Vampire]vampire[/a], others fear insectoid demon",
-      "{actor|actress|artist|comedian|entertainer|performer|thespian} vanishes after {heralding|meager|lack-luster|children's} magic show, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
-      "{bigfoot|el chupacabra|little green men|strange lights} observed {far far away|in the desert|in the evening|in a forest|in the mountains|late at night} by {local|} {npc.job|race.common}, witness claims to have been {violated|center of conspiracy|probed by aliens|abducted and later returned|inspired by the gods}, spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}",
-      "{character.weird} {illusions|sensations|sounds|smells|vibrations} reported following death of {local|} {warlock|witch doctor|priest}, {townsfolk|locals|officials} suspect {haunting|ghost|possession|curse}",
-      "{markov.fantasy}, an emissary from the fey council of {markov.dog} was spotted {frolick|napp|play|sleep}ing in the {flowers|tall grass|orchards|farmlands} outside the {title.town}"
+      "{apparition|ghost|specter} of criminal, [var:name={markov.baseball}][var:name], seen with disapproving glare at grave site. {character.weird} [link:wikipedia=Al_Capone#Imprisonment]banjo music[/a]  heard {synonym.sometimes} from {his cell|the showers} at {markov.fantasy} where he was one of the first inmates. [var:name] descended into madness while serving his sentence and died shortly after being discharged",
+      "{character.weird} {illusions|sensations|sounds|smells|vibrations} reported following death of {local|} {warlock|witch doctor|priest} named {markov.fantasy}. {townsfolk|locals|officials} suspect {curse|ghost|haunting|possession}",
+      "{markov.fantasy}, an emissary from the fey council of {markov.dog}, was spotted {frolick|napp|play|sleep}ing in the {flowers|tall grass|orchards|farmlands} outside the {title.town}",
+      "{synonym.entertainer} vanishes after {heralding|meager|lack-luster|children's} {magic show|performance}, {experts|locals|eye witnesses} suspect {magical|supernatural|unnatural} forces at work",
+      "{synonym.paranormal} reported {far far away|in the evening|late at night|early in the morning|} near {place.any} by {title.mundane}. witness claims to have been {violated|center of conspiracy|probed by unnatural means|abducted and later returned|inspired by the gods}. spouse claims witness {got drunk and passed out in garden|got hit in the head|must have smoked something|ate a strange mushroom}"
     ]
   },
   "item": {
@@ -1751,8 +1770,8 @@
       "{place.small}"
     ],
     "medium": [
-      "the {markov.tolkien} [!]{place.region}",
-      "{markov.tolkien}'s [!]{place.region}"
+      "the {markov.fantasy} [!]{place.region}",
+      "{markov.fantasy}'s [!]{place.region}"
     ],
     "natural_feature": [
       "canyon",
@@ -1771,14 +1790,24 @@
     ],
     "region": [
       "barrens",
+      "butte",
       "desert",
       "glades",
       "hills",
+      "island",
+      "isthmus",
       "jungle",
       "moor",
       "mountains",
+      "peninsula",
       "plains",
-      "sea"
+      "plateau",
+      "valley",
+      "{place.sea}"
+    ],
+    "sea": [
+      "the [!]{markov.fantasy|senses.color} [!]{place.water}",
+      "{markov.fantasy}'s [!]{place.water}"
     ],
     "small": [
       "[!]the [!]ruins of [!]the {title.structure}",
@@ -1790,11 +1819,20 @@
     "structure": [
       "castle",
       "citadel",
+      "hall",
       "hold",
       "megalith",
       "pillars",
       "stronghold",
       "tower"
+    ],
+    "water": [
+      "bay",
+      "channel",
+      "gulf",
+      "ocean",
+      "sea",
+      "straight"
     ]
   },
   "quest": {
@@ -1861,13 +1899,17 @@
       "[var:lv={#1-4}][a/an] {title.generic} {synonym.requests} a group of {synonym.adventurers} to ",
       "[var:lv={#1-4}]{title.religious|title.monster_mundane} {synonym.requests} a group of {synonym.adventurers} to "
     ],
+    "complications": [
+      "information is {partial|most|complete|fare}ly wrong",
+      "party cannot use {arcane magic|divination magic|magic items|weapons} in their quest",
+      "party encounters {markov.forename|markov.surname}, an old ally, now working against them",
+      "party must complete the quest {amidst a natural disaster|amidst an outbreak of [token=disaster.illness]|within 3 days|[token=without killing anyone] [var:else]|without leaving any trace of their involvement}",
+      "party soon finds itself facing a moral quandary",
+      "party will have to choose between saving an ally or being seen as the enemy",
+      "quest is a {diversion|trap|lie}"
+    ],
     "end": [
-      ". the information is {partial|most|complete|fare}ly wrong",
-      ". the party cannot use {arcane magic|divination magic|magic items|weapons} in their quest",
-      ". the party encounters {markov.forename|markov.surname}, an old ally, now working against them",
-      ". the party must complete the quest {amidst a natural disaster|amidst an outbreak of [token=disaster.illness]|within 3 days|[token=without killing anyone] [var:else]|without leaving any trace of their involvement}",
-      ". the party soon finds itself facing a moral quandary",
-      ". the quest is a {diversion|trap|lie}"
+      ". {additionally|also|although|furthermore|however|moreover}, the {quest.complication}"
     ],
     "major": [
       "{quest.begin}[var:lv=4]{quest.bank}{quest.end|}"
@@ -2504,6 +2546,26 @@
       "wreak havoc on",
       "wreck"
     ],
+    "entertainer": [
+      "actor",
+      "actress",
+      "clown",
+      "comedian",
+      "entertainer",
+      "farceur",
+      "harlequin",
+      "impressionist",
+      "masquerader",
+      "mime",
+      "monologist",
+      "pantomime",
+      "performer",
+      "playwright",
+      "star",
+      "starlet",
+      "stooge",
+      "thespian"
+    ],
     "guild": [
       "agency",
       "assembly",
@@ -2562,6 +2624,20 @@
       "slaughter",
       "wipe out"
     ],
+    "paranormal": [
+      "aliens",
+      "apparitions",
+      "bigfoot",
+      "el chupacabra",
+      "ghosts",
+      "headless horseman",
+      "little green men",
+      "martians",
+      "phantoms",
+      "poltergeists",
+      "specters",
+      "strange lights"
+    ],
     "requests": [
       "appeals for",
       "asks for",
@@ -2594,6 +2670,20 @@
       "uncover",
       "unmask",
       "unveil"
+    ],
+    "sometimes": [
+      "at intervals",
+      "from time to time",
+      "infrequently",
+      "intermittently",
+      "irregularly",
+      "occasionally",
+      "off and on",
+      "on and off",
+      "on occasion",
+      "periodically",
+      "sometimes",
+      "sporadically"
     ],
     "steal": [
       "abscond with",
@@ -2651,7 +2741,7 @@
       "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|character.weird|} [!][var:twin] [!]{[token=senses.color]|} [!]pillars"
     ],
     "town": [
-      "{elven|dwarven|} {city|hamlet|town|village} of {markov.fantasy}"
+      "{elven|dwarven|} {city|hamlet|town|village} of {markov.fantasy|[link:wikipedia=Viva_La_Dirt_League#Epic_NPC_Man]honeywood[/a]}"
     ]
   }
 }

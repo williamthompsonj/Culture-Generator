@@ -1,18 +1,39 @@
-/* dark mode */
-.darkmode *
-{
-  background-color: #333;
-  color: white;
-}
+@media screen{
+  /* dark mode */
+  .darkmode *
+  {
+    background-color: #333;
+    color: white;
+  }
 
-.darkmode button,
-.darkmode textarea,
-.darkmode select,
-.darkmode input
-{
-  background-color: #666;
-}
+  .darkmode button,
+  .darkmode textarea,
+  .darkmode select,
+  .darkmode input
+  {
+    background-color: #666;
+  }
 
+  .headlines, .headlines fieldset
+  {
+    max-width: 27em;
+  }
+}
+@media print{
+  form, fieldset
+  {
+    break-after: unset;
+    break-before: unset;
+    break-inside: unset;
+    page-break-after: unset;
+    page-break-before: unset;
+    page-break-inside: unset;
+  }
+  .headlines, .headlines fieldset
+  {
+    max-width: 45%;
+  }
+}
 /* normal style stuff */
 #results
 {
@@ -41,11 +62,6 @@
 {
   display: inline;
   vertical-align: top;
-}
-
-.headlines, .headlines *
-{
-  max-width: 27em;
 }
 
 .whatthis

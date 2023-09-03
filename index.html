@@ -20,20 +20,6 @@
 </head>
 <body>
 
-<p class="tooltip">
-
-<span class="whatthis">What's all this? &#x1F42D; &#x1F5B0;</span>
-
-<span class="tooltiptext">Copyright (c) William J. Thompson<br>
-Version 0.2.5 (September 2023)<br>
-<br>
-This tool currently generates headlines, quests, names, and will eventually
-generate both stat blocks and a timeline using metrics to influence what is
-most likely to occur. It generates unique names using Markov chains.<br>
-<br>
-If you really REALLY want to contact me, send it here:<br>
-william dot thompsonj at gmail dot com</span></p>
-
 <form id="markov_form" name="markov_form">
 <fieldset>
 <legend>Name Generator</legend>
@@ -57,7 +43,7 @@ Sort Names</label>
 <fieldset>
 <legend>Major Headlines</legend>
 <button onClick="util.setValue('#major_results', eventFactory.GetActivity('major', 50));"
- type="button">Major Headlines</button>
+ type="button">More</button>
 <p id="major_results" name="major_results">Place Holder</p>
 </fieldset>
 </form>
@@ -66,7 +52,7 @@ Sort Names</label>
 <fieldset>
 <legend>Moderate Headlines</legend>
 <button onClick="util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 50));"
- type="button">Moderate Headlines</button>
+ type="button">More</button>
 <p id="moderate_results" name="moderate_results">Place Holder</p>
 </fieldset>
 </form>
@@ -75,7 +61,7 @@ Sort Names</label>
 <fieldset>
 <legend>Minor Headlines</legend>
 <button onClick="util.setValue('#minor_results', eventFactory.GetActivity('minor', 50));"
- type="button">Minor Headlines</button>
+ type="button">More</button>
 <p id="minor_results" name="minor_results">Place Holder</p>
 </fieldset>
 </form>
@@ -84,7 +70,7 @@ Sort Names</label>
 <fieldset>
 <legend>Mundane Headlines</legend>
 <button onClick="util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 50));"
- type="button">Mundane Headlines</button>
+ type="button">More</button>
 <p id="mundane_results" name="mundane_results">Place Holder</p>
 </fieldset>
 </form>
@@ -128,6 +114,12 @@ Sort Names</label>
  type="button">Generate Religion</button>
 </fieldset>
 </form>
+
+<div class="whatthis">What's all this? &#x1f42d; &#x1f5b0;</div>
+<div>This tool currently generates headlines, quests, and names. Names generated using Markov chains.<br>
+If you really REALLY need to contact me, send it to: william dot thompsonj at gmail dot com
+<br>
+Copyright (c) William J. Thompson, Version 0.2.5 (September 2023)</div>
 
 </body>
 <!-- Google tag (gtag.js) -->

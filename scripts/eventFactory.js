@@ -485,20 +485,20 @@ eventFactory.ResolveToken = function(token)
   if (typeof data_ref == "function")
   {
     // it's a function, pass token
-    return data_ref(token);
+    token = data_ref(token);
   }
   else if (Array.isArray(data_ref))
   {
     // it's an array, get random value
-    return data_ref.randomValue();
+    token = data_ref.randomValue();
   }
   else if (last_ref != null)
   {
     // it's an object, get the string version of it
-    return data_ref.toString();
+    token = data_ref.toString();
   }
 
-  // doesn't resolve, return original token
+  // return lookup result or original token
   return token;
 };
 
