@@ -447,11 +447,11 @@ util.initEvents = function()
   util.setValue("#mundane_results", eventFactory.GetActivity("mundane", 15));
 };
 
-util.darkmode = function(force = false, toggle = true)
+util.darkmode = function(toggle = true)
 {
   let root = util.getElem("html");
   let vals = String(root.className);
-  if (force || (toggle && vals == ""))
+  if (toggle && vals.indexOf("darkmode") == -1)
   {
     // turn on darkmode
     document.cookie = "darkmode=true";
