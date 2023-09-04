@@ -45,8 +45,8 @@
       "torture resulting in death",
       "treason",
       "vandalism",
-      "violence against an official",
-      "violence against cabbage merchants"
+      "violence against [link:avatar=Cabbage_merchant]cabbage merchants[/a]",
+      "violence against an official"
     ],
     "dead": [
       "beaten and broken",
@@ -54,7 +54,7 @@
       "burned to a crisp in manure",
       "burned {alive|and blacked}",
       "castrated and naked",
-      "crushed by {cabbage|rock|item.mundane}s",
+      "crushed by {[link:avatar=Cabbage_merchant]cabbage[/a]|rock|item.mundane}s",
       "dismembered",
       "drained of blood",
       "drowned in a vat of milk",
@@ -637,7 +637,6 @@
       "peace",
       "power",
       "prosperity",
-      "runestone",
       "salt",
       "shadow",
       "stone",
@@ -863,6 +862,63 @@
       "{animal.cute|animal.aggressive} fight",
       "{carriage|ship} collision",
       "{field|grass|house} fire"
+    ],
+    "natural_local": [
+      "avalanche",
+      "cave-in",
+      "explosion",
+      "landslide",
+      "limnic eruption",
+      "mudslide",
+      "radiological event",
+      "rockslide",
+      "sinkhole",
+      "{flash|} flood"
+    ],
+    "natural_region": [
+      "cold snap",
+      "derecho event",
+      "drought",
+      "earthquake",
+      "famine",
+      "heat wave",
+      "insect invasion",
+      "pandemic",
+      "radiological event",
+      "rising sea level",
+      "tsunami",
+      "{agriculture|livestock|wildlife} disease",
+      "{wildfire|forest fire|brush fire|wildland fire|rural fire}"
+    ],
+    "natural_space": [
+      "bright object in the sky",
+      "comet",
+      "explosion in the heavens",
+      "meteor {impact|shower}",
+      "new star cluster",
+      "solar flare",
+      "solar storm"
+    ],
+    "natural_storm": [
+      "blizzard",
+      "cyclone",
+      "hurricane",
+      "thunderstorm",
+      "tornado {outbreak|}",
+      "tropical {storm|cyclone}",
+      "typhoon",
+      "{hail|ice|lightning|severe} storm"
+    ],
+    "natural_volcano": [
+      "ash plume",
+      "lava flow",
+      "pyroclastic flow",
+      "volcanic eruption"
+    ],
+    "unnatural": [
+      "fits of {dancing|narcolepsy}",
+      "radiological event",
+      "{amnesia|insanity|killer} fog"
     ]
   },
   "food": {
@@ -1192,7 +1248,8 @@
       "drought causes crop failure and livestock deaths across the land, mass migrations begin",
       "heavy tremors from quake destroy buildings, cause landslides, and uproot trees. {locals|townsfolk|politicians|religious leaders} proclaim end-times are near",
       "meteor destroys capitol city of {markov.deity}; ash blocks out the sun causing early winter out of season",
-      "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down"
+      "{hurricane|tropical storm|tornado} sweeps the land causing buildings to collapse and whole forests to be blown down",
+      "{oracle|prophecy} {synonym.foretell}s [a/an] {disaster.natural_space} will begin {cascade|chain|torrent} of events that include [a/an] {disaster.natural_local} in the {title.town}, followed by [a/an] {disaster.natural_region} near the {title.town}, and finally [a/an] {disaster.natural_storm} that will travel across the land"
     ],
     "minor": [
       "[a/an] {mine cave-in|avalanche|flash flood|landslide|wildfire|cold-snap|insect migration} occurred {outside town|in the woods|in the high desert|in the valley|in the hills|in the plains|near the swamp}",
@@ -1329,9 +1386,9 @@
   },
   "incident_supernatural": {
     "major": [
-      "mass outbreak of {disaster.illness} after unseasonal meteor shower",
-      "meteor falls in {desert|mountain|waste|swamp|marshe}s to the {north|south|east|west}, prophecy foretells a dark figure will {destroy|take over|corrupt} the {faithful|nobility|common folk} and bring about [a/an] {apocalypse|second coming|great plague}",
-      "passing meteor induces variants of lycanthropy within the populous, mass chaos ensues at first full moon"
+      "mass outbreak of {disaster.illness} after {disaster.natural_space} observed; {title.kingdom} declares {calamity|catastrophe|crisis|dire straits|disaster|distress|extremis|emergency}",
+      "{disaster.natural_space} induces variants of lycanthropy within the populous, mass chaos ensues at first full moon",
+      "{meteor|star} falls in {place.medium} to the {north|south|east|west}; prophecy foretells a dark figure will emerge to {destroy|take over|corrupt} the {faithful|nobility|common folk} and bring about [a/an] {apocalypse|second coming|great plague}"
     ],
     "minor": [
       "Pliny delivers report of haunted house. The spirit of [var:name=old man {markov.dog}][var:name] with long white beard seen at night. observers report chains rattling, howling, and strange lights. [var:name] believed to be [link:wikipedia=Ghost_story#Early_examples]buried in the courtyard[/a] in heavy chains",
@@ -1637,6 +1694,7 @@
       "elf",
       "ex-adventurer",
       "expert",
+      "feudatory",
       "human",
       "mage",
       "merchant",
@@ -1644,6 +1702,7 @@
       "politician",
       "priest",
       "sage",
+      "vassal",
       "warrior",
       "witch"
     ],
@@ -1738,11 +1797,70 @@
       "trooper"
     ],
     "leader": [
+      "caliph",
       "chieftain",
-      "count",
-      "emperor",
-      "king",
-      "lord"
+      "emir{a|}",
+      "emp{eror|ress}",
+      "kha{gan|tun}",
+      "malik{ah|}",
+      "margrave",
+      "president",
+      "prince{ss|}",
+      "samrat",
+      "sheikh{a|}",
+      "sultan{a|}",
+      "tsar{itsa|}",
+      "viceroy",
+      "{arch|grand }du{chess|ke}",
+      "{begum|nawab}",
+      "{king|queen}",
+      "{maha|}{raja|rana}",
+      "{shah|banbishn|padishah|shahbanu}"
+    ],
+    "military": [
+      "cadet",
+      "cavalryman",
+      "corporal",
+      "ensign",
+      "guardsman",
+      "infantryman",
+      "legionnaire",
+      "lieutenant",
+      "marshal",
+      "private",
+      "sergeant {major|}",
+      "standard bearer"
+    ],
+    "military_leader": [
+      "admiral",
+      "captain",
+      "centurion",
+      "colonel",
+      "command{ant|er}",
+      "general",
+      "major",
+      "praetor"
+    ],
+    "noble": [
+      "baron{ess|}",
+      "burgrav{e|ine}",
+      "count{ess|}",
+      "esquire",
+      "knight",
+      "magistrate",
+      "mankari",
+      "margrav{e|ine}",
+      "marqu{is|ess}",
+      "master",
+      "pasha",
+      "sardar",
+      "surrogate",
+      "thakur{ani|}",
+      "viscount{ess|}",
+      "yuva{raja|rana}",
+      "{earl|jarl}",
+      "{lord|lady}",
+      "{mem|}sahib"
     ],
     "political": [
       "ambassador",
@@ -1757,12 +1875,10 @@
       "herald",
       "judge",
       "law maker",
-      "magistrate",
       "mayor",
       "minister",
       "praetor",
       "sheriff",
-      "surrogate",
       "tribune"
     ],
     "religious": [
@@ -1775,12 +1891,12 @@
       "deacon",
       "dean",
       "diocese",
-      "father",
       "legate",
       "nuncio",
       "prelate",
       "priest",
-      "provost"
+      "provost",
+      "{father|mother}"
     ]
   },
   "place": {
@@ -1790,60 +1906,72 @@
     ],
     "medium": [
       "the {markov.fantasy} [!]{place.region}",
-      "{markov.fantasy}'s [!]{place.region}"
+      "{markov.fantasy}'s [!]{place.region}",
+      "{place.sea}"
     ],
     "natural_feature": [
       "canyon",
       "cave",
       "cavern",
+      "cliffs",
       "cove",
       "crag",
       "crossing",
       "fells",
       "hill",
+      "jungle",
+      "knoll",
       "marsh",
       "meadow",
       "mountain",
       "river",
+      "swamp",
       "{silverwood|} forest"
     ],
     "region": [
       "barrens",
       "butte",
       "desert",
+      "fen",
       "glades",
+      "heath",
       "hills",
       "island",
       "isthmus",
-      "jungle",
+      "marsh",
       "moor",
       "mountains",
       "peninsula",
       "plains",
       "plateau",
+      "upland",
       "valley",
-      "{place.sea}"
+      "wastes",
+      "wold"
     ],
     "sea": [
       "the [!]{markov.fantasy|senses.color} [!]{place.water}",
       "{markov.fantasy}'s [!]{place.water}"
     ],
     "small": [
-      "[!]the [!]ruins of [!]the {title.structure}",
-      "[!]the [!]ruins of {markov.tolkien}'s {title.structure}",
-      "[!]the [!]{place.natural_feature|title.structure}",
+      "the [!]ruins of [!]the {title.structure}",
+      "the [!]ruins of {markov.tolkien}'s {title.structure}",
+      "the [!]{place.natural_feature|title.structure}",
       "{markov.tolkien}'s [!]{place.natural_feature}",
       "{markov.tolkien}'s {title.structure}"
     ],
     "structure": [
       "castle",
       "citadel",
+      "colosseum",
       "hall",
       "hold",
       "megalith",
       "pillars",
       "stronghold",
-      "tower"
+      "temple",
+      "tower",
+      "wall"
     ],
     "water": [
       "bay",
@@ -1856,14 +1984,14 @@
   },
   "quest": {
     "_lv1": [
-      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.mundane|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "protect {[pronoun2]|[pronoun] [link:avatar=Cabbage_merchant]prized cabbages[/a]|[pronoun] [link:wikipedia=Gollum]precious[/a]|item.treasure} from the {monster.mundane|group.bad_guys} of {markov.forename|markov.surname|place.any}",
       "rescue lady {markov.fantasy} from {the [token=monster.mundane]|group.mundane|title.monster_mundane} hidden {at [token=place.small]|in [token=place.medium]}",
       "{synonym.destroy|synonym.kill} {the [token=monster.mundane]|title.monster_mundane} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.mundane}",
       "{synonym.reveal} and {capture|[token=synonym.kill][var:else=else]} [a/an] {monster.mundane}"
     ],
     "_lv2": [
-      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.minor|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "protect {[pronoun2]|[pronoun] [link:avatar=Cabbage_merchant]prized cabbages[/a]|[pronoun] [link:wikipedia=Gollum]precious[/a]|item.treasure} from the {monster.minor|group.bad_guys} of {markov.forename|markov.surname|place.any}",
       "rescue lady {markov.fantasy} from the {monster.minor} hidden {at [token=place.small]|in [token=place.medium]}",
       "{synonym.destroy|synonym.kill} the {monster.minor} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.minor}",
@@ -1871,7 +1999,7 @@
       "{synonym.reveal} who is {murder|ransom|enslav|blackmail}ing [pronoun] peers, and why. [pronoun3] suspects {the [token=group.monster_mundane]|a [token=monster.minor]} to the {north|south|east|west}"
     ],
     "_lv3": [
-      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.moderate|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "protect {[pronoun2]|[pronoun] [link:avatar=Cabbage_merchant]prized cabbages[/a]|[pronoun] [link:wikipedia=Gollum]precious[/a]|item.treasure} from the {monster.moderate|group.bad_guys} of {markov.forename|markov.surname|place.any}",
       "rescue lady {markov.fantasy} from the {monster.moderate} hidden {at [token=place.small]|in [token=place.medium]}",
       "{synonym.destroy|synonym.kill} the {monster.moderate} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.moderate}",
@@ -1879,7 +2007,7 @@
       "{synonym.reveal} who is {murder|ransom|enslav|blackmail}ing [pronoun] peers, and why. [pronoun3] suspects a {monster.moderate} to the {north|south|east|west}"
     ],
     "_lv4": [
-      "protect {him|her|[pronoun] prized cabbages|[pronoun] precious|item.treasure} from the {monster.major|group.bad_guys} of {markov.forename|markov.surname|place.any}",
+      "protect {[pronoun2]|[pronoun] [link:avatar=Cabbage_merchant]prized cabbages[/a]|[pronoun] [link:wikipedia=Gollum]precious[/a]|item.treasure} from the {monster.major|group.bad_guys} of {markov.forename|markov.surname|place.any}",
       "rescue lady {markov.fantasy} from the {monster.major} hidden {at [token=place.small]|in [token=place.medium]}",
       "{synonym.destroy|synonym.kill} the {monster.major} and retrieve its {blood|eyes|hide|heart|teeth|tongue}",
       "{synonym.reveal} a corrupt {npc.political} {synonym.in_league} with [a/an] {monster.major}",
@@ -2585,6 +2713,16 @@
       "stooge",
       "thespian"
     ],
+    "foretell": [
+      "envision",
+      "forebode",
+      "foreshadow",
+      "foretell",
+      "forewarn",
+      "predict",
+      "predict",
+      "warn"
+    ],
     "guild": [
       "agency",
       "assembly",
@@ -2642,6 +2780,20 @@
       "put to death",
       "slaughter",
       "wipe out"
+    ],
+    "kingdom": [
+      "colony state",
+      "duchy",
+      "dukedom",
+      "empire",
+      "fiefdom",
+      "kingdom",
+      "papal state",
+      "principality",
+      "province",
+      "territory",
+      "vassal state",
+      "viscounty"
     ],
     "paranormal": [
       "aliens",
@@ -2741,6 +2893,12 @@
       "a valued family heirloom",
       "the {synonym.codex|axe|gauntlet|helm|maul|relic|sword} of {markov.fantasy|title.mundane}"
     ],
+    "kingdom": [
+      "the [!!]{synonym.kingdom} of {title.leader}"
+    ],
+    "leader": [
+      "[!!]{npc.leader} {markov.fantasy|markov.baseball} {I|II|III|IV|}"
+    ],
     "monster_mundane": [
       "{markov.forename|markov.surname} the [!10]{animal.beast} [!]{npc.leader}"
     ],
@@ -2749,18 +2907,25 @@
       "[a/an] {relevance.lesser|relevance.average|local|} {npc.job|race.common}",
       "{markov.forename|markov.surname} the {npc.job}"
     ],
+    "political": [
+      "[!]{npc.political} {markov.fantasy|markov.baseball}"
+    ],
     "religious": [
-      "[pronoun] {holiness|blessedness|godliness|devoutness|piousness|saintliness}, [!]{npc.religious} {markov.deity|markov.angel|markov.demon|markov.pokemon_modern}"
+      "[pronoun] {holiness|blessedness|godliness|grace|devoutness|piousness|saintliness}, [!]{npc.religious} {markov.deity|markov.angel|markov.demon|markov.pokemon_modern}"
     ],
     "structure": [
-      "[!]{ancient|archaic|twinned|character.weird|} [!]{character.structure} [!]{place.structure}",
-      "[!]{ancient|archaic|twinned|character.weird|} [!]{place.structure} of [!]{character.structure}",
-      "[!]{ancient|archaic|twinned|character.weird|} [!]{senses.color} [!]{place.structure}",
-      "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|character.weird|} [!][var:twin] [!]pillars of [!]{character.structure}",
-      "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|character.weird|} [!][var:twin] [!]{[token=senses.color]|} [!]pillars"
+      "[!]{ancient|archaic|autochthonic|prehistoric|primeval|primal|twinned|character.weird|} [!]{character.structure} [!]{place.structure}",
+      "[!]{ancient|archaic|autochthonic|prehistoric|primeval|primal|twinned|character.weird|} [!]{place.structure} of [!]{character.structure}",
+      "[!]{ancient|archaic|autochthonic|prehistoric|primeval|primal|twinned|character.weird|} [!]{senses.color} [!]{place.structure}",
+      "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|autochthonic|prehistoric|primeval|primal|character.weird|} [!][var:twin] [!]{[token=senses.color]|} [!]{pillar|runestone|statue|monolith|tower}s",
+      "[!]{three|four|five|seven|thirteen|[var:twin=twin]|} [!]{ancient|archaic|autochthonic|prehistoric|primeval|primal|character.weird|} [!][var:twin] [!]{pillar|runestone|statue|monolith|tower}s of [!]{character.structure}"
     ],
     "town": [
-      "{elven|dwarven|} {city|hamlet|town|village} of {markov.fantasy|[link:wikipedia=Viva_La_Dirt_League#Epic_NPC_Man]honeywood[/a]}"
+      "{elven|dwarven|} {city|hamlet|outpost|trading post|town|village} of {markov.fantasy|[link:wikipedia=Viva_La_Dirt_League#Epic_NPC_Man]honeywood[/a]}",
+      "{elven|dwarven|} {city|hamlet|outpost|trading post|town|village} of {markov.fantasy}",
+      "{elven|dwarven|} {city|hamlet|outpost|trading post|town|village} of {markov.fantasy}",
+      "{elven|dwarven|} {city|hamlet|outpost|trading post|town|village} of {markov.fantasy}",
+      "{elven|dwarven|} {city|hamlet|outpost|trading post|town|village} of {markov.fantasy}"
     ]
   }
 }

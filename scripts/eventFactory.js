@@ -232,12 +232,16 @@ eventFactory.ResolveCommand = function(data)
       {
         switch (temp_ref)
         {
-          case "wikipedia":
-          token = "<a href=\"https://en.wikipedia.org/wiki/" + action + "\" target=\"_new\">";
+          case "avatar":
+          token = "<a href=\"https://avatar.fandom.com/wiki/" + action + "\" target=\"_new\">";
           break;
 
           case "fr_wiki":
           token = "<a href=\"https://forgottenrealms.fandom.com/wiki/" + action + "\" target=\"_new\">";
+          break;
+
+          case "wikipedia":
+          token = "<a href=\"https://en.wikipedia.org/wiki/" + action + "\" target=\"_new\">";
           break;
 
           case "5etools":

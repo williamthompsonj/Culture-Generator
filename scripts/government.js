@@ -2,6 +2,8 @@
 // define government parameters
 let government = {prefix: "gov"};
 
+// TODO: ochlocracy; Mob Rule
+
 // properties of object to iterate
 government.props = {
   power_concentration: {
