@@ -115,10 +115,18 @@ eventFactory.GetActivity = function(level = "", qty = 1)
     {
       factoryResult.add(result);
     }
+	
+	if (result.match(/^[A-Za-z ]\: /) != null)
+	{
+		let tag = result.match(/^[A-Za-z ]\: /)[0];
+		tag = "<b>" + tag + "</b>";
+		result = result.substring(tag.length + 2);
+		result = tag + " " + result
+	}
     if (this.track) console.log(result);
   }
 
-  result = Array.from(factoryResult).join("\r\n<br>\r\n<br>");
+  result = "<p>" + Array.from(factoryResult).join("</p><p>") + "</p>";
   return result;
 };
 
