@@ -446,3 +446,21 @@ util.initEvents = function()
   util.setValue("#minor_results", eventFactory.GetActivity("minor", 15));
   util.setValue("#mundane_results", eventFactory.GetActivity("mundane", 15));
 };
+
+util.darkmode = function(force = false, toggle = true)
+{
+  let root = util.getElem("html");
+  let vals = String(root.className);
+  if (force || (toggle && vals == ""))
+  {
+    // turn on darkmode
+    document.cookie = "darkmode=true";
+    root.className = "darkmode";
+  }
+  else
+  {
+    // turn off darkmode
+    document.cookie = "darkmode=false";
+    root.className = "";
+  }
+}

@@ -9,7 +9,7 @@ eventFactory.vowels = "aeiouáàȧâäăāãåấầẫảạæðéèêëěēề
 eventFactory.GetActivity = function(level = "", qty = 1)
 {
   let factoryResult = new Set();
-  let result;
+  let result, tag;
 
   if (level == "")
   {
@@ -67,6 +67,15 @@ eventFactory.GetActivity = function(level = "", qty = 1)
     // debugging thing, ignore
     this.track = false;
 
+    // format results
+    tag = "";
+    if (result.match(/^[A-Za-z ]+\: /) != null)
+    {
+      tag = result.substring(0, result.indexOf(": "));
+      result = result.substring(tag.length + 2);
+      tag = "<b>" + tag.toTitleCase() + "</b>";
+    }
+
     // loop while { or [ exists in our string
     while (result.indexOf("{") != -1 || result.indexOf("[") != -1)
     {
@@ -110,19 +119,17 @@ eventFactory.GetActivity = function(level = "", qty = 1)
     // wifes, lifes, knifes -> wives, lives, knives
     result = result.replace(/([wln])ifes([\u0001-\u0040\u005b-\u0060\u007b-\u00bf])/g, "$1ives$2");
 
+    if (tag)
+    {
+      result = tag + " " + result;
+    }
+
     // save results (unique entries only because it's a Set)
     if (result.length > 1)
     {
       factoryResult.add(result);
     }
-	
-	if (result.match(/^[A-Za-z ]\: /) != null)
-	{
-		let tag = result.match(/^[A-Za-z ]\: /)[0];
-		tag = "<b>" + tag + "</b>";
-		result = result.substring(tag.length + 2);
-		result = tag + " " + result
-	}
+
     if (this.track) console.log(result);
   }
 

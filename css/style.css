@@ -1,4 +1,5 @@
-@media screen{
+@media screen
+{
   /* dark mode */
   .darkmode *
   {
@@ -14,31 +15,56 @@
     background-color: #666;
   }
 
+  .darkmode .incidents p
+  {
+    background-color: #000;
+  }
+
+  .darkmode .incidents p b
+  {
+    background-color: #333;
+    text-decoration: underline;
+    padding: 1px;
+  }
+
+  /* skinny columns */
   .headlines, .headlines fieldset
   {
     max-width: 27em;
   }
 }
-@media print{
-  form, fieldset
+@media print
+{
+  /* hide buttons from print */
+  button
   {
-    break-after: unset;
-    break-before: unset;
-    break-inside: unset;
-    page-break-after: unset;
-    page-break-before: unset;
-    page-break-inside: unset;
+    display: none;
+    visibility: invisible;
   }
+  /* make headlines full width */
   .headlines, .headlines fieldset
   {
-    max-width: 45%;
+    max-width: initial;
   }
 }
+
 /* normal style stuff */
 #results
 {
   width: 99%;
   height: 600px;
+}
+
+.incidents p
+{
+  background-color: #e0e0e0;
+}
+
+.incidents p b
+{
+  background-color: #ccc;
+  border: solid 1px #666;
+  padding: 1px;
 }
 
 .settings_table input
@@ -64,7 +90,7 @@
   vertical-align: top;
 }
 
-.whatthis
+.what_is_this
 {
   font-weight: bold;
   font-size: 2em;

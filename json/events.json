@@ -1181,41 +1181,41 @@
   },
   "incident": {
     "major": [
-      "creature: [!]{incident_creature.major}",
-      "natural: [!]{incident_natural.major}",
-      "people: [!]{incident_people.major}",
-      "political: [!]{incident_political.major}",
-      "quest: [!]{quest.major}",
-      "religious: [!]{incident_religious.major}",
-      "supernatural: [!]{incident_supernatural.major}"
+      "creature: {incident_creature.major}",
+      "natural: {incident_natural.major}",
+      "people: {incident_people.major}",
+      "political: {incident_political.major}",
+      "quest: {quest.major}",
+      "religious: {incident_religious.major}",
+      "supernatural: {incident_supernatural.major}"
     ],
     "minor": [
-      "creature: [!]{incident_creature.minor}",
-      "natural: [!]{incident_natural.minor}",
-      "people: [!]{incident_people.minor}",
-      "political: [!]{incident_political.minor}",
-      "quest: [!]{quest.minor}",
-      "religious: [!]{incident_religious.minor}",
-      "supernatural: [!]{incident_supernatural.minor}"
+      "creature: {incident_creature.minor}",
+      "natural: {incident_natural.minor}",
+      "people: {incident_people.minor}",
+      "political: {incident_political.minor}",
+      "quest: {quest.minor}",
+      "religious: {incident_religious.minor}",
+      "supernatural: {incident_supernatural.minor}"
     ],
     "moderate": [
-      "creature: [!]{incident_creature.moderate}",
-      "natural: [!]{incident_natural.moderate}",
-      "people: [!]{incident_people.moderate}",
-      "political: [!]{incident_political.moderate}",
-      "quest: [!]{quest.moderate}",
-      "religious: [!]{incident_religious.moderate}",
-      "supernatural: [!]{incident_supernatural.moderate}"
+      "creature: {incident_creature.moderate}",
+      "natural: {incident_natural.moderate}",
+      "people: {incident_people.moderate}",
+      "political: {incident_political.moderate}",
+      "quest: {quest.moderate}",
+      "religious: {incident_religious.moderate}",
+      "supernatural: {incident_supernatural.moderate}"
     ],
     "mundane": [
-      "creature: [!]{incident_creature.mundane}",
-      "joke: [!]{silly.joke}",
-      "natural: [!]{incident_natural.mundane}",
-      "people: [!]{incident_people.mundane}",
-      "political: [!]{incident_political.mundane}",
-      "quest: [!]{quest.mundane}",
-      "religious: [!]{incident_religious.mundane}",
-      "supernatural: [!]{incident_supernatural.mundane}"
+      "creature: {incident_creature.mundane}",
+      "joke: {silly.joke}",
+      "natural: {incident_natural.mundane}",
+      "people: {incident_people.mundane}",
+      "political: {incident_political.mundane}",
+      "quest: {quest.mundane}",
+      "religious: {incident_religious.mundane}",
+      "supernatural: {incident_supernatural.mundane}"
     ]
   },
   "incident_creature": {

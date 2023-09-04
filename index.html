@@ -20,6 +20,8 @@
 </head>
 <body>
 
+<button onClick="util.darkmode()" type="button">Dark mode?</button>
+
 <form id="markov_form" name="markov_form">
 <fieldset>
 <legend>Name Generator</legend>
@@ -33,18 +35,16 @@
 <input type="checkbox" onChange="util.markovSort();"
  id="markov_sort" name="markov_sort">
 Sort Names</label>
-<div id="markov_output"></div>
+<p id="markov_output"></p>
 </fieldset>
 </form>
-
-<br>
 
 <form id="major_headline_form" name="major_headline_form" class="make_inline headlines">
 <fieldset>
 <legend>Major Headlines</legend>
 <button onClick="util.setValue('#major_results', eventFactory.GetActivity('major', 50));"
  type="button">More</button>
-<p id="major_results" name="major_results">Place Holder</p>
+<div id="major_results" name="major_results" class="incidents">Place Holder</div>
 </fieldset>
 </form>
 
@@ -53,7 +53,7 @@ Sort Names</label>
 <legend>Moderate Headlines</legend>
 <button onClick="util.setValue('#moderate_results', eventFactory.GetActivity('moderate', 50));"
  type="button">More</button>
-<p id="moderate_results" name="moderate_results">Place Holder</p>
+<div id="moderate_results" name="moderate_results" class="incidents">Place Holder</div>
 </fieldset>
 </form>
 
@@ -62,7 +62,7 @@ Sort Names</label>
 <legend>Minor Headlines</legend>
 <button onClick="util.setValue('#minor_results', eventFactory.GetActivity('minor', 50));"
  type="button">More</button>
-<p id="minor_results" name="minor_results">Place Holder</p>
+<div id="minor_results" name="minor_results" class="incidents">Place Holder</div>
 </fieldset>
 </form>
 
@@ -71,15 +71,15 @@ Sort Names</label>
 <legend>Mundane Headlines</legend>
 <button onClick="util.setValue('#mundane_results', eventFactory.GetActivity('mundane', 50));"
  type="button">More</button>
-<p id="mundane_results" name="mundane_results">Place Holder</p>
+<div id="mundane_results" name="mundane_results" class="incidents">Place Holder</div>
 </fieldset>
 </form>
 
-<div class="whatthis">What's all this? &#x1f42d; &#x1f5b0;</div>
-<div>This tool currently generates headlines, quests, and names. Names generated using Markov chains.<br>
+<p class="what_is_this">What's all this? &#x1f42d; &#x1f5b0;</p>
+<p>This tool currently generates headlines, quests, and names. Names generated using Markov chains.<br>
 If you really REALLY need to contact me, send it to: william dot thompsonj at gmail dot com
 <br>
-Copyright (c) William J. Thompson, Version 0.2.5 (September 2023)</div>
+Copyright (c) William J. Thompson, Version 0.2.5 (September 2023)</p>
 
 </body>
 <!-- Google tag (gtag.js) -->
