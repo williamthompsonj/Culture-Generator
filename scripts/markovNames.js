@@ -44,7 +44,7 @@ markovNames.more_names = function(qty = 40, data_name = "")
   }
 
   names = names.join(", ");
-  util.setValue("#markov_output", "Source: "+data_name.replaceAll("_", " ")+"<br><br>"+names);
+  util.setValue("#markov_output", "Source: "+data_name.replaceAll("_", " ").toTitleCase()+"<br><br>"+names);
 };
 
 markovNames.name_list = function(qty, data_name = "")

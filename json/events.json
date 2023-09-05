@@ -1330,9 +1330,9 @@
     ],
     "minor": [
       "fierce {controversy|disagreement|dispute|rivalry|opposition} between {npc.political}s, {townsfolk|locals|officials} polarized",
-      "{npc.political} accused of {gay|polyamorous|bisexual|unethical|underage|} love triangle {publicly resigns|speaks out against accusations|refuses comment|flees town|disappears|found dead|}",
       "{npc.political} comes out as {lesbian|gay|bisexual|transexual|queer|pansexual|polyamorous|transvestite}, locals {un|}{impressed|surprised|interested|welcoming}",
       "{npc.political} found guilty of {embezzling money|fraud|tax evasion|telling a white lie}, townsfolk {outraged|flabbergasted|outraged|relieved|disappointed}",
+      "{npc.political} {markov.fantasy} accused of secret {gay|polyamorous|bisexual|unethical|underage|} love {triangle|relationship} with local {npc.generic}; {publicly resigns|speaks out against accusations|refuses comment|flees town|disappears|found dead|}",
       "{race.common} reporter {missing|presumed dead|found dead} after {harlequin|heralding|incriminating} story surfaces implicating {npc.political} in {activity.political}",
       "{race.common} reporter {missing|presumed dead|found dead} after {harlequin|heralding|incriminating} story surfaces implicating {relevance.greater} {npc.generic} and {npc.political} in {activity.political}"
     ],
@@ -1381,12 +1381,13 @@
       "public {belittling|name calling|mockery|disagreement} between neutral and {evil|good} temples occurred",
       "public {belittling|name calling|mockery|disagreement} between {evil|good|neutral} temples occurred",
       "{local|ill-advised|} prophet proclaims {the sky is falling|there is a method to the madness|drunkard told a cockamamie story}",
+      "{title.religious} seen publicly {belittling|name calling|mocking|disagreeing} a rival temple {npc.religious}",
       "{title.religious}, claims punishment by the gods, {local|} healer diagnoses possible case of {disaster.illness}"
     ]
   },
   "incident_supernatural": {
     "major": [
-      "mass outbreak of {disaster.illness} after {disaster.natural_space} observed; {title.kingdom} declares {calamity|catastrophe|crisis|dire straits|disaster|distress|extremis|emergency}",
+      "mass outbreak of {disaster.illness} after {disaster.natural_space} observed; {title.leader} declares state of {calamity|catastrophe|crisis|dire straits|disaster|distress|extremis|emergency} in {title.kingdom|title.province}",
       "{disaster.natural_space} induces variants of lycanthropy within the populous, mass chaos ensues at first full moon",
       "{meteor|star} falls in {place.medium} to the {north|south|east|west}; prophecy foretells a dark figure will emerge to {destroy|take over|corrupt} the {faithful|nobility|common folk} and bring about [a/an] {apocalypse|second coming|great plague}"
     ],
@@ -2783,17 +2784,13 @@
     ],
     "kingdom": [
       "colony state",
-      "duchy",
-      "dukedom",
       "empire",
-      "fiefdom",
       "kingdom",
       "papal state",
       "principality",
       "province",
       "territory",
-      "vassal state",
-      "viscounty"
+      "vassal state"
     ],
     "paranormal": [
       "aliens",
@@ -2808,6 +2805,17 @@
       "poltergeists",
       "specters",
       "strange lights"
+    ],
+    "province": [
+      "colony state",
+      "duchy",
+      "dukedom",
+      "fiefdom",
+      "papal state",
+      "province",
+      "territory",
+      "vassal state",
+      "viscounty"
     ],
     "requests": [
       "appeals for",
@@ -2894,7 +2902,8 @@
       "the {synonym.codex|axe|gauntlet|helm|maul|relic|sword} of {markov.fantasy|title.mundane}"
     ],
     "kingdom": [
-      "the [!!]{synonym.kingdom} of {title.leader}"
+      "the [!!]{synonym.kingdom} of {markov.fantasy}",
+      "the {markov.fantasy} [!!]{synonym.kingdom}"
     ],
     "leader": [
       "[!!]{npc.leader} {markov.fantasy|markov.baseball} {I|II|III|IV|}"
@@ -2907,8 +2916,15 @@
       "[a/an] {relevance.lesser|relevance.average|local|} {npc.job|race.common}",
       "{markov.forename|markov.surname} the {npc.job}"
     ],
+    "noble": [
+      "[!!]{npc.noble} {markov.fantasy|markov.baseball} {I|II|III|IV|}"
+    ],
     "political": [
       "[!]{npc.political} {markov.fantasy|markov.baseball}"
+    ],
+    "province": [
+      "the [!!]{synonym.province} of {markov.fantasy}",
+      "the {markov.fantasy} [!!]{synonym.province}"
     ],
     "religious": [
       "[pronoun] {holiness|blessedness|godliness|grace|devoutness|piousness|saintliness}, [!]{npc.religious} {markov.deity|markov.angel|markov.demon|markov.pokemon_modern}"
