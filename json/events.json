@@ -1324,6 +1324,7 @@
   "incident_political": {
     "major": [
       "[a/an] {assassination|great violation of temple law|rebellion of the nobles|regional peasant uprising|successful overthrow of the ruling government} occurred",
+      "a [link:wikipedia=Flower_war]flower war[/a] breaks out between {title.noble} of {title.province} and {title.noble} of {title.province}",
       "the peasants revolted and {installed a new ruler|were violently suppressed|violently murdered the nobles}",
       "there was an {assassination attempt|incursion} on a {relevance.greater} noble house by {the military|foreign interests|a secret society|a cult}",
       "{taxes|pirate attacks|bandit raids} {increased|decreased}"
@@ -1363,6 +1364,7 @@
       "{title.religious} dies while divinely ascending; {township|city|province|nation} of {markov.deity} {scrambles|calls for aid|desperately appeals to allies|entreats neighboring nations|pleads for aid} to defend against atropal"
     ],
     "minor": [
+      "a pilgrimage from the old city of {markov.city} to the holy site of {markov.deity} began",
       "{arguing|fighting|an incident} between evil and {neutral|good} temples occurred",
       "{arguing|fighting|an incident} between good and {evil|neutral} temples occurred",
       "{arguing|fighting|an incident} between neutral and {evil|good} temples occurred",
@@ -1373,7 +1375,7 @@
       "[a/an] {noble|religious} order was reinvented based on a new-world culture",
       "[a/an] {noble|religious} order was {disbanded|scattered} and fell into disgrace",
       "[a/an] {relevance.greater} article of the {markov.deity|markov.angel|markov.demon} faith was {lost|stolen|destroyed|hidden away}",
-      "a pilgrimage from the old city of {markov.city} to the holy site of {markov.deity} began"
+      "{title.religious} overseas the {markov.fantasy} witch trials from the {markov.deity|markov.angel|markov.demon} {place.religious}; {#250-550} led to mass execution"
     ],
     "mundane": [
       "public {belittling|name calling|mockery|disagreement} between evil and {good|neutral} temples occurred",
@@ -1403,7 +1405,7 @@
       "{werewolf|vampire|bewitched|supernatural} 'hunter' named {markov.werewolf} revealed to be {animal.lycanthrope}; {caught in peculiar love triangle|[link:wikipedia=An_American_Werewolf_in_Paris]takes trip to [!]paris[/a]|[link:wikipedia=An_American_Werewolf_in_London]takes trip to [!]london[/a]|howls at the moon loudly}"
     ],
     "moderate": [
-      "[var:name={markov.fantasy}]ghost ship, HMS [!]{baron|baroness|duchess|duke|king|prince|princess|queen|} [var:name], spotted near {title.town} by way of {place.sea}. royal [!]navy of {markov.fantasy} in pursuit and on high alert after reports of pirate activity",
+      "[var:name={markov.fantasy}]ghost ship, {HMS|SS} [!]{baron|baroness|duchess|duke|king|prince|princess|queen|} [var:name], spotted near {title.town} by way of {place.sea}. royal [!]navy of {markov.fantasy} in pursuit and on high alert after reports of pirate activity",
       "dragon named {markov.dragon} {antagonizes|berates|attacks} {riverside|remote|mountainous|secluded} village of {markov.city|[link:wikipedia=Viva_La_Dirt_League#Epic_NPC_Man]honeywood[/a]}; {locals|townsfolk|authorities} {call for aid|sound the alarm|unable to contain threat}",
       "outbreak of lycanthropy causing spike in {animal.lycanthrope} population; priests, monster hunters, and dog catchers overwhelmed. [link:wikipedia=Abraham_Van_Helsing][!]van [!]helsing[/a] calls for backup",
       "{ghost|spectral|phantom} army reported at civil war battle site near {place.any}; {character.weird} soldiers belonging to the {markov.dog} army seen digging trenches, building armaments, and preparing for battle",
@@ -1883,21 +1885,29 @@
       "tribune"
     ],
     "religious": [
-      "abbot",
+      "[var:title_his=][var:title_her=ess]{arch|}deacon[var:title_(pronoun)]",
+      "[var:title_his=][var:title_her=ess]{arch|}priest[var:title_(pronoun)]",
+      "[var:title_his=father][var:title_her=mother]reverend [var:title_(pronoun)]",
+      "[var:title_his=o][var:title_her=a]nunci[var:title_(pronoun)]",
+      "[var:title_his=ot][var:title_her=ess]abb[var:title_(pronoun)]",
       "apostol",
-      "archdeacon",
-      "bishop",
       "camerlengo",
       "cardinal",
-      "deacon",
+      "chancellor",
+      "chaplain",
+      "chaplain",
       "dean",
-      "diocese",
+      "dean",
+      "exorcist",
+      "friar",
       "legate",
-      "nuncio",
+      "pastor",
       "prelate",
-      "priest",
       "provost",
-      "{father|mother}"
+      "vicar",
+      "{arch|}bishop",
+      "{arch|}diocese",
+      "{arch|}mandrite"
     ]
   },
   "place": {
@@ -1950,18 +1960,31 @@
       "wastes",
       "wold"
     ],
+    "religious": [
+      "abbey",
+      "basilica",
+      "cathedral",
+      "chapel",
+      "church",
+      "convent",
+      "monastery",
+      "mosque",
+      "shrine",
+      "synagogue",
+      "tabernacle",
+      "temple"
+    ],
     "sea": [
       "the [!]{markov.fantasy|senses.color} [!]{place.water}",
       "{markov.fantasy}'s [!]{place.water}"
     ],
     "small": [
-      "the [!]ruins of [!]the {title.structure}",
-      "the [!]ruins of {markov.tolkien}'s {title.structure}",
+      "the [!]ruins of {[token=markov.tolkien]'s|[!]the} {title.structure}",
       "the [!]{place.natural_feature|title.structure}",
-      "{markov.tolkien}'s [!]{place.natural_feature}",
-      "{markov.tolkien}'s {title.structure}"
+      "{markov.tolkien}'s {[!][token=place.natural_feature]|title.structure}"
     ],
     "structure": [
+      "bridge",
       "castle",
       "citadel",
       "colosseum",
@@ -1972,7 +1995,8 @@
       "stronghold",
       "temple",
       "tower",
-      "wall"
+      "wall",
+      "ziggurat"
     ],
     "water": [
       "bay",
@@ -2906,7 +2930,7 @@
       "the {markov.fantasy} [!!]{synonym.kingdom}"
     ],
     "leader": [
-      "[!!]{npc.leader} {markov.fantasy|markov.baseball} {I|II|III|IV|}"
+      "[!!]{npc.leader} {markov.fantasy|markov.baseball} {|II|III|IV|}"
     ],
     "monster_mundane": [
       "{markov.forename|markov.surname} the [!10]{animal.beast} [!]{npc.leader}"
@@ -2917,7 +2941,7 @@
       "{markov.forename|markov.surname} the {npc.job}"
     ],
     "noble": [
-      "[!!]{npc.noble} {markov.fantasy|markov.baseball} {I|II|III|IV|}"
+      "[!!]{npc.noble} {markov.fantasy|markov.baseball} {|II|III|IV|}"
     ],
     "political": [
       "[!]{npc.political} {markov.fantasy|markov.baseball}"
