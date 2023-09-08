@@ -454,13 +454,13 @@ util.darkmode = function(toggle = true)
   if (toggle && vals.indexOf("darkmode") == -1)
   {
     // turn on darkmode
-    document.cookie = "darkmode=true";
+    document.cookie = "darkmode=true; max-age="+Number.MAX_SAFE_INTEGER;
     root.className = "darkmode";
   }
   else
   {
     // turn off darkmode
-    document.cookie = "darkmode=false";
+    document.cookie = "darkmode=false; max-age="+Number.MIN_SAFE_INTEGER;
     root.className = "";
   }
 }
