@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () =>
         values[key] = Number(values[key]);
       }
     }
-    console.log(values);
+
     // check for dark mode
     if (values.hasOwnProperty("darkmode"))
     {

@@ -405,7 +405,7 @@ eventFactory.ResolveToken = function(token)
     token = token.split("|").randomValue();
   }
 
-  if (this.track) console.log("token: " + token);
+  //if (this.track) console.log("token: " + token);
 
   // ensure white space isn't present on either end of string
   token = token.trim();
