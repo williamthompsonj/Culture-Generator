@@ -1427,7 +1427,7 @@
     "mundane": [
       "{local|ill-advised|} prophet proclaims {the sky is falling|there is a method to the madness|drunkard told a cockamamie story}",
       "{title.religious} {synonym.loud|synonym.quiet|vigorous|harsh}ly {synonym.belittled} rival temple official, {title.religious}",
-      "{title.religious} {synonym.loud|synonym.quiet|vigorous|harsh}ly {synonym.belittled} {title.noble} of {title.province*",
+      "{title.religious} {synonym.loud|synonym.quiet|vigorous|harsh}ly {synonym.belittled} {title.noble} of {title.province}",
       "{title.religious} {synonym.loud|synonym.quiet|vigorous|harsh}ly {synonym.belittled} {title.religious|title.temple}",
       "{title.religious}, claims punishment by the gods, {local|} healer diagnoses possible case of {disaster.illness}"
     ]

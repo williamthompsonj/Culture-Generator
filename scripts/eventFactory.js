@@ -26,25 +26,7 @@ eventFactory.GetActivity = function(level = "", qty = 1)
       break;
     }
 
-    switch (level)
-    {
-      case "major":
-        result = window.dataset["events"].incident.major.randomValue();
-        break;
-
-      case "moderate":
-        result = window.dataset["events"].incident.moderate.randomValue();
-        break;
-
-      case "minor":
-        result = window.dataset["events"].incident.minor.randomValue();
-        break;
-
-      case "mundane":
-      default:
-        result = window.dataset["events"].incident.mundane.randomValue();
-        break;
-    }
+    result = window.dataset["events"].incident[level].randomValue();
 
     // reset local variables and pronoun every cycle
     if (Math.range(0,1))
