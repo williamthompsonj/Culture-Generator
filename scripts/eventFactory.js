@@ -2,7 +2,7 @@
 // define event factory
 let eventFactory = {local_vals:{}};
 
-  // define all the vowels we know exist in our dataset
+// define all the vowels we know exist in our dataset
 eventFactory.vowels = "aeiouáàȧâäăāãåấầẫảạæðéèêëěēềíìİîïīóòôöōõőồøơộœúùûüūũư";
 
 // pull event data from JSON
@@ -65,7 +65,7 @@ eventFactory.GetActivity = function(level = "", qty = 1)
 
       if (result.indexOf("{") != -1)
       {
-        // step 1: resolve all choices
+        // step 1: resolve choices (prior to commands)
         result = eventFactory.ResolveChoice(result);
         continue;
       }
